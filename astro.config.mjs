@@ -1,21 +1,20 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
-import react from '@astrojs/react';
+import react from "@astrojs/react";
 
-import netlify from '@astrojs/netlify';
+import netlify from "@astrojs/netlify";
 
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
 
-import robotsTxt from 'astro-robots-txt';
+import robotsTxt from "astro-robots-txt";
 
-import icon from 'astro-icon';
-
+import icon from "astro-icon";
 
 export default defineConfig({
-  site: 'https://basic.com',
+  site: "https://shower-walls.net",
   output: "server",
   adapter: netlify({
     imageCDN: false,
@@ -36,9 +35,8 @@ export default defineConfig({
     }),
   ],
 
-
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
 
   i18n: {
@@ -48,5 +46,4 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-
 });
