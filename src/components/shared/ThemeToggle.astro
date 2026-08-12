@@ -1,0 +1,12 @@
+---
+import { Button } from "@/components/ui/Button";
+import { FiMoon, FiSun } from "react-icons/fi";
+---
+
+<Button variant="simple" data-theme-toggle aria-label="Toggle color theme">
+  <span class="shrink-0 text-lg flex items-center justify-center">
+    <FiMoon className="block dark:hidden" />
+    <FiSun className="hidden dark:block" />
+  </span>
+  <span data-theme-label>Dark</span>
+</Button>

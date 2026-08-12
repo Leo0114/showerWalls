@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark,.dark *));
+
+
+@theme inline {
+    --color-primary: #013383;
+    --color-secondary: #233060;
+    --color-accent: #fab702;
+}
+    
+
