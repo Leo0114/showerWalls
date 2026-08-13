@@ -5,7 +5,7 @@ title: "Drenaje Reversible"
 code: "RD"
 category: "shower-pans"
 excerpt: "Configuración Drenaje Reversible, fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/showerPans/Reversible-Drain_SW_1.png
 gallery: "showcase"
 madeToOrder: false
 featured: false

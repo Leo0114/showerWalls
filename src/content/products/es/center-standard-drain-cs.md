@@ -5,7 +5,7 @@ title: "Drenaje Central Estándar"
 code: "CS"
 category: "shower-pans"
 excerpt: "Configuración Drenaje Central Estándar, fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/showerPans/Center-Standard-Drain_SW_1.png
 gallery: "showcase"
 madeToOrder: false
 featured: true

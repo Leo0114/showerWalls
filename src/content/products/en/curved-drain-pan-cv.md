@@ -5,7 +5,7 @@ title: "Curved Drain Pan"
 code: "CV"
 category: "shower-pans"
 excerpt: "Curved Drain Pan configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/showerPans/Curve-Drain_SW_1.png
 gallery: "showcase"
 madeToOrder: false
 featured: false

@@ -5,7 +5,7 @@ title: "Tina Exenta"
 code: "BT"
 category: "free-standing-tub"
 excerpt: "Tina Exenta fabricada a pedido para dar carácter al baño, con acabado a juego con las paredes."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/freeStandingTub/Tina_SW_1.png
 gallery: "showcase"
 madeToOrder: true
 featured: true

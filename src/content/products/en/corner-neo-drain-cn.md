@@ -5,7 +5,7 @@ title: "Corner Neo Drain"
 code: "CN"
 category: "shower-pans"
 excerpt: "Corner Neo Drain configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/showerPans/Corner-Neo-Drain_SW_1.png
 gallery: "showcase"
 madeToOrder: false
 featured: false

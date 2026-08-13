@@ -5,7 +5,7 @@ title: "Center Standard Drain"
 code: "CS"
 category: "shower-pans"
 excerpt: "Center Standard Drain configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/showerPans/Center-Standard-Drain_SW_1.png
 gallery: "showcase"
 madeToOrder: false
 featured: true

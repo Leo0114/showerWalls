@@ -5,7 +5,7 @@ title: "Free Standing Tub"
 code: "BT"
 category: "free-standing-tub"
 excerpt: "Free Standing Tub built to order to anchor the bathroom, finished to match the wall system."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/freeStandingTub/Tina_SW_1.png
 gallery: "showcase"
 madeToOrder: true
 featured: true
