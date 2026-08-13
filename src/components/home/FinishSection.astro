@@ -1,5 +1,5 @@
 ---
-import placeholder from "@/assets/images/placeholder.jpeg";
+import wallImage from "@/assets/images/w.avif";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
 import FinishSelector from "@/components/home/FinishSelector";
 import { getI18N, getLang } from "@/i18n/i18n";
@@ -14,14 +14,19 @@ const { eyebrow, title, description } = i18n.home.colors;
 
 <section class="section-y bg-panel">
   <div class="container-x">
-    <SectionHeading eyebrow={eyebrow} title={title} description={description} align="center" />
+    <SectionHeading
+      eyebrow={eyebrow}
+      title={title}
+      description={description}
+      align="center"
+    />
 
     <div class="mt-14">
       <FinishSelector
         client:visible
         lang={lang}
         ctaHref={path("contact")}
-        previewSrc={placeholder.src}
+        previewSrc={wallImage.src}
       />
     </div>
   </div>

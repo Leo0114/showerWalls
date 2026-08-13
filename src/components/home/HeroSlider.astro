@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import placeholder from "@/assets/images/placeholder.jpeg";
+import hero1 from "@/assets/images/hero1.tiff";
+import hero2 from "@/assets/images/hero2.avif";
+import hero3 from "@/assets/images/hero3.avif";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
 
@@ -13,16 +15,19 @@ const { slides, cta_primary, cta_secondary, scroll } = i18n.home.hero;
 
 /** Swap these for the real hero photography — the copy stays in the dictionary. */
 const media = [
-  { image: placeholder, position: "object-center" },
-  { image: placeholder, position: "object-top" },
-  { image: placeholder, position: "object-bottom" },
+  { image: hero1, position: "object-center" },
+  { image: hero2, position: "object-top" },
+  { image: hero3, position: "object-bottom" },
 ];
 
-const items = slides.map((slide, index) => ({ ...slide, ...media[index % media.length] }));
+const items = slides.map((slide, index) => ({
+  ...slide,
+  ...media[index % media.length],
+}));
 ---
 
 <section
-  class="relative isolate min-h-[38rem] overflow-hidden bg-baseBlack lg:min-h-[44rem]"
+  class="relative isolate min-h-152 overflow-hidden bg-baseBlack lg:min-h-176"
   data-hero
   aria-roledescription="carousel"
 >
@@ -31,7 +36,7 @@ const items = slides.map((slide, index) => ({ ...slide, ...media[index % media.l
       items.map(({ image, position }, index) => (
         <div
           class:list={[
-            "absolute inset-0 transition-opacity duration-[1200ms] ease-out",
+            "absolute inset-0 transition-opacity duration-1200ms ease-out",
             index === 0 ? "opacity-100" : "opacity-0",
           ]}
           data-hero-media={index}
@@ -51,17 +56,19 @@ const items = slides.map((slide, index) => ({ ...slide, ...media[index % media.l
   </div>
 
   <div
-    class="absolute inset-0 -z-10 bg-gradient-to-r from-baseBlack/90 via-baseBlack/70 to-baseBlack/20"
+    class="absolute inset-0 -z-10 bg-linear-to-r from-baseBlack/90 via-baseBlack/70 to-baseBlack/20"
     aria-hidden="true"
   >
   </div>
   <div
-    class="absolute inset-0 -z-10 bg-gradient-to-t from-primary/40 via-transparent to-transparent"
+    class="absolute inset-0 -z-10 bg-linear-to-t from-primary/40 via-transparent to-transparent"
     aria-hidden="true"
   >
   </div>
 
-  <div class="container-x relative flex min-h-[38rem] flex-col justify-center py-24 lg:min-h-[44rem]">
+  <div
+    class="container-x relative flex min-h-152 flex-col justify-center py-24 lg:min-h-176"
+  >
     <div class="max-w-3xl">
       {
         items.map(({ eyebrow, title, subtitle }, index) => (
@@ -82,7 +89,9 @@ const items = slides.map((slide, index) => ({ ...slide, ...media[index % media.l
             <h1 class="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">
               {title}
             </h1>
-            <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">{subtitle}</p>
+            <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+              {subtitle}
+            </p>
           </article>
         ))
       }
@@ -139,7 +148,9 @@ const items = slides.map((slide, index) => ({ ...slide, ...media[index % media.l
                 aria-selected={index === 0 ? "true" : "false"}
                 class:list={[
                   "h-1.5 cursor-pointer rounded-full transition-all duration-500",
-                  index === 0 ? "w-10 bg-secondary" : "w-4 bg-white/35 hover:bg-white/60",
+                  index === 0
+                    ? "w-10 bg-secondary"
+                    : "w-4 bg-white/35 hover:bg-white/60",
                 ]}
               />
             </li>
@@ -147,7 +158,9 @@ const items = slides.map((slide, index) => ({ ...slide, ...media[index % media.l
         }
       </ul>
 
-      <span class="ml-auto hidden text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-white/50 sm:block">
+      <span
+        class="ml-auto hidden text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-white/50 sm:block"
+      >
         {scroll}
       </span>
     </div>

@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import { FiCheck } from "react-icons/fi";
-import placeholder from "@/assets/images/placeholder.jpeg";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
+import Intro from "@/assets/images/intro.avif";
 
 const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
@@ -17,9 +17,11 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
 <section class="section-y bg-canvas">
   <div class="container-x grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
     <ScrollReveal client:visible direction="right" className="relative">
-      <div class="relative aspect-4/5 overflow-hidden rounded-[2rem] sm:aspect-square lg:aspect-4/5">
+      <div
+        class="relative aspect-4/5 overflow-hidden rounded-4xl sm:aspect-square lg:aspect-4/5"
+      >
         <Image
-          src={placeholder}
+          src={Intro}
           alt={title}
           widths={[480, 768, 1024]}
           sizes="(min-width: 1024px) 45vw, 90vw"
@@ -30,13 +32,19 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
       <div
         class="absolute -bottom-8 -right-4 hidden w-56 rounded-2xl border border-line bg-canvas p-6 shadow-xl shadow-baseBlack/5 sm:block"
       >
-        <p class="font-display text-4xl font-bold text-primary">{stats[0].value}</p>
+        <p class="font-display text-4xl font-bold text-primary">
+          {stats[0].value}
+        </p>
         <p class="mt-1 text-sm leading-snug text-muted">{stats[0].label}</p>
       </div>
     </ScrollReveal>
 
     <div>
-      <SectionHeading eyebrow={eyebrow} title={title} description={description} />
+      <SectionHeading
+        eyebrow={eyebrow}
+        title={title}
+        description={description}
+      />
 
       <ul class="mt-10 grid gap-4 sm:grid-cols-2">
         {
@@ -57,8 +65,12 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
             <div>
               <dt class="sr-only">{label}</dt>
               <dd>
-                <span class="block font-display text-2xl font-bold text-ink sm:text-3xl">{value}</span>
-                <span class="mt-1 block text-xs leading-snug text-muted">{label}</span>
+                <span class="block font-display text-2xl font-bold text-ink sm:text-3xl">
+                  {value}
+                </span>
+                <span class="mt-1 block text-xs leading-snug text-muted">
+                  {label}
+                </span>
               </dd>
             </div>
           ))
