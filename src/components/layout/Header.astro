@@ -20,7 +20,8 @@ const links = NAV_ITEMS.map(({ route, key }) => {
   return {
     href,
     label: i18n.nav[key as keyof typeof i18n.nav],
-    isActive: normalized === "/" ? current === "/" : current.startsWith(normalized),
+    isActive:
+      normalized === "/" ? current === "/" : current.startsWith(normalized),
   };
 });
 ---
@@ -71,14 +72,10 @@ const links = NAV_ITEMS.map(({ route, key }) => {
     </nav>
 
     <div class="flex items-center gap-2">
-      <LangToggle class="hidden sm:inline-flex" label={i18n.nav.language} />
-      <ThemeToggle label={i18n.nav.theme} />
-      <a
-        href={path("contact")}
-        class="hidden rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-primaryDark hover:shadow-lg hover:shadow-primary/25 lg:inline-flex"
-      >
-        {i18n.nav.cta}
-      </a>
+      <div class="hidden items-center gap-2 lg:flex">
+        <LangToggle label={i18n.nav.language} />
+        <ThemeToggle label={i18n.nav.theme} />
+      </div>
 
       <button
         type="button"
@@ -92,58 +89,73 @@ const links = NAV_ITEMS.map(({ route, key }) => {
       </button>
     </div>
   </div>
-
-  <div
-    id="mobile-menu"
-    data-menu-panel
-    hidden
-    class="fixed inset-0 z-50 flex flex-col bg-canvas lg:hidden"
-  >
-    <div class="container-x flex h-18 items-center justify-between py-3">
-      <Image src={logo} alt={SITE.name} width={168} height={60} class="h-9 w-auto object-contain" />
-      <button
-        type="button"
-        data-menu-close
-        aria-label={i18n.nav.close}
-        class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line text-ink"
-      >
-        <FiX className="h-5 w-5" aria-hidden="true" />
-      </button>
-    </div>
-
-    <nav aria-label={i18n.nav.menu} class="container-x flex flex-1 flex-col justify-center pb-16">
-      <ul class="flex flex-col gap-1">
-        {
-          links.map(({ href, label, isActive }, index) => (
-            <li>
-              <a
-                href={href}
-                aria-current={isActive ? "page" : undefined}
-                style={`--i:${index}`}
-                class:list={[
-                  "block border-b border-line/60 py-4 font-display text-2xl font-semibold transition-colors",
-                  isActive ? "text-primary" : "text-ink hover:text-primary",
-                ]}
-              >
-                {label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-
-      <div class="mt-8 flex items-center justify-between gap-3">
-        <LangToggle label={i18n.nav.language} />
-        <a
-          href={path("contact")}
-          class="rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white"
-        >
-          {i18n.nav.cta}
-        </a>
-      </div>
-    </nav>
-  </div>
 </header>
+
+{
+  /* Mobile menu lives OUTSIDE <header> to avoid backdrop-filter containing block */
+}
+<div
+  id="mobile-menu"
+  data-menu-panel
+  hidden
+  class="fixed inset-0 z-60 flex flex-col bg-canvas lg:hidden"
+>
+  <div class="container-x flex h-18 items-center justify-between py-3">
+    <Image
+      src={logo}
+      alt={SITE.name}
+      width={168}
+      height={60}
+      class="h-9 w-auto object-contain"
+    />
+    <button
+      type="button"
+      data-menu-close
+      aria-label={i18n.nav.close}
+      class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line text-ink"
+    >
+      <FiX className="h-5 w-5" aria-hidden="true" />
+    </button>
+  </div>
+
+  <nav
+    aria-label={i18n.nav.menu}
+    class="container-x flex flex-1 flex-col justify-center pb-16"
+  >
+    <ul class="flex flex-col gap-1">
+      {
+        links.map(({ href, label, isActive }, index) => (
+          <li>
+            <a
+              href={href}
+              aria-current={isActive ? "page" : undefined}
+              style={`--i:${index}`}
+              class:list={[
+                "block border-b border-line/60 py-4 font-display text-2xl font-semibold transition-colors",
+                isActive ? "text-primary" : "text-ink hover:text-primary",
+              ]}
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-8 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <LangToggle label={i18n.nav.language} />
+        <ThemeToggle label={i18n.nav.theme} />
+      </div>
+      <!-- <a
+        href={path("contact")}
+        class="rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white"
+      >
+        {i18n.nav.cta}
+      </a> -->
+    </div>
+  </nav>
+</div>
 
 <script>
   const OPEN_CLASS = "overflow-hidden";
