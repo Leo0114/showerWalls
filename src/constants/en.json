@@ -108,11 +108,11 @@
       "cta": "Request a sample",
       "selected": "Selected finish",
       "items": {
-        "arctic": { "name": "Arctic White", "description": "The brightest neutral. Maximizes light in compact bathrooms." },
-        "sand": { "name": "Warm Sand", "description": "A soft beige that keeps hospitality suites feeling residential." },
-        "carrara": { "name": "Carrara Grey", "description": "Marbled movement with the durability of solid surface." },
-        "slate": { "name": "Coastal Slate", "description": "Mid-tone blue-grey that pairs with brushed nickel trim." },
-        "graphite": { "name": "Graphite", "description": "A deep, contemporary charcoal for statement showers." }
+        "firefox-beige": { "name": "Firefox Beige", "description": "A warm, barely-there neutral that softens any space." },
+        "ivory": { "name": "Ivory", "description": "A classic off-white with quiet depth for timeless interiors." },
+        "light-gray": { "name": "Light Gray", "description": "A bright, airy gray that maximizes light in compact bathrooms." },
+        "solid-bone": { "name": "Solid Bone", "description": "An earthy, muted tone that adds understated warmth." },
+        "solid-white": { "name": "Solid White", "description": "A clean, versatile white for a crisp, contemporary look." }
       }
     },
     "catalogs": {

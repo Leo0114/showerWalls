@@ -14,7 +14,8 @@ interface ContactFormProps {
 const fieldClass =
   "w-full rounded-2xl border border-line bg-canvas px-4 py-3 text-sm text-ink transition-colors placeholder:text-muted focus:border-primary focus:outline-none";
 
-const labelClass = "mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-muted";
+const labelClass =
+  "mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-muted";
 
 export default function ContactForm({ lang }: ContactFormProps) {
   const { t } = useReactI18n(lang);
@@ -58,7 +59,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
   return (
     <>
-      <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
+      <form
+        onSubmit={onSubmit}
+        noValidate
+        className="grid gap-5 sm:grid-cols-2"
+      >
         {/* Honeypot */}
         <input
           {...register("company")}
@@ -139,7 +144,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
             id="projectType"
             defaultValue=""
             aria-invalid={Boolean(errors.projectType)}
-            className={`${fieldClass} cursor-pointer appearance-none bg-[length:1rem] bg-[right_1rem_center] bg-no-repeat`}
+            className={`${fieldClass} cursor-pointer appearance-none bg-size-[1rem] bg-position-[right_1rem_center] bg-no-repeat`}
             style={{
               backgroundImage:
                 "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236f7378' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>\")",

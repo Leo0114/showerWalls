@@ -1,10 +1,12 @@
 ---
 import { getImage } from "astro:assets";
-import placeholder from "@/assets/images/placeholder.jpeg";
 import Layout from "@/layouts/Layout.astro";
+import bannerImage from "@/assets/images/mosaico.avif";
 import Banner from "@/components/shared/Banner.astro";
 import CtaSection from "@/components/shared/CtaSection.astro";
-import ProductExplorer, { type ProductListItem } from "@/components/products/ProductExplorer";
+import ProductExplorer, {
+  type ProductListItem,
+} from "@/components/products/ProductExplorer";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
 import { getProducts } from "@/lib/content";
@@ -26,7 +28,14 @@ const products: ProductListItem[] = await Promise.all(
     category: data.category,
     madeToOrder: data.madeToOrder,
     href: path("products", data.slug),
-    cover: (await getImage({ src: data.cover, width: 640, height: 480, format: "webp" })).src,
+    cover: (
+      await getImage({
+        src: data.cover,
+        width: 640,
+        height: 480,
+        format: "webp",
+      })
+    ).src,
   })),
 );
 
@@ -37,16 +46,23 @@ const initialCategory = Astro.url.searchParams.get("category") ?? undefined;
   <Banner
     title={i18n.products.title}
     subtitle={i18n.products.banner_subtitle}
-    image={placeholder}
+    image={bannerImage}
     imageAlt={i18n.products.title}
   />
 
   <section class="section-y bg-canvas">
     <div class="container-x">
-      <p class="max-w-2xl text-base leading-relaxed text-muted">{i18n.products.intro}</p>
+      <p class="max-w-2xl text-base leading-relaxed text-muted">
+        {i18n.products.intro}
+      </p>
 
       <div class="mt-12">
-        <ProductExplorer client:load lang={lang} products={products} initialCategory={initialCategory} />
+        <ProductExplorer
+          client:load
+          lang={lang}
+          products={products}
+          initialCategory={initialCategory}
+        />
       </div>
     </div>
   </section>

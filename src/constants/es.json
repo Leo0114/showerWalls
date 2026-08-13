@@ -108,11 +108,11 @@
       "cta": "Solicitar una muestra",
       "selected": "Acabado seleccionado",
       "items": {
-        "arctic": { "name": "Blanco Ártico", "description": "El neutro más luminoso. Maximiza la luz en baños compactos." },
-        "sand": { "name": "Arena Cálida", "description": "Un beige suave que mantiene un aire residencial en suites hoteleras." },
-        "carrara": { "name": "Gris Carrara", "description": "El veteado del mármol con la durabilidad de la superficie sólida." },
-        "slate": { "name": "Pizarra Costera", "description": "Gris azulado de tono medio que combina con herrajes en níquel cepillado." },
-        "graphite": { "name": "Grafito", "description": "Un carbón profundo y contemporáneo para duchas con carácter." }
+        "firefox-beige": { "name": "Firefox Beige", "description": "Un neutro cálido y sutil que suaviza cualquier espacio." },
+        "ivory": { "name": "Ivory", "description": "Un blanco roto clásico con profundidad discreta para interiores atemporales." },
+        "light-gray": { "name": "Light Gray", "description": "Un gris luminoso y ligero que maximiza la luz en baños compactos." },
+        "solid-bone": { "name": "Solid Bone", "description": "Un tono terroso y discreto que aporta calidez natural." },
+        "solid-white": { "name": "Solid White", "description": "Un blanco limpio y versátil para un acabado fresco y contemporáneo." }
       }
     },
     "catalogs": {

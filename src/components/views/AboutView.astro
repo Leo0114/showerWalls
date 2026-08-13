@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import { FiTarget, FiEye } from "react-icons/fi";
-import placeholder from "@/assets/images/placeholder.jpeg";
+import imagen from "@/assets/images/minimalBath.avif";
+import walli from "@/assets/images/wall.avif";
+
 import Layout from "@/layouts/Layout.astro";
 import Banner from "@/components/shared/Banner.astro";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
@@ -25,23 +27,27 @@ const pillars = [
   <Banner
     title={about.title}
     subtitle={about.banner_subtitle}
-    image={placeholder}
+    image={walli}
     imageAlt={about.title}
   />
 
   <section class="section-y bg-canvas">
     <div class="container-x grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
       <div>
-        <SectionHeading eyebrow={about.eyebrow} title={about.heading} description={about.description} />
+        <SectionHeading
+          eyebrow={about.eyebrow}
+          title={about.heading}
+          description={about.description}
+        />
         <p class="mt-6 max-w-2xl text-base leading-relaxed text-muted">
           {about.description_secondary}
         </p>
       </div>
 
       <ScrollReveal client:visible direction="left">
-        <div class="relative aspect-4/5 overflow-hidden rounded-[2rem]">
+        <div class="relative aspect-4/5 overflow-hidden rounded-4xl">
           <Image
-            src={placeholder}
+            src={imagen}
             alt={about.heading}
             widths={[480, 768, 1024]}
             sizes="(min-width: 1024px) 45vw, 90vw"
@@ -61,7 +67,9 @@ const pillars = [
               <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </span>
-              <h2 class="mt-6 font-display text-2xl font-bold text-ink">{title}</h2>
+              <h2 class="mt-6 font-display text-2xl font-bold text-ink">
+                {title}
+              </h2>
               <p class="mt-4 text-base leading-relaxed text-muted">{text}</p>
             </article>
           </ScrollReveal>
@@ -77,13 +85,21 @@ const pillars = [
       <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {
           about.values.items.map(({ title, description }, index) => (
-            <ScrollReveal client:visible delay={index * 0.08} className="h-full">
+            <ScrollReveal
+              client:visible
+              delay={index * 0.08}
+              className="h-full"
+            >
               <article class="flex h-full flex-col border-t-2 border-primary/20 pt-6 transition-colors duration-500 hover:border-primary">
                 <span class="font-display text-3xl font-bold text-primary/30">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 class="mt-4 font-display text-lg font-semibold text-ink">{title}</h3>
-                <p class="mt-3 text-sm leading-relaxed text-muted">{description}</p>
+                <h3 class="mt-4 font-display text-lg font-semibold text-ink">
+                  {title}
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed text-muted">
+                  {description}
+                </p>
               </article>
             </ScrollReveal>
           ))

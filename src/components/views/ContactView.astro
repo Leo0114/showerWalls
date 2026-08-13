@@ -1,6 +1,6 @@
 ---
 import { FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
-import placeholder from "@/assets/images/placeholder.jpeg";
+import bannerImage from "@/assets/images/darkshower.avif";
 import Layout from "@/layouts/Layout.astro";
 import Banner from "@/components/shared/Banner.astro";
 import ContactForm from "@/components/contact/ContactForm";
@@ -12,10 +12,30 @@ const i18n = getI18N(lang);
 const contact = i18n.contact;
 
 const details = [
-  { label: contact.info.address_label, value: contact.info.address, Icon: FiMapPin, href: undefined },
-  { label: contact.info.phone_label, value: SITE.phone, Icon: FiPhone, href: SITE.phoneHref },
-  { label: contact.info.email_label, value: SITE.email, Icon: FiMail, href: `mailto:${SITE.email}` },
-  { label: contact.info.hours_label, value: contact.info.hours, Icon: FiClock, href: undefined },
+  {
+    label: contact.info.address_label,
+    value: contact.info.address,
+    Icon: FiMapPin,
+    href: undefined,
+  },
+  {
+    label: contact.info.phone_label,
+    value: SITE.phone,
+    Icon: FiPhone,
+    href: SITE.phoneHref,
+  },
+  {
+    label: contact.info.email_label,
+    value: SITE.email,
+    Icon: FiMail,
+    href: `mailto:${SITE.email}`,
+  },
+  {
+    label: contact.info.hours_label,
+    value: contact.info.hours,
+    Icon: FiClock,
+    href: undefined,
+  },
 ];
 ---
 
@@ -23,15 +43,21 @@ const details = [
   <Banner
     title={contact.title}
     subtitle={contact.banner_subtitle}
-    image={placeholder}
+    image={bannerImage}
     imageAlt={contact.title}
   />
 
   <section class="section-y bg-canvas">
-    <div class="container-x grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] lg:gap-20">
+    <div
+      class="container-x grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] lg:gap-20"
+    >
       <div>
-        <h2 class="font-display text-2xl font-bold text-ink">{contact.info.title}</h2>
-        <p class="mt-4 max-w-md text-base leading-relaxed text-muted">{contact.intro}</p>
+        <h2 class="font-display text-2xl font-bold text-ink">
+          {contact.info.title}
+        </h2>
+        <p class="mt-4 max-w-md text-base leading-relaxed text-muted">
+          {contact.intro}
+        </p>
 
         <ul class="mt-10 space-y-6">
           {
@@ -61,8 +87,10 @@ const details = [
         </ul>
       </div>
 
-      <div class="rounded-[2rem] border border-line bg-panel p-8 sm:p-10">
-        <h2 class="font-display text-2xl font-bold text-ink">{contact.form.title}</h2>
+      <div class="rounded-4xl border border-line bg-panel p-8 sm:p-10">
+        <h2 class="font-display text-2xl font-bold text-ink">
+          {contact.form.title}
+        </h2>
         <p class="mt-2 text-sm text-muted">{contact.subtitle}</p>
 
         <div class="mt-8">

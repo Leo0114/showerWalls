@@ -32,16 +32,16 @@ export const PRODUCT_CATEGORIES = [
 export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
 
 /**
- * The five standard finishes. Hex values are placeholders until the client
- * sends the real chips — change them here only, every surface reads from this.
+ * The five standard finishes. Hex values match the real product chips.
+ * Change them here only — every surface reads from this single source.
  * `ink` is the readable foreground over `hex`.
  */
 export const FINISHES = [
-  { id: "arctic", hex: "#F4F6F7", ink: "#1c1d1a", accent: "#C9D6DD" },
-  { id: "sand", hex: "#D9CDBC", ink: "#1c1d1a", accent: "#B9A88F" },
-  { id: "carrara", hex: "#B7BEC4", ink: "#1c1d1a", accent: "#8E979F" },
-  { id: "slate", hex: "#5C7183", ink: "#ffffff", accent: "#3E505F" },
-  { id: "graphite", hex: "#2E3439", ink: "#ffffff", accent: "#1A1F23" },
+  { id: "firefox-beige", hex: "#ecebeb", ink: "#1c1d1a", accent: "#d4d3d3" },
+  { id: "ivory", hex: "#dbdbdb", ink: "#1c1d1a", accent: "#c4c4c4" },
+  { id: "light-gray", hex: "#e9e9e6", ink: "#1c1d1a", accent: "#d1d1ce" },
+  { id: "solid-bone", hex: "#c7c5b8", ink: "#1c1d1a", accent: "#b0aea2" },
+  { id: "solid-white", hex: "#dad9d9", ink: "#1c1d1a", accent: "#c3c2c2" },
 ] as const;
 
 export type FinishId = (typeof FINISHES)[number]["id"];
