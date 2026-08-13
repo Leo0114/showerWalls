@@ -18,18 +18,31 @@ interface Props {
   noindex?: boolean;
 }
 
-const { title, description, image = "/sw-logo.png", noindex = false } = Astro.props;
+const {
+  title,
+  description,
+  image = "/sw-logo.png",
+  noindex = false,
+} = Astro.props;
 
 const lang: Lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
 
-const pageTitle = title ? i18n.seo.title_template.replace("%s", title) : i18n.seo.title_default;
+const pageTitle = title
+  ? i18n.seo.title_template.replace("%s", title)
+  : i18n.seo.title_default;
 const pageDescription = description ?? i18n.seo.description_default;
 
-const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
+const canonical = new URL(
+  Astro.url.pathname,
+  Astro.site ?? SITE.url,
+).toString();
 const alternates = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
   hreflang: LANGUAGES[code].locale,
-  href: new URL(switchLocalePath(Astro.url, code), Astro.site ?? SITE.url).toString(),
+  href: new URL(
+    switchLocalePath(Astro.url, code),
+    Astro.site ?? SITE.url,
+  ).toString(),
 }));
 ---
 
@@ -38,8 +51,7 @@ const alternates = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/icon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#006da6" />
 
@@ -63,17 +75,32 @@ const alternates = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
           image: new URL(image, Astro.site ?? SITE.url).toString(),
           url: canonical,
         },
-        optional: { description: pageDescription, siteName: SITE.name, locale: LANGUAGES[lang].locale },
+        optional: {
+          description: pageDescription,
+          siteName: SITE.name,
+          locale: LANGUAGES[lang].locale,
+        },
       }}
-      twitter={{ card: "summary_large_image", title: pageTitle, description: pageDescription }}
+      twitter={{
+        card: "summary_large_image",
+        title: pageTitle,
+        description: pageDescription,
+      }}
       extend={{
         meta: [{ name: "keywords", content: i18n.seo.keywords }],
         link: [
-          ...alternates.map(({ hreflang, href }) => ({ rel: "alternate", hreflang, href })),
+          ...alternates.map(({ hreflang, href }) => ({
+            rel: "alternate",
+            hreflang,
+            href,
+          })),
           {
             rel: "alternate",
             hreflang: "x-default",
-            href: new URL(switchLocalePath(Astro.url, defaultLang), Astro.site ?? SITE.url).toString(),
+            href: new URL(
+              switchLocalePath(Astro.url, defaultLang),
+              Astro.site ?? SITE.url,
+            ).toString(),
           },
         ],
       }}
@@ -100,7 +127,7 @@ const alternates = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
   <body class="bg-canvas text-ink antialiased">
     <a
       href="#main"
-      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-100 focus:rounded-full focus:bg-primary focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
     >
       {i18n.common.skip_to_content}
     </a>
