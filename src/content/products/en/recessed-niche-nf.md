@@ -5,7 +5,7 @@ title: "Recessed Niche"
 code: "NF"
 category: "accessories"
 excerpt: "Recessed Niche finished to match the wall system, installed as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/accessories/Niche_SW_1.png
 gallery: "showcase"
 madeToOrder: false
 featured: true

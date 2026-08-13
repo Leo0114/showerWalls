@@ -5,7 +5,7 @@ title: "Nicho Empotrado"
 code: "NF"
 category: "accessories"
 excerpt: "Nicho Empotrado con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/products/accessories/Niche_SW_1.png
 gallery: "showcase"
 madeToOrder: false
 featured: true
