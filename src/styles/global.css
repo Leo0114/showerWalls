@@ -3,11 +3,110 @@
 
 @custom-variant dark (&:where(.dark,.dark *));
 
+/* ---------------------------------------------------------------------------
+   Semantic surface tokens. Only these change between light / dark, so every
+   component can stay 100% Tailwind and theme itself for free.
+--------------------------------------------------------------------------- */
+:root {
+  --canvas: #ffffff;
+  --panel: #f2f5f8;
+  --ink: #1c1d1a;
+  --muted: #6f7378;
+  --line: #e3e8ed;
+  --strategic: #006da6;
+  --overlay: 28, 29, 26;
+}
+
+.dark {
+  --canvas: #0b0f14;
+  --panel: #131a22;
+  --ink: #eef3f8;
+  --muted: #9aa5b1;
+  --line: #222c37;
+  --strategic: #4fb0e0;
+  --overlay: 4, 8, 12;
+}
 
 @theme inline {
-    --color-primary: #013383;
-    --color-secondary: #233060;
-    --color-accent: #fab702;
-}
-    
+  /* Brand — defined by the client, do not repaint. */
+  --color-primary: #006da6;
+  --color-primaryDark: #00527d;
+  --color-primaryLight: #2f9bd4;
+  --color-secondary: #7fd8ff;
+  --color-baseBlack: #1c1d1a;
+  --color-baseGray: #848080;
+  --color-strongGray: #444442;
 
+  /* Themeable surfaces */
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-strategic: var(--strategic);
+
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 84rem;
+  padding-inline: 1.25rem;
+
+  @media (width >= 64rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Vertical rhythm shared by every marketing section. */
+@utility section-y {
+  padding-block: 4.5rem;
+
+  @media (width >= 64rem) {
+    padding-block: 7rem;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* PhotoSwipe backdrop follows the active theme. */
+.pswp {
+  --pswp-bg: rgb(var(--overlay));
+}

@@ -26,7 +26,7 @@ export default defineConfig({
     robotsTxt(),
     sitemap({
       i18n: {
-        defaultLocale: "es",
+        defaultLocale: "en",
         locales: {
           es: "es-MX",
           en: "en-US",
@@ -40,8 +40,8 @@ export default defineConfig({
   },
 
   i18n: {
-    defaultLocale: "es",
-    locales: ["es", "en"],
+    defaultLocale: "en",
+    locales: ["en", "es"],
     routing: {
       prefixDefaultLocale: false,
     },

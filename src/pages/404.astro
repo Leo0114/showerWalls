@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { usePath } from "@/i18n/utils";
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const path = usePath(lang);
+---
+
+<Layout title="404" noindex>
+  <section class="section-y bg-canvas">
+    <div class="container-x flex min-h-[50vh] flex-col items-center justify-center text-center">
+      <p class="font-display text-7xl font-extrabold text-primary/20 sm:text-8xl">404</p>
+      <h1 class="mt-6 font-display text-3xl font-bold text-ink sm:text-4xl">
+        {i18n.common.no_results}
+      </h1>
+      <a
+        href={path("index")}
+        class="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primaryDark"
+      >
+        {i18n.nav.home}
+      </a>
+    </div>
+  </section>
+</Layout>

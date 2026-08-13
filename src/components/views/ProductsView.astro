@@ -1,0 +1,61 @@
+---
+import { getImage } from "astro:assets";
+import placeholder from "@/assets/images/placeholder.jpeg";
+import Layout from "@/layouts/Layout.astro";
+import Banner from "@/components/shared/Banner.astro";
+import CtaSection from "@/components/shared/CtaSection.astro";
+import ProductExplorer, { type ProductListItem } from "@/components/products/ProductExplorer";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { usePath } from "@/i18n/utils";
+import { getProducts } from "@/lib/content";
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const path = usePath(lang);
+
+const entries = await getProducts(lang);
+
+// Every card shares the same source image, so this resolves to a single
+// build-time transform reused across the whole catalog.
+const products: ProductListItem[] = await Promise.all(
+  entries.map(async ({ data }) => ({
+    slug: data.slug,
+    title: data.title,
+    code: data.code,
+    excerpt: data.excerpt,
+    category: data.category,
+    madeToOrder: data.madeToOrder,
+    href: path("products", data.slug),
+    cover: (await getImage({ src: data.cover, width: 640, height: 480, format: "webp" })).src,
+  })),
+);
+
+const initialCategory = Astro.url.searchParams.get("category") ?? undefined;
+---
+
+<Layout title={i18n.products.title} description={i18n.products.subtitle}>
+  <Banner
+    title={i18n.products.title}
+    subtitle={i18n.products.banner_subtitle}
+    image={placeholder}
+    imageAlt={i18n.products.title}
+  />
+
+  <section class="section-y bg-canvas">
+    <div class="container-x">
+      <p class="max-w-2xl text-base leading-relaxed text-muted">{i18n.products.intro}</p>
+
+      <div class="mt-12">
+        <ProductExplorer client:load lang={lang} products={products} initialCategory={initialCategory} />
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    eyebrow={i18n.home.cta.eyebrow}
+    title={i18n.products.detail.cta.title}
+    description={i18n.products.detail.cta.description}
+    primaryLabel={i18n.products.detail.cta.primary}
+    primaryHref={path("contact")}
+  />
+</Layout>

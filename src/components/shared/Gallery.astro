@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  /** Folder name inside src/assets/images/. Path is resolved automatically. */
+  name: string;
+  title?: string;
+}
+
+const { name, title } = Astro.props;
+
+// Eagerly load every gallery image; we filter to the requested folder.
+const modules = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/images/**/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG}",
+  { eager: true },
+);
+
+const images = Object.entries(modules)
+  .filter(([path]) => path.includes(`/${name}/`))
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, mod]) => mod.default);
+
+const galleryId = `pswp-${name}`;
+---
+
+{
+  images.length > 0 && (
+    <div class="gallery-block">
+      {title && (
+        <h2 class="mb-5 font-display text-2xl font-medium text-ink">{title}</h2>
+      )}
+      <div
+        id={galleryId}
+        class="grid grid-cols-2 gap-3 md:grid-cols-3"
+        data-pswp-gallery
+      >
+        {images.map((img, i) => (
+          <a
+            href={img.src}
+            data-pswp-width={img.width}
+            data-pswp-height={img.height}
+            target="_blank"
+            rel="noreferrer"
+            class:list={[
+              "group relative block overflow-hidden rounded-xl",
+              i === 0 && "col-span-2 row-span-2 md:col-span-2",
+            ]}
+          >
+            <Image
+              src={img}
+              alt={`${name} ${i + 1}`}
+              width={i === 0 ? 900 : 500}
+              height={i === 0 ? 700 : 400}
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+
+  let lightboxes: PhotoSwipeLightbox[] = [];
+
+  function initGalleries() {
+    document
+      .querySelectorAll<HTMLElement>("[data-pswp-gallery]")
+      .forEach((el) => {
+        const lb = new PhotoSwipeLightbox({
+          gallery: `#${el.id}`,
+          children: "a",
+          pswpModule: () => import("photoswipe"),
+        });
+        lb.init();
+        lightboxes.push(lb);
+      });
+  }
+
+  function destroyGalleries() {
+    lightboxes.forEach((lb) => lb.destroy());
+    lightboxes = [];
+  }
+
+  document.addEventListener("astro:page-load", initGalleries);
+  document.addEventListener("astro:before-swap", destroyGalleries);
+</script>

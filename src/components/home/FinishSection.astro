@@ -1,0 +1,28 @@
+---
+import placeholder from "@/assets/images/placeholder.jpeg";
+import SectionHeading from "@/components/shared/SectionHeading.astro";
+import FinishSelector from "@/components/home/FinishSelector";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { usePath } from "@/i18n/utils";
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const path = usePath(lang);
+
+const { eyebrow, title, description } = i18n.home.colors;
+---
+
+<section class="section-y bg-panel">
+  <div class="container-x">
+    <SectionHeading eyebrow={eyebrow} title={title} description={description} align="center" />
+
+    <div class="mt-14">
+      <FinishSelector
+        client:visible
+        lang={lang}
+        ctaHref={path("contact")}
+        previewSrc={placeholder.src}
+      />
+    </div>
+  </div>
+</section>

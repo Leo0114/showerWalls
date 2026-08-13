@@ -1,16 +1,20 @@
-import es from "@/constants/es.json";
 import en from "@/constants/en.json";
+import es from "@/constants/es.json";
+import { defaultLang, isLang, type Lang } from "./ui";
 
-const LANG = {
-  SPANISH: "es",
-  ENGLISH: "en",
+export type Dictionary = typeof en;
+
+const DICTIONARIES: Record<Lang, Dictionary> = {
+  en,
+  es: es as Dictionary,
 };
 
-export const getI18N = ({
-  currentLocale = "es",
-}: {
-  currentLocale: string | undefined;
-}) => {
-  if (currentLocale === LANG.ENGLISH) return en;
-  return es;
-};
+/**
+ * Returns the dictionary for the given locale. Accepts `Astro.currentLocale`
+ * (which may be undefined on the default, unprefixed routes).
+ */
+export const getI18N = (currentLocale?: string | null): Dictionary =>
+  DICTIONARIES[isLang(currentLocale) ? currentLocale : defaultLang];
+
+export const getLang = (currentLocale?: string | null): Lang =>
+  isLang(currentLocale) ? currentLocale : defaultLang;

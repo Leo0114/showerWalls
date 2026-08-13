@@ -1,0 +1,309 @@
+{
+  "seo": {
+    "title_default": "Shower Walls | Paneles y Revestimientos Premium para Duchas",
+    "title_template": "%s | Shower Walls",
+    "description_default": "Especialistas en la fabricación e instalación de paneles de ducha impermeables, platos de ducha y accesorios de alta calidad.",
+    "keywords": "paneles de ducha, revestimiento de ducha, platos de ducha, remodelación de baños, paneles impermeables, ducha ADA"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about_us": "Sobre Nosotros",
+    "projects": "Proyectos",
+    "products": "Productos",
+    "contact": "Contacto",
+    "cta": "Solicitar Presupuesto",
+    "menu": "Menú",
+    "close": "Cerrar menú",
+    "language": "Idioma",
+    "theme": "Tema"
+  },
+  "common": {
+    "learn_more": "Saber más",
+    "view_all": "Ver todo",
+    "explore": "Explorar",
+    "back": "Volver",
+    "download": "Descargar",
+    "search": "Buscar",
+    "filters": "Filtros",
+    "all": "Todos",
+    "results": "resultados",
+    "no_results": "Ningún producto coincide con tu búsqueda.",
+    "clear": "Limpiar filtros",
+    "skip_to_content": "Ir al contenido"
+  },
+  "home": {
+    "hero": {
+      "slides": [
+        {
+          "eyebrow": "Shower Walls",
+          "title": "Baños renovados en días, no en semanas",
+          "subtitle": "Sistemas de pared impermeables y sin juntas, diseñados para proyectos de hotelería, multifamiliares y salud."
+        },
+        {
+          "eyebrow": "Libertad de diseño",
+          "title": "26 patrones de pared. Una superficie continua",
+          "subtitle": "De Subway y Herringbone a Chevron y Santorini: cada panel llega listo para instalar."
+        },
+        {
+          "eyebrow": "Hecho a medida",
+          "title": "Platos de ducha fabricados a pedido",
+          "subtitle": "Central, lineal, esquinero, neo-ángulo, roll-in y configuraciones ADA completas alrededor de tu drenaje."
+        }
+      ],
+      "cta_primary": "Ver productos",
+      "cta_secondary": "Solicitar presupuesto",
+      "scroll": "Desliza"
+    },
+    "intro": {
+      "eyebrow": "Quiénes somos",
+      "title": "Un sistema único de paredes y platos para proyectos exigentes",
+      "description": "En Shower Walls fabricamos e instalamos sistemas de ducha en superficie sólida que sustituyen por completo al azulejo y la lechada. Un solo proveedor, un solo equipo de instalación y una sola garantía: para un baño que se entrega a tiempo y se mantiene libre de mantenimiento durante décadas.",
+      "points": [
+        "Superficies 100% impermeables y sin juntas",
+        "Instalación sobre el sustrato existente, sin demolición",
+        "Configuraciones ADA y roll-in disponibles",
+        "Acabado uniforme en cientos de unidades"
+      ],
+      "stats": [
+        { "value": "50+", "label": "Patrones y accesorios" },
+        { "value": "9", "label": "Configuraciones de plato" },
+        { "value": "3 días", "label": "Instalación típica por unidad" }
+      ]
+    },
+    "products": {
+      "eyebrow": "Nuestro catálogo",
+      "title": "Todo lo que la ducha necesita, en un solo sistema",
+      "description": "Cuatro familias de producto diseñadas para trabajar juntas: especifica la pared, el plato y los accesorios en una sola entrega.",
+      "cta": "Ver el catálogo completo"
+    },
+    "services": {
+      "eyebrow": "Qué hacemos",
+      "title": "De la ficha técnica al último panel",
+      "description": "Acompañamos el proyecto de principio a fin para que tu equipo tenga un único punto de contacto.",
+      "items": [
+        {
+          "title": "Diseño y especificación",
+          "description": "Selección de patrón, trazado de drenaje y paquetes de aprobación listos para firmar."
+        },
+        {
+          "title": "Fabricación a medida",
+          "description": "Paneles y platos cortados al vano exacto, incluyendo medidas especiales bajo pedido."
+        },
+        {
+          "title": "Instalación profesional",
+          "description": "Cuadrillas certificadas que trabajan por piso, ala o fase para no romper el calendario."
+        },
+        {
+          "title": "Renovación y retrofit",
+          "description": "Conversión de tina a ducha y adecuaciones ADA sobre el sustrato existente."
+        }
+      ],
+      "cta": "Habla con un especialista"
+    },
+    "colors": {
+      "eyebrow": "Acabados",
+      "title": "Elige un color y mira cómo cambia todo",
+      "description": "Cinco acabados estándar, disponibles en todos los patrones de pared. Toca una muestra para previsualizarla.",
+      "note": "Acabados estándar. Colores personalizados disponibles bajo pedido.",
+      "cta": "Solicitar una muestra",
+      "selected": "Acabado seleccionado",
+      "items": {
+        "arctic": { "name": "Blanco Ártico", "description": "El neutro más luminoso. Maximiza la luz en baños compactos." },
+        "sand": { "name": "Arena Cálida", "description": "Un beige suave que mantiene un aire residencial en suites hoteleras." },
+        "carrara": { "name": "Gris Carrara", "description": "El veteado del mármol con la durabilidad de la superficie sólida." },
+        "slate": { "name": "Pizarra Costera", "description": "Gris azulado de tono medio que combina con herrajes en níquel cepillado." },
+        "graphite": { "name": "Grafito", "description": "Un carbón profundo y contemporáneo para duchas con carácter." }
+      }
+    },
+    "catalogs": {
+      "eyebrow": "Descargas",
+      "title": "Llévate el catálogo completo",
+      "description": "Bibliotecas completas de patrones, dimensiones y referencias de accesorios en PDF.",
+      "items": [
+        {
+          "id": "shower-walls",
+          "title": "Catálogo Shower Walls",
+          "description": "Los 26 patrones de pared, accesorios y opciones de acabado."
+        },
+        {
+          "id": "shower-pans",
+          "title": "Catálogo Shower Pans",
+          "description": "Configuraciones de drenaje, dimensiones y especificaciones ADA."
+        }
+      ],
+      "download": "Descargar PDF",
+      "unavailable": "Próximamente"
+    },
+    "cta": {
+      "eyebrow": "Siguiente paso",
+      "title": "Cuéntanos sobre tu proyecto",
+      "description": "Envíanos el número de unidades, los vanos y el calendario. Te respondemos con una especificación y un presupuesto.",
+      "primary": "Solicitar presupuesto",
+      "secondary": "Ver nuestros proyectos"
+    }
+  },
+  "about_us": {
+    "banner_subtitle": "Nosotros",
+    "title": "Sobre Shower Walls",
+    "subtitle": "Líderes en soluciones de revestimiento para baños.",
+    "eyebrow": "Nuestra historia",
+    "heading": "Creado para los proyectos que el azulejo no podía seguir",
+    "description": "En Shower Walls fabricamos e instalamos paneles, platos y accesorios de ducha de alto desempeño. Combinamos diseño moderno, durabilidad e innovación para renovar un baño sin el ruido, el polvo ni los retrasos de una obra tradicional.",
+    "description_secondary": "Nuestros sistemas nacieron para operadores de hotelería, multifamiliares, vivienda estudiantil y salud que necesitan cientos de baños idénticos e impecables entregados en fecha, y para quienes quieren ese mismo estándar en casa.",
+    "mission": {
+      "title": "Nuestra Misión",
+      "text": "Ofrecer alternativas modernas y eficientes al azulejo tradicional, garantizando calidad superior y diseño continuo en cada unidad."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "text": "Ser la marca de referencia en revestimientos impermeables para proyectos residenciales y comerciales en Norteamérica."
+    },
+    "values": {
+      "title": "Lo que nos guía",
+      "items": [
+        { "title": "Precisión", "description": "Cada panel se corta para el vano en el que vivirá, no se ajusta en obra." },
+        { "title": "Durabilidad", "description": "Superficies no porosas que resisten moho, humedad y uso comercial diario." },
+        { "title": "Rapidez", "description": "Instalaciones medidas en días por unidad, sin demolición ni tiempos de curado." },
+        { "title": "Responsabilidad", "description": "Un solo proveedor de paredes, platos y accesorios significa una sola garantía." }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para especificar tu próximo baño?",
+      "description": "Nuestro equipo te ayuda a elegir patrones, drenajes y accesorios según tu presupuesto y calendario.",
+      "primary": "Contáctanos",
+      "secondary": "Ver productos"
+    }
+  },
+  "projects": {
+    "banner_subtitle": "Nuestro trabajo",
+    "title": "Nuestros Proyectos",
+    "subtitle": "Explora algunas de nuestras transformaciones recientes.",
+    "intro": "Una selección de instalaciones en hotelería, multifamiliares, salud y residencial.",
+    "view_details": "Ver proyecto",
+    "detail": {
+      "overview": "Sobre el proyecto",
+      "gallery_title": "Galería del proyecto",
+      "panorama_title": "Vistas 360°",
+      "panorama_hint": "Arrastra para mirar alrededor",
+      "back": "Todos los proyectos",
+      "meta": {
+        "client": "Cliente",
+        "location": "Ubicación",
+        "year": "Año",
+        "sector": "Sector",
+        "units": "Unidades",
+        "scope": "Alcance"
+      },
+      "cta": {
+        "title": "¿Quieres un resultado así?",
+        "description": "Cuéntanos sobre tu proyecto y preparamos una especificación.",
+        "primary": "Iniciar tu proyecto"
+      }
+    }
+  },
+  "products": {
+    "banner_subtitle": "Catálogo",
+    "title": "Catálogo de Productos",
+    "subtitle": "Encuentra el acabado perfecto para tu estilo.",
+    "intro": "Filtra por familia o busca por nombre y código para encontrar la referencia exacta.",
+    "categories": {
+      "tub-shower-surrounds": {
+        "name": "Tinas y Revestimientos de Ducha",
+        "description": "Sistemas de pared sin juntas en 26 patrones, cortados a tu vano."
+      },
+      "shower-pans": {
+        "name": "Platos de Ducha",
+        "description": "Configuraciones central, lineal, esquinera, neo-ángulo, roll-in y ADA."
+      },
+      "accessories": {
+        "name": "Accesorios",
+        "description": "Nichos, jaboneras, repisas, reposapiés y perfiles para completar la ducha."
+      },
+      "free-standing-tub": {
+        "name": "Tina Exenta",
+        "description": "Una tina exenta fabricada a pedido para dar carácter al baño."
+      }
+    },
+    "details_button": "Ver detalles",
+    "request_sample": "Pedir muestra",
+    "code": "Código",
+    "family": "Familia",
+    "search_placeholder": "Busca por nombre o código…",
+    "showing": "Mostrando",
+    "of": "de",
+    "products_word": "productos",
+    "detail": {
+      "gallery_title": "Galería del producto",
+      "specs": "Especificaciones",
+      "related": "Más de esta familia",
+      "back": "Volver al catálogo",
+      "cta": {
+        "title": "¿Te interesa esta referencia?",
+        "description": "Solicita precios, tiempos de entrega o una muestra física.",
+        "primary": "Solicitar presupuesto",
+        "secondary": "Ver todos los productos"
+      }
+    }
+  },
+  "contact": {
+    "banner_subtitle": "Hablemos",
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para asesorarte en tu próximo proyecto.",
+    "intro": "Cuéntanos qué estás construyendo. Un especialista te responde en un día hábil.",
+    "form": {
+      "title": "Envíanos un mensaje",
+      "first_name_label": "Nombre",
+      "first_name_placeholder": "Juan",
+      "last_name_label": "Apellido",
+      "last_name_placeholder": "Pérez",
+      "email_label": "Correo electrónico",
+      "email_placeholder": "ejemplo@correo.com",
+      "phone_label": "Teléfono",
+      "phone_placeholder": "+1 234 567 890",
+      "project_type_label": "Tipo de proyecto",
+      "project_type_placeholder": "Selecciona un tipo de proyecto",
+      "project_types": {
+        "hospitality": "Hotelería",
+        "multifamily": "Multifamiliar",
+        "student-housing": "Vivienda estudiantil",
+        "residential": "Residencial",
+        "healthcare-ada": "Salud / ADA",
+        "other": "Otro"
+      },
+      "message_label": "Mensaje",
+      "message_placeholder": "¿En qué podemos ayudarte?",
+      "submit_button": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success_message": "¡Gracias! Nos pondremos en contacto contigo pronto.",
+      "error_message": "Ocurrió un error. Por favor inténtalo de nuevo.",
+      "required": "Campo obligatorio",
+      "errors": {
+        "first_name": "Ingresa tu nombre.",
+        "last_name": "Ingresa tu apellido.",
+        "email": "Ingresa un correo electrónico válido.",
+        "phone": "Ingresa un teléfono válido.",
+        "project_type": "Selecciona un tipo de proyecto.",
+        "message": "Cuéntanos un poco más (mínimo 10 caracteres)."
+      }
+    },
+    "info": {
+      "title": "Información de contacto",
+      "address_label": "Dirección",
+      "address": "Dirección de la empresa",
+      "phone_label": "Teléfono",
+      "phone": "+1 (800) 123-4567",
+      "email_label": "Correo",
+      "email": "contacto@shower-walls.net",
+      "hours_label": "Horario",
+      "hours": "Lunes a Viernes: 9:00 AM - 6:00 PM"
+    }
+  },
+  "footer": {
+    "tagline": "Sistemas de pared de ducha impermeables y sin juntas para proyectos residenciales y comerciales.",
+    "navigation": "Navegación",
+    "catalog": "Catálogo",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "back_to_top": "Volver arriba"
+  }
+}

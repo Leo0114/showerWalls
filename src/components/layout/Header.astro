@@ -1,0 +1,190 @@
+---
+import { Image } from "astro:assets";
+import { FiMenu, FiX } from "react-icons/fi";
+import logo from "@/assets/sw-logo.png";
+import ThemeToggle from "@/components/shared/ThemeToggle.astro";
+import LangToggle from "@/components/shared/LangToggle.astro";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { usePath } from "@/i18n/utils";
+import { NAV_ITEMS, SITE } from "@/constants/site";
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const path = usePath(lang);
+
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+
+const links = NAV_ITEMS.map(({ route, key }) => {
+  const href = path(route);
+  const normalized = href.replace(/\/$/, "") || "/";
+  return {
+    href,
+    label: i18n.nav[key as keyof typeof i18n.nav],
+    isActive: normalized === "/" ? current === "/" : current.startsWith(normalized),
+  };
+});
+---
+
+<header
+  id="site-header"
+  class="sticky top-0 z-50 border-b border-line/70 bg-canvas/80 backdrop-blur-xl transition-shadow duration-300"
+>
+  <div class="container-x flex h-18 items-center justify-between gap-6 py-3">
+    <a
+      href={path("index")}
+      class="flex shrink-0 items-center gap-3"
+      aria-label={SITE.name}
+    >
+      <Image
+        src={logo}
+        alt={SITE.name}
+        width={168}
+        height={48}
+        loading="eager"
+        class="h-9 w-auto object-contain md:h-11"
+        transition:name="site-logo"
+      />
+    </a>
+
+    <nav aria-label={i18n.nav.menu} class="hidden lg:block">
+      <ul class="flex items-center gap-1">
+        {
+          links.map(({ href, label, isActive }) => (
+            <li>
+              <a
+                href={href}
+                aria-current={isActive ? "page" : undefined}
+                class:list={[
+                  "relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300",
+                  isActive ? "text-primary" : "text-muted hover:text-ink",
+                ]}
+              >
+                {label}
+                {isActive && (
+                  <span class="absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-primary" />
+                )}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <LangToggle class="hidden sm:inline-flex" label={i18n.nav.language} />
+      <ThemeToggle label={i18n.nav.theme} />
+      <a
+        href={path("contact")}
+        class="hidden rounded-full bg-primary px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-primaryDark hover:shadow-lg hover:shadow-primary/25 lg:inline-flex"
+      >
+        {i18n.nav.cta}
+      </a>
+
+      <button
+        type="button"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label={i18n.nav.menu}
+        class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line text-ink transition-colors hover:bg-panel lg:hidden"
+      >
+        <FiMenu className="block h-5 w-5" aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    data-menu-panel
+    hidden
+    class="fixed inset-0 z-50 flex flex-col bg-canvas lg:hidden"
+  >
+    <div class="container-x flex h-18 items-center justify-between py-3">
+      <Image src={logo} alt={SITE.name} width={168} height={48} class="h-9 w-auto object-contain" />
+      <button
+        type="button"
+        data-menu-close
+        aria-label={i18n.nav.close}
+        class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line text-ink"
+      >
+        <FiX className="h-5 w-5" aria-hidden="true" />
+      </button>
+    </div>
+
+    <nav aria-label={i18n.nav.menu} class="container-x flex flex-1 flex-col justify-center pb-16">
+      <ul class="flex flex-col gap-1">
+        {
+          links.map(({ href, label, isActive }, index) => (
+            <li>
+              <a
+                href={href}
+                aria-current={isActive ? "page" : undefined}
+                style={`--i:${index}`}
+                class:list={[
+                  "block border-b border-line/60 py-4 font-display text-2xl font-semibold transition-colors",
+                  isActive ? "text-primary" : "text-ink hover:text-primary",
+                ]}
+              >
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-8 flex items-center justify-between gap-3">
+        <LangToggle label={i18n.nav.language} />
+        <a
+          href={path("contact")}
+          class="rounded-full bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white"
+        >
+          {i18n.nav.cta}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const OPEN_CLASS = "overflow-hidden";
+
+  const setMenu = (open: boolean) => {
+    const panel = document.querySelector<HTMLElement>("[data-menu-panel]");
+    const toggle = document.querySelector<HTMLElement>("[data-menu-toggle]");
+    if (!panel || !toggle) return;
+
+    panel.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle(OPEN_CLASS, open);
+  };
+
+  document.addEventListener("click", (event) => {
+    const target = event.target as Element | null;
+    if (!target) return;
+
+    if (target.closest("[data-menu-toggle]")) return setMenu(true);
+    if (target.closest("[data-menu-close]")) return setMenu(false);
+    if (target.closest("[data-menu-panel] a")) return setMenu(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenu(false);
+  });
+
+  const onScroll = () => {
+    const header = document.getElementById("site-header");
+    header?.classList.toggle("shadow-lg", window.scrollY > 8);
+    header?.classList.toggle("shadow-baseBlack/5", window.scrollY > 8);
+  };
+
+  document.addEventListener("astro:page-load", () => {
+    setMenu(false);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  });
+
+  document.addEventListener("astro:before-swap", () => {
+    window.removeEventListener("scroll", onScroll);
+    document.body.classList.remove(OPEN_CLASS);
+  });
+</script>

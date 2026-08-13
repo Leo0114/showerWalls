@@ -1,0 +1,309 @@
+{
+  "seo": {
+    "title_default": "Shower Walls | Premium Shower Wall Panels & Surround Systems",
+    "title_template": "%s | Shower Walls",
+    "description_default": "Specialists in supply and installation of high-quality, waterproof and durable shower wall panels, shower pans and accessories.",
+    "keywords": "shower panels, shower walls, shower pans, bathroom remodeling, waterproof wall panels, ADA shower"
+  },
+  "nav": {
+    "home": "Home",
+    "about_us": "About Us",
+    "projects": "Projects",
+    "products": "Products",
+    "contact": "Contact",
+    "cta": "Request a Quote",
+    "menu": "Menu",
+    "close": "Close menu",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "common": {
+    "learn_more": "Learn more",
+    "view_all": "View all",
+    "explore": "Explore",
+    "back": "Back",
+    "download": "Download",
+    "search": "Search",
+    "filters": "Filters",
+    "all": "All",
+    "results": "results",
+    "no_results": "No products match your search.",
+    "clear": "Clear filters",
+    "skip_to_content": "Skip to content"
+  },
+  "home": {
+    "hero": {
+      "slides": [
+        {
+          "eyebrow": "Shower Walls",
+          "title": "Bathrooms rebuilt in days, not weeks",
+          "subtitle": "Grout-free, waterproof wall systems engineered for hospitality, multifamily and healthcare projects."
+        },
+        {
+          "eyebrow": "Design freedom",
+          "title": "26 wall patterns. One seamless surface",
+          "subtitle": "From Subway and Herringbone to Chevron and Santorini — every panel arrives ready to install."
+        },
+        {
+          "eyebrow": "Built to spec",
+          "title": "Shower pans made to order",
+          "subtitle": "Center, trench, corner, neo-angle, roll-in and full ADA configurations built around your drain."
+        }
+      ],
+      "cta_primary": "Explore products",
+      "cta_secondary": "Request a quote",
+      "scroll": "Scroll"
+    },
+    "intro": {
+      "eyebrow": "Who we are",
+      "title": "A single-source wall and pan system for demanding projects",
+      "description": "Shower Walls manufactures and installs solid-surface shower systems that replace tile and grout entirely. One supplier, one install crew, one warranty — for a bathroom that ships on schedule and stays maintenance-free for decades.",
+      "points": [
+        "100% waterproof, grout-free surfaces",
+        "Installed over existing substrates — no demolition",
+        "ADA and roll-in configurations available",
+        "Consistent finish across hundreds of units"
+      ],
+      "stats": [
+        { "value": "50+", "label": "Wall patterns & accessories" },
+        { "value": "9", "label": "Shower pan configurations" },
+        { "value": "3 days", "label": "Typical install per unit" }
+      ]
+    },
+    "products": {
+      "eyebrow": "Our catalog",
+      "title": "Everything the shower needs, from one system",
+      "description": "Four product families designed to work together — specify the wall, the pan and the accessories in a single submittal.",
+      "cta": "See the full catalog"
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "From the spec sheet to the last panel",
+      "description": "We support the project end to end so your team keeps a single point of contact.",
+      "items": [
+        {
+          "title": "Design & specification",
+          "description": "Pattern selection, drain layout and submittal packages ready for approval."
+        },
+        {
+          "title": "Custom fabrication",
+          "description": "Panels and pans cut to your exact rough opening, including made-to-order sizes."
+        },
+        {
+          "title": "Professional installation",
+          "description": "Certified crews working by floor, wing or phase to keep the schedule intact."
+        },
+        {
+          "title": "Renovation & retrofit",
+          "description": "Tub-to-shower conversions and ADA upgrades over existing substrates."
+        }
+      ],
+      "cta": "Talk to a specialist"
+    },
+    "colors": {
+      "eyebrow": "Finishes",
+      "title": "Pick a color, see the room change",
+      "description": "Five standard finishes, available across every wall pattern. Tap a swatch to preview it.",
+      "note": "Standard finishes. Custom colors available on request.",
+      "cta": "Request a sample",
+      "selected": "Selected finish",
+      "items": {
+        "arctic": { "name": "Arctic White", "description": "The brightest neutral. Maximizes light in compact bathrooms." },
+        "sand": { "name": "Warm Sand", "description": "A soft beige that keeps hospitality suites feeling residential." },
+        "carrara": { "name": "Carrara Grey", "description": "Marbled movement with the durability of solid surface." },
+        "slate": { "name": "Coastal Slate", "description": "Mid-tone blue-grey that pairs with brushed nickel trim." },
+        "graphite": { "name": "Graphite", "description": "A deep, contemporary charcoal for statement showers." }
+      }
+    },
+    "catalogs": {
+      "eyebrow": "Downloads",
+      "title": "Take the full catalog with you",
+      "description": "Complete pattern libraries, dimensions and accessory references in PDF.",
+      "items": [
+        {
+          "id": "shower-walls",
+          "title": "Shower Walls Catalog",
+          "description": "All 26 wall patterns, accessories and finish options."
+        },
+        {
+          "id": "shower-pans",
+          "title": "Shower Pans Catalog",
+          "description": "Drain configurations, dimensions and ADA specifications."
+        }
+      ],
+      "download": "Download PDF",
+      "unavailable": "Coming soon"
+    },
+    "cta": {
+      "eyebrow": "Next step",
+      "title": "Tell us about your project",
+      "description": "Send us the unit count, the rough openings and the timeline. We will come back with a specification and a quote.",
+      "primary": "Request a quote",
+      "secondary": "See our projects"
+    }
+  },
+  "about_us": {
+    "banner_subtitle": "About us",
+    "title": "About Shower Walls",
+    "subtitle": "Leaders in innovative bathroom wall solutions.",
+    "eyebrow": "Our story",
+    "heading": "Built for the projects tile could not keep up with",
+    "description": "At Shower Walls we manufacture and install high-performance shower wall panels, pans and accessories. We combine modern design, durability and innovation to renovate a bathroom without the noise, dust and delays of traditional remodeling.",
+    "description_secondary": "Our systems were developed for hospitality, multifamily, student housing and healthcare operators who need hundreds of identical, flawless bathrooms delivered on a schedule — and for homeowners who want that same standard at home.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "To deliver modern, efficient alternatives to traditional tile, ensuring superior quality and seamless design on every unit we touch."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the go-to brand for waterproof wall coverings in residential and commercial projects across North America."
+    },
+    "values": {
+      "title": "What guides us",
+      "items": [
+        { "title": "Precision", "description": "Every panel is cut to the opening it will live in — not trimmed on site." },
+        { "title": "Durability", "description": "Non-porous surfaces that resist mold, mildew and daily commercial use." },
+        { "title": "Speed", "description": "Installs measured in days per unit, with no demolition or curing time." },
+        { "title": "Accountability", "description": "One supplier for walls, pans and accessories means one warranty." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to specify your next bathroom?",
+      "description": "Our team will help you choose patterns, drains and accessories that fit your budget and schedule.",
+      "primary": "Contact us",
+      "secondary": "Browse products"
+    }
+  },
+  "projects": {
+    "banner_subtitle": "Our work",
+    "title": "Our Projects",
+    "subtitle": "Explore some of our recent bathroom transformations.",
+    "intro": "A selection of installations across hospitality, multifamily, healthcare and residential work.",
+    "view_details": "View project",
+    "detail": {
+      "overview": "Project overview",
+      "gallery_title": "Project gallery",
+      "panorama_title": "360° views",
+      "panorama_hint": "Drag to look around",
+      "back": "All projects",
+      "meta": {
+        "client": "Client",
+        "location": "Location",
+        "year": "Year",
+        "sector": "Sector",
+        "units": "Units",
+        "scope": "Scope"
+      },
+      "cta": {
+        "title": "Want a result like this?",
+        "description": "Tell us about your project and we will put together a specification.",
+        "primary": "Start your project"
+      }
+    }
+  },
+  "products": {
+    "banner_subtitle": "Catalog",
+    "title": "Product Catalog",
+    "subtitle": "Find the perfect finish for your style.",
+    "intro": "Filter by family or search by name and code to find the exact reference.",
+    "categories": {
+      "tub-shower-surrounds": {
+        "name": "Tub & Shower Surrounds",
+        "description": "Grout-free wall systems in 26 patterns, cut to your rough opening."
+      },
+      "shower-pans": {
+        "name": "Shower Pans",
+        "description": "Center, trench, corner, neo-angle, roll-in and ADA pan configurations."
+      },
+      "accessories": {
+        "name": "Accessories",
+        "description": "Niches, soap dishes, shelves, footrests and trim to complete the shower."
+      },
+      "free-standing-tub": {
+        "name": "Free Standing Tub",
+        "description": "A made-to-order freestanding tub to anchor the bathroom."
+      }
+    },
+    "details_button": "View details",
+    "request_sample": "Request a sample",
+    "code": "Code",
+    "family": "Family",
+    "search_placeholder": "Search by name or code…",
+    "showing": "Showing",
+    "of": "of",
+    "products_word": "products",
+    "detail": {
+      "gallery_title": "Product gallery",
+      "specs": "Specifications",
+      "related": "More in this family",
+      "back": "Back to catalog",
+      "cta": {
+        "title": "Interested in this reference?",
+        "description": "Request pricing, lead times or a physical sample.",
+        "primary": "Request a quote",
+        "secondary": "View all products"
+      }
+    }
+  },
+  "contact": {
+    "banner_subtitle": "Get in touch",
+    "title": "Contact Us",
+    "subtitle": "We are here to help you with your next project.",
+    "intro": "Tell us what you are building. A specialist will reply within one business day.",
+    "form": {
+      "title": "Send us a message",
+      "first_name_label": "First name",
+      "first_name_placeholder": "John",
+      "last_name_label": "Last name",
+      "last_name_placeholder": "Doe",
+      "email_label": "Email address",
+      "email_placeholder": "example@mail.com",
+      "phone_label": "Phone number",
+      "phone_placeholder": "+1 234 567 890",
+      "project_type_label": "Project type",
+      "project_type_placeholder": "Select a project type",
+      "project_types": {
+        "hospitality": "Hospitality",
+        "multifamily": "Multifamily",
+        "student-housing": "Student housing",
+        "residential": "Residential",
+        "healthcare-ada": "Healthcare / ADA",
+        "other": "Other"
+      },
+      "message_label": "Message",
+      "message_placeholder": "How can we help you?",
+      "submit_button": "Send message",
+      "sending": "Sending…",
+      "success_message": "Thank you! We will get back to you shortly.",
+      "error_message": "An error occurred. Please try again.",
+      "required": "Required field",
+      "errors": {
+        "first_name": "Please enter your first name.",
+        "last_name": "Please enter your last name.",
+        "email": "Please enter a valid email address.",
+        "phone": "Please enter a valid phone number.",
+        "project_type": "Please select a project type.",
+        "message": "Please tell us a bit more (10 characters minimum)."
+      }
+    },
+    "info": {
+      "title": "Contact information",
+      "address_label": "Address",
+      "address": "Company Address",
+      "phone_label": "Phone",
+      "phone": "+1 (800) 123-4567",
+      "email_label": "Email",
+      "email": "contact@shower-walls.net",
+      "hours_label": "Hours",
+      "hours": "Monday - Friday: 9:00 AM - 6:00 PM"
+    }
+  },
+  "footer": {
+    "tagline": "Waterproof, grout-free shower wall systems for residential and commercial projects.",
+    "navigation": "Navigation",
+    "catalog": "Catalog",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "back_to_top": "Back to top"
+  }
+}

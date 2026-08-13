@@ -1,0 +1,140 @@
+---
+import { Image } from "astro:assets";
+import { render } from "astro:content";
+import { FiArrowLeft } from "react-icons/fi";
+import Layout from "@/layouts/Layout.astro";
+import Gallery from "@/components/shared/Gallery.astro";
+import Panorama360 from "@/components/shared/Panorama360.astro";
+import CtaSection from "@/components/shared/CtaSection.astro";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { usePath } from "@/i18n/utils";
+import type { Project } from "@/lib/content";
+import { DEFAULT_GALLERY } from "@/constants/site";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const path = usePath(lang);
+const detail = i18n.projects.detail;
+
+const { title, excerpt, cover, client, location, year, sector, units, scope, gallery, panoramas, slug } =
+  project.data;
+
+const meta = [
+  { label: detail.meta.client, value: client },
+  { label: detail.meta.location, value: location },
+  { label: detail.meta.year, value: String(year) },
+  { label: detail.meta.sector, value: sector },
+  ...(units ? [{ label: detail.meta.units, value: units }] : []),
+];
+---
+
+<Layout title={title} description={excerpt}>
+  <section class="relative isolate overflow-hidden bg-baseBlack">
+    <Image
+      src={cover}
+      alt={title}
+      widths={[768, 1280, 1920]}
+      sizes="100vw"
+      loading="eager"
+      class="absolute inset-0 -z-10 h-full w-full object-cover opacity-55"
+      transition:name={`project-image-${slug}`}
+    />
+    <div
+      class="absolute inset-0 -z-10 bg-gradient-to-t from-baseBlack via-baseBlack/70 to-baseBlack/30"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="container-x py-24 lg:py-32">
+      <a
+        href={path("projects")}
+        class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/70 transition-colors hover:text-white"
+      >
+        <FiArrowLeft className="h-4 w-4" aria-hidden="true" />
+        {detail.back}
+      </a>
+
+      <p class="mt-10 text-xs font-semibold uppercase tracking-[0.3em] text-secondary">{sector}</p>
+      <h1
+        class="mt-4 max-w-4xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-6xl"
+        transition:name={`project-title-${slug}`}
+      >
+        {title}
+      </h1>
+      <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/75">{excerpt}</p>
+    </div>
+  </section>
+
+  <section class="border-b border-line bg-panel">
+    <dl class="container-x grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-5">
+      {
+        meta.map(({ label, value }) => (
+          <div>
+            <dt class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted">{label}</dt>
+            <dd class="mt-2 font-display text-lg font-semibold text-ink">{value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="section-y bg-canvas">
+    <div class="container-x grid gap-14 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
+      <div>
+        <h2 class="font-display text-2xl font-bold text-ink">{detail.overview}</h2>
+        <div
+          class="prose prose-neutral mt-6 max-w-none dark:prose-invert prose-headings:font-display prose-a:text-primary"
+        >
+          <Content />
+        </div>
+      </div>
+
+      {
+        scope.length > 0 && (
+          <aside class="h-fit rounded-3xl border border-line bg-panel p-8">
+            <h2 class="font-display text-lg font-semibold text-ink">{detail.meta.scope}</h2>
+            <ul class="mt-5 space-y-3">
+              {scope.map((item) => (
+                <li class="flex items-start gap-3 text-sm leading-relaxed text-muted">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section-y bg-panel pt-0">
+    <div class="container-x space-y-16">
+      <Gallery name={gallery ?? DEFAULT_GALLERY} title={detail.gallery_title} />
+      {
+        panoramas.length > 0 && (
+          <Panorama360
+            names={panoramas}
+            title={detail.panorama_title}
+            hint={detail.panorama_hint}
+          />
+        )
+      }
+    </div>
+  </section>
+
+  <CtaSection
+    title={detail.cta.title}
+    description={detail.cta.description}
+    primaryLabel={detail.cta.primary}
+    primaryHref={path("contact")}
+    secondaryLabel={detail.back}
+    secondaryHref={path("projects")}
+  />
+</Layout>

@@ -1,0 +1,44 @@
+---
+import { LANGUAGES, type Lang } from "@/i18n/ui";
+import { getLang } from "@/i18n/i18n";
+import { switchLocalePath } from "@/i18n/utils";
+
+interface Props {
+  class?: string;
+  label?: string;
+}
+
+const { class: className = "", label } = Astro.props;
+
+const current: Lang = getLang(Astro.currentLocale);
+const options = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
+  code,
+  ...LANGUAGES[code],
+  href: switchLocalePath(Astro.url, code),
+  isActive: code === current,
+}));
+---
+
+<div
+  class:list={["inline-flex items-center rounded-full border border-line bg-canvas/60 p-0.5", className]}
+  role="group"
+  aria-label={label ?? "Language"}
+>
+  {
+    options.map(({ code, short, name, href, isActive }) => (
+      <a
+        href={href}
+        hreflang={code}
+        lang={code}
+        aria-current={isActive ? "true" : undefined}
+        title={name}
+        class:list={[
+          "rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] transition-colors duration-300",
+          isActive ? "bg-primary text-white" : "text-muted hover:text-ink",
+        ]}
+      >
+        {short}
+      </a>
+    ))
+  }
+</div>

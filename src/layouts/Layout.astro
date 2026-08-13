@@ -2,29 +2,114 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import { SEO } from "astro-seo";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+import ScrollTop from "@/components/shared/ScrollTop.astro";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { LANGUAGES, defaultLang, type Lang } from "@/i18n/ui";
+import { switchLocalePath } from "@/i18n/utils";
+import { SITE } from "@/constants/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Absolute or root-relative OG image. */
+  image?: string;
+  noindex?: boolean;
+}
+
+const { title, description, image = "/sw-logo.png", noindex = false } = Astro.props;
+
+const lang: Lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+
+const pageTitle = title ? i18n.seo.title_template.replace("%s", title) : i18n.seo.title_default;
+const pageDescription = description ?? i18n.seo.description_default;
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
+const alternates = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
+  hreflang: LANGUAGES[code].locale,
+  href: new URL(switchLocalePath(Astro.url, code), Astro.site ?? SITE.url).toString(),
+}));
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={LANGUAGES[lang].locale} class="scroll-pt-24">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <ClientRouter />
     <meta name="generator" content={Astro.generator} />
-    <title>Shower Walls</title>
+    <meta name="theme-color" content="#006da6" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap"
+    />
+
+    <SEO
+      title={pageTitle}
+      description={pageDescription}
+      canonical={canonical}
+      noindex={noindex}
+      nofollow={noindex}
+      openGraph={{
+        basic: {
+          title: pageTitle,
+          type: "website",
+          image: new URL(image, Astro.site ?? SITE.url).toString(),
+          url: canonical,
+        },
+        optional: { description: pageDescription, siteName: SITE.name, locale: LANGUAGES[lang].locale },
+      }}
+      twitter={{ card: "summary_large_image", title: pageTitle, description: pageDescription }}
+      extend={{
+        meta: [{ name: "keywords", content: i18n.seo.keywords }],
+        link: [
+          ...alternates.map(({ hreflang, href }) => ({ rel: "alternate", hreflang, href })),
+          {
+            rel: "alternate",
+            hreflang: "x-default",
+            href: new URL(switchLocalePath(Astro.url, defaultLang), Astro.site ?? SITE.url).toString(),
+          },
+        ],
+      }}
+    />
+
+    <ClientRouter />
+
+    <script is:inline>
+      // Applied before first paint to avoid a theme flash.
+      (() => {
+        const apply = () => {
+          const stored = localStorage.getItem("theme");
+          const dark = stored
+            ? stored === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.classList.toggle("dark", dark);
+        };
+        apply();
+        document.addEventListener("astro:after-swap", apply);
+      })();
+    </script>
   </head>
-  <body>
-    <slot />
+
+  <body class="bg-canvas text-ink antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+    >
+      {i18n.common.skip_to_content}
+    </a>
+
+    <Header />
+    <main id="main" class="min-h-screen">
+      <slot />
+    </main>
+    <Footer />
+    <ScrollTop />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>

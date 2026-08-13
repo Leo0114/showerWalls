@@ -1,0 +1,70 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center";
+  tone?: "default" | "inverted";
+  class?: string;
+  /** Heading level — sections inside a page should not all be `h2`. */
+  as?: "h1" | "h2" | "h3";
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  align = "left",
+  tone = "default",
+  as: Tag = "h2",
+  class: className = "",
+} = Astro.props;
+
+const isCenter = align === "center";
+const isInverted = tone === "inverted";
+---
+
+<div
+  class:list={[
+    "max-w-2xl",
+    isCenter && "mx-auto text-center",
+    className,
+  ]}
+>
+  {
+    eyebrow && (
+      <p
+        class:list={[
+          "flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em]",
+          isCenter && "justify-center",
+          isInverted ? "text-secondary" : "text-primary",
+        ]}
+      >
+        <span class:list={["h-px w-8", isInverted ? "bg-secondary/60" : "bg-primary/40"]} />
+        {eyebrow}
+      </p>
+    )
+  }
+
+  <Tag
+    class:list={[
+      "mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl lg:text-[2.75rem]",
+      isInverted ? "text-white" : "text-ink",
+    ]}
+  >
+    {title}
+  </Tag>
+
+  {
+    description && (
+      <p
+        class:list={[
+          "mt-5 text-base leading-relaxed text-pretty",
+          isInverted ? "text-white/75" : "text-muted",
+        ]}
+      >
+        {description}
+      </p>
+    )
+  }
+</div>

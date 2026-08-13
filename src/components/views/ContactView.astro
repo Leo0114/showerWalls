@@ -1,0 +1,74 @@
+---
+import { FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import placeholder from "@/assets/images/placeholder.jpeg";
+import Layout from "@/layouts/Layout.astro";
+import Banner from "@/components/shared/Banner.astro";
+import ContactForm from "@/components/contact/ContactForm";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { SITE } from "@/constants/site";
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const contact = i18n.contact;
+
+const details = [
+  { label: contact.info.address_label, value: contact.info.address, Icon: FiMapPin, href: undefined },
+  { label: contact.info.phone_label, value: SITE.phone, Icon: FiPhone, href: SITE.phoneHref },
+  { label: contact.info.email_label, value: SITE.email, Icon: FiMail, href: `mailto:${SITE.email}` },
+  { label: contact.info.hours_label, value: contact.info.hours, Icon: FiClock, href: undefined },
+];
+---
+
+<Layout title={contact.title} description={contact.subtitle}>
+  <Banner
+    title={contact.title}
+    subtitle={contact.banner_subtitle}
+    image={placeholder}
+    imageAlt={contact.title}
+  />
+
+  <section class="section-y bg-canvas">
+    <div class="container-x grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] lg:gap-20">
+      <div>
+        <h2 class="font-display text-2xl font-bold text-ink">{contact.info.title}</h2>
+        <p class="mt-4 max-w-md text-base leading-relaxed text-muted">{contact.intro}</p>
+
+        <ul class="mt-10 space-y-6">
+          {
+            details.map(({ label, value, Icon, href }) => (
+              <li class="flex items-start gap-4">
+                <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                </span>
+                <div>
+                  <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted">
+                    {label}
+                  </p>
+                  {href ? (
+                    <a
+                      href={href}
+                      class="mt-1 block text-sm font-medium text-ink transition-colors hover:text-primary"
+                    >
+                      {value}
+                    </a>
+                  ) : (
+                    <p class="mt-1 text-sm font-medium text-ink">{value}</p>
+                  )}
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="rounded-[2rem] border border-line bg-panel p-8 sm:p-10">
+        <h2 class="font-display text-2xl font-bold text-ink">{contact.form.title}</h2>
+        <p class="mt-2 text-sm text-muted">{contact.subtitle}</p>
+
+        <div class="mt-8">
+          <ContactForm client:load lang={lang} />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

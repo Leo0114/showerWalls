@@ -1,0 +1,13 @@
+---
+import ProjectDetailView from "@/components/views/ProjectDetailView.astro";
+import { getLang } from "@/i18n/i18n";
+import { getProject } from "@/lib/content";
+
+const lang = getLang(Astro.currentLocale);
+const { slug } = Astro.params;
+
+const project = slug ? await getProject(lang, slug) : undefined;
+if (!project) return Astro.rewrite("/404");
+---
+
+<ProjectDetailView project={project} />

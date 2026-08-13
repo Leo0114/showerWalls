@@ -1,0 +1,13 @@
+---
+import ProductDetailView from "@/components/views/ProductDetailView.astro";
+import { getLang } from "@/i18n/i18n";
+import { getProduct } from "@/lib/content";
+
+const lang = getLang(Astro.currentLocale);
+const { slug } = Astro.params;
+
+const product = slug ? await getProduct(lang, slug) : undefined;
+if (!product) return Astro.rewrite("/404");
+---
+
+<ProductDetailView product={product} />

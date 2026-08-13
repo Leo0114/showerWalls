@@ -1,0 +1,244 @@
+---
+import { Image } from "astro:assets";
+import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import placeholder from "@/assets/images/placeholder.jpeg";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { usePath } from "@/i18n/utils";
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const path = usePath(lang);
+
+const { slides, cta_primary, cta_secondary, scroll } = i18n.home.hero;
+
+/** Swap these for the real hero photography — the copy stays in the dictionary. */
+const media = [
+  { image: placeholder, position: "object-center" },
+  { image: placeholder, position: "object-top" },
+  { image: placeholder, position: "object-bottom" },
+];
+
+const items = slides.map((slide, index) => ({ ...slide, ...media[index % media.length] }));
+---
+
+<section
+  class="relative isolate min-h-[38rem] overflow-hidden bg-baseBlack lg:min-h-[44rem]"
+  data-hero
+  aria-roledescription="carousel"
+>
+  <div class="absolute inset-0 -z-20">
+    {
+      items.map(({ image, position }, index) => (
+        <div
+          class:list={[
+            "absolute inset-0 transition-opacity duration-[1200ms] ease-out",
+            index === 0 ? "opacity-100" : "opacity-0",
+          ]}
+          data-hero-media={index}
+        >
+          <Image
+            src={image}
+            alt=""
+            widths={[768, 1280, 1920]}
+            sizes="100vw"
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchpriority={index === 0 ? "high" : "auto"}
+            class:list={["h-full w-full scale-105 object-cover", position]}
+          />
+        </div>
+      ))
+    }
+  </div>
+
+  <div
+    class="absolute inset-0 -z-10 bg-gradient-to-r from-baseBlack/90 via-baseBlack/70 to-baseBlack/20"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="absolute inset-0 -z-10 bg-gradient-to-t from-primary/40 via-transparent to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="container-x relative flex min-h-[38rem] flex-col justify-center py-24 lg:min-h-[44rem]">
+    <div class="max-w-3xl">
+      {
+        items.map(({ eyebrow, title, subtitle }, index) => (
+          <article
+            data-hero-slide={index}
+            aria-hidden={index !== 0 ? "true" : undefined}
+            class:list={[
+              "transition-all duration-700 ease-out",
+              index === 0
+                ? "translate-y-0 opacity-100"
+                : "pointer-events-none absolute inset-x-0 translate-y-6 opacity-0",
+            ]}
+          >
+            <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-secondary">
+              <span class="h-px w-10 bg-secondary/70" />
+              {eyebrow}
+            </p>
+            <h1 class="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">
+              {title}
+            </h1>
+            <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">{subtitle}</p>
+          </article>
+        ))
+      }
+
+      <div class="mt-10 flex flex-wrap items-center gap-3">
+        <a
+          href={path("products")}
+          class="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primaryDark"
+        >
+          {cta_primary}
+          <FiArrowRight
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            aria-hidden="true"
+          />
+        </a>
+        <a
+          href={path("contact")}
+          class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white/15"
+        >
+          {cta_secondary}
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-14 flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          data-hero-prev
+          aria-label="Previous slide"
+          class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/15"
+        >
+          <FiChevronLeft className="h-5 w-5" aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          data-hero-next
+          aria-label="Next slide"
+          class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/15"
+        >
+          <FiChevronRight className="h-5 w-5" aria-hidden="true" />
+        </button>
+      </div>
+
+      <ul class="flex items-center gap-2" role="tablist">
+        {
+          items.map((_, index) => (
+            <li>
+              <button
+                type="button"
+                role="tab"
+                data-hero-dot={index}
+                aria-label={`${index + 1} / ${items.length}`}
+                aria-selected={index === 0 ? "true" : "false"}
+                class:list={[
+                  "h-1.5 cursor-pointer rounded-full transition-all duration-500",
+                  index === 0 ? "w-10 bg-secondary" : "w-4 bg-white/35 hover:bg-white/60",
+                ]}
+              />
+            </li>
+          ))
+        }
+      </ul>
+
+      <span class="ml-auto hidden text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-white/50 sm:block">
+        {scroll}
+      </span>
+    </div>
+  </div>
+</section>
+
+<script>
+  const AUTOPLAY_MS = 6500;
+
+  let timer: ReturnType<typeof setInterval> | undefined;
+
+  function initHero() {
+    const root = document.querySelector<HTMLElement>("[data-hero]");
+    if (!root) return;
+
+    const slides = [...root.querySelectorAll<HTMLElement>("[data-hero-slide]")];
+    const media = [...root.querySelectorAll<HTMLElement>("[data-hero-media]")];
+    const dots = [...root.querySelectorAll<HTMLElement>("[data-hero-dot]")];
+    if (slides.length < 2) return;
+
+    let index = 0;
+
+    const render = () => {
+      slides.forEach((slide, i) => {
+        const active = i === index;
+        slide.classList.toggle("opacity-100", active);
+        slide.classList.toggle("translate-y-0", active);
+        slide.classList.toggle("opacity-0", !active);
+        slide.classList.toggle("translate-y-6", !active);
+        slide.classList.toggle("pointer-events-none", !active);
+        slide.classList.toggle("absolute", !active);
+        slide.classList.toggle("inset-x-0", !active);
+        slide.toggleAttribute("aria-hidden", !active);
+      });
+
+      media.forEach((layer, i) => {
+        layer.classList.toggle("opacity-100", i === index);
+        layer.classList.toggle("opacity-0", i !== index);
+      });
+
+      dots.forEach((dot, i) => {
+        const active = i === index;
+        dot.setAttribute("aria-selected", String(active));
+        dot.classList.toggle("w-10", active);
+        dot.classList.toggle("bg-secondary", active);
+        dot.classList.toggle("w-4", !active);
+        dot.classList.toggle("bg-white/35", !active);
+      });
+    };
+
+    const go = (next: number) => {
+      index = (next + slides.length) % slides.length;
+      render();
+    };
+
+    const play = () => {
+      stop();
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      timer = setInterval(() => go(index + 1), AUTOPLAY_MS);
+    };
+
+    const stop = () => {
+      if (timer) clearInterval(timer);
+      timer = undefined;
+    };
+
+    root.querySelector("[data-hero-next]")?.addEventListener("click", () => {
+      go(index + 1);
+      play();
+    });
+    root.querySelector("[data-hero-prev]")?.addEventListener("click", () => {
+      go(index - 1);
+      play();
+    });
+    dots.forEach((dot, i) =>
+      dot.addEventListener("click", () => {
+        go(i);
+        play();
+      }),
+    );
+
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", play);
+
+    render();
+    play();
+  }
+
+  document.addEventListener("astro:page-load", initHero);
+  document.addEventListener("astro:before-swap", () => {
+    if (timer) clearInterval(timer);
+    timer = undefined;
+  });
+</script>

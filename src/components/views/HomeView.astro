@@ -1,0 +1,34 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import HeroSlider from "@/components/home/HeroSlider.astro";
+import IntroSection from "@/components/home/IntroSection.astro";
+import ProductsSection from "@/components/home/ProductsSection.astro";
+import ServicesSection from "@/components/home/ServicesSection.astro";
+import FinishSection from "@/components/home/FinishSection.astro";
+import CatalogDownloads from "@/components/home/CatalogDownloads.astro";
+import CtaSection from "@/components/shared/CtaSection.astro";
+import { getI18N, getLang } from "@/i18n/i18n";
+import { usePath } from "@/i18n/utils";
+
+const lang = getLang(Astro.currentLocale);
+const i18n = getI18N(lang);
+const path = usePath(lang);
+---
+
+<Layout>
+  <HeroSlider />
+  <IntroSection />
+  <ProductsSection />
+  <ServicesSection />
+  <FinishSection />
+  <CatalogDownloads />
+  <CtaSection
+    eyebrow={i18n.home.cta.eyebrow}
+    title={i18n.home.cta.title}
+    description={i18n.home.cta.description}
+    primaryLabel={i18n.home.cta.primary}
+    primaryHref={path("contact")}
+    secondaryLabel={i18n.home.cta.secondary}
+    secondaryHref={path("projects")}
+  />
+</Layout>

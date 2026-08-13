@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import { FiArrowUpRight } from "react-icons/fi";
+import type { Project } from "@/lib/content";
+
+interface Props {
+  project: Project;
+  href: string;
+  label: string;
+  /** First card gets the eager fetch and a wider span. */
+  featured?: boolean;
+}
+
+const { project, href, label, featured = false } = Astro.props;
+const { title, excerpt, cover, client, location, year, sector, slug } = project.data;
+---
+
+<a
+  href={href}
+  class:list={[
+    "group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-canvas transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-2xl hover:shadow-baseBlack/5",
+    featured && "lg:col-span-2",
+  ]}
+>
+  <div class:list={["relative overflow-hidden", featured ? "aspect-16/10" : "aspect-4/3"]}>
+    <Image
+      src={cover}
+      alt={title}
+      widths={[480, 768, 1280]}
+      sizes={featured ? "(min-width: 1024px) 60vw, 92vw" : "(min-width: 1024px) 30vw, 92vw"}
+      loading={featured ? "eager" : "lazy"}
+      class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+      transition:name={`project-image-${slug}`}
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-baseBlack/70 via-baseBlack/10 to-transparent opacity-80"
+      aria-hidden="true"
+    >
+    </div>
+    <span
+      class="absolute left-5 top-5 rounded-full bg-canvas/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-primary backdrop-blur-sm"
+    >
+      {sector}
+    </span>
+  </div>
+
+  <div class="flex flex-1 flex-col p-7">
+    <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted">
+      {client} · {location} · {year}
+    </p>
+
+    <h3
+      class="mt-3 font-display text-xl font-bold leading-snug text-ink transition-colors duration-300 group-hover:text-primary"
+      transition:name={`project-title-${slug}`}
+    >
+      {title}
+    </h3>
+
+    <p class="mt-3 flex-1 text-sm leading-relaxed text-muted">{excerpt}</p>
+
+    <span
+      class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary"
+    >
+      {label}
+      <FiArrowUpRight
+        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+        aria-hidden="true"
+      />
+    </span>
+  </div>
+</a>
