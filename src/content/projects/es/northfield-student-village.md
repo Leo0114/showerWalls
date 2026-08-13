@@ -3,7 +3,7 @@ lang: es
 slug: "northfield-student-village"
 title: "Villa Estudiantil Northfield"
 excerpt: "96 suites compartidas terminadas en un solo receso de verano, pensadas para una década de uso intenso."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/student.avif
 gallery: "showcase"
 client: "Northfield University Housing"
 location: "Columbus, OH"

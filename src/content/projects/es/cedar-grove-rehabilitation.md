@@ -3,7 +3,7 @@ lang: es
 slug: "cedar-grove-rehabilitation"
 title: "Centro de Rehabilitación Cedar Grove"
 excerpt: "48 duchas roll-in totalmente accesibles, diseñadas alrededor de holguras clínicas y tránsito diario de silla de ruedas."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/healtcare.avif
 gallery: "showcase"
 client: "Cedar Grove Health"
 location: "Phoenix, AZ"

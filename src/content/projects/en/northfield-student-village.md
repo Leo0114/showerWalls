@@ -3,7 +3,7 @@ lang: en
 slug: "northfield-student-village"
 title: "Northfield Student Village"
 excerpt: "96 shared suites finished during a single summer break, built for a decade of heavy use."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/student.avif
 gallery: "showcase"
 client: "Northfield University Housing"
 location: "Columbus, OH"

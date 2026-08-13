@@ -3,7 +3,7 @@ lang: en
 slug: "lakeside-residences"
 title: "Lakeside Residences"
 excerpt: "168 multifamily units delivered on a fixed turnover calendar, with an identical finish in every apartment."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/multifam.avif
 gallery: "showcase"
 client: "Lakeside Living Group"
 location: "Austin, TX"

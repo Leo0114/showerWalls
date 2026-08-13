@@ -3,7 +3,7 @@ lang: es
 slug: "harbor-point-hotel"
 title: "Hotel Harbor Point"
 excerpt: "214 baños de habitación renovados piso por piso mientras el hotel seguía abierto y vendiendo cuartos."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/hospital.avif
 gallery: "showcase"
 client: "Harbor Point Hospitality"
 location: "Seattle, WA"

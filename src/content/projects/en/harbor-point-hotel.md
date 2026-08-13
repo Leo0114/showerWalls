@@ -3,7 +3,7 @@ lang: en
 slug: "harbor-point-hotel"
 title: "Harbor Point Hotel"
 excerpt: "214 guest bathrooms rebuilt floor by floor while the hotel stayed open and selling rooms."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/hospital.avif
 gallery: "showcase"
 client: "Harbor Point Hospitality"
 location: "Seattle, WA"

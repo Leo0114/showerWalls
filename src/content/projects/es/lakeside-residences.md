@@ -3,7 +3,7 @@ lang: es
 slug: "lakeside-residences"
 title: "Residencias Lakeside"
 excerpt: "168 unidades multifamiliares entregadas con calendario fijo de entrega y un acabado idéntico en cada departamento."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/multifam.avif
 gallery: "showcase"
 client: "Lakeside Living Group"
 location: "Austin, TX"

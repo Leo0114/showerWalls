@@ -3,7 +3,7 @@ lang: en
 slug: "cedar-grove-rehabilitation"
 title: "Cedar Grove Rehabilitation Center"
 excerpt: "48 fully accessible roll-in showers built around clinical clearances and daily wheelchair traffic."
-cover: ../../../assets/images/placeholder.jpeg
+cover: ../../../assets/images/projects/healtcare.avif
 gallery: "showcase"
 client: "Cedar Grove Health"
 location: "Phoenix, AZ"
