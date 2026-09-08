@@ -41,7 +41,7 @@ const { title, steps, variant = "rail" } = Astro.props;
       ))}
     </ol>
   ) : variant === "compact" ? (
-    <ol class:list={["grid gap-4 sm:grid-cols-2", title && "mt-6"]}>
+    <ol class:list={["grid gap-3 sm:grid-cols-2 lg:grid-cols-3", title && "mt-6"]}>
       {steps.map(({ title: step, description }, index) => (
         <li class="surface-card flex gap-4 rounded-2xl p-5">
           <span class="type-label inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 tabular-nums text-strategic">
