@@ -24,13 +24,19 @@ const isCenter = align === "center";
 const isInverted = tone === "inverted";
 ---
 
-<div
-  class:list={[
-    "max-w-2xl",
-    isCenter && "mx-auto text-center",
-    className,
-  ]}
->
+<div class:list={["max-w-2xl", isCenter && "mx-auto text-center", className]}>
+  {
+    Astro.slots.has("icon") && (
+      <div
+        class:list={[
+          "mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-strategic",
+          isCenter && "mx-auto",
+        ]}
+      >
+        <slot name="icon" />
+      </div>
+    )
+  }
   {
     eyebrow && (
       <p
@@ -40,14 +46,21 @@ const isInverted = tone === "inverted";
           isInverted ? "text-secondary" : "text-strategic",
         ]}
       >
-        <span class:list={["h-px w-8", isInverted ? "bg-secondary/60" : "bg-primary/40"]} />
+        <span
+          class:list={[
+            "h-px w-8",
+            isInverted ? "bg-secondary/60" : "bg-primary/40",
+          ]}
+        />
         {eyebrow}
       </p>
     )
   }
 
-  {/* `type-title` carries the size-specific tracking and leading, so a heading
-      never inherits a letter-spacing tuned for a different size. */}
+  {
+    /* `type-title` carries the size-specific tracking and leading, so a heading
+      never inherits a letter-spacing tuned for a different size. */
+  }
   <Tag class:list={["type-title mt-4", isInverted ? "text-white" : "text-ink"]}>
     {title}
   </Tag>

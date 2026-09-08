@@ -1,5 +1,16 @@
 ---
-import { FiArrowUpRight, FiDownload, FiFileText, FiLayers } from "react-icons/fi";
+import {
+  FiArrowUpRight,
+  FiBox,
+  FiCheckCircle,
+  FiDownload,
+  FiFileText,
+  FiHelpCircle,
+  FiLayers,
+  FiShield,
+  FiTruck,
+  FiTool,
+} from "react-icons/fi";
 import bannerImage from "@/assets/images/bath2.avif";
 import Layout from "@/layouts/Layout.astro";
 import Banner from "@/components/shared/Banner.astro";
@@ -20,12 +31,16 @@ const i18n = getI18N(lang);
 const path = usePath(lang);
 
 const copy = i18n.resources;
-const { manufacturing, shipping, installation, warranty, faq, downloads } = copy;
+const { manufacturing, shipping, installation, warranty, faq, downloads } =
+  copy;
 
 // Catalog copy already lives in `home.catalogs`; this page reuses it rather
 // than keeping a second list of the same PDFs in sync.
 const documents = i18n.home.catalogs.items
-  .map((item) => ({ ...item, file: CATALOGS.find((entry) => entry.id === item.id)?.file }))
+  .map((item) => ({
+    ...item,
+    file: CATALOGS.find((entry) => entry.id === item.id)?.file,
+  }))
   .filter((item): item is typeof item & { file: string } => Boolean(item.file));
 
 const warrantyMailto = `mailto:${SITE.email}?subject=${encodeURIComponent(
@@ -60,17 +75,23 @@ const faqSchema = {
   <!-- ── Manufacturing ─────────────────────────────────────────────────── -->
   <section id="manufacturing" class="section-y scroll-mt-36 bg-canvas">
     <div class="container-x">
-      <p class="max-w-3xl text-base leading-relaxed text-pretty text-muted">{copy.intro}</p>
+      <p class="max-w-3xl text-base leading-relaxed text-pretty text-muted">
+        {copy.intro}
+      </p>
 
       <div class="mt-16">
         <SectionHeading
           eyebrow={manufacturing.eyebrow}
           title={manufacturing.title}
           description={manufacturing.description}
-        />
+        >
+          <FiBox slot="icon" className="h-5 w-5" aria-hidden="true" />
+        </SectionHeading>
       </div>
 
-      <dl class="mt-12 grid gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+      <dl
+        class="mt-12 grid gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4"
+      >
         {
           manufacturing.stats.map(({ value, label, note }) => (
             <div class="bg-canvas p-7">
@@ -86,9 +107,14 @@ const faqSchema = {
         }
       </dl>
 
-      <div class="mt-16 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
+      <div
+        class="mt-16 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]"
+      >
         <div>
-          <StepList title={manufacturing.steps_title} steps={manufacturing.steps} />
+          <StepList
+            title={manufacturing.steps_title}
+            steps={manufacturing.steps}
+          />
         </div>
 
         <ScrollReveal client:visible direction="up" className="lg:pt-4">
@@ -146,7 +172,9 @@ const faqSchema = {
         eyebrow={shipping.eyebrow}
         title={shipping.title}
         description={shipping.description}
-      />
+      >
+        <FiTruck slot="icon" className="h-5 w-5" aria-hidden="true" />
+      </SectionHeading>
 
       <h3 class="type-heading mt-14 text-ink">{shipping.phases_title}</h3>
       <div class="mt-8">
@@ -155,7 +183,9 @@ const faqSchema = {
 
       <div class="mt-16">
         <h3 class="type-heading text-ink">{shipping.equipment.title}</h3>
-        <p class="mt-3 max-w-2xl text-sm leading-relaxed text-pretty text-muted">
+        <p
+          class="mt-3 max-w-2xl text-sm leading-relaxed text-pretty text-muted"
+        >
           {shipping.equipment.description}
         </p>
         <div class="mt-7">
@@ -205,14 +235,24 @@ const faqSchema = {
         eyebrow={installation.eyebrow}
         title={installation.title}
         description={installation.description}
-      />
+      >
+        <FiTool slot="icon" className="h-5 w-5" aria-hidden="true" />
+      </SectionHeading>
 
-      <div class="mt-14 grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-        <StepList title={installation.steps_title} steps={installation.steps} />
+      <div
+        class="mt-14 grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]"
+      >
+        <StepList
+          title={installation.steps_title}
+          steps={installation.steps}
+          variant="compact"
+        />
 
         <div>
           <h3 class="type-heading text-ink">{installation.specs.title}</h3>
-          <p class="mt-3 text-sm leading-relaxed text-muted">{installation.specs.description}</p>
+          <p class="mt-3 text-sm leading-relaxed text-muted">
+            {installation.specs.description}
+          </p>
           <div class="mt-7">
             <SpecTable
               caption={installation.specs.title}
@@ -221,8 +261,12 @@ const faqSchema = {
             />
           </div>
 
-          <div class="mt-8 rounded-3xl border border-primary/25 bg-primary/5 p-7">
-            <h4 class="font-display text-base font-semibold tracking-[-0.01em] text-strategic">
+          <div
+            class="mt-8 rounded-3xl border border-primary/25 bg-primary/5 p-7"
+          >
+            <h4
+              class="font-display text-base font-semibold tracking-[-0.01em] text-strategic"
+            >
               {installation.retrofit.title}
             </h4>
             <p class="mt-2.5 text-sm leading-relaxed text-pretty text-muted">
@@ -241,21 +285,40 @@ const faqSchema = {
         eyebrow={warranty.eyebrow}
         title={warranty.title}
         description={warranty.description}
-      />
+      >
+        <FiShield slot="icon" className="h-5 w-5" aria-hidden="true" />
+      </SectionHeading>
 
       <h3 class="sr-only">{warranty.coverage_title}</h3>
       <ul class="mt-14 grid gap-5 lg:grid-cols-3">
         {
           warranty.coverage.map(({ term, title, description }, index) => (
-            <ScrollReveal client:visible delay={index * 0.08} className="h-full">
+            <ScrollReveal
+              client:visible
+              delay={index * 0.08}
+              className="h-full"
+            >
               <li class="surface-card press-soft flex h-full flex-col rounded-3xl p-8 hover:shadow-e2">
+                <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-strategic">
+                  {index === 0 && (
+                    <FiShield className="h-4 w-4" aria-hidden="true" />
+                  )}
+                  {index === 1 && (
+                    <FiLayers className="h-4 w-4" aria-hidden="true" />
+                  )}
+                  {index === 2 && (
+                    <FiCheckCircle className="h-4 w-4" aria-hidden="true" />
+                  )}
+                </span>
                 <p class="font-display text-4xl font-bold tracking-[-0.03em] text-strategic">
                   {term}
                 </p>
                 <h4 class="mt-5 font-display text-base font-semibold tracking-[-0.01em] text-ink">
                   {title}
                 </h4>
-                <p class="mt-2.5 text-sm leading-relaxed text-pretty text-muted">{description}</p>
+                <p class="mt-2.5 text-sm leading-relaxed text-pretty text-muted">
+                  {description}
+                </p>
               </li>
             </ScrollReveal>
           ))
@@ -286,7 +349,9 @@ const faqSchema = {
                   <span class="type-label inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 tabular-nums text-strategic">
                     {index + 1}
                   </span>
-                  <span class="text-sm leading-relaxed text-pretty text-muted">{step}</span>
+                  <span class="text-sm leading-relaxed text-pretty text-muted">
+                    {step}
+                  </span>
                 </li>
               ))
             }
@@ -315,13 +380,17 @@ const faqSchema = {
 
   <!-- ── FAQ ───────────────────────────────────────────────────────────── -->
   <section id="faq" class="section-y scroll-mt-36 bg-canvas">
-    <div class="container-x grid gap-12 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-20">
+    <div
+      class="container-x grid gap-12 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-20"
+    >
       <div class="lg:sticky lg:top-36 lg:self-start">
         <SectionHeading
           eyebrow={faq.eyebrow}
           title={faq.title}
           description={faq.description}
-        />
+        >
+          <FiHelpCircle slot="icon" className="h-5 w-5" aria-hidden="true" />
+        </SectionHeading>
         <a
           href={path("contact")}
           class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-strategic transition-colors hover:text-primaryDark"
@@ -345,5 +414,9 @@ const faqSchema = {
     secondaryHref={path("products")}
   />
 
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} is:inline />
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(faqSchema)}
+    is:inline
+  />
 </Layout>

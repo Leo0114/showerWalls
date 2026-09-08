@@ -20,21 +20,21 @@ interface FaqProps {
 export default function Faq({ groups, allLabel }: FaqProps) {
   const baseId = useId();
   const [group, setGroup] = useState<string>("all");
-  const [open, setOpen] = useState<Set<string>>(() => new Set());
+  const [open, setOpen] = useState<string | null>(null);
 
   const visible = useMemo(
-    () => (group === "all" ? groups : groups.filter((entry) => entry.id === group)),
+    () =>
+      group === "all" ? groups : groups.filter((entry) => entry.id === group),
     [groups, group],
   );
 
   const toggle = (key: string) =>
-    setOpen((current) => {
-      const next = new Set(current);
-      next.has(key) ? next.delete(key) : next.add(key);
-      return next;
-    });
+    setOpen((current) => (current === key ? null : key));
 
-  const tabs = [{ id: "all", label: allLabel }, ...groups.map(({ id, label }) => ({ id, label }))];
+  const tabs = [
+    { id: "all", label: allLabel },
+    ...groups.map(({ id, label }) => ({ id, label })),
+  ];
 
   return (
     <div>
@@ -75,7 +75,7 @@ export default function Faq({ groups, allLabel }: FaqProps) {
               {entry.items.map((item, index) => {
                 const key = `${entry.id}-${index}`;
                 const panelId = `${baseId}-${key}`;
-                const isOpen = open.has(key);
+                const isOpen = open === key;
 
                 return (
                   <li key={key}>
@@ -89,7 +89,9 @@ export default function Faq({ groups, allLabel }: FaqProps) {
                       >
                         <span
                           className={`font-display text-base leading-snug font-semibold tracking-[-0.01em] transition-colors duration-200 ${
-                            isOpen ? "text-strategic" : "text-ink group-hover:text-strategic"
+                            isOpen
+                              ? "text-strategic"
+                              : "text-ink group-hover:text-strategic"
                           }`}
                         >
                           {item.q}
@@ -98,7 +100,9 @@ export default function Faq({ groups, allLabel }: FaqProps) {
                           data-motion
                           aria-hidden="true"
                           className={`mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line text-muted transition-[transform,background-color,border-color,color] duration-300 ease-out group-hover:border-primary/40 group-hover:text-strategic ${
-                            isOpen ? "rotate-45 border-primary bg-primary text-white" : ""
+                            isOpen
+                              ? "rotate-45 border-primary bg-primary text-white"
+                              : ""
                           }`}
                         >
                           <FiPlus className="h-4 w-4" />

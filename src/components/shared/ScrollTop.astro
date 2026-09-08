@@ -10,7 +10,7 @@ const i18n = getI18N(getLang(Astro.currentLocale));
   type="button"
   aria-label={i18n.footer.back_to_top}
   data-motion
-  class="press glass-chrome sheen-top pointer-events-none fixed right-6 bottom-6 z-50 flex h-12 w-12 translate-y-4 scale-90 items-center justify-center rounded-full border border-line text-ink opacity-0 shadow-e3 transition-[opacity,transform] duration-300 ease-out sm:right-8 sm:bottom-8"
+  class="press glass-chrome sheen-top pointer-events-none fixed right-6 bottom-6 z-50 flex h-12 w-12 cursor-pointer translate-y-4 scale-90 items-center justify-center rounded-full border border-line text-ink opacity-0 shadow-e3 transition-[opacity,transform] duration-300 ease-out sm:right-8 sm:bottom-8"
 >
   <FiArrowUp className="h-5 w-5" aria-hidden="true" />
 </button>
@@ -46,7 +46,9 @@ const i18n = getI18N(getLang(Astro.currentLocale));
   // Delegated so it survives view transitions without re-binding.
   document.addEventListener("click", (event) => {
     if (!(event.target as Element | null)?.closest("#scroll-to-top")) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
   });
 

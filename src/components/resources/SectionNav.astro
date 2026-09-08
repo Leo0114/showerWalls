@@ -1,10 +1,20 @@
 ---
+import { FiBox, FiHelpCircle, FiShield, FiTool, FiTruck } from "react-icons/fi";
+
 interface Props {
   label: string;
   sections: ReadonlyArray<{ id: string; label: string }>;
 }
 
 const { label, sections } = Astro.props;
+
+const ICONS = {
+  manufacturing: FiBox,
+  shipping: FiTruck,
+  installation: FiTool,
+  warranty: FiShield,
+  faq: FiHelpCircle,
+} as const;
 ---
 
 <nav
@@ -23,7 +33,7 @@ const { label, sections } = Astro.props;
             <a
               href={`#${id}`}
               data-section-link={id}
-              class="press relative inline-flex shrink-0 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap text-muted hover:text-ink aria-[current=true]:text-white"
+              class="press relative inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap text-muted hover:text-ink aria-[current=true]:text-white"
             >
               {/* The pill sits behind the label so the colour swap and the slide
                   are the same motion, not two competing ones. */}
@@ -32,6 +42,12 @@ const { label, sections } = Astro.props;
                 class="absolute inset-0 -z-10 scale-90 rounded-full bg-primary opacity-0 transition-[opacity,transform] duration-300 ease-out"
                 aria-hidden="true"
               />
+              {(() => {
+                const Icon = ICONS[id as keyof typeof ICONS];
+                return Icon ? (
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                ) : null;
+              })()}
               {item}
             </a>
           </li>
@@ -52,9 +68,11 @@ const { label, sections } = Astro.props;
     if (!nav) return;
 
     const links = new Map<string, HTMLAnchorElement>();
-    nav.querySelectorAll<HTMLAnchorElement>("[data-section-link]").forEach((link) => {
-      links.set(link.dataset.sectionLink!, link);
-    });
+    nav
+      .querySelectorAll<HTMLAnchorElement>("[data-section-link]")
+      .forEach((link) => {
+        links.set(link.dataset.sectionLink!, link);
+      });
 
     const track = nav.querySelector<HTMLElement>("[data-section-nav-track]");
 
@@ -70,7 +88,8 @@ const { label, sections } = Astro.props;
 
         // On narrow screens the active chip has to come to the user.
         if (active && track && track.scrollWidth > track.clientWidth) {
-          const offset = link.offsetLeft - (track.clientWidth - link.offsetWidth) / 2;
+          const offset =
+            link.offsetLeft - (track.clientWidth - link.offsetWidth) / 2;
           track.scrollTo({ left: Math.max(offset, 0), behavior: "smooth" });
         }
       });
@@ -85,7 +104,9 @@ const { label, sections } = Astro.props;
       (entries) => {
         const visible = entries
           .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+          .sort(
+            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
+          )[0];
         if (visible) setActive(visible.target.id);
       },
       // A band just under the sticky chrome: whatever crosses it is "here".
