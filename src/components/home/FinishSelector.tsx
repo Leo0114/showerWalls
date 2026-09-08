@@ -62,10 +62,10 @@ export default function FinishSelector({
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35 }}
             >
-              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-white/60">
+              <p className="type-label text-white/60">
                 {copy.selected}
               </p>
-              <p className="mt-2 font-display text-2xl font-bold text-white">
+              <p className="mt-2 font-display text-2xl font-bold tracking-[-0.02em] text-white">
                 {activeCopy.name}
               </p>
             </motion.div>
@@ -89,10 +89,10 @@ export default function FinishSelector({
                   aria-checked={isActive}
                   aria-label={copy.items[finish.id].name}
                   onClick={() => setActiveId(finish.id)}
-                  className={`relative flex h-14 w-14 cursor-pointer items-center justify-center rounded-2xl border-2 transition-all duration-300 hover:scale-105 ${
+                  className={`press relative flex h-14 w-14 cursor-pointer items-center justify-center rounded-2xl border-2 ${
                     isActive
-                      ? "border-primary shadow-lg shadow-primary/20"
-                      : "border-line"
+                      ? "border-primary shadow-e3"
+                      : "border-line hover:border-muted"
                   }`}
                   style={{ backgroundColor: finish.hex }}
                 >
@@ -118,7 +118,7 @@ export default function FinishSelector({
             transition={{ duration: 0.3 }}
             className="mt-8"
           >
-            <h3 className="font-display text-2xl font-bold text-ink">
+            <h3 className="font-display text-2xl font-bold tracking-[-0.02em] text-ink">
               {activeCopy.name}
             </h3>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
@@ -133,7 +133,7 @@ export default function FinishSelector({
 
         <a
           href={ctaHref}
-          className="group mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primaryDark"
+          className="btn btn-primary group mt-6"
         >
           {copy.cta}
           <FiArrowRight

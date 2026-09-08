@@ -13,13 +13,18 @@ const { class: className = "", label } = Astro.props;
   type="button"
   data-theme-toggle
   aria-label={label ?? "Toggle color theme"}
-  class:list={[
-    "inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line bg-canvas/60 text-ink transition-colors duration-300 hover:bg-panel",
-    className,
-  ]}
+  class:list={["icon-btn bg-canvas/60", className]}
 >
-  <FiMoon className="block h-[18px] w-[18px] dark:hidden" aria-hidden="true" />
-  <FiSun className="hidden h-[18px] w-[18px] dark:block" aria-hidden="true" />
+  {/* Both glyphs stay mounted and cross-fade in place: the icon transforms
+      rather than being swapped, which keeps the button visually anchored. */}
+  <span class="relative block h-[18px] w-[18px]" data-motion aria-hidden="true">
+    <FiMoon
+      className="absolute inset-0 h-[18px] w-[18px] rotate-0 scale-100 opacity-100 transition-[opacity,transform] duration-300 ease-out dark:-rotate-90 dark:scale-50 dark:opacity-0"
+    />
+    <FiSun
+      className="absolute inset-0 h-[18px] w-[18px] rotate-90 scale-50 opacity-0 transition-[opacity,transform] duration-300 ease-out dark:rotate-0 dark:scale-100 dark:opacity-100"
+    />
+  </span>
 </button>
 
 <script>

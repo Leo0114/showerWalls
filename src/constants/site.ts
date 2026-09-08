@@ -19,6 +19,7 @@ export const NAV_ITEMS = [
   { route: "about", key: "about_us" },
   { route: "products", key: "products" },
   { route: "projects", key: "projects" },
+  { route: "resources", key: "resources" },
   { route: "contact", key: "contact" },
 ] as const satisfies ReadonlyArray<{ route: RouteId; key: string }>;
 

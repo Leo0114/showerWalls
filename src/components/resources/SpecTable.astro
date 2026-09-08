@@ -1,0 +1,57 @@
+---
+interface Props {
+  caption: string;
+  columns: string[];
+  rows: string[][];
+  /** Small print under the table. */
+  note?: string;
+}
+
+const { caption, columns, rows, note } = Astro.props;
+---
+
+<div class="surface-card overflow-hidden rounded-3xl">
+  {/* Wide content scrolls inside its own box — the page never scrolls sideways. */}
+  <div class="overflow-x-auto">
+    <table class="w-full min-w-[34rem] border-collapse text-left">
+      <caption class="sr-only">{caption}</caption>
+      <thead>
+        <tr class="border-b border-line bg-panel">
+          {
+            columns.map((column) => (
+              <th scope="col" class="type-label px-6 py-4 text-muted">
+                {column}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-line">
+        {
+          rows.map((row) => (
+            <tr class="transition-colors duration-200 hover:bg-panel/60">
+              {row.map((cell, index) => (
+                <td
+                  class:list={[
+                    "px-6 py-4 align-top text-sm leading-relaxed",
+                    index === 0 ? "font-medium text-ink" : "text-muted",
+                  ]}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  {
+    note && (
+      <p class="border-t border-line bg-panel px-6 py-4 text-xs leading-relaxed text-muted">
+        {note}
+      </p>
+    )
+  }
+</div>

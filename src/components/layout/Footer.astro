@@ -34,7 +34,7 @@ const socials = [
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={label}
-                class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-muted transition-colors duration-300 hover:border-primary hover:text-primary"
+                class="icon-btn text-muted hover:border-primary hover:text-strategic"
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />
               </a>
@@ -45,7 +45,7 @@ const socials = [
     </div>
 
     <nav aria-labelledby="footer-nav">
-      <h2 id="footer-nav" class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-ink">
+      <h2 id="footer-nav" class="type-label font-display text-sm text-ink">
         {i18n.footer.navigation}
       </h2>
       <ul class="mt-5 space-y-3">
@@ -54,7 +54,7 @@ const socials = [
             <li>
               <a
                 href={path(route)}
-                class="text-sm text-muted transition-colors duration-300 hover:text-primary"
+                class="text-sm text-muted transition-colors duration-300 hover:text-strategic"
               >
                 {i18n.nav[key as keyof typeof i18n.nav]}
               </a>
@@ -65,7 +65,7 @@ const socials = [
     </nav>
 
     <nav aria-labelledby="footer-catalog">
-      <h2 id="footer-catalog" class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-ink">
+      <h2 id="footer-catalog" class="type-label font-display text-sm text-ink">
         {i18n.footer.catalog}
       </h2>
       <ul class="mt-5 space-y-3">
@@ -74,7 +74,7 @@ const socials = [
             <li>
               <a
                 href={`${path("products")}?category=${category}`}
-                class="text-sm text-muted transition-colors duration-300 hover:text-primary"
+                class="text-sm text-muted transition-colors duration-300 hover:text-strategic"
               >
                 {i18n.products.categories[category].name}
               </a>
@@ -85,21 +85,21 @@ const socials = [
     </nav>
 
     <address class="not-italic">
-      <h2 class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-ink">
+      <h2 class="type-label font-display text-sm text-ink">
         {i18n.footer.contact}
       </h2>
       <ul class="mt-5 space-y-4 text-sm text-muted">
         <li class="flex items-start gap-3">
-          <FiMapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+          <FiMapPin className="mt-0.5 h-4 w-4 shrink-0 text-strategic" aria-hidden="true" />
           <span>{i18n.contact.info.address}</span>
         </li>
         <li class="flex items-start gap-3">
-          <FiPhone className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-          <a href={SITE.phoneHref} class="transition-colors hover:text-primary">{SITE.phone}</a>
+          <FiPhone className="mt-0.5 h-4 w-4 shrink-0 text-strategic" aria-hidden="true" />
+          <a href={SITE.phoneHref} class="transition-colors hover:text-strategic">{SITE.phone}</a>
         </li>
         <li class="flex items-start gap-3">
-          <FiMail className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-          <a href={`mailto:${SITE.email}`} class="transition-colors hover:text-primary">{SITE.email}</a>
+          <FiMail className="mt-0.5 h-4 w-4 shrink-0 text-strategic" aria-hidden="true" />
+          <a href={`mailto:${SITE.email}`} class="transition-colors hover:text-strategic">{SITE.email}</a>
         </li>
         <li class="pt-1 text-xs">{i18n.contact.info.hours}</li>
       </ul>

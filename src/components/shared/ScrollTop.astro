@@ -1,51 +1,58 @@
+---
+import { FiArrowUp } from "react-icons/fi";
+import { getI18N, getLang } from "@/i18n/i18n";
+
+const i18n = getI18N(getLang(Astro.currentLocale));
+---
+
 <button
   id="scroll-to-top"
-  aria-label="Volver arriba"
-  class="fixed bottom-8 right-8 z-50 flex h-12 w-12 translate-y-20 cursor-pointer items-center justify-center rounded-full bg-ink text-canvas opacity-0 shadow-lg transition-all duration-300 hover:scale-105 hover:bg-strategic focus:outline-none"
+  type="button"
+  aria-label={i18n.footer.back_to_top}
+  data-motion
+  class="press glass-chrome sheen-top pointer-events-none fixed right-6 bottom-6 z-50 flex h-12 w-12 translate-y-4 scale-90 items-center justify-center rounded-full border border-line text-ink opacity-0 shadow-e3 transition-[opacity,transform] duration-300 ease-out sm:right-8 sm:bottom-8"
 >
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-  >
-    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"
-    ></path>
-  </svg>
+  <FiArrowUp className="h-5 w-5" aria-hidden="true" />
 </button>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
-    // Escucha scroll a nivel de window y actualiza la clase
-    const handleScroll = () => {
-      const btn = document.getElementById("scroll-to-top");
-      if (!btn) return;
-      if (window.scrollY > 300) {
-        btn.classList.remove(
-          "opacity-0",
-          "translate-y-20",
-          "pointer-events-none",
-        );
-        btn.classList.add("opacity-100", "translate-y-0");
-      } else {
-        btn.classList.add("opacity-0", "translate-y-20", "pointer-events-none");
-        btn.classList.remove("opacity-100", "translate-y-0");
-      }
+  // The button appears once "back to top" is a real distance away, and it
+  // arrives from the direction it will send you — up.
+  const REVEAL_AT = 320;
+
+  let onScroll: (() => void) | undefined;
+
+  function initScrollTop() {
+    const btn = document.getElementById("scroll-to-top");
+    if (!btn) return;
+
+    const render = () => {
+      const visible = window.scrollY > REVEAL_AT;
+      btn.classList.toggle("opacity-0", !visible);
+      btn.classList.toggle("translate-y-4", !visible);
+      btn.classList.toggle("scale-90", !visible);
+      btn.classList.toggle("pointer-events-none", !visible);
+      btn.classList.toggle("opacity-100", visible);
+      btn.classList.toggle("translate-y-0", visible);
+      btn.classList.toggle("scale-100", visible);
     };
 
-    // Almacenar función p/ poder remover pero en page-load sólo reevaluamos
-    window.removeEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // init state
+    if (onScroll) window.removeEventListener("scroll", onScroll);
+    onScroll = render;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    render();
+  }
+
+  // Delegated so it survives view transitions without re-binding.
+  document.addEventListener("click", (event) => {
+    if (!(event.target as Element | null)?.closest("#scroll-to-top")) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
   });
 
-  // Evento delegado a nivel document para sobrevivir a transiciones de vista (si corre 1 vez)
-  document.addEventListener("click", (e) => {
-    const target = e.target as Element;
-    if (target.closest("#scroll-to-top")) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+  document.addEventListener("astro:page-load", initScrollTop);
+  document.addEventListener("astro:before-swap", () => {
+    if (onScroll) window.removeEventListener("scroll", onScroll);
+    onScroll = undefined;
   });
 </script>

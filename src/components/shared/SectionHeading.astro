@@ -35,9 +35,9 @@ const isInverted = tone === "inverted";
     eyebrow && (
       <p
         class:list={[
-          "flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em]",
+          "type-eyebrow flex items-center gap-3",
           isCenter && "justify-center",
-          isInverted ? "text-secondary" : "text-primary",
+          isInverted ? "text-secondary" : "text-strategic",
         ]}
       >
         <span class:list={["h-px w-8", isInverted ? "bg-secondary/60" : "bg-primary/40"]} />
@@ -46,12 +46,9 @@ const isInverted = tone === "inverted";
     )
   }
 
-  <Tag
-    class:list={[
-      "mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl lg:text-[2.75rem]",
-      isInverted ? "text-white" : "text-ink",
-    ]}
-  >
+  {/* `type-title` carries the size-specific tracking and leading, so a heading
+      never inherits a letter-spacing tuned for a different size. */}
+  <Tag class:list={["type-title mt-4", isInverted ? "text-white" : "text-ink"]}>
     {title}
   </Tag>
 
@@ -59,7 +56,7 @@ const isInverted = tone === "inverted";
     description && (
       <p
         class:list={[
-          "mt-5 text-base leading-relaxed text-pretty",
+          "type-body mt-5",
           isInverted ? "text-white/75" : "text-muted",
         ]}
       >

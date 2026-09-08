@@ -32,19 +32,19 @@ const related = await getRelatedProducts(product);
       <div>
         <a
           href={`${path("products")}?category=${category}`}
-          class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted transition-colors hover:text-primary"
+          class="press type-label inline-flex items-center gap-2 text-muted hover:text-strategic"
         >
           <FiArrowLeft className="h-4 w-4" aria-hidden="true" />
           {i18n.products.detail.back}
         </a>
 
-        <p class="mt-8 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+        <p class="type-label mt-8 flex flex-wrap items-center gap-3 text-strategic">
           <span class="rounded-full bg-primary/10 px-3 py-1">{i18n.products.code}: {code}</span>
           <span>{categoryCopy.name}</span>
         </p>
 
         <h1
-          class="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-balance text-ink sm:text-5xl"
+          class="type-display mt-5 text-ink"
           transition:name={`product-title-${slug}`}
         >
           {title}
@@ -54,7 +54,7 @@ const related = await getRelatedProducts(product);
 
         {
           madeToOrder && (
-            <p class="mt-6 inline-flex rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+            <p class="type-label mt-6 inline-flex rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-strategic">
               Made to order
             </p>
           )
@@ -63,7 +63,7 @@ const related = await getRelatedProducts(product);
         <div class="mt-9 flex flex-wrap gap-3">
           <a
             href={path("contact")}
-            class="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primaryDark"
+            class="btn btn-primary group"
           >
             {i18n.products.request_sample}
             <FiArrowUpRight
@@ -90,14 +90,14 @@ const related = await getRelatedProducts(product);
 
   <section class="section-y bg-canvas">
     <div class="container-x grid gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-      <div class="prose prose-neutral max-w-none dark:prose-invert prose-headings:font-display prose-a:text-primary">
+      <div class="prose prose-neutral max-w-none dark:prose-invert prose-headings:font-display prose-a:text-strategic">
         <Content />
       </div>
 
       {
         specs.length > 0 && (
-          <aside class="h-fit rounded-3xl border border-line bg-panel p-8">
-            <h2 class="font-display text-lg font-semibold text-ink">{i18n.products.detail.specs}</h2>
+          <aside class="surface-card h-fit rounded-3xl bg-panel p-8">
+            <h2 class="type-heading text-ink">{i18n.products.detail.specs}</h2>
             <dl class="mt-6 divide-y divide-line">
               {specs.map(({ label, value }) => (
                 <div class="flex items-start justify-between gap-6 py-3.5">
@@ -126,14 +126,14 @@ const related = await getRelatedProducts(product);
     related.length > 0 && (
       <section class="section-y bg-canvas">
         <div class="container-x">
-          <h2 class="font-display text-2xl font-bold text-ink">{i18n.products.detail.related}</h2>
+          <h2 class="type-heading text-ink">{i18n.products.detail.related}</h2>
 
           <ul class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {related.map((item) => (
               <li>
                 <a
                   href={path("products", item.data.slug)}
-                  class="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-canvas transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
+                  class="surface-card press-soft group flex h-full flex-col overflow-hidden rounded-2xl hover:-translate-y-1 hover:border-primary/40 hover:shadow-e2"
                 >
                   <div class="aspect-4/3 overflow-hidden">
                     <Image
@@ -145,7 +145,7 @@ const related = await getRelatedProducts(product);
                     />
                   </div>
                   <div class="flex flex-1 flex-col p-5">
-                    <span class="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-primary">
+                    <span class="type-label text-strategic">
                       {item.data.code}
                     </span>
                     <h3 class="mt-1.5 font-display text-sm font-semibold leading-snug text-ink">

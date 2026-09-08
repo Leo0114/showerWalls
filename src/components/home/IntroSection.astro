@@ -30,9 +30,9 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
       </div>
 
       <div
-        class="absolute -bottom-8 -right-4 hidden w-56 rounded-2xl border border-line bg-canvas p-6 shadow-xl shadow-baseBlack/5 sm:block"
+        class="surface-card absolute -right-4 -bottom-8 hidden w-56 rounded-2xl p-6 shadow-e3 sm:block"
       >
-        <p class="font-display text-4xl font-bold text-primary">
+        <p class="font-display text-4xl font-bold tracking-[-0.03em] text-strategic">
           {stats[0].value}
         </p>
         <p class="mt-1 text-sm leading-snug text-muted">{stats[0].label}</p>
@@ -50,7 +50,7 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
         {
           points.map((point) => (
             <li class="flex items-start gap-3">
-              <span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-strategic">
                 <FiCheck className="h-3.5 w-3.5" aria-hidden="true" />
               </span>
               <span class="text-sm leading-relaxed text-muted">{point}</span>
@@ -65,7 +65,9 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
             <div>
               <dt class="sr-only">{label}</dt>
               <dd>
-                <span class="block font-display text-2xl font-bold text-ink sm:text-3xl">
+                <span
+                  class="block font-display text-2xl font-bold tracking-[-0.025em] text-ink sm:text-3xl"
+                >
                   {value}
                 </span>
                 <span class="mt-1 block text-xs leading-snug text-muted">
@@ -79,7 +81,7 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
 
       <a
         href={path("about")}
-        class="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primaryDark"
+        class="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-strategic transition-colors hover:text-primaryDark"
       >
         {i18n.common.learn_more}
         <span aria-hidden="true">&rarr;</span>

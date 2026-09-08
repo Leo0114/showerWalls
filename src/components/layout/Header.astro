@@ -28,12 +28,12 @@ const links = NAV_ITEMS.map(({ route, key }) => {
 
 <header
   id="site-header"
-  class="sticky top-0 z-50 border-b border-line/70 bg-canvas/80 backdrop-blur-xl transition-shadow duration-300"
+  class="glass-chrome sticky top-0 z-50 border-b border-transparent transition-[border-color,box-shadow] duration-300 ease-out"
 >
   <div class="container-x flex h-18 items-center justify-between gap-6 py-3">
     <a
       href={path("index")}
-      class="flex shrink-0 items-center gap-3"
+      class="press flex shrink-0 items-center gap-3"
       aria-label={SITE.name}
     >
       <Image
@@ -56,13 +56,16 @@ const links = NAV_ITEMS.map(({ route, key }) => {
                 href={href}
                 aria-current={isActive ? "page" : undefined}
                 class:list={[
-                  "relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300",
-                  isActive ? "text-primary" : "text-muted hover:text-ink",
+                  "press relative rounded-full px-4 py-2 text-sm font-medium",
+                  isActive ? "text-strategic" : "text-muted hover:bg-panel/70 hover:text-ink",
                 ]}
               >
                 {label}
                 {isActive && (
-                  <span class="absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-primary" />
+                  <span
+                    class="absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-primary"
+                    transition:name="nav-indicator"
+                  />
                 )}
               </a>
             </li>
@@ -83,7 +86,7 @@ const links = NAV_ITEMS.map(({ route, key }) => {
         aria-expanded="false"
         aria-controls="mobile-menu"
         aria-label={i18n.nav.menu}
-        class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line text-ink transition-colors hover:bg-panel lg:hidden"
+        class="icon-btn lg:hidden"
       >
         <FiMenu className="block h-5 w-5" aria-hidden="true" />
       </button>
@@ -97,8 +100,9 @@ const links = NAV_ITEMS.map(({ route, key }) => {
 <div
   id="mobile-menu"
   data-menu-panel
+  data-motion
   hidden
-  class="fixed inset-0 z-60 flex flex-col bg-canvas lg:hidden"
+  class="fixed inset-0 z-60 flex -translate-y-3 flex-col bg-canvas opacity-0 transition-[opacity,transform] duration-300 ease-out data-[open]:translate-y-0 data-[open]:opacity-100 lg:hidden"
 >
   <div class="container-x flex h-18 items-center justify-between py-3">
     <Image
@@ -112,7 +116,7 @@ const links = NAV_ITEMS.map(({ route, key }) => {
       type="button"
       data-menu-close
       aria-label={i18n.nav.close}
-      class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line text-ink"
+      class="icon-btn"
     >
       <FiX className="h-5 w-5" aria-hidden="true" />
     </button>
@@ -130,9 +134,10 @@ const links = NAV_ITEMS.map(({ route, key }) => {
               href={href}
               aria-current={isActive ? "page" : undefined}
               style={`--i:${index}`}
+              data-menu-item
               class:list={[
-                "block border-b border-line/60 py-4 font-display text-2xl font-semibold transition-colors",
-                isActive ? "text-primary" : "text-ink hover:text-primary",
+                "press block border-b border-line/60 py-4 font-display text-2xl font-semibold tracking-[-0.02em]",
+                isActive ? "text-strategic" : "text-ink hover:text-strategic",
               ]}
             >
               {label}
@@ -157,17 +162,60 @@ const links = NAV_ITEMS.map(({ route, key }) => {
   </nav>
 </div>
 
+<style>
+  /* The items arrive just behind the panel, in reading order, so the menu reads
+     as one surface settling rather than six things appearing at once. */
+  [data-menu-item] {
+    opacity: 0;
+    transform: translateY(0.75rem);
+    transition:
+      opacity 320ms var(--ease-out-soft),
+      transform 320ms var(--ease-out-soft);
+    transition-delay: calc(var(--i) * 40ms + 60ms);
+  }
+
+  [data-open] [data-menu-item] {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-menu-item] {
+      transform: none;
+      transition-delay: 0ms;
+    }
+  }
+</style>
+
 <script>
   const OPEN_CLASS = "overflow-hidden";
+  /** Matches the panel's transition so the element is only hidden once it has
+      finished fading out — an interrupted close can still be re-opened. */
+  const EXIT_MS = 300;
+
+  let exitTimer: ReturnType<typeof setTimeout> | undefined;
 
   const setMenu = (open: boolean) => {
     const panel = document.querySelector<HTMLElement>("[data-menu-panel]");
     const toggle = document.querySelector<HTMLElement>("[data-menu-toggle]");
     if (!panel || !toggle) return;
 
-    panel.hidden = !open;
+    clearTimeout(exitTimer);
     toggle.setAttribute("aria-expanded", String(open));
     document.body.classList.toggle(OPEN_CLASS, open);
+
+    if (open) {
+      panel.hidden = false;
+      // One frame with the panel laid out but still closed, so the browser has
+      // a start value to animate *from* instead of snapping to the end state.
+      requestAnimationFrame(() => panel.setAttribute("data-open", ""));
+      return;
+    }
+
+    panel.removeAttribute("data-open");
+    exitTimer = setTimeout(() => {
+      if (!panel.hasAttribute("data-open")) panel.hidden = true;
+    }, EXIT_MS);
   };
 
   document.addEventListener("click", (event) => {
@@ -183,10 +231,15 @@ const links = NAV_ITEMS.map(({ route, key }) => {
     if (event.key === "Escape") setMenu(false);
   });
 
+  // The hairline and the shadow only exist while content is actually running
+  // underneath the bar; at the top of the page the chrome has nothing to
+  // separate itself from.
   const onScroll = () => {
     const header = document.getElementById("site-header");
-    header?.classList.toggle("shadow-lg", window.scrollY > 8);
-    header?.classList.toggle("shadow-baseBlack/5", window.scrollY > 8);
+    const scrolled = window.scrollY > 8;
+    header?.classList.toggle("shadow-e2", scrolled);
+    header?.classList.toggle("border-line/70", scrolled);
+    header?.classList.toggle("border-transparent", !scrolled);
   };
 
   document.addEventListener("astro:page-load", () => {

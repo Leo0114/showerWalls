@@ -36,7 +36,7 @@ const items = slides.map((slide, index) => ({
       items.map(({ image, position }, index) => (
         <div
           class:list={[
-            "absolute inset-0 transition-opacity duration-1200ms ease-out",
+            "absolute inset-0 transition-opacity duration-1000 ease-out",
             index === 0 ? "opacity-100" : "opacity-0",
           ]}
           data-hero-media={index}
@@ -82,14 +82,12 @@ const items = slides.map((slide, index) => ({
                 : "pointer-events-none absolute inset-x-0 translate-y-6 opacity-0",
             ]}
           >
-            <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-secondary">
+            <p class="type-eyebrow flex items-center gap-3 text-secondary">
               <span class="h-px w-10 bg-secondary/70" />
               {eyebrow}
             </p>
-            <h1 class="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">
-              {title}
-            </h1>
-            <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+            <h1 class="type-display mt-6 text-white">{title}</h1>
+            <p class="type-body mt-6 max-w-xl text-white/80 sm:text-lg">
               {subtitle}
             </p>
           </article>
@@ -97,20 +95,14 @@ const items = slides.map((slide, index) => ({
       }
 
       <div class="mt-10 flex flex-wrap items-center gap-3">
-        <a
-          href={path("products")}
-          class="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primaryDark"
-        >
+        <a href={path("products")} class="btn btn-primary group">
           {cta_primary}
           <FiArrowRight
-            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-1"
             aria-hidden="true"
           />
         </a>
-        <a
-          href={path("contact")}
-          class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white/15"
-        >
+        <a href={path("contact")} class="btn btn-glass">
           {cta_secondary}
         </a>
       </div>
@@ -122,7 +114,7 @@ const items = slides.map((slide, index) => ({
           type="button"
           data-hero-prev
           aria-label="Previous slide"
-          class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/15"
+          class="icon-btn border-white/25 text-white hover:bg-white/15"
         >
           <FiChevronLeft className="h-5 w-5" aria-hidden="true" />
         </button>
@@ -130,7 +122,7 @@ const items = slides.map((slide, index) => ({
           type="button"
           data-hero-next
           aria-label="Next slide"
-          class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/15"
+          class="icon-btn border-white/25 text-white hover:bg-white/15"
         >
           <FiChevronRight className="h-5 w-5" aria-hidden="true" />
         </button>
@@ -147,7 +139,7 @@ const items = slides.map((slide, index) => ({
                 aria-label={`${index + 1} / ${items.length}`}
                 aria-selected={index === 0 ? "true" : "false"}
                 class:list={[
-                  "h-1.5 cursor-pointer rounded-full transition-all duration-500",
+                  "h-1.5 cursor-pointer rounded-full transition-[width,background-color] duration-500 ease-out",
                   index === 0
                     ? "w-10 bg-secondary"
                     : "w-4 bg-white/35 hover:bg-white/60",
@@ -159,7 +151,7 @@ const items = slides.map((slide, index) => ({
       </ul>
 
       <span
-        class="ml-auto hidden text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-white/50 sm:block"
+        class="type-label ml-auto hidden text-white/50 sm:block"
       >
         {scroll}
       </span>

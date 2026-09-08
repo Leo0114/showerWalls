@@ -1,0 +1,58 @@
+---
+interface Props {
+  title?: string;
+  steps: ReadonlyArray<{ title: string; description: string }>;
+  /** `rail` draws the connected timeline; `grid` lays the steps out as cards. */
+  variant?: "rail" | "grid";
+}
+
+const { title, steps, variant = "rail" } = Astro.props;
+---
+
+{title && <h3 class="type-heading text-ink">{title}</h3>}
+
+{
+  variant === "rail" ? (
+    <ol class:list={["relative", title && "mt-8"]}>
+      {steps.map(({ title: step, description }, index) => (
+        <li class="relative flex gap-5 pb-9 last:pb-0">
+          {/* The rail is the spatial through-line: one continuous path, so the
+              sequence reads as a single process instead of eight cards. */}
+          {index < steps.length - 1 && (
+            <span
+              class="absolute top-10 bottom-1 left-[1.1875rem] w-px bg-line"
+              aria-hidden="true"
+            />
+          )}
+
+          <span class="type-label z-10 inline-flex h-9.5 w-9.5 shrink-0 items-center justify-center rounded-full border border-line bg-canvas tabular-nums text-strategic">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+
+          <div class="pt-1.5">
+            <h4 class="font-display text-base font-semibold tracking-[-0.01em] text-ink">
+              {step}
+            </h4>
+            <p class="mt-2 max-w-xl text-sm leading-relaxed text-pretty text-muted">
+              {description}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  ) : (
+    <ol class:list={["grid gap-5 sm:grid-cols-2 lg:grid-cols-3", title && "mt-8"]}>
+      {steps.map(({ title: step, description }, index) => (
+        <li class="surface-card press-soft flex flex-col rounded-3xl p-7 hover:shadow-e2">
+          <span class="type-label text-strategic/50 tabular-nums">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          <h4 class="mt-4 font-display text-base font-semibold tracking-[-0.01em] text-ink">
+            {step}
+          </h4>
+          <p class="mt-2.5 text-sm leading-relaxed text-pretty text-muted">{description}</p>
+        </li>
+      ))}
+    </ol>
+  )
+}

@@ -63,17 +63,17 @@ const details = [
           {
             details.map(({ label, value, Icon, href }) => (
               <li class="flex items-start gap-4">
-                <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-strategic">
                   <Icon className="h-4 w-4" aria-hidden="true" />
                 </span>
                 <div>
-                  <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted">
+                  <p class="type-label text-muted">
                     {label}
                   </p>
                   {href ? (
                     <a
                       href={href}
-                      class="mt-1 block text-sm font-medium text-ink transition-colors hover:text-primary"
+                      class="mt-1 block text-sm font-medium text-ink transition-colors hover:text-strategic"
                     >
                       {value}
                     </a>
@@ -87,7 +87,7 @@ const details = [
         </ul>
       </div>
 
-      <div class="rounded-4xl border border-line bg-panel p-8 sm:p-10">
+      <div class="surface-card rounded-4xl bg-panel p-8 shadow-e2 sm:p-10">
         <h2 class="font-display text-2xl font-bold text-ink">
           {contact.form.title}
         </h2>

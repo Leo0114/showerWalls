@@ -63,11 +63,11 @@ const pillars = [
       {
         pillars.map(({ title, text, Icon }, index) => (
           <ScrollReveal client:visible delay={index * 0.1} className="h-full">
-            <article class="flex h-full flex-col rounded-3xl border border-line bg-canvas p-9">
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <article class="surface-card flex h-full flex-col rounded-3xl p-9">
+              <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-strategic">
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </span>
-              <h2 class="mt-6 font-display text-2xl font-bold text-ink">
+              <h2 class="type-heading mt-6 text-ink">
                 {title}
               </h2>
               <p class="mt-4 text-base leading-relaxed text-muted">{text}</p>
@@ -91,7 +91,7 @@ const pillars = [
               className="h-full"
             >
               <article class="flex h-full flex-col border-t-2 border-primary/20 pt-6 transition-colors duration-500 hover:border-primary">
-                <span class="font-display text-3xl font-bold text-primary/30">
+                <span class="font-display text-3xl font-bold text-strategic/30">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 class="mt-4 font-display text-lg font-semibold text-ink">

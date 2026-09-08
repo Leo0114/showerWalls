@@ -1,0 +1,101 @@
+---
+interface Props {
+  label: string;
+  sections: ReadonlyArray<{ id: string; label: string }>;
+}
+
+const { label, sections } = Astro.props;
+---
+
+<nav
+  data-section-nav
+  aria-label={label}
+  class="glass-chrome sticky top-18 z-40 border-b border-line/70"
+>
+  <div class="container-x">
+    <ul
+      data-section-nav-track
+      class="-mx-1 flex snap-x items-center gap-1 overflow-x-auto py-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    >
+      {
+        sections.map(({ id, label: item }) => (
+          <li class="snap-start">
+            <a
+              href={`#${id}`}
+              data-section-link={id}
+              class="press relative inline-flex shrink-0 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap text-muted hover:text-ink aria-[current=true]:text-white"
+            >
+              {/* The pill sits behind the label so the colour swap and the slide
+                  are the same motion, not two competing ones. */}
+              <span
+                data-section-pill={id}
+                class="absolute inset-0 -z-10 scale-90 rounded-full bg-primary opacity-0 transition-[opacity,transform] duration-300 ease-out"
+                aria-hidden="true"
+              />
+              {item}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Scroll spy. The nav is a wayfinding device — it has to answer "where am I"
+  // continuously, so it tracks the section that owns the reading line rather
+  // than waiting for a click.
+  let observer: IntersectionObserver | undefined;
+
+  function initSectionNav() {
+    const nav = document.querySelector<HTMLElement>("[data-section-nav]");
+    if (!nav) return;
+
+    const links = new Map<string, HTMLAnchorElement>();
+    nav.querySelectorAll<HTMLAnchorElement>("[data-section-link]").forEach((link) => {
+      links.set(link.dataset.sectionLink!, link);
+    });
+
+    const track = nav.querySelector<HTMLElement>("[data-section-nav-track]");
+
+    const setActive = (id: string) => {
+      links.forEach((link, key) => {
+        const active = key === id;
+        link.setAttribute("aria-current", String(active));
+        const pill = link.querySelector<HTMLElement>("[data-section-pill]");
+        pill?.classList.toggle("opacity-100", active);
+        pill?.classList.toggle("scale-100", active);
+        pill?.classList.toggle("opacity-0", !active);
+        pill?.classList.toggle("scale-90", !active);
+
+        // On narrow screens the active chip has to come to the user.
+        if (active && track && track.scrollWidth > track.clientWidth) {
+          const offset = link.offsetLeft - (track.clientWidth - link.offsetWidth) / 2;
+          track.scrollTo({ left: Math.max(offset, 0), behavior: "smooth" });
+        }
+      });
+    };
+
+    const sections = [...links.keys()]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    observer?.disconnect();
+    observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (visible) setActive(visible.target.id);
+      },
+      // A band just under the sticky chrome: whatever crosses it is "here".
+      { rootMargin: "-30% 0px -60% 0px", threshold: 0 },
+    );
+
+    sections.forEach((section) => observer!.observe(section));
+    if (sections[0]) setActive(sections[0].id);
+  }
+
+  document.addEventListener("astro:page-load", initSectionNav);
+  document.addEventListener("astro:before-swap", () => observer?.disconnect());
+</script>

@@ -21,6 +21,7 @@ export const routes = {
     about: "about-us",
     products: "products",
     projects: "projects",
+    resources: "resources",
     contact: "contact",
   },
   es: {
@@ -28,6 +29,7 @@ export const routes = {
     about: "about-us",
     products: "products",
     projects: "projects",
+    resources: "resources",
     contact: "contact",
   },
 } as const satisfies Record<Lang, Record<string, string>>;

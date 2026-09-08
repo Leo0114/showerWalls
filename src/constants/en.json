@@ -10,6 +10,7 @@
     "about_us": "About Us",
     "projects": "Projects",
     "products": "Products",
+    "resources": "Resources",
     "contact": "Contact",
     "cta": "Request a Quote",
     "menu": "Menu",
@@ -29,7 +30,17 @@
     "results": "results",
     "no_results": "No products match your search.",
     "clear": "Clear filters",
-    "skip_to_content": "Skip to content"
+    "skip_to_content": "Skip to content",
+    "panorama": {
+      "enter": "Step inside",
+      "loading": "Loading the panorama…",
+      "drag": "Drag to look around",
+      "play": "Resume the tour",
+      "pause": "Pause the tour",
+      "reset": "Recenter the view",
+      "fullscreen": "Fullscreen",
+      "exit_fullscreen": "Exit fullscreen"
+    }
   },
   "home": {
     "hero": {
@@ -133,6 +144,19 @@
       ],
       "download": "Download PDF",
       "unavailable": "Coming soon"
+    },
+    "immersive": {
+      "eyebrow": "See it before it exists",
+      "title": "Stand inside a finished shower",
+      "description": "This is a real unit we delivered — not a render. Drag to look around the walls, the pan and the joints, exactly as your guests will see them.",
+      "panorama": "two",
+      "caption": "Harbor Point Hotel · Seattle, WA",
+      "points": [
+        { "value": "Zero grout lines", "label": "A single continuous surface from the pan up to the ceiling line." },
+        { "value": "Millimetre joints", "label": "Panels cut to the rough opening, so seams land where we drew them." },
+        { "value": "214 identical units", "label": "The same finish, the same joint, the same result on every floor." }
+      ],
+      "cta": "Explore the projects"
     },
     "cta": {
       "eyebrow": "Next step",
@@ -243,6 +267,372 @@
         "primary": "Request a quote",
         "secondary": "View all products"
       }
+    }
+  },
+  "resources": {
+    "banner_subtitle": "Specifications & support",
+    "title": "Resources",
+    "subtitle": "Everything your team needs once the submittal is approved.",
+    "intro": "How we manufacture, crate and ship your order, how the panels go on the wall, what the warranty covers and the answers we give most often. Written for the people who receive the truck and hang the panels.",
+    "nav_label": "On this page",
+    "sections": [
+      { "id": "manufacturing", "label": "Manufacturing" },
+      { "id": "shipping", "label": "Shipping & handling" },
+      { "id": "installation", "label": "Installation" },
+      { "id": "warranty", "label": "Warranty" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "manufacturing": {
+      "eyebrow": "Manufacturing",
+      "title": "Built to your opening, then held until your site is ready",
+      "description": "Nothing in this catalog is pulled off a shelf. Every panel and every pan is fabricated against your approved shop drawings, crated for the trip and shipped direct to the jobsite the week you need it — never through a cross-dock.",
+      "stats": [
+        { "value": "100%", "label": "Made to order", "note": "Cut to your rough opening, not trimmed on site." },
+        { "value": "4–6 wk", "label": "Standard lead time", "note": "From approved shop drawings to the truck." },
+        { "value": "0.2%", "label": "Freight damage rate", "note": "Measured across every crate we shipped last year." },
+        { "value": "1", "label": "Point of contact", "note": "Walls, pans, accessories and install on one order." }
+      ],
+      "steps_title": "From the drawing to the truck",
+      "steps": [
+        {
+          "title": "Shop drawings",
+          "description": "We draw every opening — wall heights, pan size, drain position, niche and accessory locations — and hold production until you sign off."
+        },
+        {
+          "title": "Fabrication",
+          "description": "Panels and pans are cast and cut to the approved dimensions. Grab-bar and fixture blocking is built in at this stage, not drilled on site."
+        },
+        {
+          "title": "Quality hold",
+          "description": "Colour, thickness and edge are checked against the approved finish sample before anything is packed. Off-tolerance material never leaves the floor."
+        },
+        {
+          "title": "Crating",
+          "description": "Panels are foam-separated, banded and crated in wood. Every crate is labelled with the project, the floor and the unit it belongs to."
+        },
+        {
+          "title": "Staged or shipped",
+          "description": "The order ships straight to the jobsite, or we hold it in our warehouse under the storage agreement until your schedule calls it in."
+        }
+      ]
+    },
+    "shipping": {
+      "eyebrow": "Shipping & handling",
+      "title": "The truck arrives when your floor is ready for it",
+      "description": "Material moves on a flatbed straight from our plant to your site. There is no distributor in the middle, which is why the crate you open is the crate we packed. Everything below is what your site superintendent needs to know before the driver pulls up.",
+      "phases_title": "How your order travels",
+      "phases": [
+        {
+          "title": "Delivery window",
+          "description": "We confirm the delivery date two weeks out and call the site the day before. Tell us the access constraints — dock height, street permits, crane windows — when you place the order, not when the truck is outside."
+        },
+        {
+          "title": "How it arrives",
+          "description": "Flatbed truck, wooden crates and banded pallets. The driver is not responsible for unloading: the site supplies the equipment and the crew."
+        },
+        {
+          "title": "Partial and phased releases",
+          "description": "Multi-tower and phased jobs can be released floor by floor or wing by wing so you are not storing material you will not hang for two months."
+        },
+        {
+          "title": "Container shipments",
+          "description": "For projects outside the continental US we crate for container loading and provide the packing list and dimensions your freight forwarder needs."
+        }
+      ],
+      "equipment": {
+        "title": "What you need on site to unload",
+        "description": "Have this staged before the truck is scheduled. A truck that cannot be unloaded within the free time on the bill of lading accrues detention against the project.",
+        "columns": ["Load", "Crew", "Minimum equipment"],
+        "rows": [
+          ["Wall panel crates", "2 people", "Forklift with 72\" (6 ft) forks"],
+          ["Shower pan pallets", "2 people", "Forklift with 48\" forks and a pallet jack"],
+          ["Accessory cartons", "1 person", "Hand truck"],
+          ["Free standing tubs", "3 people", "Forklift and soft slings — never lift by the rim"]
+        ],
+        "note": "A shower pan weighs roughly 200 lb. Nothing on the truck is a two-hand carry."
+      },
+      "receiving": {
+        "title": "Receiving and inspection",
+        "description": "Five minutes at the tailgate is the difference between a replacement panel and an argument with a freight carrier.",
+        "items": [
+          "Count the crates against the bill of lading before you sign anything.",
+          "Walk the load while it is still on the truck and photograph every crushed corner, tear or shifted band.",
+          "Write the damage on the delivery receipt. A clean signature closes the carrier's liability.",
+          "Open and inspect the panels within 48 hours of delivery, even if install is weeks away.",
+          "Keep the crate labels — the project and unit number on them is how we identify a replacement."
+        ]
+      },
+      "storage": {
+        "title": "Storage on site",
+        "description": "Material is finished goods from the moment it leaves our plant. Store it like it is.",
+        "items": [
+          "Indoors, dry, out of direct sun and away from any heat source.",
+          "Crates flat and off the slab on dunnage; panels stored on edge, never face down.",
+          "Do not stack more than two panel crates high.",
+          "Let panels acclimatize to the building's conditioned temperature for 24 hours before install.",
+          "Warehouse storage past 30 days from the ready-to-ship date falls under our storage agreement."
+        ]
+      },
+      "claims": {
+        "title": "Damage and claims",
+        "description": "Report it fast and we replace it fast.",
+        "items": [
+          "Visible damage: note it on the delivery receipt at the tailgate and send photos the same day.",
+          "Concealed damage: report within five business days of delivery.",
+          "Send the crate label, the bill of lading number and photos of the crate and the panel.",
+          "We confirm within two business days and put approved replacements into expedited fabrication."
+        ]
+      },
+      "returns_note": "Every panel and pan is cut for one specific opening, so material cannot be returned for credit. Order the overage you want with the original release, not after."
+    },
+    "installation": {
+      "eyebrow": "Installation",
+      "title": "Panels on the wall in a day, not a week of tile",
+      "description": "Our system goes over water-resistant drywall with a dot-mount adhesive. No cement backerboard, no waterproofing membrane, no curing time. A certified crew turns 8 to 16 units a day; if you want to use your own crew we will train them.",
+      "steps_title": "The sequence",
+      "steps": [
+        {
+          "title": "Check the opening",
+          "description": "Square, plumb, dry and framed to the dimensions on the approved drawing. Panels are cut to the drawing, so the opening has to match it."
+        },
+        {
+          "title": "Set the pan",
+          "description": "Pan first, on a full mortar bed, level to the drain. Everything above it references this line."
+        },
+        {
+          "title": "Dry fit and cut",
+          "description": "Dry fit the panels, mark the valve and showerhead, then dry-cut with a circular saw and a diamond or masonry blade."
+        },
+        {
+          "title": "Adhere the panels",
+          "description": "Dot-mount with solid-surface panel adhesive directly to water-resistant drywall. Set the back wall first, then the sides."
+        },
+        {
+          "title": "Seal the joints",
+          "description": "Colour-matched, mildew-resistant 100% silicone wherever panel meets panel or pan. Paintable latex caulk where the panel meets the substrate."
+        },
+        {
+          "title": "Set the accessories",
+          "description": "Silicone plus a hot-melt bead — the hot melt holds the piece while the silicone cures — then caulk the perimeter."
+        },
+        {
+          "title": "Protect and hand over",
+          "description": "Mask the pan, keep the trades off the surface until final clean, then hand over with the care sheet."
+        }
+      ],
+      "specs": {
+        "title": "Field reference",
+        "description": "The numbers your installer asks for on the first day.",
+        "columns": ["Item", "Specification"],
+        "rows": [
+          ["Substrate", "Water-resistant drywall. No cement backerboard, no membrane."],
+          ["Adhesive", "Solid-surface panel adhesive, dot-mounted"],
+          ["Panel-to-panel joint", "Colour-matched mildew-resistant 100% silicone"],
+          ["Panel-to-substrate edge", "Paintable latex caulk"],
+          ["Cutting", "Circular saw, dry-cut diamond or masonry blade"],
+          ["Valve and showerhead holes", "Carbide or diamond hole saw"],
+          ["Footrest height", "12\" from the top of the pan"],
+          ["Shampoo shelf height", "48\" from the top of the pan"],
+          ["Soap dish — shower", "48\" off the finished floor, one per corner"],
+          ["Soap dish — tub", "12\" above the rim, second at 48\" off the floor"],
+          ["Certified crew output", "8–16 units per day"]
+        ]
+      },
+      "retrofit": {
+        "title": "Going over existing tile",
+        "description": "Tub-to-shower conversions and refresh work can go straight over sound existing tile with a silicone bond and an edge trim that covers the tile and the panel. Tell us at quote stage — the trim is specified with the order, not found on site."
+      }
+    },
+    "warranty": {
+      "eyebrow": "Warranty",
+      "title": "One supplier for the wall, the pan and the crew — so one warranty",
+      "description": "Because we fabricate and install, there is no gap between a material claim and a workmanship claim to argue about. Terms below are our standard commercial coverage; project-specific terms follow your contract documents.",
+      "coverage_title": "What is covered",
+      "coverage": [
+        { "term": "10 years", "title": "Wall panels & shower pans", "description": "Manufacturing defects, delamination and cracking not caused by impact or substrate movement." },
+        { "term": "5 years", "title": "Accessories & trim", "description": "Niches, soap dishes, shelves, footrests and trim strips against manufacturing defect." },
+        { "term": "2 years", "title": "Our installation workmanship", "description": "Any unit installed by a Shower Walls crew, including joints, sealant and pan set." }
+      ],
+      "included": {
+        "title": "Included",
+        "items": [
+          "Manufacturing defects in material or finish",
+          "Delamination or separation under normal use",
+          "Cracking not caused by impact or building movement",
+          "Colour variation outside our published tolerance",
+          "Replacement material fabricated to the original drawing"
+        ]
+      },
+      "excluded": {
+        "title": "Not included",
+        "items": [
+          "Impact damage, dropped tools and site abuse",
+          "Abrasive pads, scouring powders and bleach-based cleaners",
+          "Adhesives, sealants or fasteners we did not specify",
+          "Field modifications made after installation",
+          "Movement, settlement or failure of the substrate behind the panel",
+          "Installations by an untrained crew without a signed training record"
+        ]
+      },
+      "claim": {
+        "title": "Making a claim",
+        "steps": [
+          "Email us the project name, the unit or room number and photographs of the condition.",
+          "We respond within two business days with an assessment or a site visit.",
+          "Approved claims go into expedited fabrication and ship to the site.",
+          "If the unit was installed by our crew, we schedule the replacement as well."
+        ],
+        "cta": "Open a warranty claim"
+      },
+      "care": {
+        "title": "Care & maintenance",
+        "description": "Non-porous surfaces do not need sealing, ever. They do need the right cleaner.",
+        "items": [
+          "Daily: a standard non-abrasive shower cleaner, then rinse completely.",
+          "Weekly: warm water and a soft cloth on the joints and the pan.",
+          "Quarterly: a deep clean per the care sheet restores gloss on high-traffic units.",
+          "Never: abrasive pads, scouring powder, bleach-based scrubs or solvent cleaners."
+        ]
+      }
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "The questions we answer most",
+      "description": "If yours is not here, a specialist will answer it in one business day.",
+      "groups": [
+        {
+          "id": "general",
+          "label": "General",
+          "items": [
+            {
+              "q": "How is this different from tile?",
+              "a": "It is a panel system, not individual tiles and grout. You get the look of a tiled wall as one continuous surface, with no grout lines to seal, scrub or replace, and an install measured in days rather than weeks."
+            },
+            {
+              "q": "How is it different from acrylic or fiberglass?",
+              "a": "Acrylic and fiberglass units are thin shells. Our panels and pans are solid surface all the way through, so they take commercial traffic, hold a repair and do not flex underfoot."
+            },
+            {
+              "q": "Is it really waterproof without a membrane?",
+              "a": "Yes. The surface is non-porous and the joints are sealed with 100% silicone, so water never reaches the substrate. That is why the system goes over water-resistant drywall rather than cement board and a membrane."
+            },
+            {
+              "q": "Does it stain or grow mildew?",
+              "a": "The surface is non-porous, so it does not absorb. Mildew has nothing to root into and common bathroom stains wipe off. There is no grout to discolour."
+            },
+            {
+              "q": "Can I get a colour that is not one of the five standard finishes?",
+              "a": "Yes. The five standard finishes cover every pattern and ship on the standard lead time. Custom colours are available on request and are quoted per project."
+            },
+            {
+              "q": "Do you sell to homeowners?",
+              "a": "We work project by project rather than by the piece. Small residential jobs are welcome — tell us the rough openings and we will tell you honestly whether we are the right fit."
+            }
+          ]
+        },
+        {
+          "id": "ordering",
+          "label": "Ordering & lead times",
+          "items": [
+            {
+              "q": "What is the standard lead time?",
+              "a": "Four to six weeks from approved shop drawings to the truck, depending on the size of the release. Everything is made to order, so the clock starts at approval, not at the purchase order."
+            },
+            {
+              "q": "How do I get a sample?",
+              "a": "Request one from any product page or from the contact form. We send physical finish chips so you are approving the colour in the room's own light, not on a screen."
+            },
+            {
+              "q": "Does pricing change between patterns?",
+              "a": "No. Every wall pattern in the catalog is the same price per square foot. What changes by pattern is the available mould size, which we work out on the shop drawing."
+            },
+            {
+              "q": "Can you make a size that is not in the catalog?",
+              "a": "Yes — most pans and surrounds are custom sizes already. Send the rough opening and the drain position and we will draw it."
+            },
+            {
+              "q": "Do you supply model rooms?",
+              "a": "Yes. Say it is a model room when you request the quote so we release it ahead of the main run and match the finish for the production units later."
+            },
+            {
+              "q": "Can we return extra material for credit?",
+              "a": "No. Everything is cut for one specific opening and is not stocked, so it cannot be resold. Order the overage you want on the original release."
+            }
+          ]
+        },
+        {
+          "id": "shipping",
+          "label": "Shipping & handling",
+          "items": [
+            {
+              "q": "How does the material arrive?",
+              "a": "On a flatbed truck straight from our plant, in wooden crates and on banded pallets, labelled by floor and unit. Nothing is cross-docked."
+            },
+            {
+              "q": "What equipment do we need to unload?",
+              "a": "A forklift with 72-inch forks for wall panel crates, and a forklift with 48-inch forks plus a pallet jack for shower pans. The driver does not unload."
+            },
+            {
+              "q": "What if a crate arrives damaged?",
+              "a": "Note it on the delivery receipt before you sign, photograph it on the truck and send us the photos with the crate label and bill of lading number. Concealed damage has a five-business-day window."
+            },
+            {
+              "q": "Can you hold our order until the site is ready?",
+              "a": "Yes. We warehouse finished orders and release them floor by floor. Storage past 30 days from the ready-to-ship date falls under the storage agreement."
+            },
+            {
+              "q": "Do you ship outside the continental US?",
+              "a": "Yes, crated for container loading. We provide the packing list, crate dimensions and weights your freight forwarder needs."
+            }
+          ]
+        },
+        {
+          "id": "installation",
+          "label": "Installation & care",
+          "items": [
+            {
+              "q": "Do we have to use your crew?",
+              "a": "No, but it is the fastest path. A certified crew turns 8 to 16 units a day. If you would rather use your own people, we train them and sign off the record that keeps the workmanship warranty intact."
+            },
+            {
+              "q": "What substrate do the panels go on?",
+              "a": "Water-resistant drywall. No cement backerboard and no waterproofing membrane are required behind our panels."
+            },
+            {
+              "q": "How are the panels attached?",
+              "a": "Dot-mounted to the substrate with solid-surface panel adhesive. They are adhered to the wall board, not screwed to the studs."
+            },
+            {
+              "q": "What goes in the seams?",
+              "a": "Colour-matched, mildew-resistant 100% silicone wherever panel meets panel or pan. Paintable latex caulk where the panel meets the surrounding substrate."
+            },
+            {
+              "q": "What blade cuts it?",
+              "a": "A circular saw with a dry-cut diamond or masonry blade. Valve and showerhead penetrations use a carbide or diamond hole saw."
+            },
+            {
+              "q": "Can we install over existing tile?",
+              "a": "Yes, over sound tile, using silicone and an edge trim that covers both the tile and the panel edge. Tell us at quote stage so the trim ships with the order."
+            },
+            {
+              "q": "How do we clean it?",
+              "a": "A non-abrasive daily shower cleaner and a full rinse. Never abrasive pads, scouring powder or bleach-based scrubs. There is nothing to reseal, ever."
+            }
+          ]
+        }
+      ]
+    },
+    "downloads": {
+      "title": "Documents",
+      "description": "Pattern libraries, dimensions and accessory references to drop straight into a submittal.",
+      "cta": "Download PDF"
+    },
+    "cta": {
+      "eyebrow": "Still deciding",
+      "title": "Send us the drawings and we will send back a plan",
+      "description": "Unit count, rough openings, drain positions and your delivery window. You get a specification, a lead time and a price.",
+      "primary": "Talk to a specialist",
+      "secondary": "Browse the catalog"
     }
   },
   "contact": {

@@ -10,6 +10,7 @@
     "about_us": "Sobre Nosotros",
     "projects": "Proyectos",
     "products": "Productos",
+    "resources": "Recursos",
     "contact": "Contacto",
     "cta": "Solicitar Presupuesto",
     "menu": "Menú",
@@ -29,7 +30,17 @@
     "results": "resultados",
     "no_results": "Ningún producto coincide con tu búsqueda.",
     "clear": "Limpiar filtros",
-    "skip_to_content": "Ir al contenido"
+    "skip_to_content": "Ir al contenido",
+    "panorama": {
+      "enter": "Entrar a la ducha",
+      "loading": "Cargando el panorama…",
+      "drag": "Arrastra para mirar alrededor",
+      "play": "Reanudar el recorrido",
+      "pause": "Pausar el recorrido",
+      "reset": "Centrar la vista",
+      "fullscreen": "Pantalla completa",
+      "exit_fullscreen": "Salir de pantalla completa"
+    }
   },
   "home": {
     "hero": {
@@ -133,6 +144,19 @@
       ],
       "download": "Descargar PDF",
       "unavailable": "Próximamente"
+    },
+    "immersive": {
+      "eyebrow": "Míralo antes de que exista",
+      "title": "Métete dentro de una ducha terminada",
+      "description": "Es una unidad real que entregamos, no un render. Arrastra para recorrer las paredes, el plato y las juntas tal como las verán tus huéspedes.",
+      "panorama": "two",
+      "caption": "Harbor Point Hotel · Seattle, WA",
+      "points": [
+        { "value": "Cero juntas", "label": "Una superficie continua desde el plato hasta la línea de techo." },
+        { "value": "Uniones al milímetro", "label": "Paneles cortados al vano: las juntas caen donde las dibujamos." },
+        { "value": "214 unidades idénticas", "label": "El mismo acabado, la misma junta y el mismo resultado en cada piso." }
+      ],
+      "cta": "Ver los proyectos"
     },
     "cta": {
       "eyebrow": "Siguiente paso",
@@ -243,6 +267,372 @@
         "primary": "Solicitar presupuesto",
         "secondary": "Ver todos los productos"
       }
+    }
+  },
+  "resources": {
+    "banner_subtitle": "Especificación y soporte",
+    "title": "Recursos",
+    "subtitle": "Todo lo que tu equipo necesita una vez aprobada la especificación.",
+    "intro": "Cómo fabricamos, embalamos y enviamos tu pedido, cómo se instalan los paneles, qué cubre la garantía y las respuestas que damos con más frecuencia. Escrito para quienes reciben el camión y montan los paneles.",
+    "nav_label": "En esta página",
+    "sections": [
+      { "id": "manufacturing", "label": "Fabricación" },
+      { "id": "shipping", "label": "Envío y manejo" },
+      { "id": "installation", "label": "Instalación" },
+      { "id": "warranty", "label": "Garantía" },
+      { "id": "faq", "label": "Preguntas frecuentes" }
+    ],
+    "manufacturing": {
+      "eyebrow": "Fabricación",
+      "title": "Fabricado para tu vano y guardado hasta que la obra esté lista",
+      "description": "Nada de este catálogo sale de un estante. Cada panel y cada plato se fabrica contra tus planos de taller aprobados, se embala para el viaje y se envía directo a la obra la semana que lo necesitas, sin pasar por un centro de distribución.",
+      "stats": [
+        { "value": "100%", "label": "Hecho a pedido", "note": "Cortado a tu vano, no ajustado en obra." },
+        { "value": "4–6 sem", "label": "Tiempo de entrega estándar", "note": "Desde los planos aprobados hasta el camión." },
+        { "value": "0.2%", "label": "Daño en transporte", "note": "Medido sobre todas las cajas enviadas el año pasado." },
+        { "value": "1", "label": "Punto de contacto", "note": "Paredes, platos, accesorios e instalación en un pedido." }
+      ],
+      "steps_title": "Del plano al camión",
+      "steps": [
+        {
+          "title": "Planos de taller",
+          "description": "Dibujamos cada vano —alturas de pared, medida del plato, posición del drenaje, nichos y accesorios— y detenemos la producción hasta tu aprobación."
+        },
+        {
+          "title": "Fabricación",
+          "description": "Paneles y platos se funden y cortan a la medida aprobada. Los refuerzos para barras de apoyo y grifería se integran aquí, no se taladran en obra."
+        },
+        {
+          "title": "Control de calidad",
+          "description": "Color, espesor y canto se verifican contra la muestra de acabado aprobada antes de embalar. El material fuera de tolerancia no sale de la planta."
+        },
+        {
+          "title": "Embalaje",
+          "description": "Los paneles se separan con espuma, se flejan y se embalan en cajas de madera. Cada caja se etiqueta con el proyecto, el piso y la unidad a la que pertenece."
+        },
+        {
+          "title": "Envío o resguardo",
+          "description": "El pedido va directo a la obra, o lo guardamos en nuestro almacén bajo el acuerdo de resguardo hasta que tu calendario lo pida."
+        }
+      ]
+    },
+    "shipping": {
+      "eyebrow": "Envío y manejo",
+      "title": "El camión llega cuando tu piso está listo para recibirlo",
+      "description": "El material viaja en plataforma directo de nuestra planta a tu obra. No hay distribuidor de por medio, por eso la caja que abres es la caja que empacamos. Todo lo de abajo es lo que tu residente de obra necesita saber antes de que llegue el camión.",
+      "phases_title": "Cómo viaja tu pedido",
+      "phases": [
+        {
+          "title": "Ventana de entrega",
+          "description": "Confirmamos la fecha con dos semanas de anticipación y llamamos a la obra el día previo. Dinos las restricciones de acceso —altura de andén, permisos de calle, ventanas de grúa— al hacer el pedido, no cuando el camión ya está afuera."
+        },
+        {
+          "title": "Cómo llega",
+          "description": "Camión de plataforma, cajas de madera y tarimas flejadas. El chofer no descarga: la obra pone el equipo y la cuadrilla."
+        },
+        {
+          "title": "Entregas parciales y por fases",
+          "description": "Los proyectos por torres o fases se pueden liberar piso por piso o ala por ala, para que no almacenes material que no vas a montar en dos meses."
+        },
+        {
+          "title": "Envíos en contenedor",
+          "description": "Para proyectos fuera de Estados Unidos continental embalamos para carga en contenedor y entregamos la lista de empaque y las dimensiones que necesita tu agente de carga."
+        }
+      ],
+      "equipment": {
+        "title": "Qué necesitas en obra para descargar",
+        "description": "Ténlo listo antes de agendar el camión. Un camión que no se puede descargar dentro del tiempo libre de la carta porte genera estadías que se cargan al proyecto.",
+        "columns": ["Carga", "Cuadrilla", "Equipo mínimo"],
+        "rows": [
+          ["Cajas de paneles de pared", "2 personas", "Montacargas con horquillas de 72\" (1.80 m)"],
+          ["Tarimas de platos de ducha", "2 personas", "Montacargas con horquillas de 48\" y patín hidráulico"],
+          ["Cajas de accesorios", "1 persona", "Diablito"],
+          ["Tinas exentas", "3 personas", "Montacargas y eslingas suaves; nunca levantar por el borde"]
+        ],
+        "note": "Un plato de ducha pesa cerca de 90 kg. Nada de lo que viene en el camión se carga a mano."
+      },
+      "receiving": {
+        "title": "Recepción e inspección",
+        "description": "Cinco minutos en la caja del camión son la diferencia entre un panel de reemplazo y una discusión con la transportista.",
+        "items": [
+          "Cuenta las cajas contra la carta porte antes de firmar nada.",
+          "Recorre la carga mientras sigue en el camión y fotografía cada esquina golpeada, rasgadura o fleje corrido.",
+          "Anota el daño en el acuse de entrega. Una firma limpia cierra la responsabilidad de la transportista.",
+          "Abre e inspecciona los paneles dentro de las 48 horas siguientes, aunque la instalación sea semanas después.",
+          "Conserva las etiquetas de las cajas: el proyecto y número de unidad que llevan es como identificamos un reemplazo."
+        ]
+      },
+      "storage": {
+        "title": "Almacenaje en obra",
+        "description": "El material es producto terminado desde que sale de nuestra planta. Guárdalo como tal.",
+        "items": [
+          "Bajo techo, seco, sin sol directo y lejos de cualquier fuente de calor.",
+          "Cajas planas y elevadas del piso sobre polines; los paneles de canto, nunca boca abajo.",
+          "No apiles más de dos cajas de paneles.",
+          "Deja que los paneles se aclimaten 24 horas a la temperatura del edificio antes de instalar.",
+          "El resguardo en almacén más allá de 30 días desde la fecha de listo para envío entra en el acuerdo de resguardo."
+        ]
+      },
+      "claims": {
+        "title": "Daños y reclamaciones",
+        "description": "Repórtalo rápido y lo reponemos rápido.",
+        "items": [
+          "Daño visible: anótalo en el acuse de entrega en el camión y envía fotos el mismo día.",
+          "Daño oculto: repórtalo dentro de los cinco días hábiles siguientes a la entrega.",
+          "Envía la etiqueta de la caja, el número de carta porte y fotos de la caja y del panel.",
+          "Confirmamos en dos días hábiles y las reposiciones aprobadas entran a fabricación express."
+        ]
+      },
+      "returns_note": "Cada panel y cada plato se corta para un vano específico, por lo que el material no se acepta en devolución. Pide el excedente que quieras en la liberación original, no después."
+    },
+    "installation": {
+      "eyebrow": "Instalación",
+      "title": "Paneles montados en un día, no una semana de azulejo",
+      "description": "Nuestro sistema va sobre panel de yeso resistente a la humedad con adhesivo por puntos. Sin cementante, sin membrana impermeable y sin tiempos de curado. Una cuadrilla certificada entrega de 8 a 16 unidades al día; si prefieres usar tu propio equipo, lo capacitamos.",
+      "steps_title": "La secuencia",
+      "steps": [
+        {
+          "title": "Revisa el vano",
+          "description": "A escuadra, a plomo, seco y armado a las medidas del plano aprobado. Los paneles se cortan al plano, así que el vano tiene que coincidir con él."
+        },
+        {
+          "title": "Coloca el plato",
+          "description": "Primero el plato, sobre cama completa de mortero y a nivel con el drenaje. Todo lo que va encima toma esta línea como referencia."
+        },
+        {
+          "title": "Prueba en seco y corta",
+          "description": "Presenta los paneles, marca la válvula y la regadera, y corta en seco con sierra circular y disco de diamante o mampostería."
+        },
+        {
+          "title": "Adhiere los paneles",
+          "description": "Adhesivo por puntos para superficie sólida directamente sobre el panel de yeso resistente a la humedad. Primero la pared del fondo, luego los laterales."
+        },
+        {
+          "title": "Sella las juntas",
+          "description": "Silicón 100% resistente al moho y a color donde el panel encuentra otro panel o el plato. Sellador acrílico pintable donde el panel encuentra el sustrato."
+        },
+        {
+          "title": "Monta los accesorios",
+          "description": "Silicón más un cordón de termofusible: el termofusible sostiene la pieza mientras el silicón cura. Después sella el perímetro."
+        },
+        {
+          "title": "Protege y entrega",
+          "description": "Cubre el plato, mantén a los demás oficios fuera de la superficie hasta la limpieza final y entrega con la hoja de cuidados."
+        }
+      ],
+      "specs": {
+        "title": "Referencia de obra",
+        "description": "Los números que tu instalador pide el primer día.",
+        "columns": ["Concepto", "Especificación"],
+        "rows": [
+          ["Sustrato", "Panel de yeso resistente a la humedad. Sin cementante ni membrana."],
+          ["Adhesivo", "Adhesivo para superficie sólida, aplicado por puntos"],
+          ["Junta panel a panel", "Silicón 100% a color, resistente al moho"],
+          ["Canto panel a sustrato", "Sellador acrílico pintable"],
+          ["Corte", "Sierra circular, disco de diamante o mampostería en seco"],
+          ["Perforación de válvula y regadera", "Broca de copa de carburo o diamante"],
+          ["Altura de reposapiés", "30 cm (12\") desde el borde del plato"],
+          ["Altura de repisa de shampoo", "122 cm (48\") desde el borde del plato"],
+          ["Jabonera — ducha", "122 cm (48\") sobre piso terminado, una por esquina"],
+          ["Jabonera — tina", "30 cm sobre el borde y otra a 122 cm del piso"],
+          ["Rendimiento de cuadrilla certificada", "8–16 unidades por día"]
+        ]
+      },
+      "retrofit": {
+        "title": "Instalación sobre azulejo existente",
+        "description": "Las conversiones de tina a ducha y las renovaciones pueden ir directo sobre azulejo firme, con adherencia de silicón y un perfil de canto que cubre el azulejo y el panel. Avísanos al cotizar: el perfil se especifica con el pedido, no se improvisa en obra."
+      }
+    },
+    "warranty": {
+      "eyebrow": "Garantía",
+      "title": "Un solo proveedor para la pared, el plato y la cuadrilla: una sola garantía",
+      "description": "Como fabricamos e instalamos, no hay hueco entre una reclamación de material y una de mano de obra que discutir. Los plazos siguientes son nuestra cobertura comercial estándar; las condiciones específicas de cada proyecto siguen tu contrato.",
+      "coverage_title": "Qué cubre",
+      "coverage": [
+        { "term": "10 años", "title": "Paneles de pared y platos", "description": "Defectos de fabricación, delaminación y fisuras no causadas por impacto o movimiento del sustrato." },
+        { "term": "5 años", "title": "Accesorios y perfiles", "description": "Nichos, jaboneras, repisas, reposapiés y perfiles contra defecto de fabricación." },
+        { "term": "2 años", "title": "Nuestra mano de obra", "description": "Cualquier unidad instalada por una cuadrilla de Shower Walls, incluyendo juntas, sellado y colocación del plato." }
+      ],
+      "included": {
+        "title": "Incluye",
+        "items": [
+          "Defectos de fabricación en material o acabado",
+          "Delaminación o separación bajo uso normal",
+          "Fisuras no causadas por impacto o movimiento del edificio",
+          "Variación de color fuera de nuestra tolerancia publicada",
+          "Material de reposición fabricado al plano original"
+        ]
+      },
+      "excluded": {
+        "title": "No incluye",
+        "items": [
+          "Daño por impacto, herramienta caída y maltrato en obra",
+          "Fibras abrasivas, polvos de tallar y limpiadores con cloro",
+          "Adhesivos, selladores o fijaciones que no especificamos",
+          "Modificaciones hechas en obra después de instalar",
+          "Movimiento, asentamiento o falla del sustrato detrás del panel",
+          "Instalaciones por cuadrillas sin capacitación registrada"
+        ]
+      },
+      "claim": {
+        "title": "Cómo reclamar",
+        "steps": [
+          "Envíanos por correo el nombre del proyecto, el número de unidad o habitación y fotos de la condición.",
+          "Respondemos en dos días hábiles con un dictamen o una visita a obra.",
+          "Las reclamaciones aprobadas entran a fabricación express y se envían a la obra.",
+          "Si la unidad la instaló nuestra cuadrilla, también programamos el reemplazo."
+        ],
+        "cta": "Abrir una reclamación"
+      },
+      "care": {
+        "title": "Cuidado y mantenimiento",
+        "description": "Las superficies no porosas no necesitan sellarse nunca. Lo que sí necesitan es el limpiador correcto.",
+        "items": [
+          "Diario: un limpiador de ducha no abrasivo y enjuague completo.",
+          "Semanal: agua tibia y paño suave sobre juntas y plato.",
+          "Trimestral: una limpieza profunda según la hoja de cuidados devuelve el brillo en unidades de alto tránsito.",
+          "Nunca: fibras abrasivas, polvos de tallar, limpiadores con cloro ni solventes."
+        ]
+      }
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Lo que más nos preguntan",
+      "description": "Si la tuya no está aquí, un especialista te responde en un día hábil.",
+      "groups": [
+        {
+          "id": "general",
+          "label": "General",
+          "items": [
+            {
+              "q": "¿En qué se diferencia del azulejo?",
+              "a": "Es un sistema de paneles, no azulejos individuales con lechada. Obtienes el aspecto de un muro aplacado en una superficie continua, sin juntas que sellar, tallar o reponer, y con una instalación que se mide en días y no en semanas."
+            },
+            {
+              "q": "¿En qué se diferencia del acrílico o la fibra de vidrio?",
+              "a": "Las unidades de acrílico y fibra de vidrio son cascarones delgados. Nuestros paneles y platos son superficie sólida en todo su espesor, así que aguantan tránsito comercial, admiten reparación y no ceden al pisarlos."
+            },
+            {
+              "q": "¿De verdad es impermeable sin membrana?",
+              "a": "Sí. La superficie es no porosa y las juntas se sellan con silicón 100%, así que el agua nunca llega al sustrato. Por eso el sistema va sobre panel de yeso resistente a la humedad y no sobre cementante con membrana."
+            },
+            {
+              "q": "¿Se mancha o le sale moho?",
+              "a": "La superficie no es porosa, no absorbe. El moho no tiene dónde arraigar y las manchas comunes de baño se limpian. No hay lechada que se decolore."
+            },
+            {
+              "q": "¿Puedo pedir un color fuera de los cinco acabados estándar?",
+              "a": "Sí. Los cinco acabados estándar cubren todos los patrones y salen con el tiempo de entrega normal. Los colores personalizados están disponibles bajo pedido y se cotizan por proyecto."
+            },
+            {
+              "q": "¿Venden a particulares?",
+              "a": "Trabajamos por proyecto más que por pieza. Los trabajos residenciales pequeños son bienvenidos: cuéntanos los vanos y te decimos con honestidad si somos la opción adecuada."
+            }
+          ]
+        },
+        {
+          "id": "ordering",
+          "label": "Pedidos y tiempos",
+          "items": [
+            {
+              "q": "¿Cuál es el tiempo de entrega estándar?",
+              "a": "De cuatro a seis semanas desde los planos de taller aprobados hasta el camión, según el tamaño de la liberación. Todo es a pedido, así que el reloj empieza con la aprobación, no con la orden de compra."
+            },
+            {
+              "q": "¿Cómo consigo una muestra?",
+              "a": "Pídela desde cualquier página de producto o desde el formulario de contacto. Enviamos muestras físicas de acabado para que apruebes el color con la luz del propio espacio y no en una pantalla."
+            },
+            {
+              "q": "¿El precio cambia entre patrones?",
+              "a": "No. Todos los patrones de pared del catálogo cuestan lo mismo por metro cuadrado. Lo que cambia por patrón es la medida de molde disponible, que resolvemos en el plano de taller."
+            },
+            {
+              "q": "¿Pueden hacer una medida que no está en el catálogo?",
+              "a": "Sí; la mayoría de los platos y revestimientos ya son medidas especiales. Mándanos el vano y la posición del drenaje y lo dibujamos."
+            },
+            {
+              "q": "¿Surten cuartos muestra?",
+              "a": "Sí. Indícalo al pedir la cotización para liberarlo antes de la corrida principal y luego igualar el acabado en las unidades de producción."
+            },
+            {
+              "q": "¿Podemos devolver material sobrante a crédito?",
+              "a": "No. Todo se corta para un vano específico y no se mantiene en inventario, así que no se puede revender. Pide el excedente en la liberación original."
+            }
+          ]
+        },
+        {
+          "id": "shipping",
+          "label": "Envío y manejo",
+          "items": [
+            {
+              "q": "¿Cómo llega el material?",
+              "a": "En camión de plataforma directo de nuestra planta, en cajas de madera y tarimas flejadas, etiquetadas por piso y unidad. Nada pasa por centro de distribución."
+            },
+            {
+              "q": "¿Qué equipo necesitamos para descargar?",
+              "a": "Montacargas con horquillas de 1.80 m para las cajas de paneles, y montacargas con horquillas de 1.20 m más patín hidráulico para los platos. El chofer no descarga."
+            },
+            {
+              "q": "¿Y si una caja llega dañada?",
+              "a": "Anótalo en el acuse antes de firmar, fotografíalo sobre el camión y mándanos las fotos con la etiqueta de la caja y el número de carta porte. El daño oculto tiene una ventana de cinco días hábiles."
+            },
+            {
+              "q": "¿Pueden guardar nuestro pedido hasta que la obra esté lista?",
+              "a": "Sí. Resguardamos pedidos terminados y los liberamos piso por piso. El resguardo de más de 30 días desde la fecha de listo para envío entra en el acuerdo de resguardo."
+            },
+            {
+              "q": "¿Envían fuera de Estados Unidos continental?",
+              "a": "Sí, con embalaje para contenedor. Entregamos lista de empaque, dimensiones y pesos de las cajas para tu agente de carga."
+            }
+          ]
+        },
+        {
+          "id": "installation",
+          "label": "Instalación y cuidado",
+          "items": [
+            {
+              "q": "¿Tenemos que usar su cuadrilla?",
+              "a": "No, pero es el camino más rápido. Una cuadrilla certificada entrega de 8 a 16 unidades al día. Si prefieres a tu propia gente, la capacitamos y firmamos el registro que mantiene vigente la garantía de mano de obra."
+            },
+            {
+              "q": "¿Sobre qué sustrato van los paneles?",
+              "a": "Panel de yeso resistente a la humedad. No se requiere cementante ni membrana impermeable detrás de nuestros paneles."
+            },
+            {
+              "q": "¿Cómo se fijan los paneles?",
+              "a": "Con adhesivo para superficie sólida aplicado por puntos sobre el sustrato. Se adhieren al panel de yeso, no se atornillan a los montantes."
+            },
+            {
+              "q": "¿Qué lleva la junta?",
+              "a": "Silicón 100% a color y resistente al moho donde el panel encuentra otro panel o el plato. Sellador acrílico pintable donde el panel encuentra el sustrato circundante."
+            },
+            {
+              "q": "¿Con qué disco se corta?",
+              "a": "Sierra circular con disco de diamante o mampostería para corte en seco. Las perforaciones de válvula y regadera con broca de copa de carburo o diamante."
+            },
+            {
+              "q": "¿Se puede instalar sobre azulejo existente?",
+              "a": "Sí, sobre azulejo firme, con silicón y un perfil de canto que cubre tanto el azulejo como el borde del panel. Avísanos al cotizar para que el perfil viaje con el pedido."
+            },
+            {
+              "q": "¿Cómo se limpia?",
+              "a": "Con un limpiador de ducha no abrasivo y enjuague completo. Nunca fibras abrasivas, polvos de tallar ni limpiadores con cloro. No hay nada que resellar, nunca."
+            }
+          ]
+        }
+      ]
+    },
+    "downloads": {
+      "title": "Documentos",
+      "description": "Bibliotecas de patrones, dimensiones y referencias de accesorios listas para tu entrega técnica.",
+      "cta": "Descargar PDF"
+    },
+    "cta": {
+      "eyebrow": "¿Aún lo estás decidiendo?",
+      "title": "Mándanos los planos y te devolvemos un plan",
+      "description": "Número de unidades, vanos, posición de drenajes y tu ventana de entrega. Recibes especificación, tiempo de entrega y precio.",
+      "primary": "Habla con un especialista",
+      "secondary": "Ver el catálogo"
     }
   },
   "contact": {

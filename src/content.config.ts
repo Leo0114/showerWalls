@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "zod";
 import { glob } from "astro/loaders";
 import { PRODUCT_CATEGORIES } from "@/constants/site";
 
@@ -21,10 +22,15 @@ const localized = {
 };
 
 /** Keeps the `<lang>/<slug>` shape as the entry id instead of collapsing it. */
-const generateId = ({ entry }: { entry: string }) => entry.replace(/\.mdx?$/, "");
+const generateId = ({ entry }: { entry: string }) =>
+  entry.replace(/\.mdx?$/, "");
 
 const products = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/products", generateId }),
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./src/content/products",
+    generateId,
+  }),
   schema: ({ image }) =>
     z.object({
       ...localized,
@@ -32,12 +38,18 @@ const products = defineCollection({
       code: z.string(),
       category: z.enum(PRODUCT_CATEGORIES),
       madeToOrder: z.boolean().default(false),
-      specs: z.array(z.object({ label: z.string(), value: z.string() })).default([]),
+      specs: z
+        .array(z.object({ label: z.string(), value: z.string() }))
+        .default([]),
     }),
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/projects", generateId }),
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./src/content/projects",
+    generateId,
+  }),
   schema: ({ image }) =>
     z.object({
       ...localized,

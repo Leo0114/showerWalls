@@ -27,7 +27,7 @@ const galleryId = `pswp-${name}`;
   images.length > 0 && (
     <div class="gallery-block">
       {title && (
-        <h2 class="mb-5 font-display text-2xl font-medium text-ink">{title}</h2>
+        <h2 class="type-heading mb-5 text-ink">{title}</h2>
       )}
       <div
         id={galleryId}
@@ -42,7 +42,7 @@ const galleryId = `pswp-${name}`;
             target="_blank"
             rel="noreferrer"
             class:list={[
-              "group relative block overflow-hidden rounded-xl",
+              "press-soft group relative block overflow-hidden rounded-2xl",
               i === 0 && "col-span-2 row-span-2 md:col-span-2",
             ]}
           >
@@ -51,7 +51,7 @@ const galleryId = `pswp-${name}`;
               alt={`${name} ${i + 1}`}
               width={i === 0 ? 900 : 500}
               height={i === 0 ? 700 : 400}
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </a>
         ))}

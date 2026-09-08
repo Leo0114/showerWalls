@@ -15,7 +15,7 @@ const fieldClass =
   "w-full rounded-2xl border border-line bg-canvas px-4 py-3 text-sm text-ink transition-colors placeholder:text-muted focus:border-primary focus:outline-none";
 
 const labelClass =
-  "mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-muted";
+  "type-label mb-2 block text-muted";
 
 export default function ContactForm({ lang }: ContactFormProps) {
   const { t } = useReactI18n(lang);
@@ -182,7 +182,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primaryDark disabled:cursor-not-allowed disabled:opacity-60"
+            className="btn btn-primary group px-8 py-4 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSubmitting ? copy.sending : copy.submit_button}
             <FiSend

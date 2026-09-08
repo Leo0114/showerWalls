@@ -55,15 +55,15 @@ const meta = [
     <div class="container-x py-24 lg:py-32">
       <a
         href={path("projects")}
-        class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/70 transition-colors hover:text-white"
+        class="press type-label inline-flex items-center gap-2 text-white/70 hover:text-white"
       >
         <FiArrowLeft className="h-4 w-4" aria-hidden="true" />
         {detail.back}
       </a>
 
-      <p class="mt-10 text-xs font-semibold uppercase tracking-[0.3em] text-secondary">{sector}</p>
+      <p class="type-eyebrow mt-10 text-secondary">{sector}</p>
       <h1
-        class="mt-4 max-w-4xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-6xl"
+        class="type-display mt-4 max-w-4xl text-white"
         transition:name={`project-title-${slug}`}
       >
         {title}
@@ -77,7 +77,7 @@ const meta = [
       {
         meta.map(({ label, value }) => (
           <div>
-            <dt class="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted">{label}</dt>
+            <dt class="type-label text-muted">{label}</dt>
             <dd class="mt-2 font-display text-lg font-semibold text-ink">{value}</dd>
           </div>
         ))
@@ -88,9 +88,9 @@ const meta = [
   <section class="section-y bg-canvas">
     <div class="container-x grid gap-14 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
       <div>
-        <h2 class="font-display text-2xl font-bold text-ink">{detail.overview}</h2>
+        <h2 class="type-heading text-ink">{detail.overview}</h2>
         <div
-          class="prose prose-neutral mt-6 max-w-none dark:prose-invert prose-headings:font-display prose-a:text-primary"
+          class="prose prose-neutral mt-6 max-w-none dark:prose-invert prose-headings:font-display prose-a:text-strategic"
         >
           <Content />
         </div>
@@ -98,7 +98,7 @@ const meta = [
 
       {
         scope.length > 0 && (
-          <aside class="h-fit rounded-3xl border border-line bg-panel p-8">
+          <aside class="surface-card h-fit rounded-3xl bg-panel p-8">
             <h2 class="font-display text-lg font-semibold text-ink">{detail.meta.scope}</h2>
             <ul class="mt-5 space-y-3">
               {scope.map((item) => (

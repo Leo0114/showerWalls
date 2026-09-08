@@ -12,7 +12,6 @@ const { class: className = "", label } = Astro.props;
 
 const current: Lang = getLang(Astro.currentLocale);
 const options = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
-  code,
   ...LANGUAGES[code],
   href: switchLocalePath(Astro.url, code),
   isActive: code === current,
@@ -20,7 +19,10 @@ const options = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
 ---
 
 <div
-  class:list={["inline-flex items-center rounded-full border border-line bg-canvas/60 p-0.5", className]}
+  class:list={[
+    "inline-flex items-center rounded-full border border-line bg-canvas/60 p-0.5",
+    className,
+  ]}
   role="group"
   aria-label={label ?? "Language"}
 >
@@ -33,8 +35,8 @@ const options = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
         aria-current={isActive ? "true" : undefined}
         title={name}
         class:list={[
-          "rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] transition-colors duration-300",
-          isActive ? "bg-primary text-white" : "text-muted hover:text-ink",
+          "press rounded-full px-2.5 py-1 text-xs font-semibold tracking-[0.12em] uppercase",
+          isActive ? "bg-primary text-white shadow-e1" : "text-muted hover:text-ink",
         ]}
       >
         {short}

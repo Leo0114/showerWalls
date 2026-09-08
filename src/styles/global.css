@@ -6,25 +6,81 @@
 /* ---------------------------------------------------------------------------
    Semantic surface tokens. Only these change between light / dark, so every
    component can stay 100% Tailwind and theme itself for free.
+
+   `--glass*`, `--shadow*` and `--sheen` exist so the translucent chrome and the
+   elevation scale flip with the theme without a single `dark:` variant.
 --------------------------------------------------------------------------- */
 :root {
   --canvas: #ffffff;
   --panel: #f2f5f8;
+  --elevated: #ffffff;
   --ink: #1c1d1a;
   --muted: #6f7378;
   --line: #e3e8ed;
   --strategic: #006da6;
   --overlay: 28, 29, 26;
+
+  /* Translucent chrome (headers, sheets, chips). */
+  --glass: 255 255 255;
+  --glass-alpha: 0.72;
+  --glass-alpha-strong: 0.88;
+  /* Top edge of a material: light catching the surface. */
+  --sheen: 255 255 255 / 0.6;
+
+  /* Elevation. Bigger surfaces read as thicker: deeper blur + deeper shadow. */
+  --shadow-rgb: 16 24 32;
+  --shadow-1: 0 1px 2px rgb(var(--shadow-rgb) / 0.05);
+  --shadow-2:
+    0 1px 2px rgb(var(--shadow-rgb) / 0.04), 0 6px 16px -6px rgb(var(--shadow-rgb) / 0.1);
+  --shadow-3:
+    0 2px 4px rgb(var(--shadow-rgb) / 0.04), 0 18px 40px -12px rgb(var(--shadow-rgb) / 0.16);
+
+  /* Motion. A spring has no duration; these settle times are the "response"
+     half of Apple's damping/response model.
+       --ease-out-soft ≈ critically damped (no overshoot). The default.
+       --ease-spring   ≈ damping 0.8. Only after a momentum gesture.  */
+  --ease-out-soft: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --duration-press: 120ms;
+  --duration-quick: 220ms;
+  --duration-base: 340ms;
+  --duration-slow: 520ms;
+
+  /* One transition list shared by every interactive surface. Press feedback and
+     hover elevation therefore never fight over `transition-property`, and the
+     press uses `scale` (an independent transform property) so it composes with
+     Tailwind's own `translate` utilities instead of replacing them. */
+  --transition-interactive:
+    scale var(--duration-press) var(--ease-out-soft),
+    translate var(--duration-base) var(--ease-out-soft),
+    transform var(--duration-base) var(--ease-out-soft),
+    background-color var(--duration-quick) var(--ease-out-soft),
+    border-color var(--duration-quick) var(--ease-out-soft),
+    color var(--duration-quick) var(--ease-out-soft),
+    box-shadow var(--duration-quick) var(--ease-out-soft);
 }
 
 .dark {
   --canvas: #0b0f14;
   --panel: #131a22;
+  --elevated: #172029;
   --ink: #eef3f8;
   --muted: #9aa5b1;
   --line: #222c37;
   --strategic: #4fb0e0;
   --overlay: 4, 8, 12;
+
+  --glass: 11 15 20;
+  --glass-alpha: 0.68;
+  --glass-alpha-strong: 0.85;
+  --sheen: 255 255 255 / 0.1;
+
+  --shadow-rgb: 0 0 0;
+  --shadow-1: 0 1px 2px rgb(var(--shadow-rgb) / 0.4);
+  --shadow-2: 0 1px 2px rgb(var(--shadow-rgb) / 0.3), 0 6px 16px -6px rgb(var(--shadow-rgb) / 0.55);
+  --shadow-3: 0 2px 4px rgb(var(--shadow-rgb) / 0.3), 0 18px 40px -12px rgb(var(--shadow-rgb) / 0.7);
 }
 
 @theme inline {
@@ -40,6 +96,7 @@
   /* Themeable surfaces */
   --color-canvas: var(--canvas);
   --color-panel: var(--panel);
+  --color-elevated: var(--elevated);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-line: var(--line);
@@ -47,6 +104,14 @@
 
   --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Elevation exposed to Tailwind. The raw `--shadow-N` tokens flip with the
+     theme, so `shadow-e2` is correct in both without a `dark:` variant.
+     Motion tokens deliberately stay out of the theme — the `press`, `btn` and
+     `surface-card` utilities below own every timing so they cannot drift. */
+  --shadow-e1: var(--shadow-1);
+  --shadow-e2: var(--shadow-2);
+  --shadow-e3: var(--shadow-3);
 }
 
 @utility container-x {
@@ -69,6 +134,216 @@
   }
 }
 
+/* ---------------------------------------------------------------------------
+   Typography. Tracking and leading are size-specific — a single letter-spacing
+   value is always wrong somewhere. Large text tightens, small text opens up.
+--------------------------------------------------------------------------- */
+@utility type-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 1.2rem + 4.4vw, 3.75rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+@utility type-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.875rem, 1.2rem + 2.4vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+@utility type-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+@utility type-body {
+  font-size: 1rem;
+  line-height: 1.65;
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+
+/* Small caps labels: small text needs *positive* tracking to stay legible. */
+@utility type-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+@utility type-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* ---------------------------------------------------------------------------
+   Materials. Translucency is a floating functional layer, never stacked on
+   another translucent layer.
+--------------------------------------------------------------------------- */
+
+/* Chrome that content scrolls underneath (header, floating bars). */
+@utility glass-chrome {
+  background-color: rgb(var(--glass) / var(--glass-alpha));
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+/* A smaller, lighter chip that draws attention to itself (badges over media). */
+@utility glass-chip {
+  background-color: rgb(var(--glass) / var(--glass-alpha-strong));
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+}
+
+/* Bright top edge — the highlight a real material catches. */
+@utility sheen-top {
+  box-shadow: inset 0 1px 0 0 rgb(var(--sheen));
+}
+
+@utility surface-card {
+  background-color: var(--elevated);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-interactive);
+}
+
+/* Where floating chrome overlaps content, fade the content instead of drawing
+   a 1px divider under the bar. */
+@utility edge-fade-top {
+  mask-image: linear-gradient(to bottom, transparent, black 2.5rem);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 2.5rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Feedback. Response is the foundation: highlight on pointer-*down*, never on
+   release, and keep the change small enough to read as a press.
+--------------------------------------------------------------------------- */
+@utility press {
+  transition: var(--transition-interactive);
+  touch-action: manipulation;
+
+  &:active {
+    scale: 0.97;
+  }
+}
+
+/* Same, damped for large targets where a 3% squeeze reads as a glitch. */
+@utility press-soft {
+  transition: var(--transition-interactive);
+  touch-action: manipulation;
+
+  &:active {
+    scale: 0.995;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons. One place, so every surface in the site presses the same way.
+--------------------------------------------------------------------------- */
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: var(--transition-interactive);
+
+  &:active {
+    scale: 0.97;
+  }
+}
+
+@utility btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-2);
+
+  &:hover {
+    background-color: var(--color-primaryDark);
+    box-shadow: var(--shadow-3);
+  }
+}
+
+@utility btn-outline {
+  border: 1px solid var(--line);
+  background-color: var(--canvas);
+  color: var(--ink);
+
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 45%, transparent);
+    color: var(--color-primary);
+  }
+}
+
+@utility btn-invert {
+  background-color: #fff;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-2);
+
+  &:hover {
+    box-shadow: var(--shadow-3);
+  }
+}
+
+/* Over photography / dark sections only — never over another glass layer. */
+@utility btn-glass {
+  border: 1px solid rgb(255 255 255 / 0.25);
+  background-color: rgb(255 255 255 / 0.1);
+  color: #fff;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  &:hover {
+    background-color: rgb(255 255 255 / 0.2);
+    border-color: rgb(255 255 255 / 0.4);
+  }
+}
+
+/* Round icon button, used by every toggle in the chrome. */
+@utility icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex: none;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: var(--transition-interactive);
+
+  &:hover {
+    background-color: var(--panel);
+  }
+
+  &:active {
+    scale: 0.92;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -79,7 +354,17 @@
     background-color: var(--canvas);
     color: var(--ink);
     font-family: var(--font-sans);
+    font-synthesis-weight: none;
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Variable-font faces pick their own optical size per point size. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-optical-sizing: auto;
   }
 
   ::selection {
@@ -90,9 +375,19 @@
   :focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 3px;
+    border-radius: 0.35rem;
+  }
+
+  /* Never trap a keyboard user behind a scroll-margin-less anchor. */
+  [id] {
+    scroll-margin-top: 6.5rem;
   }
 }
 
+/* ---------------------------------------------------------------------------
+   Accessibility. Reduced motion is not "no feedback" — it is a gentler,
+   non-vestibular equivalent: keep the opacity cross-fades, drop the travel.
+--------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -102,7 +397,45 @@
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-property: opacity, background-color, border-color, color, fill, stroke !important;
+    transition-duration: 180ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Elements whose only job is to travel simply stop travelling. */
+  [data-motion] {
+    transform: none !important;
+    scale: none !important;
+    translate: none !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass-chrome,
+  .glass-chip,
+  .btn-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: rgb(var(--glass) / 0.97);
+  }
+
+  .btn-glass {
+    background-color: rgb(0 0 0 / 0.8);
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --line: #9aa2ab;
+    --muted: #45494e;
+    --glass-alpha: 0.98;
+    --glass-alpha-strong: 1;
+  }
+
+  .dark {
+    --line: #5a6673;
+    --muted: #c3ccd5;
   }
 }
 

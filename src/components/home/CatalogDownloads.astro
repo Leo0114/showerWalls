@@ -28,17 +28,22 @@ const catalogs = items
               href={file}
               download
               data-catalog={id}
-              class="group flex h-full flex-col rounded-3xl border border-line bg-panel p-7 transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
+              class="surface-card press-soft group flex h-full flex-col rounded-3xl bg-panel p-7 hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3"
             >
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-white">
+              <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-strategic transition-colors duration-500 ease-out group-hover:bg-primary group-hover:text-white">
                 <FiFileText className="h-5 w-5" aria-hidden="true" />
               </span>
 
-              <h3 class="mt-6 font-display text-lg font-semibold text-ink">{name}</h3>
-              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{text}</p>
+              <h3 class="mt-6 font-display text-lg font-semibold tracking-[-0.015em] text-ink">
+                {name}
+              </h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-pretty text-muted">{text}</p>
 
-              <span class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                <FiDownload className="h-4 w-4" aria-hidden="true" />
+              <span class="type-label mt-6 inline-flex items-center gap-2 text-strategic">
+                <FiDownload
+                  className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-y-0.5"
+                  aria-hidden="true"
+                />
                 {download}
               </span>
             </a>

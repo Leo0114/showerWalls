@@ -85,7 +85,7 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
   return (
     <div className="grid gap-10 lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-14">
       <aside className="lg:sticky lg:top-24 lg:self-start">
-        <div className="rounded-3xl border border-line bg-panel p-6">
+        <div className="surface-card rounded-3xl bg-panel p-6">
           <label htmlFor="product-search" className="sr-only">
             {copy.search_placeholder}
           </label>
@@ -100,11 +100,11 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder={copy.search_placeholder}
-              className="w-full rounded-full border border-line bg-canvas py-3 pl-11 pr-4 text-sm text-ink placeholder:text-muted focus:border-primary focus:outline-none"
+              className="w-full rounded-full border border-line bg-canvas py-3 pr-4 pl-11 text-sm text-ink transition-colors duration-200 ease-out placeholder:text-muted focus:border-primary focus:outline-none"
             />
           </div>
 
-          <h2 className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-muted">
+          <h2 className="type-label mt-8 text-muted">
             {t.common.filters}
           </h2>
 
@@ -118,9 +118,9 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
                     role="radio"
                     aria-checked={isActive}
                     onClick={() => selectFilter(id)}
-                    className={`flex w-full cursor-pointer items-center justify-between gap-3 rounded-xl px-4 py-2.5 text-left text-sm transition-colors duration-300 ${
+                    className={`press flex w-full cursor-pointer items-center justify-between gap-3 rounded-xl px-4 py-2.5 text-left text-sm ${
                       isActive
-                        ? "bg-primary text-white"
+                        ? "bg-primary text-white shadow-e1"
                         : "text-muted hover:bg-canvas hover:text-ink"
                     }`}
                   >
@@ -140,7 +140,7 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
             <button
               type="button"
               onClick={reset}
-              className="mt-6 inline-flex cursor-pointer items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary transition-colors hover:text-primaryDark"
+              className="press type-label mt-6 inline-flex cursor-pointer items-center gap-2 text-strategic hover:text-primaryLight"
             >
               <FiX className="h-4 w-4" aria-hidden="true" />
               {t.common.clear}
@@ -165,7 +165,7 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
               <li key={product.slug}>
                 <a
                   href={product.href}
-                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-canvas transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
+                  className="surface-card press-soft group flex h-full flex-col overflow-hidden rounded-3xl hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3"
                 >
                   <div className="relative aspect-4/3 overflow-hidden bg-panel">
                     <img
@@ -175,27 +175,27 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
                       decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <span className="absolute left-4 top-4 rounded-full bg-canvas/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-primary backdrop-blur-sm">
+                    <span className="glass-chip type-label absolute top-4 left-4 rounded-full px-3 py-1 text-strategic">
                       {product.code}
                     </span>
                     {product.madeToOrder && (
-                      <span className="absolute right-4 top-4 rounded-full bg-primary px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-white">
+                      <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-[0.65rem] font-semibold tracking-[0.16em] text-white uppercase shadow-e1">
                         ★
                       </span>
                     )}
                   </div>
 
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-muted">
+                    <p className="type-label text-muted">
                       {copy.categories[product.category].name}
                     </p>
-                    <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-ink">
+                    <h3 className="mt-2 font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-ink">
                       {product.title}
                     </h3>
                     <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-muted">
                       {product.excerpt}
                     </p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                    <span className="type-label mt-5 inline-flex items-center gap-2 text-strategic">
                       {copy.details_button}
                       <FiArrowUpRight
                         className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
