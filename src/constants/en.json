@@ -137,6 +137,11 @@
       "download": "Download PDF",
       "unavailable": "Coming soon"
     },
+    "modular_group": {
+      "eyebrow": "Modular Group",
+      "title": "Part of Modular Group",
+      "description": "Our ecosystem of specialized manufacturing companies delivering integrated solutions."
+    },
     "immersive": {
       "eyebrow": "See it before it exists",
       "title": "Stand inside a finished shower",

@@ -1,55 +1,131 @@
 ---
-import { FiDownload, FiFileText } from "react-icons/fi";
+import { Image } from "astro:assets";
+import { FiDownload, FiFileText, FiExternalLink } from "react-icons/fi";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { CATALOGS } from "@/constants/site";
+
+import showerWallsLogo from "@/assets/images/modularG/showerWalls.png";
+import modulWoodsLogo from "@/assets/images/modularG/modulWoods.png";
+import kuartzLogo from "@/assets/images/modularG/kuartz.webp";
+import vanityTopsLogo from "@/assets/images/modularG/vanityTops.png";
 
 const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
 
 const { eyebrow, title, description, items, download } = i18n.home.catalogs;
+const groupI18n = i18n.home.modular_group;
 
 // Copy and file path are joined by id, so adding a catalog is a one-line change
 // in `CATALOGS` plus its entry in both dictionaries.
 const catalogs = items
   .map((item) => ({ ...item, file: CATALOGS.find((c) => c.id === item.id)?.file }))
   .filter((item): item is typeof item & { file: string } => Boolean(item.file));
+
+const companies = [
+  {
+    id: "shower-walls",
+    name: "ShowerWalls",
+    logo: showerWallsLogo,
+    url: "https://shower-walls.net/",
+  },
+  {
+    id: "modul-woods",
+    name: "Modul Woods",
+    logo: modulWoodsLogo,
+    url: "https://modul-woods.com/",
+  },
+  {
+    id: "kuartz-surfaces",
+    name: "KÜARTZ Surfaces",
+    logo: kuartzLogo,
+    url: "https://kuartzsurfaces.com/",
+  },
+  {
+    id: "modular-vanity-tops",
+    name: "Modular Vanity Tops",
+    logo: vanityTopsLogo,
+    url: "https://modular-tops.com/",
+  },
+];
 ---
 
 <section class="section-y bg-canvas">
-  <div class="container-x grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
-    <SectionHeading eyebrow={eyebrow} title={title} description={description} />
+  <div class="container-x flex flex-col gap-16 lg:gap-24">
+    <!-- Downloads section -->
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-center">
+      <SectionHeading eyebrow={eyebrow} title={title} description={description} />
 
-    <ul class="grid gap-4 sm:grid-cols-2">
-      {
-        catalogs.map(({ id, title: name, description: text, file }) => (
-          <li>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        {
+          catalogs.map(({ id, title: name, description: text, file }) => (
+            <li>
+              <a
+                href={file}
+                download
+                data-catalog={id}
+                class="surface-card press-soft group flex h-full flex-col rounded-3xl bg-panel p-7 hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3"
+              >
+                <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-strategic transition-colors duration-500 ease-out group-hover:bg-primary group-hover:text-white">
+                  <FiFileText className="h-5 w-5" aria-hidden="true" />
+                </span>
+
+                <h3 class="mt-6 font-display text-lg font-semibold tracking-[-0.015em] text-ink">
+                  {name}
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-pretty text-muted">{text}</p>
+
+                <span class="type-label mt-6 inline-flex items-center gap-2 text-strategic">
+                  <FiDownload
+                    className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-y-0.5"
+                    aria-hidden="true"
+                  />
+                  {download}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Separator -->
+    <div class="h-px w-full bg-line/60" aria-hidden="true"></div>
+
+    <!-- Modular Group Ecosystem section -->
+    <div class="flex flex-col gap-10">
+      <div class="flex flex-col items-center text-center max-w-2xl mx-auto">
+        <p class="type-eyebrow text-strategic">{groupI18n.eyebrow}</p>
+        <h2 class="type-title mt-3 text-ink">{groupI18n.title}</h2>
+        <p class="type-body mt-3 text-muted">{groupI18n.description}</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+        {
+          companies.map(({ name, logo, url }) => (
             <a
-              href={file}
-              download
-              data-catalog={id}
-              class="surface-card press-soft group flex h-full flex-col rounded-3xl bg-panel p-7 hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3"
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Visit ${name}`}
+              aria-label={`Visit ${name} website`}
+              class="surface-card press-soft group relative flex flex-col items-center justify-center rounded-3xl bg-panel/70 p-6 sm:p-8 hover:-translate-y-1 hover:bg-panel hover:border-primary/40 hover:shadow-e3 transition-all duration-300 cursor-pointer"
             >
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-strategic transition-colors duration-500 ease-out group-hover:bg-primary group-hover:text-white">
-                <FiFileText className="h-5 w-5" aria-hidden="true" />
+              <span class="absolute top-3.5 right-3.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-canvas/60 text-muted transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                <FiExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
               </span>
 
-              <h3 class="mt-6 font-display text-lg font-semibold tracking-[-0.015em] text-ink">
-                {name}
-              </h3>
-              <p class="mt-2 flex-1 text-sm leading-relaxed text-pretty text-muted">{text}</p>
-
-              <span class="type-label mt-6 inline-flex items-center gap-2 text-strategic">
-                <FiDownload
-                  className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-y-0.5"
-                  aria-hidden="true"
+              <div class="flex h-20 sm:h-24 w-full items-center justify-center p-2">
+                <Image
+                  src={logo}
+                  alt={name}
+                  class="max-h-full max-w-full h-auto w-auto object-contain filter transition-transform duration-500 ease-out group-hover:scale-105"
                 />
-                {download}
-              </span>
+              </div>
             </a>
-          </li>
-        ))
-      }
-    </ul>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </section>

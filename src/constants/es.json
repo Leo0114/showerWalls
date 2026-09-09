@@ -137,6 +137,11 @@
       "download": "Descargar PDF",
       "unavailable": "Próximamente"
     },
+    "modular_group": {
+      "eyebrow": "Modular Group",
+      "title": "Parte de Modular Group",
+      "description": "Nuestro ecosistema de empresas especializadas en manufactura ofreciendo soluciones integrales."
+    },
     "immersive": {
       "eyebrow": "Míralo antes de que exista",
       "title": "Métete dentro de una ducha terminada",
