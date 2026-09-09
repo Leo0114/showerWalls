@@ -4,7 +4,7 @@ slug: "right-left-footrest-rf"
 title: "Right / Left Footrest"
 code: "RF"
 category: "accessories"
-excerpt: "Right / Left Footrest finished to match the wall system, installed as part of the same panel package."
+excerpt: "Right / Left Footrest finished to match the wall system, shipped as part of the same panel package."
 cover: ../../../assets/images/placeholder.jpeg
 gallery: "showcase"
 madeToOrder: false
@@ -17,13 +17,13 @@ specs:
     value: "Solid surface"
   - label: "Finish"
     value: "Matches wall panels"
-  - label: "Install"
+  - label: "Fitting"
     value: "Integrated with the panel"
 ---
 
 ## Right / Left Footrest
 
-The **Right / Left Footrest** (code `RF`) is fabricated in the same solid surface as the walls, so it reads as part of the shower rather than an add-on bolted to it. It ships with the panel package and is installed by the same crew.
+The **Right / Left Footrest** (code `RF`) is fabricated in the same solid surface as the walls, so it reads as part of the shower rather than an add-on bolted to it. It ships with the panel package and is fitted alongside the panels.
 
 ### Details
 

@@ -9,7 +9,6 @@ import {
   FiLayers,
   FiShield,
   FiTruck,
-  FiTool,
 } from "react-icons/fi";
 import bannerImage from "@/assets/images/bath2.avif";
 import Layout from "@/layouts/Layout.astro";
@@ -31,7 +30,7 @@ const i18n = getI18N(lang);
 const path = usePath(lang);
 
 const copy = i18n.resources;
-const { manufacturing, shipping, installation, warranty, faq, downloads } =
+const { manufacturing, shipping, warranty, faq, downloads } =
   copy;
 
 // Catalog copy already lives in `home.catalogs`; this page reuses it rather
@@ -228,57 +227,6 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- ── Installation ──────────────────────────────────────────────────── -->
-  <section id="installation" class="section-y scroll-mt-36 bg-canvas">
-    <div class="container-x">
-      <SectionHeading
-        eyebrow={installation.eyebrow}
-        title={installation.title}
-        description={installation.description}
-      >
-        <FiTool slot="icon" className="h-5 w-5" aria-hidden="true" />
-      </SectionHeading>
-
-      <!-- Steps: full-width grid of cards -->
-      <div class="mt-8">
-        <StepList
-          title={installation.steps_title}
-          steps={installation.steps}
-          variant="compact"
-        />
-      </div>
-
-      <!-- Specs + Retrofit: full-width, side by side -->
-      <div class="mt-10 grid gap-8 lg:grid-cols-[1fr_minmax(0,20rem)]">
-        <div>
-          <h3 class="type-heading text-ink">{installation.specs.title}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-muted">
-            {installation.specs.description}
-          </p>
-          <div class="mt-5">
-            <SpecTable
-              caption={installation.specs.title}
-              columns={installation.specs.columns}
-              rows={installation.specs.rows}
-            />
-          </div>
-        </div>
-
-        <div
-          class="rounded-2xl border border-strategic/20 bg-strategic/5 px-6 py-6 lg:self-start lg:mt-[3.25rem]"
-        >
-          <h4
-            class="font-display text-base font-semibold tracking-[-0.01em] text-strategic"
-          >
-            {installation.retrofit.title}
-          </h4>
-          <p class="mt-2 text-sm leading-relaxed text-pretty text-muted">
-            {installation.retrofit.description}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ── Warranty ──────────────────────────────────────────────────────── -->
   <section id="warranty" class="section-y scroll-mt-36 bg-panel">

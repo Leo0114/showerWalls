@@ -23,13 +23,13 @@ specs:
 
 ## Interval
 
-The **Interval** pattern (code `IA`) reproduces the look of tile on a single continuous panel — no grout lines to scrub, no joints for water to find. Panels are cut to the exact rough opening of your unit and installed directly over the existing substrate.
+The **Interval** pattern (code `IA`) reproduces the look of tile on a single continuous panel — no grout lines to scrub, no joints for water to find. Panels are cut to the exact rough opening of your unit and fitted directly over the existing substrate.
 
 ### Why specify it
 
 - Non-porous surface that resists mold, mildew and daily commercial use
 - Available in all five standard finishes, with custom colors on request
-- Installed in a single day per unit, with no demolition or curing time
+- Fitted in a single day per unit, with no demolition or curing time
 - Repeatable, identical results across hundreds of bathrooms
 
 ### Typical applications

@@ -4,7 +4,7 @@ slug: "7x7-soap-shelf-s7"
 title: "7x7 Soap Shelf"
 code: "S7"
 category: "accessories"
-excerpt: "7x7 Soap Shelf finished to match the wall system, installed as part of the same panel package."
+excerpt: "7x7 Soap Shelf finished to match the wall system, shipped as part of the same panel package."
 cover: ../../../assets/images/placeholder.jpeg
 gallery: "showcase"
 madeToOrder: false
@@ -17,13 +17,13 @@ specs:
     value: "Solid surface"
   - label: "Finish"
     value: "Matches wall panels"
-  - label: "Install"
+  - label: "Fitting"
     value: "Integrated with the panel"
 ---
 
 ## 7x7 Soap Shelf
 
-The **7x7 Soap Shelf** (code `S7`) is fabricated in the same solid surface as the walls, so it reads as part of the shower rather than an add-on bolted to it. It ships with the panel package and is installed by the same crew.
+The **7x7 Soap Shelf** (code `S7`) is fabricated in the same solid surface as the walls, so it reads as part of the shower rather than an add-on bolted to it. It ships with the panel package and is fitted alongside the panels.
 
 ### Details
 

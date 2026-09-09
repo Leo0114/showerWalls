@@ -5,7 +5,7 @@ import SectionHeading from "@/components/shared/SectionHeading.astro";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
-import Intro from "@/assets/images/intro.avif";
+import Intro from "@/assets/images/intro.jpg";
 
 const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
@@ -32,7 +32,9 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
       <div
         class="surface-card absolute -right-4 -bottom-8 hidden w-56 rounded-2xl p-6 shadow-e3 sm:block"
       >
-        <p class="font-display text-4xl font-bold tracking-[-0.03em] text-strategic">
+        <p
+          class="font-display text-4xl font-bold tracking-[-0.03em] text-strategic"
+        >
           {stats[0].value}
         </p>
         <p class="mt-1 text-sm leading-snug text-muted">{stats[0].label}</p>
@@ -65,9 +67,7 @@ const { eyebrow, title, description, points, stats } = i18n.home.intro;
             <div>
               <dt class="sr-only">{label}</dt>
               <dd>
-                <span
-                  class="block font-display text-2xl font-bold tracking-[-0.025em] text-ink sm:text-3xl"
-                >
+                <span class="block font-display text-2xl font-bold tracking-[-0.025em] text-ink sm:text-3xl">
                   {value}
                 </span>
                 <span class="mt-1 block text-xs leading-snug text-muted">

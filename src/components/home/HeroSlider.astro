@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import hero1 from "@/assets/images/hero1.tiff";
-import hero2 from "@/assets/images/hero2.avif";
-import hero3 from "@/assets/images/hero3.avif";
+import hero1 from "@/assets/images/hero1.jpg";
+import hero2 from "@/assets/images/hero2.jpg";
+import hero3 from "@/assets/images/hero3.jpg";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
 
@@ -27,7 +27,7 @@ const items = slides.map((slide, index) => ({
 ---
 
 <section
-  class="relative isolate min-h-152 overflow-hidden bg-baseBlack lg:min-h-176"
+  class="relative isolate min-h-[calc(100vh-4.5rem)] min-h-[calc(100dvh-4.5rem)] overflow-hidden bg-baseBlack"
   data-hero
   aria-roledescription="carousel"
 >
@@ -67,9 +67,9 @@ const items = slides.map((slide, index) => ({
   </div>
 
   <div
-    class="container-x relative flex min-h-152 flex-col justify-center py-24 lg:min-h-176"
+    class="container-x relative flex min-h-[calc(100vh-4.5rem)] min-h-[calc(100dvh-4.5rem)] flex-col justify-between py-10 sm:py-12 md:py-16 lg:py-20"
   >
-    <div class="max-w-3xl">
+    <div class="my-auto max-w-3xl py-4 sm:py-6">
       {
         items.map(({ eyebrow, title, subtitle }, index) => (
           <article
@@ -150,9 +150,7 @@ const items = slides.map((slide, index) => ({
         }
       </ul>
 
-      <span
-        class="type-label ml-auto hidden text-white/50 sm:block"
-      >
+      <span class="type-label ml-auto hidden text-white/50 sm:block">
         {scroll}
       </span>
     </div>

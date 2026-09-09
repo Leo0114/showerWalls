@@ -2,7 +2,7 @@
   "seo": {
     "title_default": "Shower Walls | Paneles y Revestimientos Premium para Duchas",
     "title_template": "%s | Shower Walls",
-    "description_default": "Especialistas en la fabricación e instalación de paneles de ducha impermeables, platos de ducha y accesorios de alta calidad.",
+    "description_default": "Especialistas en la fabricación de paneles de ducha impermeables, platos de ducha y accesorios de alta calidad.",
     "keywords": "paneles de ducha, revestimiento de ducha, platos de ducha, remodelación de baños, paneles impermeables, ducha ADA"
   },
   "nav": {
@@ -53,7 +53,7 @@
         {
           "eyebrow": "Libertad de diseño",
           "title": "26 patrones de pared. Una superficie continua",
-          "subtitle": "De Subway y Herringbone a Chevron y Santorini: cada panel llega listo para instalar."
+          "subtitle": "De Subway y Herringbone a Chevron y Santorini: cada panel llega listo para colocar."
         },
         {
           "eyebrow": "Hecho a medida",
@@ -68,23 +68,23 @@
     "intro": {
       "eyebrow": "Quiénes somos",
       "title": "Un sistema único de paredes y platos para proyectos exigentes",
-      "description": "En Shower Walls fabricamos e instalamos sistemas de ducha en superficie sólida que sustituyen por completo al azulejo y la lechada. Un solo proveedor, un solo equipo de instalación y una sola garantía: para un baño que se entrega a tiempo y se mantiene libre de mantenimiento durante décadas.",
+      "description": "En Shower Walls fabricamos sistemas de ducha en superficie sólida que sustituyen por completo al azulejo y la lechada. Un solo proveedor y una sola garantía: para un baño que se entrega a tiempo y se mantiene libre de mantenimiento durante décadas.",
       "points": [
         "Superficies 100% impermeables y sin juntas",
-        "Instalación sobre el sustrato existente, sin demolición",
+        "Se adapta al sustrato existente, sin demolición",
         "Configuraciones ADA y roll-in disponibles",
         "Acabado uniforme en cientos de unidades"
       ],
       "stats": [
         { "value": "50+", "label": "Patrones y accesorios" },
         { "value": "9", "label": "Configuraciones de plato" },
-        { "value": "3 días", "label": "Instalación típica por unidad" }
+        { "value": "3 días", "label": "Entrega típica por unidad" }
       ]
     },
     "products": {
       "eyebrow": "Nuestro catálogo",
       "title": "Todo lo que la ducha necesita, en un solo sistema",
-      "description": "Cuatro familias de producto diseñadas para trabajar juntas: especifica la pared, el plato y los accesorios en una sola entrega.",
+      "description": "Tres familias de producto diseñadas para trabajar juntas: especifica la pared, el plato y los accesorios en una sola entrega.",
       "cta": "Ver el catálogo completo"
     },
     "services": {
@@ -95,14 +95,6 @@
         {
           "title": "Diseño y especificación",
           "description": "Selección de patrón, trazado de drenaje y paquetes de aprobación listos para firmar."
-        },
-        {
-          "title": "Fabricación a medida",
-          "description": "Paneles y platos cortados al vano exacto, incluyendo medidas especiales bajo pedido."
-        },
-        {
-          "title": "Instalación profesional",
-          "description": "Cuadrillas certificadas que trabajan por piso, ala o fase para no romper el calendario."
         },
         {
           "title": "Renovación y retrofit",
@@ -172,7 +164,7 @@
     "subtitle": "Líderes en soluciones de revestimiento para baños.",
     "eyebrow": "Nuestra historia",
     "heading": "Creado para los proyectos que el azulejo no podía seguir",
-    "description": "En Shower Walls fabricamos e instalamos paneles, platos y accesorios de ducha de alto desempeño. Combinamos diseño moderno, durabilidad e innovación para renovar un baño sin el ruido, el polvo ni los retrasos de una obra tradicional.",
+    "description": "En Shower Walls fabricamos paneles, platos y accesorios de ducha de alto desempeño. Combinamos diseño moderno, durabilidad e innovación para renovar un baño sin el ruido, el polvo ni los retrasos de una obra tradicional.",
     "description_secondary": "Nuestros sistemas nacieron para operadores de hotelería, multifamiliares, vivienda estudiantil y salud que necesitan cientos de baños idénticos e impecables entregados en fecha, y para quienes quieren ese mismo estándar en casa.",
     "mission": {
       "title": "Nuestra Misión",
@@ -187,7 +179,7 @@
       "items": [
         { "title": "Precisión", "description": "Cada panel se corta para el vano en el que vivirá, no se ajusta en obra." },
         { "title": "Durabilidad", "description": "Superficies no porosas que resisten moho, humedad y uso comercial diario." },
-        { "title": "Rapidez", "description": "Instalaciones medidas en días por unidad, sin demolición ni tiempos de curado." },
+        { "title": "Rapidez", "description": "Entregas medidas en días por unidad, sin demolición ni tiempos de curado." },
         { "title": "Responsabilidad", "description": "Un solo proveedor de paredes, platos y accesorios significa una sola garantía." }
       ]
     },
@@ -202,7 +194,7 @@
     "banner_subtitle": "Nuestro trabajo",
     "title": "Nuestros Proyectos",
     "subtitle": "Explora algunas de nuestras transformaciones recientes.",
-    "intro": "Una selección de instalaciones en hotelería, multifamiliares, salud y residencial.",
+    "intro": "Una selección de proyectos en hotelería, multifamiliares, salud y residencial.",
     "view_details": "Ver proyecto",
     "detail": {
       "overview": "Sobre el proyecto",
@@ -242,10 +234,6 @@
       "accessories": {
         "name": "Accesorios",
         "description": "Nichos, jaboneras, repisas, reposapiés y perfiles para completar la ducha."
-      },
-      "free-standing-tub": {
-        "name": "Tina Exenta",
-        "description": "Una tina exenta fabricada a pedido para dar carácter al baño."
       }
     },
     "details_button": "Ver detalles",
@@ -278,7 +266,6 @@
     "sections": [
       { "id": "manufacturing", "label": "Fabricación" },
       { "id": "shipping", "label": "Envío y manejo" },
-      { "id": "installation", "label": "Instalación" },
       { "id": "warranty", "label": "Garantía" },
       { "id": "faq", "label": "Preguntas frecuentes" }
     ],
@@ -290,7 +277,7 @@
         { "value": "100%", "label": "Hecho a pedido", "note": "Cortado a tu vano, no ajustado en obra." },
         { "value": "4–6 sem", "label": "Tiempo de entrega estándar", "note": "Desde los planos aprobados hasta el camión." },
         { "value": "0.2%", "label": "Daño en transporte", "note": "Medido sobre todas las cajas enviadas el año pasado." },
-        { "value": "1", "label": "Punto de contacto", "note": "Paredes, platos, accesorios e instalación en un pedido." }
+        { "value": "1", "label": "Punto de contacto", "note": "Paredes, platos y accesorios en un pedido." }
       ],
       "steps_title": "Del plano al camión",
       "steps": [
@@ -346,8 +333,7 @@
         "rows": [
           ["Cajas de paneles de pared", "2 personas", "Montacargas con horquillas de 72\" (1.80 m)"],
           ["Tarimas de platos de ducha", "2 personas", "Montacargas con horquillas de 48\" y patín hidráulico"],
-          ["Cajas de accesorios", "1 persona", "Diablito"],
-          ["Tinas exentas", "3 personas", "Montacargas y eslingas suaves; nunca levantar por el borde"]
+          ["Cajas de accesorios", "1 persona", "Diablito"]
         ],
         "note": "Un plato de ducha pesa cerca de 90 kg. Nada de lo que viene en el camión se carga a mano."
       },
@@ -358,7 +344,7 @@
           "Cuenta las cajas contra la carta porte antes de firmar nada.",
           "Recorre la carga mientras sigue en el camión y fotografía cada esquina golpeada, rasgadura o fleje corrido.",
           "Anota el daño en el acuse de entrega. Una firma limpia cierra la responsabilidad de la transportista.",
-          "Abre e inspecciona los paneles dentro de las 48 horas siguientes, aunque la instalación sea semanas después.",
+          "Abre e inspecciona los paneles dentro de las 48 horas siguientes.",
           "Conserva las etiquetas de las cajas: el proyecto y número de unidad que llevan es como identificamos un reemplazo."
         ]
       },
@@ -369,7 +355,7 @@
           "Bajo techo, seco, sin sol directo y lejos de cualquier fuente de calor.",
           "Cajas planas y elevadas del piso sobre polines; los paneles de canto, nunca boca abajo.",
           "No apiles más de dos cajas de paneles.",
-          "Deja que los paneles se aclimaten 24 horas a la temperatura del edificio antes de instalar.",
+          "Deja que los paneles se aclimaten 24 horas a la temperatura del edificio antes de colocar.",
           "El resguardo en almacén más allá de 30 días desde la fecha de listo para envío entra en el acuerdo de resguardo."
         ]
       },
@@ -385,73 +371,14 @@
       },
       "returns_note": "Cada panel y cada plato se corta para un vano específico, por lo que el material no se acepta en devolución. Pide el excedente que quieras en la liberación original, no después."
     },
-    "installation": {
-      "eyebrow": "Instalación",
-      "title": "Paneles montados en un día, no una semana de azulejo",
-      "description": "Nuestro sistema va sobre panel de yeso resistente a la humedad con adhesivo por puntos. Sin cementante, sin membrana impermeable y sin tiempos de curado. Una cuadrilla certificada entrega de 8 a 16 unidades al día; si prefieres usar tu propio equipo, lo capacitamos.",
-      "steps_title": "La secuencia",
-      "steps": [
-        {
-          "title": "Revisa el vano",
-          "description": "A escuadra, a plomo, seco y armado a las medidas del plano aprobado. Los paneles se cortan al plano, así que el vano tiene que coincidir con él."
-        },
-        {
-          "title": "Coloca el plato",
-          "description": "Primero el plato, sobre cama completa de mortero y a nivel con el drenaje. Todo lo que va encima toma esta línea como referencia."
-        },
-        {
-          "title": "Prueba en seco y corta",
-          "description": "Presenta los paneles, marca la válvula y la regadera, y corta en seco con sierra circular y disco de diamante o mampostería."
-        },
-        {
-          "title": "Adhiere los paneles",
-          "description": "Adhesivo por puntos para superficie sólida directamente sobre el panel de yeso resistente a la humedad. Primero la pared del fondo, luego los laterales."
-        },
-        {
-          "title": "Sella las juntas",
-          "description": "Silicón 100% resistente al moho y a color donde el panel encuentra otro panel o el plato. Sellador acrílico pintable donde el panel encuentra el sustrato."
-        },
-        {
-          "title": "Monta los accesorios",
-          "description": "Silicón más un cordón de termofusible: el termofusible sostiene la pieza mientras el silicón cura. Después sella el perímetro."
-        },
-        {
-          "title": "Protege y entrega",
-          "description": "Cubre el plato, mantén a los demás oficios fuera de la superficie hasta la limpieza final y entrega con la hoja de cuidados."
-        }
-      ],
-      "specs": {
-        "title": "Referencia de obra",
-        "description": "Los números que tu instalador pide el primer día.",
-        "columns": ["Concepto", "Especificación"],
-        "rows": [
-          ["Sustrato", "Panel de yeso resistente a la humedad. Sin cementante ni membrana."],
-          ["Adhesivo", "Adhesivo para superficie sólida, aplicado por puntos"],
-          ["Junta panel a panel", "Silicón 100% a color, resistente al moho"],
-          ["Canto panel a sustrato", "Sellador acrílico pintable"],
-          ["Corte", "Sierra circular, disco de diamante o mampostería en seco"],
-          ["Perforación de válvula y regadera", "Broca de copa de carburo o diamante"],
-          ["Altura de reposapiés", "30 cm (12\") desde el borde del plato"],
-          ["Altura de repisa de shampoo", "122 cm (48\") desde el borde del plato"],
-          ["Jabonera — ducha", "122 cm (48\") sobre piso terminado, una por esquina"],
-          ["Jabonera — tina", "30 cm sobre el borde y otra a 122 cm del piso"],
-          ["Rendimiento de cuadrilla certificada", "8–16 unidades por día"]
-        ]
-      },
-      "retrofit": {
-        "title": "Instalación sobre azulejo existente",
-        "description": "Las conversiones de tina a ducha y las renovaciones pueden ir directo sobre azulejo firme, con adherencia de silicón y un perfil de canto que cubre el azulejo y el panel. Avísanos al cotizar: el perfil se especifica con el pedido, no se improvisa en obra."
-      }
-    },
     "warranty": {
       "eyebrow": "Garantía",
-      "title": "Un solo proveedor para la pared, el plato y la cuadrilla: una sola garantía",
-      "description": "Como fabricamos e instalamos, no hay hueco entre una reclamación de material y una de mano de obra que discutir. Los plazos siguientes son nuestra cobertura comercial estándar; las condiciones específicas de cada proyecto siguen tu contrato.",
+      "title": "Un solo proveedor para la pared y el plato: una sola garantía",
+      "description": "Como fabricamos todo en una sola planta, no hay hueco entre reclamaciones que discutir. Los plazos siguientes son nuestra cobertura comercial estándar; las condiciones específicas de cada proyecto siguen tu contrato.",
       "coverage_title": "Qué cubre",
       "coverage": [
         { "term": "10 años", "title": "Paneles de pared y platos", "description": "Defectos de fabricación, delaminación y fisuras no causadas por impacto o movimiento del sustrato." },
-        { "term": "5 años", "title": "Accesorios y perfiles", "description": "Nichos, jaboneras, repisas, reposapiés y perfiles contra defecto de fabricación." },
-        { "term": "2 años", "title": "Nuestra mano de obra", "description": "Cualquier unidad instalada por una cuadrilla de Shower Walls, incluyendo juntas, sellado y colocación del plato." }
+        { "term": "5 años", "title": "Accesorios y perfiles", "description": "Nichos, jaboneras, repisas, reposapiés y perfiles contra defecto de fabricación." }
       ],
       "included": {
         "title": "Incluye",
@@ -469,9 +396,8 @@
           "Daño por impacto, herramienta caída y maltrato en obra",
           "Fibras abrasivas, polvos de tallar y limpiadores con cloro",
           "Adhesivos, selladores o fijaciones que no especificamos",
-          "Modificaciones hechas en obra después de instalar",
-          "Movimiento, asentamiento o falla del sustrato detrás del panel",
-          "Instalaciones por cuadrillas sin capacitación registrada"
+          "Modificaciones hechas en obra después de la entrega",
+          "Movimiento, asentamiento o falla del sustrato detrás del panel"
         ]
       },
       "claim": {
@@ -479,8 +405,7 @@
         "steps": [
           "Envíanos por correo el nombre del proyecto, el número de unidad o habitación y fotos de la condición.",
           "Respondemos en dos días hábiles con un dictamen o una visita a obra.",
-          "Las reclamaciones aprobadas entran a fabricación express y se envían a la obra.",
-          "Si la unidad la instaló nuestra cuadrilla, también programamos el reemplazo."
+          "Las reclamaciones aprobadas entran a fabricación express y se envían a la obra."
         ],
         "cta": "Abrir una reclamación"
       },
@@ -506,7 +431,7 @@
           "items": [
             {
               "q": "¿En qué se diferencia del azulejo?",
-              "a": "Es un sistema de paneles, no azulejos individuales con lechada. Obtienes el aspecto de un muro aplacado en una superficie continua, sin juntas que sellar, tallar o reponer, y con una instalación que se mide en días y no en semanas."
+              "a": "Es un sistema de paneles, no azulejos individuales con lechada. Obtienes el aspecto de un muro aplacado en una superficie continua, sin juntas que sellar, tallar o reponer, y con un proyecto que se mide en días y no en semanas."
             },
             {
               "q": "¿En qué se diferencia del acrílico o la fibra de vidrio?",
@@ -585,40 +510,6 @@
               "a": "Sí, con embalaje para contenedor. Entregamos lista de empaque, dimensiones y pesos de las cajas para tu agente de carga."
             }
           ]
-        },
-        {
-          "id": "installation",
-          "label": "Instalación y cuidado",
-          "items": [
-            {
-              "q": "¿Tenemos que usar su cuadrilla?",
-              "a": "No, pero es el camino más rápido. Una cuadrilla certificada entrega de 8 a 16 unidades al día. Si prefieres a tu propia gente, la capacitamos y firmamos el registro que mantiene vigente la garantía de mano de obra."
-            },
-            {
-              "q": "¿Sobre qué sustrato van los paneles?",
-              "a": "Panel de yeso resistente a la humedad. No se requiere cementante ni membrana impermeable detrás de nuestros paneles."
-            },
-            {
-              "q": "¿Cómo se fijan los paneles?",
-              "a": "Con adhesivo para superficie sólida aplicado por puntos sobre el sustrato. Se adhieren al panel de yeso, no se atornillan a los montantes."
-            },
-            {
-              "q": "¿Qué lleva la junta?",
-              "a": "Silicón 100% a color y resistente al moho donde el panel encuentra otro panel o el plato. Sellador acrílico pintable donde el panel encuentra el sustrato circundante."
-            },
-            {
-              "q": "¿Con qué disco se corta?",
-              "a": "Sierra circular con disco de diamante o mampostería para corte en seco. Las perforaciones de válvula y regadera con broca de copa de carburo o diamante."
-            },
-            {
-              "q": "¿Se puede instalar sobre azulejo existente?",
-              "a": "Sí, sobre azulejo firme, con silicón y un perfil de canto que cubre tanto el azulejo como el borde del panel. Avísanos al cotizar para que el perfil viaje con el pedido."
-            },
-            {
-              "q": "¿Cómo se limpia?",
-              "a": "Con un limpiador de ducha no abrasivo y enjuague completo. Nunca fibras abrasivas, polvos de tallar ni limpiadores con cloro. No hay nada que resellar, nunca."
-            }
-          ]
         }
       ]
     },
@@ -679,13 +570,13 @@
     "info": {
       "title": "Información de contacto",
       "address_label": "Dirección",
-      "address": "Dirección de la empresa",
+      "address": "Monterrey, Nuevo León, México",
       "phone_label": "Teléfono",
-      "phone": "+1 (800) 123-4567",
+      "phone": "Toll Free 866 544 94 77 Ext 123",
       "email_label": "Correo",
-      "email": "contacto@shower-walls.net",
+      "email": "sales1@shower-walls.net",
       "hours_label": "Horario",
-      "hours": "Lunes a Viernes: 9:00 AM - 6:00 PM"
+      "hours": "Lunes a Viernes: 9:00 AM - 6:00 PM CST"
     }
   },
   "footer": {

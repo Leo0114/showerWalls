@@ -4,7 +4,7 @@ slug: "6x6-footrest-f6"
 title: "6x6 Footrest"
 code: "F6"
 category: "accessories"
-excerpt: "6x6 Footrest finished to match the wall system, installed as part of the same panel package."
+excerpt: "6x6 Footrest finished to match the wall system, shipped as part of the same panel package."
 cover: ../../../assets/images/placeholder.jpeg
 gallery: "showcase"
 madeToOrder: false
@@ -17,13 +17,13 @@ specs:
     value: "Solid surface"
   - label: "Finish"
     value: "Matches wall panels"
-  - label: "Install"
+  - label: "Fitting"
     value: "Integrated with the panel"
 ---
 
 ## 6x6 Footrest
 
-The **6x6 Footrest** (code `F6`) is fabricated in the same solid surface as the walls, so it reads as part of the shower rather than an add-on bolted to it. It ships with the panel package and is installed by the same crew.
+The **6x6 Footrest** (code `F6`) is fabricated in the same solid surface as the walls, so it reads as part of the shower rather than an add-on bolted to it. It ships with the panel package and is fitted alongside the panels.
 
 ### Details
 

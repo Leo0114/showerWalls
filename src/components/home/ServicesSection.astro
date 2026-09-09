@@ -1,5 +1,5 @@
 ---
-import { FiArrowRight, FiCompass, FiTool, FiTruck, FiRefreshCw } from "react-icons/fi";
+import { FiArrowRight, FiCompass, FiRefreshCw } from "react-icons/fi";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { getI18N, getLang } from "@/i18n/i18n";
@@ -11,7 +11,7 @@ const path = usePath(lang);
 
 const { eyebrow, title, description, items, cta } = i18n.home.services;
 
-const icons = [FiCompass, FiTool, FiTruck, FiRefreshCw];
+const icons = [FiCompass, FiRefreshCw];
 ---
 
 <section class="section-y relative isolate overflow-hidden bg-baseBlack text-white">
@@ -30,7 +30,7 @@ const icons = [FiCompass, FiTool, FiTruck, FiRefreshCw];
       tone="inverted"
     />
 
-    <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2">
       {
         items.map(({ title: name, description: text }, index) => {
           const Icon = icons[index % icons.length];

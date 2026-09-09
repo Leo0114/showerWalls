@@ -1,5 +1,5 @@
 ---
-import { FiBox, FiHelpCircle, FiShield, FiTool, FiTruck } from "react-icons/fi";
+import { FiBox, FiHelpCircle, FiShield, FiTruck } from "react-icons/fi";
 
 interface Props {
   label: string;
@@ -11,7 +11,6 @@ const { label, sections } = Astro.props;
 const ICONS = {
   manufacturing: FiBox,
   shipping: FiTruck,
-  installation: FiTool,
   warranty: FiShield,
   faq: FiHelpCircle,
 } as const;

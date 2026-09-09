@@ -3,9 +3,9 @@ import type { RouteId } from "@/i18n/ui";
 export const SITE = {
   name: "Shower Walls",
   url: "https://shower-walls.net",
-  email: "contact@shower-walls.net",
-  phone: "+1 (800) 123-4567",
-  phoneHref: "tel:+18001234567",
+  email: "sales1@shower-walls.net",
+  phone: "Toll Free 866 544 94 77 Ext 123",
+  phoneHref: "tel:+8665449477,123",
   social: {
     instagram: "https://instagram.com/",
     facebook: "https://facebook.com/",
@@ -27,7 +27,6 @@ export const PRODUCT_CATEGORIES = [
   "tub-shower-surrounds",
   "shower-pans",
   "accessories",
-  "free-standing-tub",
 ] as const;
 
 export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
