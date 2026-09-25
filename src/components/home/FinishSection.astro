@@ -1,15 +1,37 @@
 ---
-import wallImage from "@/assets/images/w.avif";
+import { Image } from "astro:assets";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
-import FinishSelector from "@/components/home/FinishSelector";
 import { getI18N, getLang } from "@/i18n/i18n";
-import { usePath } from "@/i18n/utils";
+
+import aurora from "@/assets/images/colors/Aurora.png";
+import crystalAlmond from "@/assets/images/colors/Crystal-Almond.png";
+import firefoxBeige from "@/assets/images/colors/Firefox-Beige.png";
+import galaxyBlack from "@/assets/images/colors/Galaxy-Black.png";
+import italianIced from "@/assets/images/colors/Italian-Iced.png";
+import ivory from "@/assets/images/colors/Ivory.png";
+import lightGray from "@/assets/images/colors/Light-Gray.png";
+import solidLightGray from "@/assets/images/colors/Solid-Light-Gray.png";
+import walnut from "@/assets/images/colors/Walnut.png";
 
 const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
-const path = usePath(lang);
 
 const { eyebrow, title, description } = i18n.home.colors;
+
+const row1 = [
+  { name: "Aurora", img: aurora },
+  { name: "Crystal Almond", img: crystalAlmond },
+  { name: "Firefox Beige", img: firefoxBeige },
+  { name: "Galaxy Black", img: galaxyBlack },
+];
+
+const row2 = [
+  { name: "Italian Iced", img: italianIced },
+  { name: "Ivory", img: ivory },
+  { name: "Light Gray", img: lightGray },
+  { name: "Solid Light Gray", img: solidLightGray },
+  { name: "Walnut", img: walnut },
+];
 ---
 
 <section class="section-y bg-panel">
@@ -21,13 +43,100 @@ const { eyebrow, title, description } = i18n.home.colors;
       align="center"
     />
 
-    <div class="mt-14">
-      <FinishSelector
-        client:visible
-        lang={lang}
-        ctaHref={path("contact")}
-        previewSrc={wallImage.src}
-      />
+    {/* Un único contenedor — PhotoSwipe encuentra todos los <a> dentro de #colors-gallery */}
+    <div id="colors-gallery" class="mt-14 flex flex-col gap-6 md:gap-8">
+      {/* Grid de 4 elementos */}
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
+        {
+          row1.map((item) => (
+            <a
+              href={item.img.src}
+              data-pswp-width={item.img.width}
+              data-pswp-height={item.img.height}
+              rel="noreferrer"
+              class="surface-card group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-line/80 bg-background p-3 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-e3"
+            >
+              <div class="relative aspect-4/3 sm:aspect-square w-full overflow-hidden rounded-xl bg-surface-subtle">
+                <Image
+                  src={item.img}
+                  alt={item.name}
+                  widths={[320, 640]}
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                />
+              </div>
+              <div class="mt-3 px-1 text-center">
+                <span class="font-display text-sm font-semibold tracking-tight text-ink transition-colors duration-200 group-hover:text-primary">
+                  {item.name}
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+
+      {/* Grid de 5 elementos */}
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+        {
+          row2.map((item) => (
+            <a
+              href={item.img.src}
+              data-pswp-width={item.img.width}
+              data-pswp-height={item.img.height}
+              rel="noreferrer"
+              class="surface-card group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-line/80 bg-background p-3 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-e3"
+            >
+              <div class="relative aspect-4/3 sm:aspect-square w-full overflow-hidden rounded-xl bg-surface-subtle">
+                <Image
+                  src={item.img}
+                  alt={item.name}
+                  widths={[320, 640]}
+                  sizes="(min-width: 1024px) 20vw, 50vw"
+                  class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                />
+              </div>
+              <div class="mt-3 px-1 text-center">
+                <span class="font-display text-sm font-semibold tracking-tight text-ink transition-colors duration-200 group-hover:text-primary">
+                  {item.name}
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+
+  let lightbox: PhotoSwipeLightbox | null = null;
+
+  function initColorGallery() {
+    const galleryEl = document.getElementById("colors-gallery");
+    if (!galleryEl) return;
+
+    if (lightbox) {
+      lightbox.destroy();
+    }
+
+    // gallery apunta al contenedor padre; children: "a" selecciona TODOS los <a>
+    // dentro de él, sin importar en qué fila estén → galería unificada de 9 imágenes.
+    lightbox = new PhotoSwipeLightbox({
+      gallery: "#colors-gallery",
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+    lightbox.init();
+  }
+
+  document.addEventListener("astro:page-load", initColorGallery);
+  document.addEventListener("astro:before-swap", () => {
+    if (lightbox) {
+      lightbox.destroy();
+      lightbox = null;
+    }
+  });
+</script>
