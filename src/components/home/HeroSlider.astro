@@ -56,7 +56,7 @@ const items = slides.map((slide, index) => ({
   </div>
 
   <div
-    class="absolute inset-0 -z-10 bg-linear-to-r from-baseBlack/50 via-baseBlack/30 to-baseBlack/20"
+    class="absolute inset-0 -z-10 bg-linear-to-r from-baseBlack/70 via-baseBlack/40 to-baseBlack/70"
     aria-hidden="true"
   >
   </div>
@@ -69,32 +69,48 @@ const items = slides.map((slide, index) => ({
   <div
     class="container-x relative flex min-h-[calc(100vh-4.5rem)] min-h-[calc(100dvh-4.5rem)] flex-col justify-between py-10 sm:py-12 md:py-16 lg:py-20"
   >
-    <div class="my-auto max-w-3xl py-4 sm:py-6">
-      {
-        items.map(({ eyebrow, title, subtitle }, index) => (
-          <article
-            data-hero-slide={index}
-            aria-hidden={index !== 0 ? "true" : undefined}
-            class:list={[
-              "transition-all duration-700 ease-out",
-              index === 0
-                ? "translate-y-0 opacity-100"
-                : "pointer-events-none absolute inset-x-0 translate-y-6 opacity-0",
-            ]}
-          >
-            <p class="type-eyebrow flex items-center gap-3 text-secondary">
-              <span class="h-px w-10 bg-secondary/70" />
-              {eyebrow}
-            </p>
-            <h1 class="type-display mt-6 text-white">{title}</h1>
-            <p class="type-body mt-6 max-w-xl text-white/80 sm:text-lg">
-              {subtitle}
-            </p>
-          </article>
-        ))
-      }
+    <div class="my-auto w-full py-4 sm:py-6">
+      <div class="relative w-full">
+        {
+          items.map(({ eyebrow, title, subtitle }, index) => {
+            const isRight = index === 1;
+            return (
+              <article
+                data-hero-slide={index}
+                aria-hidden={index !== 0 ? "true" : undefined}
+                class:list={[
+                  "max-w-3xl transition-all duration-700 ease-out",
+                  isRight
+                    ? "ml-auto flex flex-col items-end text-right"
+                    : "mr-auto flex flex-col items-start text-left",
+                  index === 0
+                    ? "translate-y-0 opacity-100"
+                    : "pointer-events-none absolute inset-x-0 top-0 translate-y-6 opacity-0",
+                ]}
+              >
+                <p
+                  class:list={[
+                    "type-eyebrow flex items-center gap-3 text-secondary",
+                    isRight ? "justify-end" : "justify-start",
+                  ]}
+                >
+                  <span class="h-px w-10 bg-secondary/70" />
+                  {eyebrow}
+                </p>
+                <h1 class="type-display mt-6 text-white">{title}</h1>
+                <p class="type-body mt-6 max-w-xl text-white/80 sm:text-lg">
+                  {subtitle}
+                </p>
+              </article>
+            );
+          })
+        }
+      </div>
 
-      <div class="mt-10 flex flex-wrap items-center gap-3">
+      <div
+        data-hero-cta
+        class="mt-10 flex flex-wrap items-center gap-3 transition-all duration-500 ease-out justify-start"
+      >
         <a href={path("products")} class="btn btn-primary group">
           {cta_primary}
           <FiArrowRight
@@ -169,6 +185,7 @@ const items = slides.map((slide, index) => ({
     const slides = [...root.querySelectorAll<HTMLElement>("[data-hero-slide]")];
     const media = [...root.querySelectorAll<HTMLElement>("[data-hero-media]")];
     const dots = [...root.querySelectorAll<HTMLElement>("[data-hero-dot]")];
+    const cta = root.querySelector<HTMLElement>("[data-hero-cta]");
     if (slides.length < 2) return;
 
     let index = 0;
@@ -182,9 +199,16 @@ const items = slides.map((slide, index) => ({
         slide.classList.toggle("translate-y-6", !active);
         slide.classList.toggle("pointer-events-none", !active);
         slide.classList.toggle("absolute", !active);
+        slide.classList.toggle("top-0", !active);
         slide.classList.toggle("inset-x-0", !active);
         slide.toggleAttribute("aria-hidden", !active);
       });
+
+      if (cta) {
+        const isRight = index === 1;
+        cta.classList.toggle("justify-end", isRight);
+        cta.classList.toggle("justify-start", !isRight);
+      }
 
       media.forEach((layer, i) => {
         layer.classList.toggle("opacity-100", i === index);
