@@ -246,6 +246,20 @@
     "subtitle": "Explore some of our recent bathroom transformations.",
     "intro": "A selection of projects across hospitality, multifamily, healthcare and residential work.",
     "view_details": "View project",
+    "visit_web": "Visit website",
+    "search_placeholder": "Search by name, brand, city…",
+    "filter_all": "All",
+    "no_results": "No projects match your search.",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "of": "of"
+    },
+    "types": {
+      "Hospitality": "Hospitality",
+      "Multifamily": "Multifamily",
+      "Seniorliving": "Senior Living"
+    },
     "detail": {
       "overview": "Project overview",
       "gallery_title": "Project gallery",

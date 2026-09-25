@@ -1,0 +1,1199 @@
+[
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Homewood Suites Huntsville-Village of Providence, AL - Hilton",
+        "Marca":"Hilton",
+        "City":"Hunstville",
+        "State":"Alabama",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/hsvhwhw-homewood-suites-huntsville-village-of-providence\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Homewood+Suites+by+Hilton+Huntsville-Village+of+Providence\/@34.7537315,-86.693512,18.59z\/data=!4m18!1m8!3m7!1s0x886269185f32fd7d:0x87ccf9008e4a489!2s20+Town+Center+Dr+NW,+Huntsville,+AL+35806,+USA!3b1!8m2!3d34.7531729!4d-86.693731!16s%2Fg%2F11y28x8xlw!3m8!1s0x8862691853a805e1:0xbe1144b0445062bd!5m2!4m1!1i2!8m2!3d34.7541967!4d-86.6940862!16s%2Fg%2F1v6wq19r?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Fairfield Inn & Suites Huntsville Redstone Gateway - Marriott",
+        "Marca":"Marriott",
+        "City":"Hunstville",
+        "State":"Alabama",
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/hsvrg-fairfield-inn-and-suites-huntsville-redstone-gateway\/overview\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Fairfield+Inn+%26+Suites+by+Marriott+Huntsville+Redstone+Gateway\/@34.6952896,-86.6749513,17z\/data=!3m1!4b1!4m9!3m8!1s0x88626f252c0434e9:0x309dbc0940092360!5m2!4m1!1i2!8m2!3d34.6952896!4d-86.6723764!16s%2Fg%2F11v41ff8w3?hl=en-US&entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Courtyard By Marriott Decatur | Marriott Bonvoy",
+        "Marca":"Marriott",
+        "City":"Decatur",
+        "State":"Alabama",
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/hsvdc-courtyard-decatur\/photos\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Courtyard+by+Marriott+Decatur\/@34.5867192,-87.0292223,17.69z\/data=!4m9!3m8!1s0x886284f24c8175bf:0x1d97dc548f608dc3!5m2!4m1!1i2!8m2!3d34.587088!4d-87.0301482!16s%2Fg%2F1tp0fdcz?hl=en-US&entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn & Suites Phoenix\/Gilbert",
+        "Marca":"Hilton ",
+        "City":"Phoenix",
+        "State":"Arixona",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/phxgthx-hampton-suites-phoenix-gilbert\/hotel-location\/",
+        "Dirección":"https:\/\/g.co\/kgs\/dvuh62t"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"ECO MESA Sustainable Apartments in Downtown Mesa",
+        "Marca":null,
+        "City":"Mesa",
+        "State":"Arizona",
+        "Web":"https:\/\/ecomesa.com\/index",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/ECO+Mesa\/@33.4159256,-111.8355258,15z\/data=!4m6!3m5!1s0x872ba70c532420e3:0xce0ef0325d5b3d93!8m2!3d33.4159256!4d-111.8355258!16s%2Fg%2F11v3n1_mt3?hl=en&entry=tts"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Phoenix North Happy Valley",
+        "Marca":"Hilton",
+        "City":"Phoenix",
+        "State":"Arizona",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/phxnvht-home2-suites-phoenix-north-happy-valley\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Home2+Suites+By+Hilton+Phoenix+North+Happy+Valley\/@33.7100294,-112.1054155,19.23z\/data=!4m20!1m10!3m9!1s0x872b65999b178603:0x17ccde4bf04c61ea!2sHome2+Suites+By+Hilton+Phoenix+North+Happy+Valley!5m2!4m1!1i2!8m2!3d33.71023!4d-112.104783!16s%2Fg%2F11vm4b_f3q!3m8!1s0x872b65999b178603:0x17ccde4bf04c61ea!5m2!4m1!1i2!8m2!3d33.71023!4d-112.104783!16s%2Fg%2F11vm4b_f3q?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Days Inn by Wyndham Phoenix North",
+        "Marca":"Wyndham",
+        "City":"Phoenix",
+        "State":"Arizona",
+        "Web":"https:\/\/www.wyndhamhotels.com\/days-inn\/phoenix-arizona\/days-inn-phoenix-north\/overview",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express Cabot",
+        "Marca":"IHG",
+        "City":"Cabot",
+        "State":"Arkansa",
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/es\/cabot\/litcb\/hoteldetail\/directions",
+        "Dirección":"https:\/\/www.google.com\/maps?ll=34.976271,-92.031375"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn and Suites Bessemer Birmingham",
+        "Marca":"Hilton",
+        "City":"Bessemer",
+        "State":"Birmingham",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/bhmmrhx-hampton-suites-bessemer-birmingham\/",
+        "Dirección":"https:\/\/www.google.com\/travel\/search?q=hampton%20inn%20%26%20suites%20bessemer%20birmingham&g2lb=2502548%2C2503771%2C2503781%2C2504511%2C4258168%2C4284970%2C4291517%2C4814050%2C4874190%2C4893075%2C4965990%2C10208620%2C72277293%2C72302247%2C72317059%2C72406588%2C72412680%2C72421566%2C72424729%2C72430562%2C72440517%2C72442338%2C72448521%2C72453203%2C72458066%2C72458707%2C72462234%2C72469155%2C72470440%2C72470899%2C72471395%2C72472051%2C72473738%2C72473841%2C72479990%2C72480010%2C72484736&hl=es-419&gl=mx&ssta=1&ts=CAESCAoCCAMKAggDGhwSGhIUCgcI6A8QARgZEgcI6A8QARgaGAEyAhAAKgsKCToDTVhOQgIIcw&qs=CAEyFENnc0l4LVNreXRDc2hfT3hBUkFCOAtCCQlHMkkJZR3msUIJCes16u6Af87XQgkJEY9G6NMHIA4&ap=aAG6AQhvdmVydmlldw&ictx=1&sa=X&ved=0CAAQ5JsGahcKEwig-LjXmPSDAxUAAAAAHQAAAAAQCg&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn and Suites by Hilton Oroville",
+        "Marca":"Hilton",
+        "City":"Oroville",
+        "State":"California",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/cichohx-hampton-suites-oroville\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/2355+Feather+River+Blvd,+Oroville,+CA+95965,+USA\/@39.499583,-121.5725049,17z\/data=!3m1!4b1!4m6!3m5!1s0x809cb44de9923fd9:0x939484040214f75f!8m2!3d39.499583!4d-121.56993!16s%2Fg%2F11f40pvwxz?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn Needles",
+        "Marca":"Hilton",
+        "City":"Needles",
+        "State":"California",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/eedithx-hampton-needles\/gallery\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/@34.8485232,-114.6158882,3a,75y,162.23h,90t\/data=!3m6!1e1!3m4!1sfGnbubDp5Ihlr5oipEYYZA!2e0!7i16384!8i8192?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton San Jose South",
+        "Marca":"Hilton",
+        "City":"San Jose",
+        "State":"California",
+        "Web":"https:\/\/www.hilton.com\/es\/hotels\/sjchtht-home2-suites-san-jose-south\/",
+        "Dirección":"https:\/\/g.co\/kgs\/AH3rqf3"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Big Bear Lake",
+        "Marca":"Hilton",
+        "City":"Big Bear Lake",
+        "State":"California",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/ontbeht-home2-suites-big-bear-lake\/",
+        "Dirección":"https:\/\/g.co\/kgs\/2382w9E"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn Bear Lake",
+        "Marca":"Hilton",
+        "City":"Big Bear Lake",
+        "State":"California",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/ontbbhx-hampton-big-bear-lake\/",
+        "Dirección":"https:\/\/g.co\/kgs\/FAFphca"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"HOME2-HAMPTON I \/ HOME2-HAMPTON INN-BI\n",
+        "Marca":"Hilton ",
+        "City":"La Mesa",
+        "State":"California",
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/es\/la-mesa\/sanpd\/hoteldetail",
+        "Dirección":"https:\/\/www.google.com\/search?sca_esv=600789614&sxsrf=ACQVn09ngKIP4Ta5IsjZlysAJZuzZ8LHtw:1706033383657&q=Holiday+Inn+Express+San+Diego+-+la+Mesa,+an+IHG+Hotel&ludocid=2840367664085677159&lsig=AB86z5VaNqNZUcuZTQvXU0lFL-nr&sa=X&ved=2ahUKEwiQ6LrOjfSDAxXEJkQIHV3_B9wQoAJ6BAgXEAc"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"STAYBRIDGE SUITES ROCKLIN - ROSEVILLE AREA",
+        "Marca":"IHG",
+        "City":"Rocklin",
+        "State":"California",
+        "Web":"https:\/\/www.ihg.com\/staybridge\/hotels\/us\/en\/rocklin\/sacsb\/hoteldetail",
+        "Dirección":"https:\/\/www.google.com\/search?sca_esv=600789614&sxsrf=ACQVn0_AreSwfjRPJ-DJiC0PDJykm1vaQA:1706032367705&q=Staybridge+Suites+Rocklin+-+Roseville+Area,+an+IHG+Hotel&ludocid=2034219277310530719&lsig=AB86z5VRlSx5wSgE9lH8ftlnGESr&sa=X&ved=2ahUKEwjgi4LqifSDAxUPNkQIHXSxA7oQoAJ6BAgVEAc"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express & Suites Yuba City - Marysville",
+        "Marca":"IHG",
+        "City":"Yuba City",
+        "State":"California",
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/en\/yuba-city\/myvyc\/hoteldetail",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Holiday+Inn+Express+%26+Suites+Yuba+City+Marysville,+an+IHG+Hotel\/@39.134717,-121.61221,15z\/data=!4m2!3m1!1s0x0:0xfd6d67794e8eb36d?sa=X&ved=2ahUKEwjQ5r6Y2faDAxXHIUQIHRjPATQQ_BJ6BAgQEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Red Roof Inn & Suites Sacramento North",
+        "Marca":"Red Roof Inn",
+        "City":"Sacramento",
+        "State":"California",
+        "Web":"https:\/\/www.redroof.com\/property\/ca\/sacramento\/RRI342",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/4325+Watt+Ave,+Sacramento,+CA+95821,+EE.+UU.\/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x809ad9113b8a2371:0x7b45607abe16fec5?sa=X&ved=2ahUKEwjYiK-uk_SDAxWGO0QIHaiJD2AQwwV6BAgQEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"La Quinta Inn & Suites by Wyndham San Jose Silicon Valley",
+        "Marca":"Wyndham",
+        "City":"San Jose",
+        "State":"California",
+        "Web":"https:\/\/www.wyndhamhotels.com\/laquinta\/san-jose-california\/la-quinta-inn-and-suites-san-jose-silicon-valley\/overview",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/1036+N.+4th+St\/@39.9678268,-75.1435514,3a,75y,281.6h,90t\/data=!3m4!1e1!3m2!1sJAp26d_F290v2lW7hQ6ICg!2e0!4m2!3m1!1s0x89c6c8701648e345:0xd97400fcec3142f0?sa=X&ved=2ahUKEwjj--OQkPSDAxXyl-4BHSU0BaAQxB16BAgREAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn and Suites Greeley, CO Hotel - Hilton",
+        "Marca":"Hilton",
+        "City":"Greeley",
+        "State":"Colorado",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/gxycohx-hampton-suites-greeley\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Hampton+Inn+%26+Suites+Greeley\/@40.3902357,-104.7179387,19.56z\/data=!4m9!3m8!1s0x876ea112034e1621:0x251b8659c6e83177!5m2!4m1!1i2!8m2!3d40.3902682!4d-104.71771!16s%2Fg%2F1v9lc87n?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hilton Garden Inn in Danbury, Connecticut",
+        "Marca":"Hilton",
+        "City":"Danbury",
+        "State":"Connecticut",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/dnbdhgi-hilton-garden-inn-danbury\/gallery\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Hilton+Garden+Inn+Danbury\/@41.3933283,-73.5255747,19.48z\/data=!4m18!1m8!3m7!1s0x89dd54f77510d591:0xdd74e06a2015d97e!2s119+Mill+Plain+Rd,+Danbury,+CT+06811,+USA!3b1!8m2!3d41.3933656!4d-73.5255523!16s%2Fg%2F11b8ymgq8r!3m8!1s0x89dd54f69073fe15:0xdf5fb3ee5302440c!5m2!4m1!1i2!8m2!3d41.393395!4d-73.5254693!16s%2Fg%2F1tq6fh3h?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"SpringHill Suites Frederica",
+        "Marca":"Marriot",
+        "City":"Frederica",
+        "State":"Delaware",
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/sbyfs-springhill-suites-frederica\/overview\/",
+        "Dirección":"https:\/\/g.co\/kgs\/8BpdN6e"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"SpringHill Suites Frederica | Marriott Bonvoy",
+        "Marca":"Marriott",
+        "City":"Frederica",
+        "State":"Delaware",
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/sbyfs-springhill-suites-frederica\/photos\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/SpringHill+Suites+by+Marriott+Frederica\/@38.9981283,-75.4547075,18z\/data=!4m15!1m5!3m4!2zMzjCsDU5JzU2LjUiTiA3NcKwMjcnMTkuOSJX!8m2!3d38.9990347!4d-75.4555242!3m8!1s0x89b89d678a51dc59:0x370b92a8d4885f32!5m2!4m1!1i2!8m2!3d39.0090017!4d-75.4657542!16s%2Fg%2F11stxp7nnd?hl=en-US&entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Postcard Inn Beach Bar & Snack Shack",
+        "Marca":"Crescent Hotels",
+        "City":"St. Pete Beach",
+        "State":"Florida",
+        "Web":"https:\/\/www.postcardinn.com\/eat-drink\/",
+        "Dirección":"https:\/\/g.co\/kgs\/MCkrYGn"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hilton Garden Inn Pensacola Downtown",
+        "Marca":"Hilton",
+        "City":"Pensacola",
+        "State":"Florida",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/pnsdngi-hilton-garden-inn-pensacola-downtown\/gallery\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Hilton+Garden+Inn+Pensacola+Downtown\/@30.4145216,-87.2048752,15z\/data=!4m2!3m1!1s0x0:0x110592b62cb20994?sa=X&ved=2ahUKEwiJkdSej_SDAxWZJkQIHUseALAQ_BJ6BAhjEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Beal House Fort Walton Beachfront, Tapestry Collection by Hilton",
+        "Marca":"Hilton",
+        "City":"Fort Walton",
+        "State":"Florida",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/fwbbhup-beal-house-fort-walton-beach\/gallery\/",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites Hotels in Lake Mary, FL",
+        "Marca":"Hilton ",
+        "City":"Lake Mary",
+        "State":"Florida",
+        "Web":"https:\/\/www.hilton.com\/es\/hotels\/mcoolht-home2-suites-lake-mary-orlando\/",
+        "Dirección":"https:\/\/g.co\/kgs\/xmPDkeS"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Ft. Pierce I-95",
+        "Marca":"Hilton ",
+        "City":"Ft. Pierce",
+        "State":"Florida",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/mlbfpht-home2-suites-ft-pierce-i-95\/",
+        "Dirección":"https:\/\/g.co\/kgs\/QCbwAkV"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express - Cape Canaveral ",
+        "Marca":"IHG",
+        "City":"Cape Canaveral",
+        "State":"Florida",
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/es\/cape-canaveral\/mlbcl\/hoteldetail",
+        "Dirección":"https:\/\/g.co\/kgs\/tq428DL"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Contry Inn & Suites by Radisson ",
+        "Marca":"Radisson ",
+        "City":"Jacksonville",
+        "State":"Florida",
+        "Web":"https:\/\/www.radissonhotels.com\/en-us\/brand\/country-inn",
+        "Dirección":"https:\/\/www.google.com\/search?sca_esv=600789614&sxsrf=ACQVn09x-8ZgEjYpd6ZAbTmNbVf1S30Djg:1706033550403&q=Country+Inn+%26+Suites+by+Radisson,+Jacksonville+I-95&ludocid=5384641017921921551&lsig=AB86z5VrjuIaaYGRxrDmhIqHuOHv&sa=X&ved=2ahUKEwjIl_ydjvSDAxWCJEQIHfBXAhwQoAJ6BAgVEAY"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"La Quinta Inn & Suites by Wyndham Miami Cutler Bay",
+        "Marca":"Wyndham",
+        "City":"Miami",
+        "State":"Florida",
+        "Web":"https:\/\/www.wyndhamhotels.com\/laquinta\/miami-florida\/la-quinta-miami-cutler-bay\/overview",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/10821%20Caribbean%20Boulevard%2C%20Miami%2C%20FL%2C%2033189\/@25.579371,-80.366235,12z"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Best Western Milton Inn",
+        "Marca":"Best Western",
+        "City":"Balirsville",
+        "State":"Georgia",
+        "Web":"https:\/\/www.bestwestern.com\/es_ES\/book\/hotels-in-milton\/best-western-milton-inn\/propertyCode.10405.html",
+        "Dirección":"https:\/\/g.co\/kgs\/VGG6SjR"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Argento at the Bridges Apartments | Apartments in McDonough, GA",
+        "Marca":null,
+        "City":"McDonough",
+        "State":"Georgia",
+        "Web":"https:\/\/www.argentoatthebridges.com\/photogallery",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Argento+at+the+Bridges+Apartments\/@33.476889,-84.2233079,17z\/data=!3m1!4b1!4m6!3m5!1s0x88f459e321f92eb3:0xa1eafc1d9e1e4e04!8m2!3d33.476889!4d-84.220733!16s%2Fg%2F11vf82236v?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Efficiency Lodge - Carrollton, GA",
+        "Marca":"Efficiency Lodge",
+        "City":"Carrollton",
+        "State":"Georgia",
+        "Web":"https:\/\/www.efflodge.com\/carrollton-ga",
+        "Dirección":"https:\/\/g.co\/kgs\/MRKYRWq"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Efficiency Lodge",
+        "Marca":null,
+        "City":"Kennesaw",
+        "State":"Georgia",
+        "Web":"https:\/\/www.efflodge.com\/kennesaw-ga",
+        "Dirección":"https:\/\/g.co\/kgs\/4H6939o"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn Vidalia",
+        "Marca":"Hilton",
+        "City":"Vidalia",
+        "State":"Georgia",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/vdigahx-hampton-vidalia\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Hampton+Inn+Vidalia\/@32.2025893,-82.3551358,19.5z\/data=!4m18!1m8!3m7!1s0x88f0866515585f2b:0x56252365126e48f0!2s3303+E+1st+St,+Vidalia,+GA+30474,+USA!3b1!8m2!3d32.2028307!4d-82.3546304!16s%2Fg%2F11c89hsxdk!3m8!1s0x88f0886f228ca6ad:0xd704db1deac2cfae!5m2!4m1!1i2!8m2!3d32.2030878!4d-82.3546187!16s%2Fg%2F1th7nq_0?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Bolingbrook Chicago",
+        "Marca":"Hilton",
+        "City":"Chicago",
+        "State":"Illinois",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/mdwbcht-home2-suites-bolingbrook-chicago\/gallery\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Home2+Suites+by+Hilton+Bolingbrook+Chicago\/@41.6887558,-88.0714869,19.49z\/data=!4m18!1m8!3m7!1s0x880e5bc0be88cb47:0xdfcf6ec8a5c2b125!2s1+Brookside+Ct,+Bolingbrook,+IL+60440,+USA!3b1!8m2!3d41.6887515!4d-88.0716773!16s%2Fg%2F11vhgy8y3t!3m8!1s0x880e5bc0bed70cbb:0xabd35aa98cdb9bf2!5m2!4m1!1i2!8m2!3d41.688794!4d-88.07159!16s%2Fg%2F11kjpl3ndq?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hilton Garden Inn St. Charles, IL ",
+        "Marca":"Hilton",
+        "City":"St. Charles",
+        "State":"Illinois",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/chiscgi-hilton-garden-inn-st-charles\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Hilton+Garden+Inn+St.+Charles\/@41.9229833,-88.2544833,21z\/data=!4m18!1m8!3m7!1s0x880f0219b9ebd373:0xfe6d709bf28150c0!2s4070+E+Main+St,+St.+Charles,+IL+60174,+USA!3b1!8m2!3d41.922938!4d-88.2545598!16s%2Fg%2F11b8v5ymvn!3m8!1s0x880f0210b5558113:0x687f4d7aa8295f5a!5m2!4m1!1i2!8m2!3d41.9229754!4d-88.2545844!16s%2Fg%2F1tdk5s8c?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"TownePlace Suites Joliet South",
+        "Marca":"Marriott",
+        "City":"Joliet South",
+        "State":"Illinois",
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/mdwts-towneplace-suites-joliet-south\/overview\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/1515+Riverboat+Center+Dr,+Joliet,+IL+60431,+EE.+UU.\/data=!4m2!3m1!1s0x880e6209b4d6836d:0x2b4bb30c64feb3a1?sa=X&ved=2ahUKEwifvab2j_SDAxXzl-4BHUy7AOgQ8gF6BAgPEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Fairfield Inn & Suites Indianapolis Plainfield",
+        "Marca":"Marriot",
+        "City":"Indianapolis",
+        "State":"Indiana",
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/indpf-fairfield-inn-and-suites-indianapolis-plainfield\/overview\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/6018+Gateway+Dr,+Plainfield,+IN+46168,+EE.+UU.\/@39.6727443,-86.3738521,14z\/data=!4m16!1m9!3m8!1s0x886ca384075d7699:0x9dd210c6a6d086f3!2s6018+Gateway+Dr,+Plainfield,+IN+46168,+EE.+UU.!3b1!8m2!3d39.672338!4d-86.373856!10e5!16s%2Fg%2F11tm_jzm25!3m5!1s0x886ca384075d7699:0x9dd210c6a6d086f3!8m2!3d39.672338!4d-86.373856!16s%2Fg%2F11tm_jzm25?entry=ttu "
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn and Suites Burlington, Iowa Hotel",
+        "Marca":"Hilton",
+        "City":"Burlington ",
+        "State":"Iowa",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/brlwdhx-hampton-suites-burlington\/",
+        "Dirección":"https:\/\/www.google.com\/maps?q=3001+Winegard+Dr.,+Suite+130,+Burlington,+Iowa,+52601,+USA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn Kansas City The Legends",
+        "Marca":"Hilton",
+        "City":"Kansas City",
+        "State":"Kansas",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/mkcswhx-hampton-kansas-city-the-legends\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/1400+Village+West+Pkwy,+Kansas+City,+KS+66111,+EE.+UU.\/@39.1198185,-94.8232511,17z\/data=!3m1!4b1!4m6!3m5!1s0x87c08ea2d5c19e53:0xe3963d6c6d57272c!8m2!3d39.1198185!4d-94.8206762!16s%2Fg%2F11bw4bhs08?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Motel 6 Park City Ks",
+        "Marca":"Motel 6",
+        "City":"Park City",
+        "State":"Kansas",
+        "Web":"https:\/\/www.motel6.com\/es\/home\/motels.ks.park-city.4887.html",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/1075+HOPALONG+CASSIDY+CIRCLE+PARK\/@37.8212092,-97.3244752,3a,75y,143.14h,90t\/data=!3m4!1e1!3m2!1sQfji-sc11wrt9FjMwYJb-g!2e0!4m2!3m1!1s0x87bb1c6ea3163dcb:0xd50da49a5ee07fae?sa=X&ved=2ahUKEwi_44f0kvSDAxVuLUQIHW2HC1wQxB16BAgVEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Lexington Keeneland Airport",
+        "Marca":"Hilton",
+        "City":"Lexington",
+        "State":"Kentucky",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/lexkeht-home2-suites-lexington-keeneland-airport\/",
+        "Dirección":"https:\/\/g.co\/kgs\/5jr1tg2"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Best Western Lafayette Inn",
+        "Marca":"Best Western",
+        "City":"Lafayette",
+        "State":"Louisiana",
+        "Web":"https:\/\/www.bestwestern.com\/en_US\/book\/hotels-in-lafayette\/best-western-lafayette-inn\/propertyCode.19110.html",
+        "Dirección":"https:\/\/www.bing.com\/maps?q=2207+NE+Evangeline+Trwy&FORM=HDRSC6&cp=30.252638%7E-92.014469&lvl=19.3"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Emerald Apartments | Apartments In Cheverly, MD",
+        "Marca":null,
+        "City":"Cheverly",
+        "State":"Maryland",
+        "Web":"https:\/\/www.liveatea.com\/cheverly\/emerald-apartments\/photos\/",
+        "Dirección":"https:\/\/www.bing.com\/maps?q=EMERALD+APARTMENTS+23501&FORM=HDRSC6&cp=38.935788%7E-76.924895&lvl=18.8"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Best Western Lakewinds ",
+        "Marca":"Best Western",
+        "City":"Ludington",
+        "State":"Michigan",
+        "Web":"https:\/\/www.bestwestern.com\/en_US\/book\/hotels-in-ludington\/best-western-lakewinds\/propertyCode.23162.html",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Best+Western+Lakewinds\/@43.9549255,-86.4039855,19.46z\/data=!4m18!1m8!3m7!1s0x881c1a19f575cef5:0x37a18f847766a9ae!2s5005+US-10,+Ludington,+MI+49431,+USA!3b1!8m2!3d43.9550066!4d-86.4034688!16s%2Fg%2F11c17ypbdb!3m8!1s0x881c1a1a4668e927:0x5294f302838265e1!5m2!4m1!1i2!8m2!3d43.9551318!4d-86.4034946!16s%2Fg%2F1vc82f1g?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hilton Garden Inn Kalispell",
+        "Marca":"Hilton",
+        "City":"Kalispell",
+        "State":"Montana",
+        "Web":"https:\/\/www.hilton.com\/es\/hotels\/fcaksgi-hilton-garden-inn-kalispell\/",
+        "Dirección":"https:\/\/www.google.com\/maps?q=1840+Highway+93+South,+Kalispell,+Montana,+59901,+USA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Las Vegas I-215 Curve",
+        "Marca":"Hilton",
+        "City":"Las Vegas",
+        "State":"Nevada",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/lascuht-home2-suites-las-vegas-i-215-curve\/gallery\/",
+        "Dirección":"https:\/\/www.google.com\/maps?q=8470+W.+Sunset+Road,+Las+Vegas,+Nevada,+89113,+USA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Albuquerque Airport",
+        "Marca":"Hilton",
+        "City":"Albuquerque",
+        "State":"New Mexico",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/abqdlht-home2-suites-albuquerque-airport\/",
+        "Dirección":"https:\/\/g.co\/kgs\/gtUzgrw"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn Harriman Hotel in Woodbury, NY ",
+        "Marca":"Hilton",
+        "City":"Woodbury",
+        "State":"New York",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/nycmrhx-hampton-harriman-woodbury\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Hampton+Inn+Harriman+Woodbury\/@41.3102225,-74.1310318,20.75z\/data=!4m18!1m8!3m7!1s0x89c2d736925a44ef:0x43fc0e27a77a207d!2s60+Centre+Dr,+Central+Valley,+NY+10917,+USA!3b1!8m2!3d41.3104127!4d-74.1310612!16s%2Fg%2F11c3q51y4z!3m8!1s0x89c2d73692a25c43:0x1367d099fad31394!5m2!4m1!1i2!8m2!3d41.3104068!4d-74.1310886!16s%2Fg%2F1tfg8lv7?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Courtyard Tarrytown Westchester County",
+        "Marca":"Marriot",
+        "City":"Tarrytown",
+        "State":"New York",
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/hpngr-courtyard-tarrytown-westchester-county\/overview\/",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Homewood Suites by Hilton Raleigh Downtown",
+        "Marca":"Hilton",
+        "City":"Raleigh",
+        "State":"North Carolina",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/rduwdhw-homewood-suites-raleigh-downtown\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/200+W+Davie+St,+Raleigh,+NC+27601,+USA\/@35.7759958,-78.6426948,20.5z\/data=!4m6!3m5!1s0x89ac5f71aca2992f:0xdb683a8f5babcd86!8m2!3d35.7758863!4d-78.6426663!16s%2Fg%2F11sv04vmg0?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Embassy Suites by Hilton Asheville Downtown",
+        "Marca":"Hilton ",
+        "City":"Asheville",
+        "State":"North Carolina",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/avleses-embassy-suites-asheville-downtown\/",
+        "Dirección":"https:\/\/g.co\/kgs\/24zzaBb"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn and Suites by Hilton Cincinnati Midtown Rookwood",
+        "Marca":"Hilton",
+        "City":"Cincinnati",
+        "State":"Ohio",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/cvgnchx-hampton-suites-cincinnati-midtown-rookwood\/",
+        "Dirección":"https:\/\/g.co\/kgs\/dDsBjRw"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express & Suites Defiance",
+        "Marca":"IHG",
+        "City":"Defiance",
+        "State":"Ohio",
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/es\/defiance\/dfioh\/hoteldetail",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/1148+Hotel+Dr,+Defiance,+OH+43512,+EE.+UU.\/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x883dce04e28e5abd:0x5ee08702e65f3368?sa=X&ved=2ahUKEwiS87XrjPSDAxVYO0QIHXLvAdAQwwV6BAgQEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"La Quinta Inn & Suites by Wyndham - Tulsa - Catoosa Route 66",
+        "Marca":"Wyndham",
+        "City":"Tulsa",
+        "State":"Oklahoma",
+        "Web":"https:\/\/www.wyndhamhotels.com\/laquinta\/catoosa-oklahoma\/la-quinta-tulsa-catoosa-route-66\/overview?CID=LC:6ysy27krtpcrqev:52998",
+        "Dirección":"https:\/\/www.google.com\/travel\/search?q=18725%20e%20admiral%20pl%20catoosa%20ok%20la%20quinta&g2lb=2502548%2C2503771%2C2503781%2C2504511%2C4258168%2C4284970%2C4291517%2C4814050%2C4874190%2C4893075%2C4965990%2C10208620%2C72277293%2C72302247%2C72317059%2C72406588%2C72412680%2C72421566%2C72424729%2C72430562%2C72440517%2C72442338%2C72448521%2C72453203%2C72458066%2C72458707%2C72462234%2C72469155%2C72470440%2C72470899%2C72471395%2C72472051%2C72473738%2C72473841%2C72479990%2C72480010%2C72484736&hl=es-419&gl=mx&ssta=1&ts=CAEaHBIaEhQKBwjoDxABGBkSBwjoDxABGBoYATICEAAqBwoFOgNNWE4&qs=CAEyFENnc0lfNHVyejRqOG52ajFBUkFCOAg&ap=aAG6AQhvdmVydmlldw&ictx=1&ved=0CAAQ5JsGahcKEwjAiPrSk_SDAxUAAAAAHQAAAAAQCw&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Sunshine Park Apartments | Apartments in Roseburg, OR",
+        "Marca":null,
+        "City":"Rosebyurg",
+        "State":"Oregon",
+        "Web":"https:\/\/www.sunshineparkapts.com\/photogallery",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Sunshine+Park\/@43.2212535,-123.2803064,21z\/data=!4m15!1m8!3m7!1s0x54c423bbf5d3fd79:0xcd8894490c42e63e!2s152+Sunshine+Rd,+Roseburg,+OR+97470,+USA!3b1!8m2!3d43.2211936!4d-123.280337!16s%2Fg%2F11c26317gb!3m5!1s0x54c4235b8a1fc579:0xad431f8717185fc7!8m2!3d43.2211936!4d-123.280337!16s%2Fg%2F11s3l3tdgy?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Quebec City, QC",
+        "Marca":"Hilton",
+        "City":"Quebec City",
+        "State":"Quebec",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/yqbwhht-home2-suites-quebec-city\/",
+        "Dirección":"https:\/\/g.co\/kgs\/4pEMq2F"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Tru by Hilton Santee",
+        "Marca":"Hilton",
+        "City":"Santee",
+        "State":"South Carolina",
+        "Web":"https:\/\/www.hilton.com\/es\/hotels\/caesaru-tru-santee\/",
+        "Dirección":"https:\/\/g.co\/kgs\/M5NocVB"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Best Western Plus Gen X Inn - Hotels in Memphis",
+        "Marca":"Best Western",
+        "City":"Memphis",
+        "State":"Tennessee",
+        "Web":"https:\/\/www.bestwestern.com\/en_US\/book\/hotels-in-memphis\/best-western-plus-gen-x-inn\/propertyCode.43175.html",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/1177+Madison+Ave\/@35.1393895,-90.0220421,3a,75y,213.62h,90t\/data=!3m4!1e1!3m2!1skRn6rwNkOJCgxA9gClWKFw!2e0!4m2!3m1!1s0x87d57e6dc01d2f03:0xed2dd36a4e64c39a?sa=X&ved=2ahUKEwjs9vaSi_SDAxUrC0QIHX82Bs4QxB16BAgREAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Embassy Suites by Hilton Knoxville Downtown",
+        "Marca":"Hilton ",
+        "City":"Knoxville",
+        "State":"Tennessee",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/tysxdes-embassy-suites-knoxville-downtown\/",
+        "Dirección":"https:\/\/g.co\/kgs\/Nh5M6vh"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express & Suites Ashland",
+        "Marca":"IHG",
+        "City":"Ashland",
+        "State":"Tennessee",
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/es\/ashland\/hsaor\/hoteldetail\/gallery",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/565+Clover+Ln,+Ashland,+OR+97520,+EE.+UU.\/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x54cf0cedc6a5ed27:0xfc6479d38109fa81?sa=X&ved=2ahUKEwjljajnjfSDAxXFMUQIHfRQAgAQwwV6BAgQEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Brownwood",
+        "Marca":"Hilton",
+        "City":"Brownwood",
+        "State":"Texas",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/abibrht-home2-suites-brownwood\/rooms\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/401+E+Commerce+St,+Brownwood,+TX+76801,+USA\/@31.7295571,-98.975004,18.5z\/data=!4m6!3m5!1s0x8650c6512d18a02d:0x75cd4bf30c4c6ba3!8m2!3d31.7296971!4d-98.9742668!16s%2Fg%2F11vm2v__br?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn Seguin, Texas ",
+        "Marca":"Hilton",
+        "City":"Seguin",
+        "State":"Texas",
+        "Web":"https:\/\/www.hilton.com\/es\/hotels\/satsghx-hampton-seguin\/",
+        "Dirección":"https:\/\/g.co\/kgs\/cnXK5iw"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Tru by Hilton North Richland Hills DFW West",
+        "Marca":"Hilton",
+        "City":"North Richland Hills",
+        "State":"Texas",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/dfwwdru-tru-north-richland-hills-dfw-west\/gallery\/",
+        "Dirección":"https:\/\/www.google.com\/maps?q=1500+Weyland+Dr.,+North+Richland+Hills,+Texas,+76180,+USA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Galveston",
+        "Marca":"Hilton",
+        "City":"Galveston",
+        "State":"Texas",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/houlvht-home2-suites-galveston\/",
+        "Dirección":"https:\/\/www.google.com\/maps?q=4302+Seawall+Blvd,+Galveston,+Texas,+77550,+USA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton McAllen, Texas Hotel",
+        "Marca":"Hilton",
+        "City":"McAllen",
+        "State":"Texas",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/mfewght-home2-suites-mcallen\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Home2+Suites+by+Hilton+McAllen\/@26.201529,-98.2619473,20.75z\/data=!4m18!1m8!3m7!1s0x8665a7745c832c89:0x9fe726a8f643522b!2s501+S+Ware+Rd,+McAllen,+TX+78501,+USA!3b1!8m2!3d26.2019104!4d-98.2612643!16s%2Fg%2F11srgt82bw!3m8!1s0x8665a7744f9947df:0x37e33f5eb1734b1e!5m2!4m1!1i2!8m2!3d26.2016212!4d-98.2617657!16s%2Fg%2F11c30qj3j_?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Tru by Hilton Lewisville",
+        "Marca":"Hilton",
+        "City":"Lewisville",
+        "State":"Texas",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/dfwlwru-tru-lewisville-vista-ridge-mall\/",
+        "Dirección":"https:\/\/maps.app.goo.gl\/Qd9XLyUENAonQ4EV6"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hampton Inn & Suites Lufkin",
+        "Marca":"Hilton ",
+        "City":"Lufkin",
+        "State":"Texas",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/luftxhx-hampton-suites-lufkin\/",
+        "Dirección":"https:\/\/g.co\/kgs\/PsFMjFE"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"La Quinta Inn & Suites by Wyndham New Braunfels",
+        "Marca":"Wyndham",
+        "City":"New Braunfels",
+        "State":"Texas",
+        "Web":"https:\/\/www.wyndhamhotels.com\/laquinta\/new-braunfels-texas\/la-quinta-new-braunfels\/overview",
+        "Dirección":"https:\/\/www.google.com\/search?q=La+Quinta+Inn+%26+Suites+365+Hwy+46+South&rlz=1C1CHBD_esMX1080MX1081&oq=La+Quinta+Inn+%26+Suites%09365+Hwy+46+South&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzM3MmowajSoAgCwAgA&sourceid=chrome&ie=UTF-8"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Milwaukee West",
+        "Marca":"Hilton",
+        "City":"Milwaukee",
+        "State":"Wisconsin",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/mkemwht-home2-suites-milwaukee-west\/gallery\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Home2+Suites+by+Hilton+Milwaukee+West\/@43.0192536,-88.0022046,17z\/data=!3m1!4b1!4m9!3m8!1s0x88051ab854e5890d:0xfa7a28af22253317!5m2!4m1!1i2!8m2!3d43.0192536!4d-87.9996297!16s%2Fg%2F11tgctzrny?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Racine",
+        "Marca":"Hilton",
+        "City":"Racine",
+        "State":"Wisconsin",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/ztvacht-home2-suites-racine\/rooms\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Home2+Suites+by+Hilton+Racine\/@42.719075,-87.9144105,20.31z\/data=!4m18!1m8!3m7!1s0x88056940ebc88fa5:0x5f992a05c523d883!2s1301+W+Rd,+Mt+Pleasant,+WI+53177,+USA!3b1!8m2!3d42.7190529!4d-87.9141476!16s%2Fg%2F11vb6vrdzt!3m8!1s0x88056887e2f293d9:0xcb488a62e0c35e08!5m2!4m1!1i2!8m2!3d42.7190849!4d-87.9141228!16s%2Fg%2F11krhm2bbv?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Home2 Suites by Hilton Milwaukee West",
+        "Marca":"Hilton ",
+        "City":"Milwaukee",
+        "State":"Wisconsin",
+        "Web":"https:\/\/www.hilton.com\/en\/hotels\/mkemwht-home2-suites-milwaukee-west\/",
+        "Dirección":"https:\/\/www.google.com\/search?sca_esv=600789614&biw=1424&bih=816&sxsrf=ACQVn0-b3AwLY5_1jfOsjGO5UxTVzx7oVA:1706034679259&q=Home2+Suites+by+Hilton+Milwaukee+West&ludocid=18048783189297935127&lsig=AB86z5VmziXAWpQ0eVK9GPnPVa9g&sa=X&ved=2ahUKEwivmKC4kvSDAxXOhu4BHQ11C_MQoAJ6BAgXEAc"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Lumen On Ninth",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/lumenonninth.com\/",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Parkside Apartments & Shops",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.parksidebentonville.com\/Marketing\/Home\/Media",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"SureStay Hotel by Best Western Secaucus Meadowlands",
+        "Marca":"Best Western",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.bestwestern.com\/en_US\/book\/hotels-in-secaucus\/surestay-by-best-western-secaucus-meadowlands\/propertyCode.31071.html",
+        "Dirección":"https:\/\/g.co\/kgs\/gVtvjsz"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Comfort Suites Columbus East Broad",
+        "Marca":"Choice",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/ohio\/columbus\/comfort-suites-hotels\/oh504",
+        "Dirección":"https:\/\/g.co\/kgs\/B9Rcs9p"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Country Inn & Suites by Radisson, Atlanta Airport South, GA",
+        "Marca":"Choice",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/es-xl\/georgia\/college-park\/country-inn-suites-hotels\/gad52",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Country+Inn+%26+Suites+by+Radisson,+Atlanta+Airport+South,+GA\/@33.615869,-84.4517374,17z\/data=!3m1!4b1!4m9!3m8!1s0x88f4e3303e71d855:0xb78ddedb6c96a44c!5m2!4m1!1i2!8m2!3d33.615869!4d-84.4491625!16s%2Fg%2F1tgpnw61?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Comfort Inn & Suites Near Kino Sports Complex",
+        "Marca":"Choice",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/arizona\/tucson\/comfort-inn-hotels\/az388",
+        "Dirección":"https:\/\/g.co\/kgs\/wrF9uAT"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Mint House",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/minthouse.com\/",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Comfort Suites Denver North - Westminster",
+        "Marca":"Choice ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/colorado\/westminster\/comfort-suites-hotels\/co734",
+        "Dirección":"https:\/\/g.co\/kgs\/QMghSGT"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Comfort Inn Ocala Silver Springs",
+        "Marca":"Choice ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/florida\/ocala\/comfort-inn-hotels\/fle43",
+        "Dirección":"https:\/\/g.co\/kgs\/xsvJXWg"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Country Inn & Suites by Radisson, Atlanta Airport South, GA",
+        "Marca":"Choice ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/georgia\/college-park\/country-inn-suites-hotels\/gad52",
+        "Dirección":"https:\/\/g.co\/kgs\/nLMgiaq"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Comfort Inn Dryden",
+        "Marca":"Choice ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/ontario\/dryden\/comfort-inn-hotels\/cn265",
+        "Dirección":"https:\/\/g.co\/kgs\/czufMp8"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Country Inn & Suites by Radisson, Stone Mountain, GA",
+        "Marca":"Choice ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.choicehotels.com\/georgia\/stone-mountain\/country-inn-suites-hotels\/gad47",
+        "Dirección":"https:\/\/maps.app.goo.gl\/7gDppx6QN1qJSPLMA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Efficency Lodge ",
+        "Marca":"Efficency Lodge ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.efflodge.com\/cartersville-ga",
+        "Dirección":"https:\/\/g.co\/kgs\/XL8KWSC"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Extended Stay America - Phoenix - Mesa - West",
+        "Marca":"Extended Stay",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.extendedstayamerica.com\/hotels\/az\/phoenix\/mesa-west",
+        "Dirección":"https:\/\/g.co\/kgs\/6bvsa2G"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Emerald Apartments\n",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/grandpeaks.com\/florida\/emerald-grove\/gallery\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/23501+Meadow+Creek+DR%09ORLANDO%09FL\/@28.3705936,-81.5034247,3a,75y,169.49h,90t\/data=!3m4!1e1!3m2!1sX4-HT021zU83mCDPcyuB8Q!2e0!4m2!3m1!1s0x88dd80303694ba0d:0xaf631527942e2a32?sa=X&ved=2ahUKEwjXwNH7lPSDAxWdLEQIHbLOAYYQxB16BAgREAA"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"ALBION IN THE GULCH \n",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.albioninthegulch.com\/albion-nashville-tn\/",
+        "Dirección":"Albion in the Gulch Apartments"
+    },
+    {
+        "Tipo":"Seniorliving",
+        "Hotel":"Ohio Living Westminster-Thurber",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ohioliving.org\/communities\/ohio-living-westminster-thurber\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/717+Neil+Ave,+Columbus,+OH+43215,+Estados+Unidos\/@39.9756067,-83.0935341,12z\/data=!4m8!4m7!1m0!1m5!1m1!1s0x88388f209ad3fd7f:0x74b80e21422f7402!2m2!1d-83.0110764!2d39.9755583?entry=ttu"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Slate at Fishers District Apartments",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.homes.com\/property\/slate-at-fishers-district-fishers-in\/kj1rfggc67c5g\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Slate+at+Fishers+District+Luxury+Villas+%26+Townhomes\/@39.9503926,-86.0007331,18.5z\/data=!4m15!1m8!3m7!1s0x8814b4888e512797:0xbed7bdf48da8def8!2s11255+Slate+Stone+Dr,+Fishers,+IN+46038,+USA!3b1!8m2!3d39.9504542!4d-86.0011245!16s%2Fg%2F11v03tr4dg!3m5!1s0x8814b51317941533:0x7817f3bfabf851c4!8m2!3d39.9501683!4d-86.0012973!16s%2Fg%2F11sr0bzvpy?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Salem Waterfront And Suites - Salem Waterfront And Suites MA",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.guestreservations.com\/salem-waterfront-hotel-and-suites-salem\/booking?msclkid=2cffbbb4ec3d11b4be6fde04fcab0e30",
+        "Dirección":"Salem Waterfront Hotel & Suites - Google Maps"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hotel E Real Santa Clara",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.hotelerealsantaclara.com\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Hotel+E+Real\/@37.3520611,-121.9953605,20.21z\/data=!4m18!1m8!3m7!1s0x808fb5f667d0c493:0x28c7f14a63f8e4!2s3580+El+Camino+Real,+Santa+Clara,+CA+95051,+USA!3b1!8m2!3d37.3520506!4d-121.9948983!16s%2Fg%2F11c2gd6j0d!3m8!1s0x808fb5f6657dec0d:0x6e66a8a15e0df0b7!5m2!4m1!1i2!8m2!3d37.3520265!4d-121.994959!16s%2Fg%2F1tfn2zv1?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"The Flats at Ninth Avenue Pensacola",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.theflatsatninthavenue.com\/gallery",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Flats+at+Ninth+Avenue\/@30.504129,-87.1848631,21z\/data=!4m6!3m5!1s0x8890ea8727edf139:0xc30c792651c4faf7!8m2!3d30.5041021!4d-87.1847202!16s%2Fg%2F1263dk154?entry=ttu"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Futura Nova Cove",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.facebook.com\/LinkvestCapital\/videos\/the-futura-at-nona-cove-project-of-our-affiliate-lv-development-is-progressing-a\/1227509901081843\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/19465+Boggy+Creek+Rd+ORLANDO\/@28.3481511,-81.2351138,3a,75y,358.66h,90t\/data=!3m4!1e1!3m2!1sTXVT4vAKkYr8jgD7cLcUEg!2e0!4m2!3m1!1s0x88dd8a340bdaf881:0xc0b57d34c7c8d933?sa=X&ved=2ahUKEwiim_C_nfSDAxUwEkQIHQA9A3wQxB16BAgREAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Hub Tampa",
+        "Marca":"Hub",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/huboncampus.com\/tampa\/",
+        "Dirección":"https:\/\/www.google.com\/search?q=12202+Club+Dr.%2C+Tampa%2C+FL+33612&rlz=1C1CHBD_esMX1080MX1081&oq=12202+Club+Dr.%2C+Tampa%2C+FL+33612&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgTGIAE0gEHMzY2ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Grand Living at Wellen Park",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/wellenpark.com\/news\/grand-living-at-wellen-park-now-leasing-luxury-apartments-for-seniors\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Grand+Living+at+Wellen+Park\/@27.0483632,-82.3277319,17z\/data=!3m1!4b1!4m6!3m5!1s0x88c357a3e8b14671:0x598ad232be74f53c!8m2!3d27.0483632!4d-82.325157!16s%2Fg%2F11tff5_rsx?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express & Suites Paragould",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/en\/paragould\/pgrar\/hoteldetail",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/3502+Linwood+Dr,+Paragould,+Arkansas+72450,+EE.+UU.\/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x889a4da01164b989:0xb6ec4cb0bb9bb54a?sa=X&ved=2ahUKEwjz3euzm_SDAxXXOkQIHUBmD0sQwwV6BAgdEAA"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express & Suites Indianapolis W - Airport Area",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/en\/indianapolis\/indew\/hoteldetail\/gallery",
+        "Dirección":"https:\/\/www.google.com\/maps?rlz=1C1CHBD_esMX1080MX1081&gs_lcrp=EgZjaHJvbWUyCwgAEEUYExg5GIAEMgkIARAAGBMYgATSAQc3MjlqMGo0qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=mx&sa=X&geocode=KeHZYM8FqGyIMan8F5PCHulC&daddr=5855+Rockville+Rd,+Indianapolis,+IN+46224,+Estados+Unidos"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Staybridge Suites Grand Rapids - Airport - IHG",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/staybridge\/hotels\/us\/en\/grand-rapids\/grrmi\/hoteldetail\/gallery",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Staybridge+Suites+Grand+Rapids+-+Airport,+an+IHG+Hotel\/@42.9085689,-85.5767877,17z\/data=!3m1!4b1!4m9!3m8!1s0x88184d11755a4cd1:0xc5d491c54b987627!5m2!4m1!1i2!8m2!3d42.9085689!4d-85.5742128!16s%2Fg%2F1tdg8dqh?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express San Diego - La Mesa Hoteles",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/es\/la-mesa\/sanpd\/hoteldetail",
+        "Dirección":"https:\/\/g.co\/kgs\/Ph151HN"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Staybridge Suites Tucson Airport",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/staybridge\/hotels\/us\/en\/tucson\/tussb\/hoteldetail",
+        "Dirección":"https:\/\/g.co\/kgs\/6jZHT9w"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express San Diego - La Mesa",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/en\/la-mesa\/sanpd\/hoteldetail\/gallery",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Holiday+Inn+Express+San+Diego+-+la+Mesa,+an+IHG+Hotel\/@32.774993,-117.0261697,20.92z\/data=!4m18!1m8!3m7!1s0x80d9571b789d9d53:0x1f1be1323eb523d9!2s8000+Parkway+Dr,+La+Mesa,+CA+91942,+USA!3b1!8m2!3d32.7750483!4d-117.0260312!16s%2Fg%2F11bw3_c2p1!3m8!1s0x80d9571b78d1aeef:0x276b035771553467!5m2!4m1!1i2!8m2!3d32.7750769!4d-117.0259756!16s%2Fg%2F11y1vlghp9?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express Harvey-Marrero Hotel by IHG",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/gb\/en\/harvey\/hvyla\/hoteldetail\/gallery",
+        "Dirección":"Holiday Inn Express Harvey-Marrero, an IHG Hotel - Google Maps"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express & Suites El Paso - Sunland Park Area - IHG",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinn\/hotels\/us\/en\/el-paso\/elpsl\/hoteldetail\/gallery",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Holiday+Inn+El+Paso+West+%E2%80%93+Sunland+Park,+an+IHG+Hotel\/@31.8133229,-106.550992,20.83z\/data=!4m18!1m8!3m7!1s0x86ddf81a735f318b:0x579ec0ee5b55cd39!2s900+Sunland+Park+Dr,+El+Paso,+TX+79922,+USA!3b1!8m2!3d31.813416!4d-106.5509494!16s%2Fg%2F11c43wmqqw!3m8!1s0x86ddf81a773213d9:0xd788992b80b29c55!5m2!4m1!1i2!8m2!3d31.813446!4d-106.550947!16s%2Fg%2F11f324p9vy?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Avid hotel Elkhart North - Elkhart Indiana ",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/avidhotels\/hotels\/us\/en\/find-hotels\/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99618783&icdv=99618783&glat=META_hpa_paid_MX_desktop_EKIAV_mapresults_2_USD_2024-02-15_default_12260711232__FALSE_QUHNIDAP0&qSlH=EKIAV&qRms=1&qAdlt=2&qChld=0&qCiD=15&qCiMy=012024&qCoD=17&qCoMy=012024&qAAR=6CBARC&qRtP=IDAP0&qrtPt=79.56&setPMCookies=true&qSlRc=QUHN&qSHBrC=VA&qDest=327%20Northpointe%20Blvd.,%20Elkhart,%20IN,%20US&hmGUID=eada3441-3d2d-42fe-194c-9c53ab09323e&gclid=CjwKCAiA5L2tBhBTEiwAdSxJX9lfbANZzbceXTXsHWNexGEmzOQTGedCFf7cYVWYa8tjl-xlIDeUGRoCf5YQAvD_BwE&cm_mmc=hpa_paid_MX_desktop_EKIAV_mapresults_2_USD_2024-02-15_default_12260711232__FALSE_QUHNIDAP0&srb_u=1&qChAge=&qRmFltr=",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/avid+Hotels+Elkhart+North,+an+IHG+Hotel\/@41.7346608,-85.9789694,20.25z\/data=!4m9!3m8!1s0x8816dc56d81397eb:0xd2e8d1e316202589!5m2!4m1!1i2!8m2!3d41.734566!4d-85.978926!16s%2Fg%2F11krhl0jfp?entry=ttu"
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Stillwater Crossing Apartments | Apartments in Bend, OR",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.stillwater-crossing.com\/photogallery",
+        "Dirección":"60847 Atwood Dr stillwater apartments - Google Maps"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Candlewood Suites Vicksburg ",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/candlewood\/hotels\/us\/en\/vicksburg\/vkshf\/hoteldetail",
+        "Dirección":"https:\/\/g.co\/kgs\/onU8u1F"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express & Suites Vineland Millville, an IHG Hotel",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/en\/vineland\/vnlcm\/hoteldetail",
+        "Dirección":"https:\/\/g.co\/kgs\/reQjJbe"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Candlewood Suites Pittston ",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/candlewood\/hotels\/us\/en\/pittston\/avppt\/hoteldetail",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/Candlewood+Suites+Pittston\/@41.1558764,-76.218175,10z?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Holiday Inn Express Van Nuys Hotel IHG",
+        "Marca":"IHG",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.ihg.com\/holidayinnexpress\/hotels\/us\/en\/van-nuys\/laxvn\/hoteldetail\/gallery",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Holiday+Inn+Express+Van+Nuys,+an+IHG+Hotel\/@34.2202221,-118.4714135,20.75z\/data=!4m18!1m8!3m7!1s0x80c290b3d41c1eef:0xb77604bbc4c736e3!2s8244+Orion+Ave,+Van+Nuys,+CA+91406,+USA!3b1!8m2!3d34.2202988!4d-118.4714408!16s%2Fg%2F11bw4j34qm!3m8!1s0x80c290b3d6d2f5bb:0x5649de7f13c215bb!5m2!4m1!1i2!8m2!3d34.220308!4d-118.471411!16s%2Fg%2F1vgw8wpj?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Carrollton Hotel & Event Centre",
+        "Marca":"Independent",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.carrolltoninn.com\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/Carrollton+Inn\/@42.077709,-94.8801927,17z\/data=!3m1!4b1!4m8!3m7!1s0x87ed39c3febad1d5:0x2ba8ca0b3ca16819!5m2!4m1!1i2!8m2!3d42.077709!4d-94.878004?shorturl=1"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"TownePlace Suites Big Spring",
+        "Marca":"Marriot",
+        "City":"Big Spring",
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/maftb-towneplace-suites-big-spring\/overview\/",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Courtyard Burlington Williston",
+        "Marca":"Marriot",
+        "City":"Williston",
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/btvwl-courtyard-burlington-williston\/overview\/",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Moxy Miami Wyndwood",
+        "Marca":"Marriot",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/miaon-moxy-miami-wynwood\/photos\/",
+        "Dirección":"https:\/\/g.co\/kgs\/TokqWY6"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Fairfield Inn & Suites Huntsville Redstone Gateway",
+        "Marca":"Marriot",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/hsvrg-fairfield-inn-and-suites-huntsville-redstone-gateway\/overview\/",
+        "Dirección":"https:\/\/maps.app.goo.gl\/jcskNywXb9ZmhYJa8"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Fairfield Inn & Suites by Marriott Greenville",
+        "Marca":"Marriot",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/pgvgv-fairfield-inn-and-suites-greenville\/overview\/",
+        "Dirección":"https:\/\/g.co\/kgs\/gGQ65h5"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"TownePlace Suites by Marriott Lubbock",
+        "Marca":"Marriot",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/lbbts-towneplace-suites-lubbock\/overview\/",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Efficiency Lodge - Columbus GA",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.booking.com\/hotel\/us\/efficiency-lodge-columbus-gfa.es.html",
+        "Dirección":"Efficiency hotel - Google Maps"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"SpringHill Suites by Marriott Frederica",
+        "Marca":"Marriot",
+        "City":"Frederica",
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/sbyfs-springhill-suites-frederica\/photos\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/place\/SpringHill+Suites+by+Marriott+Frederica\/@39.0090058,-75.4683291,17z\/data=!3m1!4b1!4m9!3m8!1s0x89b89d678a51dc59:0x370b92a8d4885f32!5m2!4m1!1i2!8m2!3d39.0090017!4d-75.4657542!16s%2Fg%2F11stxp7nnd?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"TownePlace Suites Germantown ",
+        "Marca":"Marriot ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/towneplacesuites.marriott.com\/",
+        "Dirección":"https:\/\/g.co\/kgs\/5Cd2sQt"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"SpringHill Suites ",
+        "Marca":"Marriott",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/springhillsuites.marriott.com\/",
+        "Dirección":"https:\/\/maps.app.goo.gl\/852dX8FW5HrQCrG19"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"TownePlace Suites Show Low",
+        "Marca":"Marriott",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/flgst-towneplace-suites-show-low\/overview\/",
+        "Dirección":"https:\/\/www.google.com\/maps\/search\/?api=1&query=34.2334299669645%2C-110.02531772897022&hl=en-US"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Courtyard by Marriott Mississauga-Airport Corporate Centre West",
+        "Marca":"Marriott",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/yyzmq-courtyard-mississauga-airport-corporate-centre-west\/photos\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Courtyard+by+Marriott+Mississauga-Airport+Corporate+Centre+West\/@43.6412392,-79.6166851,18.74z\/data=!4m20!1m10!3m9!1s0x882b388d4c3e9503:0xfbbb95ad2ac39ae0!2sCourtyard+by+Marriott+Mississauga-Airport+Corporate+Centre+West!5m2!4m1!1i2!8m2!3d43.6414347!4d-79.6155997!16s%2Fg%2F1tgcsj7l!3m8!1s0x882b388d4c3e9503:0xfbbb95ad2ac39ae0!5m2!4m1!1i2!8m2!3d43.6414347!4d-79.6155997!16s%2Fg%2F1tgcsj7l?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"TownePlace Suites Show Low | Marriott Bonvoy",
+        "Marca":"Marriott",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.marriott.com\/en-us\/hotels\/flgst-towneplace-suites-show-low\/photos\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/TownePlace+Suites+by+Marriott+Show+Low\/@34.2333111,-110.0252515,20.5z\/data=!4m18!1m8!3m7!1s0x8728cb4b13cc80ad:0x927e8c50d77db838!2s1401+E+Woolford+Rd,+Show+Low,+AZ+85901,+USA!3b1!8m2!3d34.233257!4d-110.025307!16s%2Fg%2F11t6gfp07f!3m8!1s0x8728cba21985fb8d:0xab11c21b71808be4!5m2!4m1!1i2!8m2!3d34.233257!4d-110.025307!16s%2Fg%2F11krcms37m?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Motel 6 Huntsville, AL University Dr.",
+        "Marca":"Motel 6",
+        "City":"Hunstville",
+        "State":null,
+        "Web":"https:\/\/www.motel6.com\/en\/home\/motels.al.huntsville.3304.html",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"La Quinta Inn & Suites by Wyndham Centralia",
+        "Marca":"Wyndham",
+        "City":"Centralia",
+        "State":null,
+        "Web":"https:\/\/www.wyndhamhotels.com\/laquinta\/centralia-washington\/la-quinta-inn-and-suites-centralia\/overview",
+        "Dirección":null
+    },
+    {
+        "Tipo":"Multifamily",
+        "Hotel":"Grand Living at Wellen Park ",
+        "Marca":null,
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/wellenpark.com\/news\/grand-living-at-wellen-park-now-leasing-luxury-apartments-for-seniors\/",
+        "Dirección":"https:\/\/www.google.com.mx\/maps\/place\/Grand+Living+at+Wellen+Park\/@27.0480889,-82.3256183,20.25z\/data=!4m10!1m2!2m1!1s12275+Mercado+Dr+grand+willing!3m6!1s0x88c357a3e8b14671:0x598ad232be74f53c!8m2!3d27.0483632!4d-82.325157!15sCh4xMjI3NSBNZXJjYWRvIERyIGdyYW5kIHdpbGxpbmdaICIeMTIyNzUgbWVyY2FkbyBkciBncmFuZCB3aWxsaW5nkgEYYXNzaXN0ZWRfbGl2aW5nX2ZhY2lsaXR5mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU53TmpWWVFsZG5FQUXgAQA!16s%2Fg%2F11tff5_rsx?entry=ttu"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"La Quinta Inn by Wyndham Tampa Busch Gardens",
+        "Marca":"Wyndham",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.wyndhamhotels.com\/laquinta\/tampa-florida\/la-quinta-inn-tampa-near-busch-gardens\/overview",
+        "Dirección":"https:\/\/www.google.com\/maps?rlz=1C1CHBD_esMX1080MX1081&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzQ5NGowajSoAgCwAgA&um=1&ie=UTF-8&fb=1&gl=mx&sa=X&geocode=KUnAG8tQxsKIMWmwPvUlodTB&daddr=9202+N+30th+St,+Tampa,+FL+33612,+Estados+Unidos"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Wingate by Wyndham Marion",
+        "Marca":"Wyndham",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.wyndhamhotels.com\/wingate\/marion-ohio\/wingate-marion\/overview",
+        "Dirección":"https:\/\/www.google.com\/maps\/dir\/\/227%20James%20Way%2C%20Marion%2C%20OH%2C%2043302\/@40.579820,-83.079794,12z"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"La Quinta Inn & Suites by Wyndham Austin - Cedar Park",
+        "Marca":"Wyndham",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.wyndhamhotels.com\/laquinta\/cedar-park-texas\/la-quinta-austin-cedar-park\/overview",
+        "Dirección":"https:\/\/g.co\/kgs\/1bP83L3"
+    },
+    {
+        "Tipo":"Hospitality",
+        "Hotel":"Days Inn by Wyndham Tucson Airport",
+        "Marca":"Wyndham ",
+        "City":null,
+        "State":null,
+        "Web":"https:\/\/www.wyndhamhotels.com\/es-xl\/days-inn\/tucson-arizona\/days-inn-tucson-airport\/overview",
+        "Dirección":"https:\/\/g.co\/kgs\/zJvbPD7"
+    }
+]

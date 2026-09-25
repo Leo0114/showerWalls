@@ -2,18 +2,32 @@
 import Layout from "@/layouts/Layout.astro";
 import bannerImage from "@/assets/images/w.avif";
 import Banner from "@/components/shared/Banner.astro";
-import ProjectCard from "@/components/projects/ProjectCard.astro";
 import CtaSection from "@/components/shared/CtaSection.astro";
-import ScrollReveal from "@/components/shared/ScrollReveal";
+import ProjectsGrid from "@/components/projects/ProjectsGrid";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
-import { getProjects } from "@/lib/content";
+
+// Static assets — resolved at build time and passed as plain string URLs
+// so the React island never needs Astro's asset pipeline.
+import hospitalityImg from "@/assets/images/projects/hospital.avif";
+import multifamilyImg from "@/assets/images/projects/multifam.avif";
+import seniorlivingImg from "@/assets/images/projects/student.avif";
+
+import rawProjects from "@/constants/proyectos.json";
 
 const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
 const path = usePath(lang);
 
-const projects = await getProjects(lang);
+// Strip Dirección — we don't expose it in the UI — and narrow types.
+const projects = rawProjects.map(({ Dirección: _d, ...rest }) => rest);
+
+// Pass resolved image src strings; Astro's ImageMetadata carries `.src`.
+const typeImages: Record<string, string> = {
+  Hospitality: hospitalityImg.src,
+  Multifamily: multifamilyImg.src,
+  Seniorliving: seniorlivingImg.src,
+};
 ---
 
 <Layout title={i18n.projects.title} description={i18n.projects.subtitle}>
@@ -30,22 +44,14 @@ const projects = await getProjects(lang);
         {i18n.projects.intro}
       </p>
 
-      <div class="mt-12 grid gap-6 lg:grid-cols-2">
-        {
-          projects.map((project, index) => (
-            <ScrollReveal
-              client:visible
-              delay={index * 0.08}
-              className="h-full"
-            >
-              <ProjectCard
-                project={project}
-                href={path("projects", project.data.slug)}
-                label={i18n.projects.view_details}
-              />
-            </ScrollReveal>
-          ))
-        }
+      <!-- React island: search + filter + paginated grid -->
+      <div class="mt-10">
+        <ProjectsGrid
+          client:load
+          projects={projects}
+          i18n={i18n.projects}
+          typeImages={typeImages}
+        />
       </div>
     </div>
   </section>

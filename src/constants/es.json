@@ -246,6 +246,20 @@
     "subtitle": "Explora algunas de nuestras transformaciones recientes.",
     "intro": "Una selección de proyectos en hotelería, multifamiliares, salud y residencial.",
     "view_details": "Ver proyecto",
+    "visit_web": "Visitar sitio web",
+    "search_placeholder": "Buscar por nombre, marca, ciudad…",
+    "filter_all": "Todos",
+    "no_results": "Ningún proyecto coincide con tu búsqueda.",
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "of": "de"
+    },
+    "types": {
+      "Hospitality": "Hospitalidad",
+      "Multifamily": "Multifamiliar",
+      "Seniorliving": "Senior Living"
+    },
     "detail": {
       "overview": "Sobre el proyecto",
       "gallery_title": "Galería del proyecto",

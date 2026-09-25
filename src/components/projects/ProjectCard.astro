@@ -1,67 +1,105 @@
 ---
-import { Image } from "astro:assets";
-import { FiArrowUpRight } from "react-icons/fi";
-import type { Project } from "@/lib/content";
+/**
+ * ProjectCard — driven by proyectos.json entries.
+ *
+ * Props surface only the flat JSON fields we actually render;
+ * the parent island passes them after filtering / paginating.
+ */
 
-interface Props {
-  project: Project;
-  href: string;
-  label: string;
-  /** First card gets the eager fetch and a wider span. */
-  featured?: boolean;
+import { Image } from "astro:assets";
+import { FiExternalLink } from "react-icons/fi";
+
+import hospitalityImg from "@/assets/images/projects/hospital.avif";
+import multifamilyImg from "@/assets/images/projects/multifam.avif";
+import seniorlivingImg from "@/assets/images/projects/student.avif";
+
+export interface ProjectEntry {
+  Tipo: string;
+  Hotel: string;
+  Marca: string | null;
+  City: string | null;
+  State: string | null;
+  Web: string | null;
 }
 
-const { project, href, label, featured = false } = Astro.props;
-const { title, excerpt, cover, client, location, year, sector, slug } = project.data;
+interface Props {
+  project: ProjectEntry;
+  visitLabel: string;
+}
+
+const { project, visitLabel } = Astro.props;
+const { Tipo, Hotel, Marca, City, State, Web } = project;
+
+// Pick the representative image per type — no external fetch needed.
+const typeImage =
+  Tipo === "Multifamily"
+    ? multifamilyImg
+    : Tipo === "Seniorliving"
+      ? seniorlivingImg
+      : hospitalityImg;
+
+const location = [City, State].filter(Boolean).join(", ");
 ---
 
 <a
-  href={href}
-  class:list={[
-    "surface-card press-soft group relative flex h-full flex-col overflow-hidden rounded-3xl hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3",
-    featured && "lg:col-span-2",
-  ]}
+  href={Web ?? "#"}
+  target={Web ? "_blank" : undefined}
+  rel={Web ? "noopener noreferrer" : undefined}
+  aria-label={Hotel}
+  class="surface-card press-soft group relative flex flex-col overflow-hidden rounded-2xl hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-e3"
 >
-  <div class:list={["relative overflow-hidden", featured ? "aspect-16/10" : "aspect-4/3"]}>
+  <!-- Type image strip -->
+  <div class="relative h-36 overflow-hidden">
     <Image
-      src={cover}
-      alt={title}
-      widths={[480, 768, 1280]}
-      sizes={featured ? "(min-width: 1024px) 60vw, 92vw" : "(min-width: 1024px) 30vw, 92vw"}
-      loading={featured ? "eager" : "lazy"}
+      src={typeImage}
+      alt={Tipo}
+      widths={[320, 480]}
+      sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
+      loading="lazy"
       class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-      transition:name={`project-image-${slug}`}
     />
+    <!-- Gradient overlay -->
     <div
-      class="absolute inset-0 bg-gradient-to-t from-baseBlack/70 via-baseBlack/10 to-transparent opacity-80"
+      class="absolute inset-0 bg-gradient-to-t from-baseBlack/60 via-baseBlack/10 to-transparent opacity-80"
       aria-hidden="true"
-    >
-    </div>
-    <span class="glass-chip type-label absolute top-5 left-5 rounded-full px-3 py-1 text-strategic">
-      {sector}
+    ></div>
+    <!-- Type badge -->
+    <span class="glass-chip type-label absolute top-3 left-3 rounded-full px-2.5 py-1 text-strategic">
+      {Tipo === "Seniorliving" ? "Senior Living" : Tipo}
     </span>
+    <!-- External link icon -->
+    {
+      Web && (
+        <span class="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-full bg-strategic/90 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+          <FiExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+        </span>
+      )
+    }
   </div>
 
-  <div class="flex flex-1 flex-col p-7">
-    <p class="type-label text-muted">
-      {client} · {location} · {year}
-    </p>
-
-    <h3
-      class="mt-3 font-display text-xl leading-snug font-bold tracking-[-0.02em] text-ink transition-colors duration-300 ease-out group-hover:text-strategic"
-      transition:name={`project-title-${slug}`}
-    >
-      {title}
+  <!-- Card body -->
+  <div class="flex flex-1 flex-col gap-1.5 p-4">
+    <!-- Hotel name -->
+    <h3 class="font-display text-[0.875rem] leading-snug font-bold tracking-[-0.01em] text-ink line-clamp-2 transition-colors duration-200 group-hover:text-strategic">
+      {Hotel}
     </h3>
 
-    <p class="mt-3 flex-1 text-sm leading-relaxed text-pretty text-muted">{excerpt}</p>
+    <!-- Meta row: brand · location -->
+    <p class="type-label mt-0.5 text-muted line-clamp-1">
+      {[Marca?.trim(), location].filter(Boolean).join(" · ")}
+    </p>
 
-    <span class="type-label mt-6 inline-flex items-center gap-2 text-strategic">
-      {label}
-      <FiArrowUpRight
-        className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-        aria-hidden="true"
-      />
-    </span>
+    <!-- Visit label -->
+    {
+      Web && (
+        <span class="type-label mt-auto pt-3 inline-flex items-center gap-1.5 text-strategic">
+          {visitLabel}
+          <FiExternalLink
+            className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            aria-hidden="true"
+          />
+        </span>
+      )
+    }
   </div>
 </a>
