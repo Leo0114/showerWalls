@@ -63,7 +63,6 @@ export const PROJECT_TYPES = [
   "multifamily",
   "student-housing",
   "residential",
-  "healthcare-ada",
   "other",
 ] as const;
 

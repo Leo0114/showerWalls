@@ -52,7 +52,7 @@
         },
         {
           "eyebrow": "Design freedom",
-          "title": "26 wall patterns. One seamless surface",
+          "title": "More tan 35 patterns. One seamless surface",
           "subtitle": "From Subway and Herringbone to Chevron and Santorini — every panel arrives ready to fit."
         },
         {
@@ -68,7 +68,7 @@
     "intro": {
       "eyebrow": "Who we are",
       "title": "A single-source wall and pan system for demanding projects",
-      "description": "Shower Walls manufactures solid-surface shower systems that replace tile and grout entirely. One supplier, one warranty — for a bathroom that ships on schedule and stays maintenance-free for decades.",
+      "description": "Shower Walls manufactures a cultured marble shower systems that replace tile and grout entirely. One supplier, one warranty — for a bathroom that ships on schedule and stays maintenance-free for decades.",
       "points": [
         "100% waterproof, grout-free surfaces",
         "Fits over existing substrates — no demolition",
@@ -76,9 +76,18 @@
         "Consistent finish across hundreds of units"
       ],
       "stats": [
-        { "value": "50+", "label": "Wall patterns & accessories" },
-        { "value": "9", "label": "Shower pan configurations" },
-        { "value": "3 days", "label": "Typical fit per unit" }
+        {
+          "value": "50+",
+          "label": "Wall patterns & accessories"
+        },
+        {
+          "value": "9",
+          "label": "Shower pan configurations"
+        },
+        {
+          "value": "3 days",
+          "label": "Typical fit per unit"
+        }
       ]
     },
     "products": {
@@ -111,11 +120,26 @@
       "cta": "Request a sample",
       "selected": "Selected finish",
       "items": {
-        "firefox-beige": { "name": "Firefox Beige", "description": "A warm, barely-there neutral that softens any space." },
-        "ivory": { "name": "Ivory", "description": "A classic off-white with quiet depth for timeless interiors." },
-        "light-gray": { "name": "Light Gray", "description": "A bright, airy gray that maximizes light in compact bathrooms." },
-        "solid-bone": { "name": "Solid Bone", "description": "An earthy, muted tone that adds understated warmth." },
-        "solid-white": { "name": "Solid White", "description": "A clean, versatile white for a crisp, contemporary look." }
+        "firefox-beige": {
+          "name": "Firefox Beige",
+          "description": "A warm, barely-there neutral that softens any space."
+        },
+        "ivory": {
+          "name": "Ivory",
+          "description": "A classic off-white with quiet depth for timeless interiors."
+        },
+        "light-gray": {
+          "name": "Light Gray",
+          "description": "A bright, airy gray that maximizes light in compact bathrooms."
+        },
+        "solid-bone": {
+          "name": "Solid Bone",
+          "description": "An earthy, muted tone that adds understated warmth."
+        },
+        "solid-white": {
+          "name": "Solid White",
+          "description": "A clean, versatile white for a crisp, contemporary look."
+        }
       }
     },
     "catalogs": {
@@ -126,7 +150,7 @@
         {
           "id": "shower-walls",
           "title": "Shower Walls Catalog",
-          "description": "All 26 wall patterns, accessories and finish options."
+          "description": "More than 35 wall patterns, accessories and finish options."
         },
         {
           "id": "shower-pans",
@@ -149,9 +173,18 @@
       "panorama": "two",
       "caption": "Harbor Point Hotel · Seattle, WA",
       "points": [
-        { "value": "Zero grout lines", "label": "A single continuous surface from the pan up to the ceiling line." },
-        { "value": "Millimetre joints", "label": "Panels cut to the rough opening, so seams land where we drew them." },
-        { "value": "214 identical units", "label": "The same finish, the same joint, the same result on every floor." }
+        {
+          "value": "Zero grout lines",
+          "label": "A single continuous surface from the pan up to the ceiling line."
+        },
+        {
+          "value": "Millimetre joints",
+          "label": "Panels cut to the rough opening, so seams land where we drew them."
+        },
+        {
+          "value": "214 identical units",
+          "label": "The same finish, the same joint, the same result on every floor."
+        }
       ],
       "cta": "Explore the projects"
     },
@@ -182,10 +215,22 @@
     "values": {
       "title": "What guides us",
       "items": [
-        { "title": "Precision", "description": "Every panel is cut to the opening it will live in — not trimmed on site." },
-        { "title": "Durability", "description": "Non-porous surfaces that resist mold, mildew and daily commercial use." },
-        { "title": "Speed", "description": "Deliveries measured in days per unit, with no demolition or curing time." },
-        { "title": "Accountability", "description": "One supplier for walls, pans and accessories means one warranty." }
+        {
+          "title": "Precision",
+          "description": "Every panel is cut to the opening requested"
+        },
+        {
+          "title": "Durability",
+          "description": "Non-porous surfaces that resist mold, mildew and daily commercial use."
+        },
+        {
+          "title": "Speed",
+          "description": "Deliveries measured in days per unit, with no demolition or curing time."
+        },
+        {
+          "title": "Accountability",
+          "description": "One supplier for walls, pans and accessories means one warranty."
+        }
       ]
     },
     "cta": {
@@ -269,20 +314,44 @@
     "intro": "How we manufacture, crate and ship your order, what the warranty covers and the answers we give most often. Written for the people who receive the truck.",
     "nav_label": "On this page",
     "sections": [
-      { "id": "manufacturing", "label": "Manufacturing" },
-      { "id": "shipping", "label": "Shipping & handling" },
-      { "id": "warranty", "label": "Warranty" },
-      { "id": "faq", "label": "FAQ" }
+      {
+        "id": "shipping",
+        "label": "Shipping & handling"
+      },
+      {
+        "id": "warranty",
+        "label": "Warranty"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
     ],
     "manufacturing": {
       "eyebrow": "Manufacturing",
       "title": "Built to your opening, then held until your site is ready",
       "description": "Nothing in this catalog is pulled off a shelf. Every panel and every pan is fabricated against your approved shop drawings, crated for the trip and shipped direct to the jobsite the week you need it — never through a cross-dock.",
       "stats": [
-        { "value": "100%", "label": "Made to order", "note": "Cut to your rough opening." },
-        { "value": "4–6 wk", "label": "Standard lead time", "note": "From approved shop drawings to the truck." },
-        { "value": "0.2%", "label": "Freight damage rate", "note": "Measured across every crate we shipped last year." },
-        { "value": "1", "label": "Point of contact", "note": "Walls, pans and accessories on one order." }
+        {
+          "value": "100%",
+          "label": "Made to order",
+          "note": "Cut to your rough opening."
+        },
+        {
+          "value": "4–6 wk",
+          "label": "Standard lead time",
+          "note": "From approved shop drawings to the truck."
+        },
+        {
+          "value": "0.2%",
+          "label": "Freight damage rate",
+          "note": "Measured across every crate we shipped last year."
+        },
+        {
+          "value": "1",
+          "label": "Point of contact",
+          "note": "Walls, pans and accessories on one order."
+        }
       ],
       "steps_title": "From the drawing to the truck",
       "steps": [
@@ -296,11 +365,11 @@
         },
         {
           "title": "Quality hold",
-          "description": "Colour, thickness and edge are checked against the approved finish sample before anything is packed."
+          "description": "Color, thickenss and Edge are checked against our drawings and the color selected"
         },
         {
           "title": "Crating",
-          "description": "Panels are foam-separated, banded and crated in wood. Every crate is labelled with the project, the floor and the unit it belongs to."
+          "description": "Panels are foam-separated, banded and crated in wood. Every cate is labell for easy identification, special labeling is also ßavailable."
         },
         {
           "title": "Staged or shipped",
@@ -311,7 +380,7 @@
     "shipping": {
       "eyebrow": "Shipping & handling",
       "title": "The truck arrives when your floor is ready for it",
-      "description": "Material moves on a flatbed straight from our plant to your site. There is no distributor in the middle, which is why the crate you open is the crate we packed. Everything below is what your site superintendent needs to know before the driver pulls up.",
+      "description": "Material moves on a flatbed or a 53´dry van straight from our plant to your site. There is no distributor in the middle, which is why the crate you open is the crate we packed. Everything below is what your site superintendent needs to know before the driver pulls up.",
       "phases_title": "How your order travels",
       "phases": [
         {
@@ -320,7 +389,7 @@
         },
         {
           "title": "How it arrives",
-          "description": "Flatbed truck, wooden crates and banded pallets. The driver is not responsible for unloading: the site supplies the equipment and the crew."
+          "description": "Flatbed or 53´dry van,, wooden crates and banded pallets. The driver is not responsible for unloading: the site supplies the equipment and the crew."
         },
         {
           "title": "Partial and phased releases",
@@ -334,11 +403,27 @@
       "equipment": {
         "title": "What you need on site to unload",
         "description": "Have this staged before the truck is scheduled. A truck that cannot be unloaded within the free time on the bill of lading accrues detention against the project.",
-        "columns": ["Load", "Crew", "Minimum equipment"],
+        "columns": [
+          "Load",
+          "Crew",
+          "Minimum equipment"
+        ],
         "rows": [
-          ["Wall panel crates", "2 people", "Forklift with 72\" (6 ft) forks"],
-          ["Shower pan pallets", "2 people", "Forklift with 48\" forks and a pallet jack"],
-          ["Accessory cartons", "1 person", "Hand truck"]
+          [
+            "Wall panel crates",
+            "2 people",
+            "Forklift with 72\" (6 ft) forks"
+          ],
+          [
+            "Shower pan pallets",
+            "2 people",
+            "Forklift with 48\" forks and a pallet jack"
+          ],
+          [
+            "Accessory cartons",
+            "1 person",
+            "Hand truck"
+          ]
         ],
         "note": "A shower pan weighs roughly 200 lb. Nothing on the truck is a two-hand carry."
       },
@@ -359,7 +444,7 @@
         "items": [
           "Indoors, dry, out of direct sun and away from any heat source.",
           "Crates flat and off the slab on dunnage; panels stored on edge, never face down.",
-          "Do not stack more than two panel crates high.",
+          "Do not stack",
           "Warehouse storage past 30 days from the ready-to-ship date falls under our storage agreement."
         ]
       },
@@ -381,8 +466,16 @@
       "description": "Because we fabricate everything in one facility, there is no gap between claims to argue about. Terms below are our standard commercial coverage; project-specific terms follow your contract documents.",
       "coverage_title": "What is covered",
       "coverage": [
-        { "term": "10 years", "title": "Wall panels & shower pans", "description": "Manufacturing defects, delamination and cracking not caused by impact or substrate movement." },
-        { "term": "5 years", "title": "Accessories & trim", "description": "Niches, soap dishes, shelves, footrests and trim strips against manufacturing defect." }
+        {
+          "term": "10 years",
+          "title": "Wall panels & shower pans",
+          "description": "Manufacturing defects, delamination and cracking not caused by impact or substrate movement."
+        },
+        {
+          "term": "5 years",
+          "title": "Accessories & trim",
+          "description": "Niches, soap dishes, shelves, footrests and trim strips against manufacturing defect."
+        }
       ],
       "included": {
         "title": "Included",
@@ -495,7 +588,7 @@
           "items": [
             {
               "q": "How does the material arrive?",
-              "a": "On a flatbed truck straight from our plant, in wooden crates and on banded pallets, labelled by floor and unit. Nothing is cross-docked."
+              "a": "On a flatbed truck or a 53” dry van if you have a dock from our plant straight to you… in wooden crates and on banded pallets, labelled by floor and unit."
             },
             {
               "q": "What equipment do we need to unload?",
@@ -552,7 +645,6 @@
         "multifamily": "Multifamily",
         "student-housing": "Student housing",
         "residential": "Residential",
-        "healthcare-ada": "Healthcare / ADA",
         "other": "Other"
       },
       "message_label": "Message",

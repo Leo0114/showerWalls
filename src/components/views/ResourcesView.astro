@@ -30,8 +30,7 @@ const i18n = getI18N(lang);
 const path = usePath(lang);
 
 const copy = i18n.resources;
-const { manufacturing, shipping, warranty, faq, downloads } =
-  copy;
+const { shipping, warranty, faq, downloads } = copy;
 
 // Catalog copy already lives in `home.catalogs`; this page reuses it rather
 // than keeping a second list of the same PDFs in sync.
@@ -72,7 +71,7 @@ const faqSchema = {
   <SectionNav label={copy.nav_label} sections={copy.sections} />
 
   <!-- ── Manufacturing ─────────────────────────────────────────────────── -->
-  <section id="manufacturing" class="section-y scroll-mt-36 bg-canvas">
+  <!-- <section id="manufacturing" class="section-y scroll-mt-36 bg-canvas">
     <div class="container-x">
       <p class="max-w-3xl text-base leading-relaxed text-pretty text-muted">
         {copy.intro}
@@ -162,7 +161,7 @@ const faqSchema = {
         </ScrollReveal>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ── Shipping & handling ───────────────────────────────────────────── -->
   <section id="shipping" class="section-y scroll-mt-36 bg-panel">
@@ -226,7 +225,6 @@ const faqSchema = {
       </p>
     </div>
   </section>
-
 
   <!-- ── Warranty ──────────────────────────────────────────────────────── -->
   <section id="warranty" class="section-y scroll-mt-36 bg-panel">

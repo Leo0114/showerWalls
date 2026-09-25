@@ -52,7 +52,7 @@
         },
         {
           "eyebrow": "Libertad de diseño",
-          "title": "26 patrones de pared. Una superficie continua",
+          "title": "Más de 35 patrones. Una superficie continua",
           "subtitle": "De Subway y Herringbone a Chevron y Santorini: cada panel llega listo para colocar."
         },
         {
@@ -68,7 +68,7 @@
     "intro": {
       "eyebrow": "Quiénes somos",
       "title": "Un sistema único de paredes y platos para proyectos exigentes",
-      "description": "En Shower Walls fabricamos sistemas de ducha en superficie sólida que sustituyen por completo al azulejo y la lechada. Un solo proveedor y una sola garantía: para un baño que se entrega a tiempo y se mantiene libre de mantenimiento durante décadas.",
+      "description": "En Shower Walls fabricamos sistemas de ducha de mármol cultivado que sustituyen por completo al azulejo y la lechada. Un solo proveedor y una sola garantía: para un baño que se entrega a tiempo y se mantiene libre de mantenimiento durante décadas.",
       "points": [
         "Superficies 100% impermeables y sin juntas",
         "Se adapta al sustrato existente, sin demolición",
@@ -76,9 +76,18 @@
         "Acabado uniforme en cientos de unidades"
       ],
       "stats": [
-        { "value": "50+", "label": "Patrones y accesorios" },
-        { "value": "9", "label": "Configuraciones de plato" },
-        { "value": "3 días", "label": "Entrega típica por unidad" }
+        {
+          "value": "50+",
+          "label": "Patrones y accesorios"
+        },
+        {
+          "value": "9",
+          "label": "Configuraciones de plato"
+        },
+        {
+          "value": "3 días",
+          "label": "Entrega típica por unidad"
+        }
       ]
     },
     "products": {
@@ -111,11 +120,26 @@
       "cta": "Solicitar una muestra",
       "selected": "Acabado seleccionado",
       "items": {
-        "firefox-beige": { "name": "Firefox Beige", "description": "Un neutro cálido y sutil que suaviza cualquier espacio." },
-        "ivory": { "name": "Ivory", "description": "Un blanco roto clásico con profundidad discreta para interiores atemporales." },
-        "light-gray": { "name": "Light Gray", "description": "Un gris luminoso y ligero que maximiza la luz en baños compactos." },
-        "solid-bone": { "name": "Solid Bone", "description": "Un tono terroso y discreto que aporta calidez natural." },
-        "solid-white": { "name": "Solid White", "description": "Un blanco limpio y versátil para un acabado fresco y contemporáneo." }
+        "firefox-beige": {
+          "name": "Firefox Beige",
+          "description": "Un neutro cálido y sutil que suaviza cualquier espacio."
+        },
+        "ivory": {
+          "name": "Ivory",
+          "description": "Un blanco roto clásico con profundidad discreta para interiores atemporales."
+        },
+        "light-gray": {
+          "name": "Light Gray",
+          "description": "Un gris luminoso y ligero que maximiza la luz en baños compactos."
+        },
+        "solid-bone": {
+          "name": "Solid Bone",
+          "description": "Un tono terroso y discreto que aporta calidez natural."
+        },
+        "solid-white": {
+          "name": "Solid White",
+          "description": "Un blanco limpio y versátil para un acabado fresco y contemporáneo."
+        }
       }
     },
     "catalogs": {
@@ -126,7 +150,7 @@
         {
           "id": "shower-walls",
           "title": "Catálogo Shower Walls",
-          "description": "Los 26 patrones de pared, accesorios y opciones de acabado."
+          "description": "Más de 35 patrones de pared, accesorios y opciones de acabado."
         },
         {
           "id": "shower-pans",
@@ -149,9 +173,18 @@
       "panorama": "two",
       "caption": "Harbor Point Hotel · Seattle, WA",
       "points": [
-        { "value": "Cero juntas", "label": "Una superficie continua desde el plato hasta la línea de techo." },
-        { "value": "Uniones al milímetro", "label": "Paneles cortados al vano: las juntas caen donde las dibujamos." },
-        { "value": "214 unidades idénticas", "label": "El mismo acabado, la misma junta y el mismo resultado en cada piso." }
+        {
+          "value": "Cero juntas",
+          "label": "Una superficie continua desde el plato hasta la línea de techo."
+        },
+        {
+          "value": "Uniones al milímetro",
+          "label": "Paneles cortados al vano: las juntas caen donde las dibujamos."
+        },
+        {
+          "value": "214 unidades idénticas",
+          "label": "El mismo acabado, la misma junta y el mismo resultado en cada piso."
+        }
       ],
       "cta": "Ver los proyectos"
     },
@@ -182,10 +215,22 @@
     "values": {
       "title": "Lo que nos guía",
       "items": [
-        { "title": "Precisión", "description": "Cada panel se corta para el vano en el que vivirá, no se ajusta en obra." },
-        { "title": "Durabilidad", "description": "Superficies no porosas que resisten moho, humedad y uso comercial diario." },
-        { "title": "Rapidez", "description": "Entregas medidas en días por unidad, sin demolición ni tiempos de curado." },
-        { "title": "Responsabilidad", "description": "Un solo proveedor de paredes, platos y accesorios significa una sola garantía." }
+        {
+          "title": "Precisión",
+          "description": "Cada panel se corta para el vano solicitado."
+        },
+        {
+          "title": "Durabilidad",
+          "description": "Superficies no porosas que resisten moho, humedad y uso comercial diario."
+        },
+        {
+          "title": "Rapidez",
+          "description": "Entregas medidas en días por unidad, sin demolición ni tiempos de curado."
+        },
+        {
+          "title": "Responsabilidad",
+          "description": "Un solo proveedor de paredes, platos y accesorios significa una sola garantía."
+        }
       ]
     },
     "cta": {
@@ -269,20 +314,48 @@
     "intro": "Cómo fabricamos, embalamos y enviamos tu pedido, cómo se instalan los paneles, qué cubre la garantía y las respuestas que damos con más frecuencia. Escrito para quienes reciben el camión y montan los paneles.",
     "nav_label": "En esta página",
     "sections": [
-      { "id": "manufacturing", "label": "Fabricación" },
-      { "id": "shipping", "label": "Envío y manejo" },
-      { "id": "warranty", "label": "Garantía" },
-      { "id": "faq", "label": "Preguntas frecuentes" }
+      {
+        "id": "manufacturing",
+        "label": "Fabricación"
+      },
+      {
+        "id": "shipping",
+        "label": "Envío y manejo"
+      },
+      {
+        "id": "warranty",
+        "label": "Garantía"
+      },
+      {
+        "id": "faq",
+        "label": "Preguntas frecuentes"
+      }
     ],
     "manufacturing": {
       "eyebrow": "Fabricación",
       "title": "Fabricado para tu vano y guardado hasta que la obra esté lista",
       "description": "Nada de este catálogo sale de un estante. Cada panel y cada plato se fabrica contra tus planos de taller aprobados, se embala para el viaje y se envía directo a la obra la semana que lo necesitas, sin pasar por un centro de distribución.",
       "stats": [
-        { "value": "100%", "label": "Hecho a pedido", "note": "Cortado a tu vano, no ajustado en obra." },
-        { "value": "4–6 sem", "label": "Tiempo de entrega estándar", "note": "Desde los planos aprobados hasta el camión." },
-        { "value": "0.2%", "label": "Daño en transporte", "note": "Medido sobre todas las cajas enviadas el año pasado." },
-        { "value": "1", "label": "Punto de contacto", "note": "Paredes, platos y accesorios en un pedido." }
+        {
+          "value": "100%",
+          "label": "Hecho a pedido",
+          "note": "Cortado a tu vano, no ajustado en obra."
+        },
+        {
+          "value": "4–6 sem",
+          "label": "Tiempo de entrega estándar",
+          "note": "Desde los planos aprobados hasta el camión."
+        },
+        {
+          "value": "0.2%",
+          "label": "Daño en transporte",
+          "note": "Medido sobre todas las cajas enviadas el año pasado."
+        },
+        {
+          "value": "1",
+          "label": "Punto de contacto",
+          "note": "Paredes, platos y accesorios en un pedido."
+        }
       ],
       "steps_title": "Del plano al camión",
       "steps": [
@@ -296,11 +369,11 @@
         },
         {
           "title": "Control de calidad",
-          "description": "Color, espesor y canto se verifican contra la muestra de acabado aprobada antes de embalar. El material fuera de tolerancia no sale de la planta."
+          "description": "Se verifican el color, espesor y cantos contra nuestros planos y el color seleccionado."
         },
         {
           "title": "Embalaje",
-          "description": "Los paneles se separan con espuma, se flejan y se embalan en cajas de madera. Cada caja se etiqueta con el proyecto, el piso y la unidad a la que pertenece."
+          "description": "Los paneles se separan con espuma, se flejan y se embalan en madera. Cada caja se etiqueta para una fácil identificación, y también hay etiquetado especial disponible."
         },
         {
           "title": "Envío o resguardo",
@@ -311,7 +384,7 @@
     "shipping": {
       "eyebrow": "Envío y manejo",
       "title": "El camión llega cuando tu piso está listo para recibirlo",
-      "description": "El material viaja en plataforma directo de nuestra planta a tu obra. No hay distribuidor de por medio, por eso la caja que abres es la caja que empacamos. Todo lo de abajo es lo que tu residente de obra necesita saber antes de que llegue el camión.",
+      "description": "El material viaja en plataforma o furgón seco de 53' directo de nuestra planta a tu obra. No hay distribuidor de por medio, por eso la caja que abres es la caja que empacamos. Todo lo de abajo es lo que tu residente de obra necesita saber antes de que llegue el camión.",
       "phases_title": "Cómo viaja tu pedido",
       "phases": [
         {
@@ -320,7 +393,7 @@
         },
         {
           "title": "Cómo llega",
-          "description": "Camión de plataforma, cajas de madera y tarimas flejadas. El chofer no descarga: la obra pone el equipo y la cuadrilla."
+          "description": "Camión de plataforma o furgón seco de 53', cajas de madera y tarimas flejadas. El chofer no descarga: la obra pone el equipo y la cuadrilla."
         },
         {
           "title": "Entregas parciales y por fases",
@@ -334,11 +407,27 @@
       "equipment": {
         "title": "Qué necesitas en obra para descargar",
         "description": "Ténlo listo antes de agendar el camión. Un camión que no se puede descargar dentro del tiempo libre de la carta porte genera estadías que se cargan al proyecto.",
-        "columns": ["Carga", "Cuadrilla", "Equipo mínimo"],
+        "columns": [
+          "Carga",
+          "Cuadrilla",
+          "Equipo mínimo"
+        ],
         "rows": [
-          ["Cajas de paneles de pared", "2 personas", "Montacargas con horquillas de 72\" (1.80 m)"],
-          ["Tarimas de platos de ducha", "2 personas", "Montacargas con horquillas de 48\" y patín hidráulico"],
-          ["Cajas de accesorios", "1 persona", "Diablito"]
+          [
+            "Cajas de paneles de pared",
+            "2 personas",
+            "Montacargas con horquillas de 72\" (1.80 m)"
+          ],
+          [
+            "Tarimas de platos de ducha",
+            "2 personas",
+            "Montacargas con horquillas de 48\" y patín hidráulico"
+          ],
+          [
+            "Cajas de accesorios",
+            "1 persona",
+            "Diablito"
+          ]
         ],
         "note": "Un plato de ducha pesa cerca de 90 kg. Nada de lo que viene en el camión se carga a mano."
       },
@@ -359,7 +448,7 @@
         "items": [
           "Bajo techo, seco, sin sol directo y lejos de cualquier fuente de calor.",
           "Cajas planas y elevadas del piso sobre polines; los paneles de canto, nunca boca abajo.",
-          "No apiles más de dos cajas de paneles.",
+          "No apiles",
           "Deja que los paneles se aclimaten 24 horas a la temperatura del edificio antes de colocar.",
           "El resguardo en almacén más allá de 30 días desde la fecha de listo para envío entra en el acuerdo de resguardo."
         ]
@@ -382,8 +471,16 @@
       "description": "Como fabricamos todo en una sola planta, no hay hueco entre reclamaciones que discutir. Los plazos siguientes son nuestra cobertura comercial estándar; las condiciones específicas de cada proyecto siguen tu contrato.",
       "coverage_title": "Qué cubre",
       "coverage": [
-        { "term": "10 años", "title": "Paneles de pared y platos", "description": "Defectos de fabricación, delaminación y fisuras no causadas por impacto o movimiento del sustrato." },
-        { "term": "5 años", "title": "Accesorios y perfiles", "description": "Nichos, jaboneras, repisas, reposapiés y perfiles contra defecto de fabricación." }
+        {
+          "term": "10 años",
+          "title": "Paneles de pared y platos",
+          "description": "Defectos de fabricación, delaminación y fisuras no causadas por impacto o movimiento del sustrato."
+        },
+        {
+          "term": "5 años",
+          "title": "Accesorios y perfiles",
+          "description": "Nichos, jaboneras, repisas, reposapiés y perfiles contra defecto de fabricación."
+        }
       ],
       "included": {
         "title": "Incluye",
@@ -496,7 +593,7 @@
           "items": [
             {
               "q": "¿Cómo llega el material?",
-              "a": "En camión de plataforma directo de nuestra planta, en cajas de madera y tarimas flejadas, etiquetadas por piso y unidad. Nada pasa por centro de distribución."
+              "a": "En camión de plataforma o furgón seco de 53\" si cuentas con andén, directo de nuestra planta a ti... en cajas de madera y tarimas flejadas, etiquetadas por piso y unidad."
             },
             {
               "q": "¿Qué equipo necesitamos para descargar?",
@@ -553,7 +650,6 @@
         "multifamily": "Multifamiliar",
         "student-housing": "Vivienda estudiantil",
         "residential": "Residencial",
-        "healthcare-ada": "Salud / ADA",
         "other": "Otro"
       },
       "message_label": "Mensaje",
