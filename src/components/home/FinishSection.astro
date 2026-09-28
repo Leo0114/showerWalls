@@ -10,8 +10,10 @@ import galaxyBlack from "@/assets/images/colors/Galaxy-Black.png";
 import italianIced from "@/assets/images/colors/Italian-Iced.png";
 import ivory from "@/assets/images/colors/Ivory.png";
 import lightGray from "@/assets/images/colors/Light-Gray.png";
+import solidGray from "@/assets/images/colors/Solid-Gray.png";
 import solidLightGray from "@/assets/images/colors/Solid-Light-Gray.png";
 import walnut from "@/assets/images/colors/Walnut.png";
+import solidWhite from "@/assets/images/colors/Solid-White.png";
 
 const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
@@ -19,18 +21,19 @@ const i18n = getI18N(lang);
 const { eyebrow, title, description } = i18n.home.colors;
 
 const row1 = [
-  { name: "Aurora", img: aurora },
-  { name: "Crystal Almond", img: crystalAlmond },
+  { name: "Solid White", img: solidWhite },
+  { name: "Solid Ivory", img: ivory },
+  { name: "Solid Gray", img: solidGray },
+  { name: "Light Gray", img: lightGray },
   { name: "Firefox Beige", img: firefoxBeige },
-  { name: "Galaxy Black", img: galaxyBlack },
 ];
 
 const row2 = [
   { name: "Italian Iced", img: italianIced },
-  { name: "Ivory", img: ivory },
-  { name: "Light Gray", img: lightGray },
-  { name: "Solid Light Gray", img: solidLightGray },
+  { name: "Aurora", img: aurora },
   { name: "Walnut", img: walnut },
+  { name: "Galaxy Black", img: galaxyBlack },
+  { name: "Crystal Almond", img: crystalAlmond },
 ];
 ---
 
@@ -43,10 +46,12 @@ const row2 = [
       align="center"
     />
 
-    {/* Un único contenedor — PhotoSwipe encuentra todos los <a> dentro de #colors-gallery */}
+    {
+      /* Un único contenedor — PhotoSwipe encuentra todos los <a> dentro de #colors-gallery */
+    }
     <div id="colors-gallery" class="mt-14 flex flex-col gap-6 md:gap-8">
       {/* Grid de 4 elementos */}
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 md:gap-6">
         {
           row1.map((item) => (
             <a
@@ -76,7 +81,9 @@ const row2 = [
       </div>
 
       {/* Grid de 5 elementos */}
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6"
+      >
         {
           row2.map((item) => (
             <a
