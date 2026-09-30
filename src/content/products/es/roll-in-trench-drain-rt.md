@@ -5,8 +5,8 @@ title: "Drenaje Lineal Roll-In"
 code: "RT"
 category: "shower-pans"
 excerpt: "Configuración Drenaje Lineal Roll-In, fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/products/showerPans/Roll-In-Trench-Drain_Rejilla_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Roll-In Trench Drain/one.png"
+gallery: "products/showerPans/Roll-In Trench Drain"
 madeToOrder: false
 featured: false
 order: 103

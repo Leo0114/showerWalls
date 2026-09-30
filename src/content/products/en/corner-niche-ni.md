@@ -5,8 +5,8 @@ title: "Corner Niche"
 code: "NI"
 category: "accessories"
 excerpt: "Corner Niche finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/products/accessories/Corner-Niche_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Niches/one.png"
+gallery: "products/accessories/Niches"
 madeToOrder: false
 featured: false
 order: 202

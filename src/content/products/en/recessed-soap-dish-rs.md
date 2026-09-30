@@ -5,8 +5,8 @@ title: "Recessed Soap Dish"
 code: "RS"
 category: "accessories"
 excerpt: "Recessed Soap Dish finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Recesed /one.png"
+gallery: "products/accessories/Soap Dish/Recesed "
 madeToOrder: false
 featured: false
 order: 210

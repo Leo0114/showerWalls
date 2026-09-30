@@ -5,8 +5,8 @@ title: "Nicho Esquinero"
 code: "NI"
 category: "accessories"
 excerpt: "Nicho Esquinero con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/products/accessories/Corner-Niche_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Niches/one.png"
+gallery: "products/accessories/Niches"
 madeToOrder: false
 featured: false
 order: 202

@@ -5,8 +5,9 @@ title: "Chevron FFI"
 code: "FF"
 category: "tub-shower-surrounds"
 excerpt: "Chevron FFI wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/CHEVRON FFI/one.png"
+gallery: "products/tub&showeSurrounds/CHEVRON FFI"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 4

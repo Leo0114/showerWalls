@@ -5,8 +5,8 @@ title: "Center Mount Soap Dish"
 code: "CE"
 category: "accessories"
 excerpt: "Center Mount Soap Dish finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Center/one.png"
+gallery: "products/accessories/Soap Dish/Center"
 madeToOrder: false
 featured: false
 order: 215

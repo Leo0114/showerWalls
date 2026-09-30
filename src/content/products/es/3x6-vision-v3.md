@@ -5,8 +5,9 @@ title: "3x6 Vision"
 code: "V3"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 3x6 Vision en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/3x6 VISION/one.JPG"
+gallery: "products/tub&showeSurrounds/3x6 VISION"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 24

@@ -5,8 +5,8 @@ title: "6x6 Footrest"
 code: "F6"
 category: "accessories"
 excerpt: "6x6 Footrest finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/6x6 Foot Rest/one.png"
+gallery: "products/accessories/6x6 Foot Rest"
 madeToOrder: false
 featured: false
 order: 207

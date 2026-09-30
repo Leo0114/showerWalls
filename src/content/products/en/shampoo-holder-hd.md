@@ -5,8 +5,8 @@ title: "Shampoo Holder"
 code: "HD"
 category: "accessories"
 excerpt: "Shampoo Holder finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Shampoo Holder/one.png"
+gallery: "products/accessories/Shampoo Holder"
 madeToOrder: false
 featured: false
 order: 204

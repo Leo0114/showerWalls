@@ -5,8 +5,9 @@ title: "Herringbone"
 code: "HE"
 category: "tub-shower-surrounds"
 excerpt: "Herringbone wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/HERRINGBONE/one.png"
+gallery: "products/tub&showeSurrounds/HERRINGBONE"
+surfaceFinishes: ["gloss"]
 madeToOrder: false
 featured: false
 order: 6

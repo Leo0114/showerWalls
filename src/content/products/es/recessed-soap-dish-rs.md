@@ -5,8 +5,8 @@ title: "Jabonera Empotrada"
 code: "RS"
 category: "accessories"
 excerpt: "Jabonera Empotrada con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Recesed /one.png"
+gallery: "products/accessories/Soap Dish/Recesed "
 madeToOrder: false
 featured: false
 order: 210

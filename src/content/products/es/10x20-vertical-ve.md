@@ -5,8 +5,9 @@ title: "10x20 Vertical"
 code: "VE"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 10x20 Vertical en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/10X20 VERTICAL/one.png"
+gallery: "products/tub&showeSurrounds/10X20 VERTICAL"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 12

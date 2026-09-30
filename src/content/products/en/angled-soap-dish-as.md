@@ -5,8 +5,8 @@ title: "Angled Soap Dish"
 code: "AS"
 category: "accessories"
 excerpt: "Angled Soap Dish finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Angled soap Dish/one.png"
+gallery: "products/accessories/Angled soap Dish"
 madeToOrder: false
 featured: false
 order: 212

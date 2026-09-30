@@ -308,7 +308,19 @@
     "showing": "Mostrando",
     "of": "de",
     "products_word": "productos",
+    "pagination": {
+      "label": "Páginas de productos",
+      "previous": "Página anterior",
+      "next": "Página siguiente",
+      "page": "Página"
+    },
     "detail": {
+      "surface_finish": "Acabado de superficie",
+      "surface_finishes": {
+        "gloss": "Brillante",
+        "matte": "Mate",
+        "textured": "Texturizado"
+      },
       "gallery_title": "Galería del producto",
       "specs": "Especificaciones",
       "related": "Más de esta familia",

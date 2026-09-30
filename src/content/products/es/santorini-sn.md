@@ -5,8 +5,9 @@ title: "Santorini"
 code: "SN"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Santorini en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/SANTORINI/one.png"
+gallery: "products/tub&showeSurrounds/SANTORINI"
+surfaceFinishes: ["gloss"]
 madeToOrder: false
 featured: false
 order: 19

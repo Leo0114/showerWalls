@@ -5,8 +5,8 @@ title: "Corner Mount Soap Dish"
 code: "CM"
 category: "accessories"
 excerpt: "Corner Mount Soap Dish finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/products/accessories/Corner-Niche_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Corner/one.png"
+gallery: "products/accessories/Soap Dish/Corner"
 madeToOrder: false
 featured: false
 order: 203

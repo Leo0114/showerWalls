@@ -5,8 +5,9 @@ title: "Ventana"
 code: "VN"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Ventana en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/VENTANA/one.png"
+gallery: "products/tub&showeSurrounds/VENTANA"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 21

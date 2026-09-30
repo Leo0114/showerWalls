@@ -5,8 +5,8 @@ title: "Jabonera Inclinada"
 code: "AS"
 category: "accessories"
 excerpt: "Jabonera Inclinada con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Angled soap Dish/one.png"
+gallery: "products/accessories/Angled soap Dish"
 madeToOrder: false
 featured: false
 order: 212

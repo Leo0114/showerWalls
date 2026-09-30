@@ -5,8 +5,8 @@ title: "4x12 Smooth Tile"
 code: "CP"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 4x12 Smooth Tile en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/4X12 TILE/one.png"
+gallery: "products/tub&showeSurrounds/4X12 TILE"
 madeToOrder: false
 featured: false
 order: 15

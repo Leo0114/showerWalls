@@ -5,8 +5,9 @@ title: "Dune"
 code: "DU"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Dune en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/DUNE/one.png"
+gallery: "products/tub&showeSurrounds/DUNE"
+surfaceFinishes: ["gloss"]
 madeToOrder: false
 featured: false
 order: 20

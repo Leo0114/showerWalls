@@ -5,8 +5,8 @@ title: "ADA Shower Pan"
 code: "AD"
 category: "shower-pans"
 excerpt: "ADA Shower Pan configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/products/showerPans/ADA_SW_2.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/ADA/one.png"
+gallery: "products/showerPans/ADA"
 madeToOrder: false
 featured: false
 order: 104

@@ -5,8 +5,9 @@ title: "Dune"
 code: "DU"
 category: "tub-shower-surrounds"
 excerpt: "Dune wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/DUNE/one.png"
+gallery: "products/tub&showeSurrounds/DUNE"
+surfaceFinishes: ["gloss"]
 madeToOrder: false
 featured: false
 order: 20

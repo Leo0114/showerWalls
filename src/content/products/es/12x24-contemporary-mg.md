@@ -5,8 +5,9 @@ title: "12x24 Contemporary"
 code: "MG"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 12x24 Contemporary en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/12X24 CONTEMPO/one.png"
+gallery: "products/tub&showeSurrounds/12X24 CONTEMPO"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 3

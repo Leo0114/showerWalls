@@ -5,8 +5,8 @@ title: "Wall-Mounted Soap Dish"
 code: "WM"
 category: "accessories"
 excerpt: "Wall-Mounted Soap Dish finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Wall Mounted/one.png"
+gallery: "products/accessories/Soap Dish/Wall Mounted"
 madeToOrder: false
 featured: false
 order: 209

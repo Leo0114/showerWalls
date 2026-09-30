@@ -5,8 +5,9 @@ title: "Fan"
 code: "FA"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Fan en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/FAN/one.png"
+gallery: "products/tub&showeSurrounds/FAN"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 18

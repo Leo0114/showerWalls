@@ -5,8 +5,9 @@ title: "Interval"
 code: "IA"
 category: "tub-shower-surrounds"
 excerpt: "Interval wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/INTERVAL/one.png"
+gallery: "products/tub&showeSurrounds/INTERVAL"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 9

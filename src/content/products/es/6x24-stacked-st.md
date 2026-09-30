@@ -5,8 +5,9 @@ title: "6x24 Stacked"
 code: "ST"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 6x24 Stacked en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/6X24 STACKED/one.png"
+gallery: "products/tub&showeSurrounds/6X24 STACKED"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 25

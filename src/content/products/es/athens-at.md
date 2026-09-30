@@ -5,8 +5,9 @@ title: "Athens"
 code: "AT"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Athens en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/ATHENS/one.png"
+gallery: "products/tub&showeSurrounds/ATHENS"
+surfaceFinishes: ["gloss"]
 madeToOrder: false
 featured: false
 order: 23

@@ -6,7 +6,8 @@ code: "SM"
 category: "tub-shower-surrounds"
 excerpt: "Smooth wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
 cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+available: false
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 26

@@ -6,7 +6,8 @@ code: "SM"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Smooth en panel de superficie sólida sin juntas, cortado al vano exacto."
 cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+available: false
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 26

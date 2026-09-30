@@ -5,8 +5,8 @@ title: "Plato con Drenaje Curvo"
 code: "CV"
 category: "shower-pans"
 excerpt: "Configuración Plato con Drenaje Curvo, fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/products/showerPans/Curve-Drain_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Curve Drain/one.png"
+gallery: "products/showerPans/Curve Drain"
 madeToOrder: false
 featured: false
 order: 108

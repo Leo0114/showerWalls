@@ -5,8 +5,8 @@ title: "Reposapiés 7x7 Opción ADA"
 code: "F7"
 category: "accessories"
 excerpt: "Reposapiés 7x7 Opción ADA con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/7x7 Foot Rest/one.png"
+gallery: "products/accessories/7x7 Foot Rest"
 madeToOrder: false
 featured: false
 order: 217

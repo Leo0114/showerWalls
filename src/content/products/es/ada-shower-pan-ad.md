@@ -5,8 +5,8 @@ title: "Plato de Ducha ADA"
 code: "AD"
 category: "shower-pans"
 excerpt: "Configuración Plato de Ducha ADA, fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/products/showerPans/ADA_SW_2.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/ADA/one.png"
+gallery: "products/showerPans/ADA"
 madeToOrder: false
 featured: false
 order: 104

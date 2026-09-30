@@ -5,8 +5,9 @@ title: "Vertical Vision"
 code: "VV"
 category: "tub-shower-surrounds"
 excerpt: "Vertical Vision wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/VERTICAL VISION/one.png"
+gallery: "products/tub&showeSurrounds/VERTICAL VISION"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 8

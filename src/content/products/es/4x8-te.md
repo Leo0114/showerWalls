@@ -5,8 +5,9 @@ title: "4x8"
 code: "TE"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 4x8 en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/4X8 SUBWAY/one.png"
+gallery: "products/tub&showeSurrounds/4X8 SUBWAY"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 17

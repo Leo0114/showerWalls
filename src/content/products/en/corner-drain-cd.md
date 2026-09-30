@@ -5,8 +5,8 @@ title: "Corner Drain"
 code: "CD"
 category: "shower-pans"
 excerpt: "Corner Drain configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/products/showerPans/Corner-Drain_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Corner Drain/one.png"
+gallery: "products/showerPans/Corner Drain"
 madeToOrder: false
 featured: false
 order: 105

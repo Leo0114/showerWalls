@@ -5,8 +5,8 @@ title: "Trim Strip"
 code: "TS"
 category: "accessories"
 excerpt: "Trim Strip finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Trims/one.png"
+gallery: "products/accessories/Trims"
 madeToOrder: false
 featured: false
 order: 205

@@ -5,8 +5,9 @@ title: "Fan"
 code: "FA"
 category: "tub-shower-surrounds"
 excerpt: "Fan wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/FAN/one.png"
+gallery: "products/tub&showeSurrounds/FAN"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 18

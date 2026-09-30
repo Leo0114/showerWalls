@@ -5,8 +5,9 @@ title: "4x15 Confetti"
 code: "TT"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 4x15 Confetti en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/CONFETTI 4X15/one.png"
+gallery: "products/tub&showeSurrounds/CONFETTI 4X15"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 10

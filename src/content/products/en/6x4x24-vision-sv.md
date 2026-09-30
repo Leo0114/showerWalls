@@ -6,7 +6,7 @@ code: "SV"
 category: "tub-shower-surrounds"
 excerpt: "6x4x24 Vision wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
 cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+available: false
 madeToOrder: false
 featured: false
 order: 22

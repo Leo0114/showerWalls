@@ -5,8 +5,9 @@ title: "4x8"
 code: "TE"
 category: "tub-shower-surrounds"
 excerpt: "4x8 wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/4X8 SUBWAY/one.png"
+gallery: "products/tub&showeSurrounds/4X8 SUBWAY"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 17

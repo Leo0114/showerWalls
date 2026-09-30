@@ -5,8 +5,8 @@ title: "Repisa Jabonera 6x6"
 code: "S6"
 category: "accessories"
 excerpt: "Repisa Jabonera 6x6 con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/6x6 Soap dish/one.png"
+gallery: "products/accessories/6x6 Soap dish"
 madeToOrder: false
 featured: false
 order: 213

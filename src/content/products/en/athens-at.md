@@ -5,8 +5,9 @@ title: "Athens"
 code: "AT"
 category: "tub-shower-surrounds"
 excerpt: "Athens wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/ATHENS/one.png"
+gallery: "products/tub&showeSurrounds/ATHENS"
+surfaceFinishes: ["gloss"]
 madeToOrder: false
 featured: false
 order: 23

@@ -5,8 +5,8 @@ title: "6x6 Soap Shelf"
 code: "S6"
 category: "accessories"
 excerpt: "6x6 Soap Shelf finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/6x6 Soap dish/one.png"
+gallery: "products/accessories/6x6 Soap dish"
 madeToOrder: false
 featured: false
 order: 213

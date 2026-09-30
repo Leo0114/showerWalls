@@ -5,8 +5,9 @@ title: "6x24 Linear Listello"
 code: "LL"
 category: "tub-shower-surrounds"
 excerpt: "6x24 Linear Listello wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/6X24 LINEAR LISTELLO/one.png"
+gallery: "products/tub&showeSurrounds/6X24 LINEAR LISTELLO"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 7

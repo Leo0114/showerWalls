@@ -5,8 +5,8 @@ title: "Right / Left Footrest"
 code: "RF"
 category: "accessories"
 excerpt: "Right / Left Footrest finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Foot Rest/one.png"
+gallery: "products/accessories/Foot Rest"
 madeToOrder: false
 featured: false
 order: 206

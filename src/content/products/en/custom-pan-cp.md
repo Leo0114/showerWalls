@@ -5,8 +5,8 @@ title: "Custom Pan"
 code: "CP"
 category: "shower-pans"
 excerpt: "Custom Pan configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/products/showerPans/Custom_SW_1-2.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Custom/one.png"
+gallery: "products/showerPans/Custom"
 madeToOrder: true
 featured: false
 order: 109

@@ -5,8 +5,8 @@ title: "Repisa Jabonera 7x7"
 code: "S7"
 category: "accessories"
 excerpt: "Repisa Jabonera 7x7 con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/7x7 Soap Dish/one.png"
+gallery: "products/accessories/7x7 Soap Dish"
 madeToOrder: false
 featured: false
 order: 214

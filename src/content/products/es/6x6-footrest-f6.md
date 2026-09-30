@@ -5,8 +5,8 @@ title: "Reposapiés 6x6"
 code: "F6"
 category: "accessories"
 excerpt: "Reposapiés 6x6 con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/6x6 Foot Rest/one.png"
+gallery: "products/accessories/6x6 Foot Rest"
 madeToOrder: false
 featured: false
 order: 207

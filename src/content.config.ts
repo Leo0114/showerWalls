@@ -1,7 +1,7 @@
 import { defineCollection } from "astro:content";
 import { z } from "zod";
 import { glob } from "astro/loaders";
-import { PRODUCT_CATEGORIES } from "@/constants/site";
+import { PRODUCT_CATEGORIES, SURFACE_FINISHES } from "@/constants/site";
 
 const LANGS = ["en", "es"] as const;
 
@@ -15,7 +15,7 @@ const localized = {
   slug: z.string(),
   title: z.string(),
   excerpt: z.string(),
-  /** Folder name inside `src/assets/images/` consumed by `<Gallery />`. */
+  /** Folder path inside `src/assets/images/` consumed by `<Gallery />`. */
   gallery: z.string().optional(),
   featured: z.boolean().default(false),
   order: z.number().int().default(0),
@@ -34,9 +34,18 @@ const products = defineCollection({
   schema: ({ image }) =>
     z.object({
       ...localized,
+      /** Always `products/<section>/<product>/one.*` for listed products. */
       cover: image(),
-      code: z.string(),
+      /** Catalog code; omitted for products that have not been assigned one yet. */
+      code: z.string().optional(),
       category: z.enum(PRODUCT_CATEGORIES),
+      /**
+       * `false` hides the product everywhere (listing, detail, related). Set it
+       * when the product has no image folder under `assets/images/products/`.
+       */
+      available: z.boolean().default(true),
+      /** Wall surface finishes this pattern ships in. Omit when not confirmed. */
+      surfaceFinishes: z.array(z.enum(SURFACE_FINISHES)).optional(),
       madeToOrder: z.boolean().default(false),
       specs: z
         .array(z.object({ label: z.string(), value: z.string() }))

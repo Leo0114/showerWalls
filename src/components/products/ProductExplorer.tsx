@@ -1,12 +1,18 @@
-import { useMemo, useState } from "react";
-import { FiArrowUpRight, FiSearch, FiX } from "react-icons/fi";
+import { useMemo, useRef, useState } from "react";
+import {
+  FiArrowUpRight,
+  FiChevronLeft,
+  FiChevronRight,
+  FiSearch,
+  FiX,
+} from "react-icons/fi";
 import { PRODUCT_CATEGORIES, type ProductCategory } from "@/constants/site";
 import { useReactI18n } from "@/i18n/useReacti18n";
 
 export interface ProductListItem {
   slug: string;
   title: string;
-  code: string;
+  code?: string;
   excerpt: string;
   category: ProductCategory;
   href: string;
@@ -18,9 +24,12 @@ interface ProductExplorerProps {
   lang: string;
   products: ProductListItem[];
   initialCategory?: string;
+  initialPage?: number;
 }
 
 type Filter = ProductCategory | "all";
+
+const PAGE_SIZE = 15;
 
 const normalize = (value: string) =>
   value
@@ -28,7 +37,21 @@ const normalize = (value: string) =>
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 
-export default function ProductExplorer({ lang, products, initialCategory }: ProductExplorerProps) {
+/** Mirrors explorer state into the query string without adding history entries. */
+function syncParam(key: string, value: string | null) {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  if (value === null) url.searchParams.delete(key);
+  else url.searchParams.set(key, value);
+  window.history.replaceState({}, "", url);
+}
+
+export default function ProductExplorer({
+  lang,
+  products,
+  initialCategory,
+  initialPage = 1,
+}: ProductExplorerProps) {
   const { t } = useReactI18n(lang);
   const copy = t.products;
 
@@ -38,6 +61,8 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
       : "all",
   );
   const [query, setQuery] = useState("");
+  const [page, setPage] = useState(initialPage);
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   const counts = useMemo(() => {
     const base = Object.fromEntries(PRODUCT_CATEGORIES.map((c) => [c, 0])) as Record<
@@ -53,23 +78,51 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
     return products.filter((product) => {
       if (filter !== "all" && product.category !== filter) return false;
       if (!term) return true;
-      return normalize(`${product.title} ${product.code}`).includes(term);
+      return normalize(`${product.title} ${product.code ?? ""}`).includes(term);
     });
   }, [products, filter, query]);
 
+  const totalPages = Math.max(1, Math.ceil(visible.length / PAGE_SIZE));
+  // Clamp instead of trusting state: a stale `?page=` or a narrowing filter can overshoot.
+  const currentPage = Math.min(Math.max(1, page), totalPages);
+  const pageItems = visible.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const from = visible.length === 0 ? 0 : (currentPage - 1) * PAGE_SIZE + 1;
+  const to = Math.min(currentPage * PAGE_SIZE, visible.length);
+
   const isFiltered = filter !== "all" || query.length > 0;
+
+  const resetPage = () => {
+    setPage(1);
+    syncParam("page", null);
+  };
 
   const selectFilter = (next: Filter) => {
     setFilter(next);
-    if (typeof window === "undefined") return;
-    const url = new URL(window.location.href);
-    if (next === "all") url.searchParams.delete("category");
-    else url.searchParams.set("category", next);
-    window.history.replaceState({}, "", url);
+    resetPage();
+    syncParam("category", next === "all" ? null : next);
+  };
+
+  const updateQuery = (next: string) => {
+    setQuery(next);
+    resetPage();
+  };
+
+  const goToPage = (next: number) => {
+    if (next === currentPage || next < 1 || next > totalPages) return;
+    setPage(next);
+    syncParam("page", next === 1 ? null : String(next));
+
+    const target = resultsRef.current;
+    if (!target) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Only pull the view back when the top of the results is out of sight.
+    if (target.getBoundingClientRect().top < 0) {
+      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    }
   };
 
   const reset = () => {
-    setQuery("");
+    updateQuery("");
     selectFilter("all");
   };
 
@@ -98,7 +151,7 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
               id="product-search"
               type="search"
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(event) => updateQuery(event.target.value)}
               placeholder={copy.search_placeholder}
               className="w-full rounded-full border border-line bg-canvas py-3 pr-4 pl-11 text-sm text-ink transition-colors duration-200 ease-out placeholder:text-muted focus:border-primary focus:outline-none"
             />
@@ -149,10 +202,13 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
         </div>
       </aside>
 
-      <div>
+      <div ref={resultsRef} className="scroll-mt-28">
         <p className="text-sm text-muted" aria-live="polite">
-          {copy.showing} <span className="font-semibold text-ink">{visible.length}</span> {copy.of}{" "}
-          {products.length} {copy.products_word}
+          {copy.showing}{" "}
+          <span className="font-semibold text-ink tabular-nums">
+            {totalPages > 1 ? `${from}–${to}` : visible.length}
+          </span>{" "}
+          {copy.of} <span className="tabular-nums">{visible.length}</span> {copy.products_word}
         </p>
 
         {visible.length === 0 ? (
@@ -161,7 +217,7 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
           </p>
         ) : (
           <ul className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-            {visible.map((product) => (
+            {pageItems.map((product) => (
               <li key={product.slug}>
                 <a
                   href={product.href}
@@ -175,9 +231,11 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
                       decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <span className="glass-chip type-label absolute top-4 left-4 rounded-full px-3 py-1 text-strategic">
-                      {product.code}
-                    </span>
+                    {product.code && (
+                      <span className="glass-chip type-label absolute top-4 left-4 rounded-full px-3 py-1 text-strategic">
+                        {product.code}
+                      </span>
+                    )}
                     {product.madeToOrder && (
                       <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-[0.65rem] font-semibold tracking-[0.16em] text-white uppercase shadow-e1">
                         ★
@@ -208,7 +266,74 @@ export default function ProductExplorer({ lang, products, initialCategory }: Pro
             ))}
           </ul>
         )}
+
+        <Pagination
+          page={currentPage}
+          totalPages={totalPages}
+          labels={copy.pagination}
+          onChange={goToPage}
+        />
       </div>
     </div>
+  );
+}
+
+interface PaginationProps {
+  page: number;
+  totalPages: number;
+  labels: { label: string; previous: string; next: string; page: string };
+  onChange: (page: number) => void;
+}
+
+function Pagination({ page, totalPages, labels, onChange }: PaginationProps) {
+  if (totalPages <= 1) return null;
+
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  return (
+    <nav aria-label={labels.label} className="mt-12 flex items-center justify-center gap-2">
+      <button
+        type="button"
+        onClick={() => onChange(page - 1)}
+        disabled={page === 1}
+        aria-label={labels.previous}
+        className="icon-btn press cursor-pointer disabled:cursor-not-allowed disabled:opacity-30"
+      >
+        <FiChevronLeft className="h-4 w-4" aria-hidden="true" />
+      </button>
+
+      <ul className="flex items-center gap-1.5">
+        {pages.map((n) => {
+          const isCurrent = n === page;
+          return (
+            <li key={n}>
+              <button
+                type="button"
+                onClick={() => onChange(n)}
+                aria-label={`${labels.page} ${n}`}
+                aria-current={isCurrent ? "page" : undefined}
+                className={`press h-10 min-w-10 cursor-pointer rounded-full px-3 text-sm font-medium tabular-nums ${
+                  isCurrent
+                    ? "bg-primary text-white shadow-e1"
+                    : "text-muted hover:bg-panel hover:text-ink"
+                }`}
+              >
+                {n}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+
+      <button
+        type="button"
+        onClick={() => onChange(page + 1)}
+        disabled={page === totalPages}
+        aria-label={labels.next}
+        className="icon-btn press cursor-pointer disabled:cursor-not-allowed disabled:opacity-30"
+      >
+        <FiChevronRight className="h-4 w-4" aria-hidden="true" />
+      </button>
+    </nav>
   );
 }

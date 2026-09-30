@@ -5,8 +5,9 @@ title: "4x15 Confetti"
 code: "TT"
 category: "tub-shower-surrounds"
 excerpt: "4x15 Confetti wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/CONFETTI 4X15/one.png"
+gallery: "products/tub&showeSurrounds/CONFETTI 4X15"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 10

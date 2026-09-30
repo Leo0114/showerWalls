@@ -5,8 +5,8 @@ title: "Drenaje Lineal (Trench)"
 code: "TD"
 category: "shower-pans"
 excerpt: "Configuración Drenaje Lineal (Trench), fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/products/showerPans/Trench-Drain_Rejilla_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Trench Drain/one.png"
+gallery: "products/showerPans/Trench Drain"
 madeToOrder: false
 featured: false
 order: 102

@@ -5,8 +5,8 @@ title: "Jabonera de Pared"
 code: "WM"
 category: "accessories"
 excerpt: "Jabonera de Pared con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Wall Mounted/one.png"
+gallery: "products/accessories/Soap Dish/Wall Mounted"
 madeToOrder: false
 featured: false
 order: 209

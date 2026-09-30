@@ -5,8 +5,9 @@ title: "Stars"
 code: "SA"
 category: "tub-shower-surrounds"
 excerpt: "Stars wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/STARS/one.png"
+gallery: "products/tub&showeSurrounds/STARS"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 13

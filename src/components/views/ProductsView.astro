@@ -17,8 +17,7 @@ const path = usePath(lang);
 
 const entries = await getProducts(lang);
 
-// Every card shares the same source image, so this resolves to a single
-// build-time transform reused across the whole catalog.
+// Each product ships its own `one.*` cover; resize them all to one card size.
 const products: ProductListItem[] = await Promise.all(
   entries.map(async ({ data }) => ({
     slug: data.slug,
@@ -40,6 +39,7 @@ const products: ProductListItem[] = await Promise.all(
 );
 
 const initialCategory = Astro.url.searchParams.get("category") ?? undefined;
+const initialPage = Math.max(1, Number.parseInt(Astro.url.searchParams.get("page") ?? "1", 10) || 1);
 ---
 
 <Layout title={i18n.products.title} description={i18n.products.subtitle}>
@@ -62,6 +62,7 @@ const initialCategory = Astro.url.searchParams.get("category") ?? undefined;
           lang={lang}
           products={products}
           initialCategory={initialCategory}
+          initialPage={initialPage}
         />
       </div>
     </div>

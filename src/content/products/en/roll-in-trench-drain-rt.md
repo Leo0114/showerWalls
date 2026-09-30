@@ -5,8 +5,8 @@ title: "Roll-In Trench Drain"
 code: "RT"
 category: "shower-pans"
 excerpt: "Roll-In Trench Drain configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/products/showerPans/Roll-In-Trench-Drain_Rejilla_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Roll-In Trench Drain/one.png"
+gallery: "products/showerPans/Roll-In Trench Drain"
 madeToOrder: false
 featured: false
 order: 103

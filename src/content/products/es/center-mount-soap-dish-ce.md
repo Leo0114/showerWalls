@@ -5,8 +5,8 @@ title: "Jabonera de Montaje Central"
 code: "CE"
 category: "accessories"
 excerpt: "Jabonera de Montaje Central con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Center/one.png"
+gallery: "products/accessories/Soap Dish/Center"
 madeToOrder: false
 featured: false
 order: 215

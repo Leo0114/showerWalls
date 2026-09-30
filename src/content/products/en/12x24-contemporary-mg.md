@@ -5,8 +5,9 @@ title: "12x24 Contemporary"
 code: "MG"
 category: "tub-shower-surrounds"
 excerpt: "12x24 Contemporary wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/12X24 CONTEMPO/one.png"
+gallery: "products/tub&showeSurrounds/12X24 CONTEMPO"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 3

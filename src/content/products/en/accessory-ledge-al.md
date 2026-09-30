@@ -5,8 +5,8 @@ title: "Accessory Ledge"
 code: "AL"
 category: "accessories"
 excerpt: "Accessory Ledge finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Accesory Ledge/one.png"
+gallery: "products/accessories/Accesory Ledge"
 madeToOrder: false
 featured: false
 order: 208

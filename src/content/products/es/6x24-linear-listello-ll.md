@@ -5,8 +5,9 @@ title: "6x24 Linear Listello"
 code: "LL"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 6x24 Linear Listello en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/6X24 LINEAR LISTELLO/one.png"
+gallery: "products/tub&showeSurrounds/6X24 LINEAR LISTELLO"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 7

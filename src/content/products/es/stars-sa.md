@@ -5,8 +5,9 @@ title: "Stars"
 code: "SA"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Stars en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/STARS/one.png"
+gallery: "products/tub&showeSurrounds/STARS"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 13

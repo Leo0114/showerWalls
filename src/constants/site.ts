@@ -31,6 +31,11 @@ export const PRODUCT_CATEGORIES = [
 
 export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
 
+/** Surface finishes a wall pattern can ship in. Labels live in the i18n dictionaries. */
+export const SURFACE_FINISHES = ["gloss", "matte", "textured"] as const;
+
+export type SurfaceFinish = (typeof SURFACE_FINISHES)[number];
+
 /**
  * The five standard finishes. Hex values match the real product chips.
  * Change them here only — every surface reads from this single source.

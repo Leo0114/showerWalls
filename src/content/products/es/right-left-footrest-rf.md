@@ -5,8 +5,8 @@ title: "Reposapiés Derecho / Izquierdo"
 code: "RF"
 category: "accessories"
 excerpt: "Reposapiés Derecho / Izquierdo con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Foot Rest/one.png"
+gallery: "products/accessories/Foot Rest"
 madeToOrder: false
 featured: false
 order: 206

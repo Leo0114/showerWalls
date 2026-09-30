@@ -5,8 +5,9 @@ title: "Theory"
 code: "TH"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Theory en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/THEORY/one.png"
+gallery: "products/tub&showeSurrounds/THEORY"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 16

@@ -5,8 +5,9 @@ title: "Interval"
 code: "IA"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared Interval en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/INTERVAL/one.png"
+gallery: "products/tub&showeSurrounds/INTERVAL"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 9

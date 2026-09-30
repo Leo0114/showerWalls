@@ -5,8 +5,8 @@ title: "Portaobjetos Esquinero Grande"
 code: "LC"
 category: "accessories"
 excerpt: "Portaobjetos Esquinero Grande con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Large Coner Holder/one.png"
+gallery: "products/accessories/Large Coner Holder"
 madeToOrder: false
 featured: false
 order: 211

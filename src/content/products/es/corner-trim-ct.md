@@ -5,8 +5,8 @@ title: "Perfil Esquinero"
 code: "CT"
 category: "accessories"
 excerpt: "Perfil Esquinero con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Trims/one.png"
+gallery: "products/accessories/Trims"
 madeToOrder: false
 featured: false
 order: 216

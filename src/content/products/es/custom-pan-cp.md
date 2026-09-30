@@ -5,8 +5,8 @@ title: "Plato a Medida"
 code: "CP"
 category: "shower-pans"
 excerpt: "Configuración Plato a Medida, fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/products/showerPans/Custom_SW_1-2.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Custom/one.png"
+gallery: "products/showerPans/Custom"
 madeToOrder: true
 featured: false
 order: 109

@@ -5,8 +5,8 @@ title: "Corner Trim"
 code: "CT"
 category: "accessories"
 excerpt: "Corner Trim finished to match the wall system, shipped as part of the same panel package."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Trims/one.png"
+gallery: "products/accessories/Trims"
 madeToOrder: false
 featured: false
 order: 216

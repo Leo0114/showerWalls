@@ -5,8 +5,9 @@ title: "Theory"
 code: "TH"
 category: "tub-shower-surrounds"
 excerpt: "Theory wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/THEORY/one.png"
+gallery: "products/tub&showeSurrounds/THEORY"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 16

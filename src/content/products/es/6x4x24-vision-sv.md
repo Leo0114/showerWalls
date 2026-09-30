@@ -6,7 +6,7 @@ code: "SV"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 6x4x24 Vision en panel de superficie sólida sin juntas, cortado al vano exacto."
 cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+available: false
 madeToOrder: false
 featured: false
 order: 22

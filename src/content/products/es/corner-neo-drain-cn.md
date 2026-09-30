@@ -5,8 +5,8 @@ title: "Drenaje Neo-Ángulo Esquinero"
 code: "CN"
 category: "shower-pans"
 excerpt: "Configuración Drenaje Neo-Ángulo Esquinero, fabricada a pedido según la posición del drenaje y el vano."
-cover: ../../../assets/images/products/showerPans/Corner-Neo-Drain_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Corner Neo Drain/one.png"
+gallery: "products/showerPans/Corner Neo Drain"
 madeToOrder: false
 featured: false
 order: 107

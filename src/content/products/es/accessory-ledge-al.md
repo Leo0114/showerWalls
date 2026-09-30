@@ -5,8 +5,8 @@ title: "Repisa Accesoria"
 code: "AL"
 category: "accessories"
 excerpt: "Repisa Accesoria con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Accesory Ledge/one.png"
+gallery: "products/accessories/Accesory Ledge"
 madeToOrder: false
 featured: false
 order: 208

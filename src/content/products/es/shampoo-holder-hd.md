@@ -5,8 +5,8 @@ title: "Portashampoo"
 code: "HD"
 category: "accessories"
 excerpt: "Portashampoo con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Shampoo Holder/one.png"
+gallery: "products/accessories/Shampoo Holder"
 madeToOrder: false
 featured: false
 order: 204

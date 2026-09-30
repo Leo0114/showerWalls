@@ -5,8 +5,9 @@ title: "3x6 Subway"
 code: "SB"
 category: "tub-shower-surrounds"
 excerpt: "3x6 Subway wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/3X6 SUBWAY/one.png"
+gallery: "products/tub&showeSurrounds/3X6 SUBWAY"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
 order: 2

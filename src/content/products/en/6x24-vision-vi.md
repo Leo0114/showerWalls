@@ -5,8 +5,9 @@ title: "6x24 Vision"
 code: "VI"
 category: "tub-shower-surrounds"
 excerpt: "6x24 Vision wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/6X24 VISION/one.png"
+gallery: "products/tub&showeSurrounds/6X24 VISION"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: true
 order: 1

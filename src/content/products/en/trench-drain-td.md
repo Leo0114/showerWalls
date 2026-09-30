@@ -5,8 +5,8 @@ title: "Trench Drain"
 code: "TD"
 category: "shower-pans"
 excerpt: "Trench Drain configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/products/showerPans/Trench-Drain_Rejilla_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Trench Drain/one.png"
+gallery: "products/showerPans/Trench Drain"
 madeToOrder: false
 featured: false
 order: 102

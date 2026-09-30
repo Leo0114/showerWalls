@@ -308,7 +308,19 @@
     "showing": "Showing",
     "of": "of",
     "products_word": "products",
+    "pagination": {
+      "label": "Products pages",
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Page"
+    },
     "detail": {
+      "surface_finish": "Surface finish",
+      "surface_finishes": {
+        "gloss": "Gloss",
+        "matte": "Matte",
+        "textured": "Textured"
+      },
       "gallery_title": "Product gallery",
       "specs": "Specifications",
       "related": "More in this family",

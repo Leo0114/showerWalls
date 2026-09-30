@@ -5,8 +5,8 @@ title: "Jabonera Esquinera de Montaje"
 code: "CM"
 category: "accessories"
 excerpt: "Jabonera Esquinera de Montaje con acabado a juego con el sistema de pared, instalado dentro del mismo paquete."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/accessories/Soap Dish/Corner/one.png"
+gallery: "products/accessories/Soap Dish/Corner"
 madeToOrder: false
 featured: false
 order: 203

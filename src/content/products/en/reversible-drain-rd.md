@@ -5,8 +5,8 @@ title: "Reversible Drain"
 code: "RD"
 category: "shower-pans"
 excerpt: "Reversible Drain configuration, built to order around your drain location and rough opening."
-cover: ../../../assets/images/products/showerPans/Reversible-Drain_SW_1.png
-gallery: "showcase"
+cover: "../../../assets/images/products/showerPans/Reversible Drain/one.png"
+gallery: "products/showerPans/Reversible Drain"
 madeToOrder: false
 featured: false
 order: 106

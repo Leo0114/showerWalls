@@ -5,8 +5,9 @@ title: "Santorini"
 code: "SN"
 category: "tub-shower-surrounds"
 excerpt: "Santorini wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/SANTORINI/one.png"
+gallery: "products/tub&showeSurrounds/SANTORINI"
+surfaceFinishes: ["gloss"]
 madeToOrder: false
 featured: false
 order: 19

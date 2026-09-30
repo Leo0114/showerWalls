@@ -5,8 +5,9 @@ title: "Chevron H4"
 code: "H4"
 category: "tub-shower-surrounds"
 excerpt: "Chevron H4 wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/CHEVRON H4/one.png"
+gallery: "products/tub&showeSurrounds/CHEVRON H4"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 14

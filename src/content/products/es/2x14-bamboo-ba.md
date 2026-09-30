@@ -5,8 +5,9 @@ title: "2x14 Bamboo"
 code: "BA"
 category: "tub-shower-surrounds"
 excerpt: "Patrón de pared 2x14 Bamboo en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: ../../../assets/images/placeholder.jpeg
-gallery: "showcase"
+cover: "../../../assets/images/products/tub&showeSurrounds/2x14 BAMBOO/one.png"
+gallery: "products/tub&showeSurrounds/2x14 BAMBOO"
+surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: false
 order: 11
