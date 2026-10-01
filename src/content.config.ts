@@ -15,13 +15,11 @@ const localized = {
   slug: z.string(),
   title: z.string(),
   excerpt: z.string(),
-  /** Folder path inside `src/assets/images/` consumed by `<Gallery />`. */
   gallery: z.string().optional(),
   featured: z.boolean().default(false),
   order: z.number().int().default(0),
 };
 
-/** Keeps the `<lang>/<slug>` shape as the entry id instead of collapsing it. */
 const generateId = ({ entry }: { entry: string }) =>
   entry.replace(/\.mdx?$/, "");
 
@@ -34,17 +32,10 @@ const products = defineCollection({
   schema: ({ image }) =>
     z.object({
       ...localized,
-      /** Always `products/<section>/<product>/one.*` for listed products. */
       cover: image(),
-      /** Catalog code; omitted for products that have not been assigned one yet. */
       code: z.string().optional(),
       category: z.enum(PRODUCT_CATEGORIES),
-      /**
-       * `false` hides the product everywhere (listing, detail, related). Set it
-       * when the product has no image folder under `assets/images/products/`.
-       */
       available: z.boolean().default(true),
-      /** Wall surface finishes this pattern ships in. Omit when not confirmed. */
       surfaceFinishes: z.array(z.enum(SURFACE_FINISHES)).optional(),
       madeToOrder: z.boolean().default(false),
       specs: z
@@ -69,7 +60,6 @@ const projects = defineCollection({
       sector: z.string(),
       units: z.string().optional(),
       scope: z.array(z.string()).default([]),
-      /** Image names inside `src/assets/images/360/` (without extension). */
       panoramas: z.array(z.string()).default([]),
     }),
 });

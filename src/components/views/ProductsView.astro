@@ -5,6 +5,7 @@ import bannerImage from "@/assets/images/mosaico.avif";
 import Banner from "@/components/shared/Banner.astro";
 import CtaSection from "@/components/shared/CtaSection.astro";
 import ProductExplorer, {
+  CUTOUT_CATEGORIES,
   type ProductListItem,
 } from "@/components/products/ProductExplorer";
 import { getI18N, getLang } from "@/i18n/i18n";
@@ -32,6 +33,8 @@ const products: ProductListItem[] = await Promise.all(
         src: data.cover,
         width: 640,
         height: 480,
+        // Cut-outs keep their full silhouette (and alpha); photos fill the frame.
+        fit: CUTOUT_CATEGORIES.has(data.category) ? "inside" : "cover",
         format: "webp",
       })
     ).src,

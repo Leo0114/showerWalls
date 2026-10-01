@@ -29,6 +29,15 @@ interface ProductExplorerProps {
 
 type Filter = ProductCategory | "all";
 
+/** Categories shot as transparent cut-outs: shown whole (contained), never cropped. */
+export const CUTOUT_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
+  "shower-pans",
+  "accessories",
+]);
+
+/** Categories whose card is reduced to name + CTA. */
+const COMPACT_CATEGORIES: ReadonlySet<ProductCategory> = new Set(["tub-shower-surrounds"]);
+
 const PAGE_SIZE = 15;
 
 const normalize = (value: string) =>
@@ -217,19 +226,33 @@ export default function ProductExplorer({
           </p>
         ) : (
           <ul className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-            {pageItems.map((product) => (
+            {pageItems.map((product) => {
+              const isCutout = CUTOUT_CATEGORIES.has(product.category);
+              const isCompact = COMPACT_CATEGORIES.has(product.category);
+              return (
               <li key={product.slug}>
                 <a
                   href={product.href}
                   className="surface-card press-soft group flex h-full flex-col overflow-hidden rounded-3xl hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3"
                 >
-                  <div className="relative aspect-4/3 overflow-hidden bg-panel">
+                  <div
+                    className={`relative aspect-4/3 overflow-hidden ${
+                      isCutout
+                        ? "bg-[radial-gradient(ellipse_at_50%_40%,var(--color-canvas)_0%,var(--color-panel)_75%)]"
+                        : "bg-panel"
+                    }`}
+                  >
                     <img
                       src={product.cover}
                       alt={product.title}
                       loading="lazy"
                       decoding="async"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className={
+                        isCutout
+                          ? // Cut-outs float inside a padded "stage": whole object visible, grounded by a soft shadow.
+                            "h-full w-full object-contain px-10 pt-14 pb-10 drop-shadow-[0_14px_18px_rgb(0_0_0/0.14)] transition-transform duration-500 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                          : "h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      }
                     />
                     {product.code && (
                       <span className="glass-chip type-label absolute top-4 left-4 rounded-full px-3 py-1 text-strategic">
@@ -244,15 +267,23 @@ export default function ProductExplorer({
                   </div>
 
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="type-label text-muted">
-                      {copy.categories[product.category].name}
-                    </p>
-                    <h3 className="mt-2 font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-ink">
+                    {!isCompact && (
+                      <p className="type-label mb-2 text-muted">
+                        {copy.categories[product.category].name}
+                      </p>
+                    )}
+                    <h3
+                      className={`font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-ink ${
+                        isCompact ? "flex-1" : ""
+                      }`}
+                    >
                       {product.title}
                     </h3>
-                    <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-muted">
-                      {product.excerpt}
-                    </p>
+                    {!isCompact && (
+                      <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-muted">
+                        {product.excerpt}
+                      </p>
+                    )}
                     <span className="type-label mt-5 inline-flex items-center gap-2 text-strategic">
                       {copy.details_button}
                       <FiArrowUpRight
@@ -263,7 +294,8 @@ export default function ProductExplorer({
                   </div>
                 </a>
               </li>
-            ))}
+              );
+            })}
           </ul>
         )}
 
