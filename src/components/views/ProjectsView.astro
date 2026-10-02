@@ -6,6 +6,7 @@ import CtaSection from "@/components/shared/CtaSection.astro";
 import ProjectsGrid from "@/components/projects/ProjectsGrid";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
+import { getImage } from "astro:assets";
 
 // Static assets — resolved at build time and passed as plain string URLs
 // so the React island never needs Astro's asset pipeline.
@@ -21,11 +22,22 @@ const path = usePath(lang);
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/projects/**/*.{png,jpg,jpeg,webp,avif}', { eager: true });
 
-// Strip Dirección — we don't expose it in the UI — and resolve Imagen.
-const projects = rawProjects.map(({ Dirección: _d, Imagen, ...rest }) => ({
-  ...rest,
-  Imagen: Imagen && images[Imagen] ? images[Imagen].default.src : null
-}));
+// Strip Dirección — we don't expose it in the UI — and optimize Imagen using Astro.
+const projects = await Promise.all(
+  rawProjects.map(async ({ Dirección: _d, Imagen, ...rest }) => {
+    let imgSrc = null;
+    if (Imagen && images[Imagen]) {
+      const optimized = await getImage({
+        src: images[Imagen].default,
+        width: 600, // Optimize width for grid
+        format: "webp", // Modern format
+        quality: 80
+      });
+      imgSrc = optimized.src;
+    }
+    return { ...rest, Imagen: imgSrc };
+  })
+);
 
 // Pass resolved image src strings; Astro's ImageMetadata carries `.src`.
 const typeImages: Record<string, string> = {
