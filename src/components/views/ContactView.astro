@@ -1,5 +1,5 @@
 ---
-import { FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import bannerImage from "@/assets/images/darkshower.avif";
 import Layout from "@/layouts/Layout.astro";
 import Banner from "@/components/shared/Banner.astro";
@@ -29,12 +29,6 @@ const details = [
     value: SITE.email,
     Icon: FiMail,
     href: `mailto:${SITE.email}`,
-  },
-  {
-    label: contact.info.hours_label,
-    value: contact.info.hours,
-    Icon: FiClock,
-    href: undefined,
   },
 ];
 ---
@@ -85,6 +79,10 @@ const details = [
             ))
           }
         </ul>
+
+        <p class="mt-6 pl-[3.75rem] text-sm font-medium text-ink">
+          We answer in English and Spanish.
+        </p>
       </div>
 
       <div class="surface-card rounded-4xl bg-panel p-8 shadow-e2 sm:p-10">

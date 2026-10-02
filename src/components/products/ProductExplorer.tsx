@@ -1,11 +1,5 @@
 import { useMemo, useRef, useState } from "react";
-import {
-  FiArrowUpRight,
-  FiChevronLeft,
-  FiChevronRight,
-  FiSearch,
-  FiX,
-} from "react-icons/fi";
+import { FiArrowUpRight, FiSearch, FiX } from "react-icons/fi";
 import { PRODUCT_CATEGORIES, type ProductCategory } from "@/constants/site";
 import { useReactI18n } from "@/i18n/useReacti18n";
 
@@ -36,9 +30,16 @@ export const CUTOUT_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
 ]);
 
 /** Categories whose card is reduced to name + CTA. */
-const COMPACT_CATEGORIES: ReadonlySet<ProductCategory> = new Set(["tub-shower-surrounds"]);
+const COMPACT_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
+  "tub-shower-surrounds",
+  "shower-pans",
+  "accessories",
+]);
 
-const PAGE_SIZE = 15;
+/** Categories whose cover image gets a #eaeaec color tint overlay. */
+const TINTED_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
+  "tub-shower-surrounds",
+]);
 
 const normalize = (value: string) =>
   value
@@ -59,7 +60,6 @@ export default function ProductExplorer({
   lang,
   products,
   initialCategory,
-  initialPage = 1,
 }: ProductExplorerProps) {
   const { t } = useReactI18n(lang);
   const copy = t.products;
@@ -70,14 +70,12 @@ export default function ProductExplorer({
       : "all",
   );
   const [query, setQuery] = useState("");
-  const [page, setPage] = useState(initialPage);
   const resultsRef = useRef<HTMLDivElement>(null);
 
   const counts = useMemo(() => {
-    const base = Object.fromEntries(PRODUCT_CATEGORIES.map((c) => [c, 0])) as Record<
-      ProductCategory,
-      number
-    >;
+    const base = Object.fromEntries(
+      PRODUCT_CATEGORIES.map((c) => [c, 0]),
+    ) as Record<ProductCategory, number>;
     products.forEach((product) => (base[product.category] += 1));
     return base;
   }, [products]);
@@ -91,43 +89,17 @@ export default function ProductExplorer({
     });
   }, [products, filter, query]);
 
-  const totalPages = Math.max(1, Math.ceil(visible.length / PAGE_SIZE));
-  // Clamp instead of trusting state: a stale `?page=` or a narrowing filter can overshoot.
-  const currentPage = Math.min(Math.max(1, page), totalPages);
-  const pageItems = visible.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
-  const from = visible.length === 0 ? 0 : (currentPage - 1) * PAGE_SIZE + 1;
-  const to = Math.min(currentPage * PAGE_SIZE, visible.length);
+  const pageItems = visible;
 
   const isFiltered = filter !== "all" || query.length > 0;
 
-  const resetPage = () => {
-    setPage(1);
-    syncParam("page", null);
-  };
-
   const selectFilter = (next: Filter) => {
     setFilter(next);
-    resetPage();
     syncParam("category", next === "all" ? null : next);
   };
 
   const updateQuery = (next: string) => {
     setQuery(next);
-    resetPage();
-  };
-
-  const goToPage = (next: number) => {
-    if (next === currentPage || next < 1 || next > totalPages) return;
-    setPage(next);
-    syncParam("page", next === 1 ? null : String(next));
-
-    const target = resultsRef.current;
-    if (!target) return;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    // Only pull the view back when the top of the results is out of sight.
-    if (target.getBoundingClientRect().top < 0) {
-      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
-    }
   };
 
   const reset = () => {
@@ -166,11 +138,13 @@ export default function ProductExplorer({
             />
           </div>
 
-          <h2 className="type-label mt-8 text-muted">
-            {t.common.filters}
-          </h2>
+          <h2 className="type-label mt-8 text-muted">{t.common.filters}</h2>
 
-          <ul className="mt-4 space-y-1" role="radiogroup" aria-label={t.common.filters}>
+          <ul
+            className="mt-4 space-y-1"
+            role="radiogroup"
+            aria-label={t.common.filters}
+          >
             {options.map(({ id, label, count }) => {
               const isActive = filter === id;
               return (
@@ -215,9 +189,9 @@ export default function ProductExplorer({
         <p className="text-sm text-muted" aria-live="polite">
           {copy.showing}{" "}
           <span className="font-semibold text-ink tabular-nums">
-            {totalPages > 1 ? `${from}–${to}` : visible.length}
+            {visible.length}
           </span>{" "}
-          {copy.of} <span className="tabular-nums">{visible.length}</span> {copy.products_word}
+          {copy.products_word}
         </p>
 
         {visible.length === 0 ? (
@@ -229,82 +203,98 @@ export default function ProductExplorer({
             {pageItems.map((product) => {
               const isCutout = CUTOUT_CATEGORIES.has(product.category);
               const isCompact = COMPACT_CATEGORIES.has(product.category);
+              const isTinted = TINTED_CATEGORIES.has(product.category);
               return (
-              <li key={product.slug}>
-                <a
-                  href={product.href}
-                  className="surface-card press-soft group flex h-full flex-col overflow-hidden rounded-3xl hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3"
-                >
-                  <div
-                    className={`relative aspect-4/3 overflow-hidden ${
-                      isCutout
-                        ? "bg-[radial-gradient(ellipse_at_50%_40%,var(--color-canvas)_0%,var(--color-panel)_75%)]"
-                        : "bg-panel"
-                    }`}
+                <li key={product.slug}>
+                  <a
+                    href={product.href}
+                    className="surface-card press-soft group flex h-full flex-col overflow-hidden rounded-3xl hover:-translate-y-1 hover:border-primary/40 hover:shadow-e3"
                   >
-                    <img
-                      src={product.cover}
-                      alt={product.title}
-                      loading="lazy"
-                      decoding="async"
-                      className={
+                    <div
+                      className={`relative aspect-4/3 overflow-hidden ${
                         isCutout
-                          ? // Cut-outs float inside a padded "stage": whole object visible, grounded by a soft shadow.
-                            "h-full w-full object-contain px-10 pt-14 pb-10 drop-shadow-[0_14px_18px_rgb(0_0_0/0.14)] transition-transform duration-500 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-                          : "h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      }
-                    />
-                    {product.code && (
-                      <span className="glass-chip type-label absolute top-4 left-4 rounded-full px-3 py-1 text-strategic">
-                        {product.code}
-                      </span>
-                    )}
-                    {product.madeToOrder && (
-                      <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-[0.65rem] font-semibold tracking-[0.16em] text-white uppercase shadow-e1">
-                        ★
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex flex-1 flex-col p-6">
-                    {!isCompact && (
-                      <p className="type-label mb-2 text-muted">
-                        {copy.categories[product.category].name}
-                      </p>
-                    )}
-                    <h3
-                      className={`font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-ink ${
-                        isCompact ? "flex-1" : ""
+                          ? "bg-[radial-gradient(ellipse_at_50%_40%,var(--color-canvas)_0%,var(--color-panel)_75%)]"
+                          : "bg-panel"
                       }`}
                     >
-                      {product.title}
-                    </h3>
-                    {!isCompact && (
-                      <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-muted">
-                        {product.excerpt}
-                      </p>
-                    )}
-                    <span className="type-label mt-5 inline-flex items-center gap-2 text-strategic">
-                      {copy.details_button}
-                      <FiArrowUpRight
-                        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                        aria-hidden="true"
+                      <img
+                        src={product.cover}
+                        alt={product.title}
+                        loading="lazy"
+                        decoding="async"
+                        style={
+                          isTinted
+                            ? {
+                                filter:
+                                  "sepia(1) saturate(0.05) brightness(0.97) hue-rotate(180deg)",
+                                mixBlendMode: "multiply",
+                              }
+                            : undefined
+                        }
+                        className={
+                          isCutout
+                            ? // Cut-outs float inside a padded "stage": whole object visible, grounded by a soft shadow.
+                              "h-full w-full object-contain px-10 pt-14 pb-10 drop-shadow-[0_14px_18px_rgb(0_0_0/0.14)] transition-transform duration-500 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                            : "h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        }
                       />
-                    </span>
-                  </div>
-                </a>
-              </li>
+                      {isTinted && (
+                        <div
+                          aria-hidden="true"
+                          style={{
+                            backgroundColor: "#eaeaec",
+                            mixBlendMode: "color",
+                            opacity: 0.65,
+                            position: "absolute",
+                            inset: 0,
+                            pointerEvents: "none",
+                          }}
+                        />
+                      )}
+                      {product.code && (
+                        <span className="glass-chip type-label absolute top-4 left-4 rounded-full px-3 py-1 text-strategic">
+                          {product.code}
+                        </span>
+                      )}
+                      {product.madeToOrder && (
+                        <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-[0.65rem] font-semibold tracking-[0.16em] text-white uppercase shadow-e1">
+                          ★
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="flex flex-1 flex-col p-6">
+                      {!isCompact && (
+                        <p className="type-label mb-2 text-muted">
+                          {copy.categories[product.category].name}
+                        </p>
+                      )}
+                      <h3
+                        className={`font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-ink ${
+                          isCompact ? "flex-1" : ""
+                        }`}
+                      >
+                        {product.title}
+                      </h3>
+                      {!isCompact && (
+                        <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-muted">
+                          {product.excerpt}
+                        </p>
+                      )}
+                      <span className="type-label mt-5 inline-flex items-center gap-2 text-strategic">
+                        {copy.details_button}
+                        <FiArrowUpRight
+                          className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </div>
+                  </a>
+                </li>
               );
             })}
           </ul>
         )}
-
-        <Pagination
-          page={currentPage}
-          totalPages={totalPages}
-          labels={copy.pagination}
-          onChange={goToPage}
-        />
       </div>
     </div>
   );
@@ -323,7 +313,10 @@ function Pagination({ page, totalPages, labels, onChange }: PaginationProps) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <nav aria-label={labels.label} className="mt-12 flex items-center justify-center gap-2">
+    <nav
+      aria-label={labels.label}
+      className="mt-12 flex items-center justify-center gap-2"
+    >
       <button
         type="button"
         onClick={() => onChange(page - 1)}
@@ -331,7 +324,7 @@ function Pagination({ page, totalPages, labels, onChange }: PaginationProps) {
         aria-label={labels.previous}
         className="icon-btn press cursor-pointer disabled:cursor-not-allowed disabled:opacity-30"
       >
-        <FiChevronLeft className="h-4 w-4" aria-hidden="true" />
+        {/* <FiChevronLeft className="h-4 w-4" aria-hidden="true" /> */}
       </button>
 
       <ul className="flex items-center gap-1.5">
@@ -364,7 +357,7 @@ function Pagination({ page, totalPages, labels, onChange }: PaginationProps) {
         aria-label={labels.next}
         className="icon-btn press cursor-pointer disabled:cursor-not-allowed disabled:opacity-30"
       >
-        <FiChevronRight className="h-4 w-4" aria-hidden="true" />
+        {/* <FiChevronRight className="h-4 w-4" aria-hidden="true" /> */}
       </button>
     </nav>
   );
