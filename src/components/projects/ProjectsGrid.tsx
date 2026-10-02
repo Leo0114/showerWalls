@@ -20,7 +20,7 @@ export interface ProjectEntry {
   City: string | null;
   State: string | null;
   Web: string | null;
-  /** Dirección intentionally excluded from UI */
+  Imagen?: string | null;
 }
 
 export interface I18nProjects {
@@ -75,9 +75,9 @@ function ProjectCard({
   typeImages: Record<string, string>;
   typeLabel: string;
 }) {
-  const { Hotel, Marca, City, State, Web, Tipo } = project;
+  const { Hotel, Marca, City, State, Web, Tipo, Imagen } = project;
   const location = [City, State].filter(Boolean).join(", ");
-  const imgSrc = typeImages[Tipo] ?? typeImages["Hospitality"];
+  const imgSrc = Imagen ?? typeImages[Tipo] ?? typeImages["Hospitality"];
 
   return (
     <a

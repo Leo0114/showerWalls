@@ -19,8 +19,13 @@ const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
 const path = usePath(lang);
 
-// Strip Dirección — we don't expose it in the UI — and narrow types.
-const projects = rawProjects.map(({ Dirección: _d, ...rest }) => rest);
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/projects/**/*.{png,jpg,jpeg,webp,avif}', { eager: true });
+
+// Strip Dirección — we don't expose it in the UI — and resolve Imagen.
+const projects = rawProjects.map(({ Dirección: _d, Imagen, ...rest }) => ({
+  ...rest,
+  Imagen: Imagen && images[Imagen] ? images[Imagen].default.src : null
+}));
 
 // Pass resolved image src strings; Astro's ImageMetadata carries `.src`.
 const typeImages: Record<string, string> = {
