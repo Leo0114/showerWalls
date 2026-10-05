@@ -1,6 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import { FiFacebook, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import {
+  FiFacebook,
+  FiInstagram,
+  FiLinkedin,
+  FiMail,
+  FiMapPin,
+  FiPhone,
+} from "react-icons/fi";
 import logo from "@/assets/sw-logo.png";
 import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
@@ -14,7 +21,7 @@ const year = new Date().getFullYear();
 
 const socials = [
   { href: SITE.social.instagram, label: "Instagram", Icon: FiInstagram },
-  { href: SITE.social.facebook, label: "Facebook", Icon: FiFacebook },
+  // { href: SITE.social.facebook, label: "Facebook", Icon: FiFacebook },
   { href: SITE.social.linkedin, label: "LinkedIn", Icon: FiLinkedin },
 ];
 ---
@@ -22,8 +29,16 @@ const socials = [
 <footer class="border-t border-line bg-panel">
   <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
     <div class="lg:col-span-1">
-      <Image src={logo} alt={SITE.name} width={200} height={72} class="h-11 w-auto object-contain" />
-      <p class="mt-5 max-w-xs text-sm leading-relaxed text-muted">{i18n.footer.tagline}</p>
+      <Image
+        src={logo}
+        alt={SITE.name}
+        width={200}
+        height={72}
+        class="h-11 w-auto object-contain"
+      />
+      <p class="mt-5 max-w-xs text-sm leading-relaxed text-muted">
+        {i18n.footer.tagline}
+      </p>
 
       <ul class="mt-6 flex items-center gap-3">
         {
@@ -90,16 +105,31 @@ const socials = [
       </h2>
       <ul class="mt-5 space-y-4 text-sm text-muted">
         <li class="flex items-start gap-3">
-          <FiMapPin className="mt-0.5 h-4 w-4 shrink-0 text-strategic" aria-hidden="true" />
+          <FiMapPin
+            className="mt-0.5 h-4 w-4 shrink-0 text-strategic"
+            aria-hidden="true"
+          />
           <span>{i18n.contact.info.address}</span>
         </li>
         <li class="flex items-start gap-3">
-          <FiPhone className="mt-0.5 h-4 w-4 shrink-0 text-strategic" aria-hidden="true" />
-          <a href={SITE.phoneHref} class="transition-colors hover:text-strategic">{SITE.phone}</a>
+          <FiPhone
+            className="mt-0.5 h-4 w-4 shrink-0 text-strategic"
+            aria-hidden="true"
+          />
+          <a
+            href={SITE.phoneHref}
+            class="transition-colors hover:text-strategic">{SITE.phone}</a
+          >
         </li>
         <li class="flex items-start gap-3">
-          <FiMail className="mt-0.5 h-4 w-4 shrink-0 text-strategic" aria-hidden="true" />
-          <a href={`mailto:${SITE.email}`} class="transition-colors hover:text-strategic">{SITE.email}</a>
+          <FiMail
+            className="mt-0.5 h-4 w-4 shrink-0 text-strategic"
+            aria-hidden="true"
+          />
+          <a
+            href={`mailto:${SITE.email}`}
+            class="transition-colors hover:text-strategic">{SITE.email}</a
+          >
         </li>
         <li class="pt-1 text-xs">{i18n.contact.info.hours}</li>
       </ul>
@@ -107,7 +137,9 @@ const socials = [
   </div>
 
   <div class="border-t border-line">
-    <div class="container-x flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted sm:flex-row">
+    <div
+      class="container-x flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted sm:flex-row"
+    >
       <p>&copy; {year} {SITE.name}. {i18n.footer.rights}</p>
       <p>{SITE.url.replace("https://", "")}</p>
     </div>

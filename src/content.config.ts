@@ -18,6 +18,7 @@ const localized = {
   gallery: z.string().optional(),
   featured: z.boolean().default(false),
   order: z.number().int().default(0),
+  isNew: z.boolean().default(false),
 };
 
 const generateId = ({ entry }: { entry: string }) =>

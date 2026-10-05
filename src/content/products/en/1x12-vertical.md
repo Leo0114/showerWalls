@@ -8,7 +8,7 @@ cover: "../../../assets/images/products/tub&showeSurrounds/1X12 VERTICAL/one.png
 gallery: "products/tub&showeSurrounds/1X12 VERTICAL"
 madeToOrder: false
 featured: false
-order: 28
+order: 6
 specs:
   - label: "Family"
     value: "Tub & Shower Surrounds"

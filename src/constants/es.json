@@ -77,16 +77,16 @@
       ],
       "stats": [
         {
-          "value": "50+",
+          "value": "Más de 50",
           "label": "Patrones y accesorios"
         },
         {
-          "value": "9",
-          "label": "Configuraciones de plato"
+          "value": "Más de 30,000",
+          "label": "Habitaciones realizadas"
         },
         {
-          "value": "3 días",
-          "label": "Entrega típica por unidad"
+          "value": "4-5 semanas",
+          "label": "Lead time"
         }
       ]
     },

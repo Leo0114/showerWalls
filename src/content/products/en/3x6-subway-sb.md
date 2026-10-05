@@ -10,7 +10,7 @@ gallery: "products/tub&showeSurrounds/3X6 SUBWAY"
 surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
-order: 2
+order: 3
 specs:
   - label: "Family"
     value: "Tub & Shower Surrounds"

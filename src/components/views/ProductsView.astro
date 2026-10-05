@@ -27,6 +27,7 @@ const products: ProductListItem[] = await Promise.all(
     excerpt: data.excerpt,
     category: data.category,
     madeToOrder: data.madeToOrder,
+    isNew: data.isNew,
     href: path("products", data.slug),
     cover: (
       await getImage({

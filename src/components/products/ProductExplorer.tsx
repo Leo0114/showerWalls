@@ -12,6 +12,7 @@ export interface ProductListItem {
   href: string;
   cover: string;
   madeToOrder: boolean;
+  isNew: boolean;
 }
 
 interface ProductExplorerProps {
@@ -37,9 +38,7 @@ const COMPACT_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
 ]);
 
 /** Categories whose cover image gets a #eaeaec color tint overlay. */
-const TINTED_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
-  "tub-shower-surrounds",
-]);
+const TINTED_CATEGORIES: ReadonlySet<ProductCategory> = new Set<ProductCategory>();
 
 const normalize = (value: string) =>
   value
@@ -256,7 +255,12 @@ export default function ProductExplorer({
                           {product.code}
                         </span>
                       )}
-                      {product.madeToOrder && (
+                      {product.isNew && (
+                        <span className="absolute top-4 right-4 rounded-full bg-emerald-500 px-3 py-1 text-[0.62rem] font-bold tracking-[0.14em] text-white uppercase shadow-e1">
+                          New
+                        </span>
+                      )}
+                      {!product.isNew && product.madeToOrder && (
                         <span className="absolute top-4 right-4 rounded-full bg-primary px-3 py-1 text-[0.65rem] font-semibold tracking-[0.16em] text-white uppercase shadow-e1">
                           ★
                         </span>

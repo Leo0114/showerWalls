@@ -10,7 +10,7 @@ gallery: "products/tub&showeSurrounds/6X24 VISION"
 surfaceFinishes: ["matte", "textured"]
 madeToOrder: false
 featured: true
-order: 1
+order: 4
 specs:
   - label: "Familia"
     value: "Tinas y Revestimientos"

@@ -10,7 +10,7 @@ gallery: "products/tub&showeSurrounds/12X24 CONTEMPO"
 surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
 featured: false
-order: 3
+order: 5
 specs:
   - label: "Familia"
     value: "Tinas y Revestimientos"

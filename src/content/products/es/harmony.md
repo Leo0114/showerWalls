@@ -1,14 +1,16 @@
 ---
 lang: es
-slug: "1x12-vertical"
-title: "1x12 Vertical"
+slug: "harmony"
+title: "Harmony"
 category: "tub-shower-surrounds"
-excerpt: "Patrón de pared 1x12 Vertical en panel de superficie sólida sin juntas, cortado al vano exacto."
-cover: "../../../assets/images/products/tub&showeSurrounds/1X12 VERTICAL/one.png"
-gallery: "products/tub&showeSurrounds/1X12 VERTICAL"
+excerpt: "Patrón de pared Harmony en panel de superficie sólida sin juntas — líneas limpias y equilibradas para un acabado moderno y atemporal."
+cover: "../../../assets/images/products/tub&showeSurrounds/harmony/one.jpg"
+gallery: "products/tub&showeSurrounds/harmony"
+surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
-featured: false
-order: 6
+featured: true
+isNew: true
+order: 2
 specs:
   - label: "Familia"
     value: "Tinas y Revestimientos"
@@ -20,9 +22,9 @@ specs:
     value: "Corte al vano"
 ---
 
-## 1x12 Vertical
+## Harmony
 
-El patrón **1x12 Vertical** reproduce el aspecto del azulejo en un panel continuo: sin líneas de lechada que tallar y sin juntas por donde entre el agua. Los paneles se cortan al vano exacto de la unidad y se instalan directamente sobre el sustrato existente.
+El patrón **Harmony** ofrece geometría limpia y equilibrada en un panel continuo: sin líneas de lechada que tallar y sin juntas por donde entre el agua. Los paneles se cortan al vano exacto de la unidad y se instalan directamente sobre el sustrato existente.
 
 ### Por qué especificarlo
 

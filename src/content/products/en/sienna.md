@@ -1,16 +1,16 @@
 ---
 lang: en
-slug: "12x24-contemporary-mg"
-title: "12x24 Contemporary"
-code: "MG"
+slug: "sienna"
+title: "Sienna"
 category: "tub-shower-surrounds"
-excerpt: "12x24 Contemporary wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: "../../../assets/images/products/tub&showeSurrounds/12X24 CONTEMPO/one.png"
-gallery: "products/tub&showeSurrounds/12X24 CONTEMPO"
+excerpt: "Sienna wall pattern in a grout-free solid-surface panel — warm tones and refined texture, cut to your exact rough opening."
+cover: "../../../assets/images/products/tub&showeSurrounds/sienna/one.jpg"
+gallery: "products/tub&showeSurrounds/sienna"
 surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
-featured: false
-order: 5
+featured: true
+isNew: true
+order: 1
 specs:
   - label: "Family"
     value: "Tub & Shower Surrounds"
@@ -22,9 +22,9 @@ specs:
     value: "Cut to rough opening"
 ---
 
-## 12x24 Contemporary
+## Sienna
 
-The **12x24 Contemporary** pattern (code `MG`) reproduces the look of tile on a single continuous panel — no grout lines to scrub, no joints for water to find. Panels are cut to the exact rough opening of your unit and fitted directly over the existing substrate.
+The **Sienna** pattern brings warm, earthy tones to solid-surface panels — no grout lines to scrub, no joints for water to find. Panels are cut to the exact rough opening of your unit and fitted directly over the existing substrate.
 
 ### Why specify it
 

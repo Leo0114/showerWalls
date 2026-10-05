@@ -1,16 +1,16 @@
 ---
 lang: en
-slug: "12x24-contemporary-mg"
-title: "12x24 Contemporary"
-code: "MG"
+slug: "harmony"
+title: "Harmony"
 category: "tub-shower-surrounds"
-excerpt: "12x24 Contemporary wall pattern in a grout-free solid-surface panel, cut to your exact rough opening."
-cover: "../../../assets/images/products/tub&showeSurrounds/12X24 CONTEMPO/one.png"
-gallery: "products/tub&showeSurrounds/12X24 CONTEMPO"
+excerpt: "Harmony wall pattern in a grout-free solid-surface panel — clean, balanced lines designed for a modern and timeless look."
+cover: "../../../assets/images/products/tub&showeSurrounds/harmony/one.jpg"
+gallery: "products/tub&showeSurrounds/harmony"
 surfaceFinishes: ["gloss", "matte"]
 madeToOrder: false
-featured: false
-order: 5
+featured: true
+isNew: true
+order: 2
 specs:
   - label: "Family"
     value: "Tub & Shower Surrounds"
@@ -22,9 +22,9 @@ specs:
     value: "Cut to rough opening"
 ---
 
-## 12x24 Contemporary
+## Harmony
 
-The **12x24 Contemporary** pattern (code `MG`) reproduces the look of tile on a single continuous panel — no grout lines to scrub, no joints for water to find. Panels are cut to the exact rough opening of your unit and fitted directly over the existing substrate.
+The **Harmony** pattern delivers balanced, clean geometry on a single continuous panel — no grout lines to scrub, no joints for water to find. Panels are cut to the exact rough opening of your unit and fitted directly over the existing substrate.
 
 ### Why specify it
 
