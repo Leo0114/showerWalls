@@ -19,6 +19,12 @@ specs:
     value: "5 colores estándar"
   - label: "Medidas"
     value: "Corte al vano"
+  - label: "Altura"
+    value: "96\""
+  - label: "Grosor"
+    value: "1/4\""
+  - label: "Material"
+    value: "Cultured marble"
 ---
 
 ## 4x12 Smooth Tile

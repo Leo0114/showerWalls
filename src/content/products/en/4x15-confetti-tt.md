@@ -20,6 +20,12 @@ specs:
     value: "5 standard colors"
   - label: "Sizing"
     value: "Cut to rough opening"
+  - label: "Height"
+    value: "96\""
+  - label: "Thickness"
+    value: "1/4\""
+  - label: "Material"
+    value: "Cultured marble"
 ---
 
 ## 4x15 Confetti
