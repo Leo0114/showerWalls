@@ -57,7 +57,9 @@ const links = NAV_ITEMS.map(({ route, key }) => {
                 aria-current={isActive ? "page" : undefined}
                 class:list={[
                   "press relative rounded-full px-4 py-2 text-sm font-medium",
-                  isActive ? "text-strategic" : "text-muted hover:bg-panel/70 hover:text-ink",
+                  isActive
+                    ? "text-strategic"
+                    : "text-muted hover:bg-panel/70 hover:text-ink",
                 ]}
               >
                 {label}
@@ -77,7 +79,7 @@ const links = NAV_ITEMS.map(({ route, key }) => {
     <div class="flex items-center gap-2">
       <div class="hidden items-center gap-2 lg:flex">
         <LangToggle label={i18n.nav.language} />
-        <ThemeToggle label={i18n.nav.theme} />
+        <!-- <ThemeToggle label={i18n.nav.theme} /> -->
       </div>
 
       <button

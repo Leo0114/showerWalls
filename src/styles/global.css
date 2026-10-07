@@ -22,8 +22,8 @@
 
   /* Translucent chrome (headers, sheets, chips). */
   --glass: 255 255 255;
-  --glass-alpha: 0.72;
-  --glass-alpha-strong: 0.88;
+  --glass-alpha: 0.95;
+  --glass-alpha-strong: 0.98;
   /* Top edge of a material: light catching the surface. */
   --sheen: 255 255 255 / 0.6;
 
@@ -73,8 +73,8 @@
   --overlay: 4, 8, 12;
 
   --glass: 11 15 20;
-  --glass-alpha: 0.68;
-  --glass-alpha-strong: 0.85;
+  --glass-alpha: 0.95;
+  --glass-alpha-strong: 0.98;
   --sheen: 255 255 255 / 0.1;
 
   --shadow-rgb: 0 0 0;

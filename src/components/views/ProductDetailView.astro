@@ -9,6 +9,7 @@ import { getI18N, getLang } from "@/i18n/i18n";
 import { usePath } from "@/i18n/utils";
 import { getRelatedProducts, type Product } from "@/lib/content";
 import { DEFAULT_GALLERY } from "@/constants/site";
+import { CUTOUT_CATEGORIES } from "@/components/products/ProductExplorer";
 
 interface Props {
   product: Product;
@@ -36,6 +37,8 @@ const specRows = surfaceFinishes?.length
       },
     ]
   : specs;
+
+const isCutout = CUTOUT_CATEGORIES.has(category);
 ---
 
 <Layout title={title} description={excerpt}>
@@ -88,14 +91,14 @@ const specRows = surfaceFinishes?.length
         </div>
       </div>
 
-      <div class="relative aspect-4/3 overflow-hidden rounded-[2rem] border border-line">
+      <div class:list={["relative overflow-hidden rounded-[2rem] border border-line", isCutout ? "aspect-square bg-canvas p-8 lg:p-12" : "aspect-4/3"]}>
         <Image
           src={cover}
           alt={title}
           widths={[480, 768, 1280]}
           sizes="(min-width: 1024px) 48vw, 92vw"
           loading="eager"
-          class="h-full w-full object-cover"
+          class:list={["h-full w-full", isCutout ? "object-contain drop-shadow-[0_14px_18px_rgb(0_0_0/0.14)]" : "object-cover"]}
           transition:name={`product-image-${slug}`}
         />
       </div>
@@ -153,13 +156,13 @@ const specRows = surfaceFinishes?.length
                   href={path("products", item.data.slug)}
                   class="surface-card press-soft group flex h-full flex-col overflow-hidden rounded-2xl hover:-translate-y-1 hover:border-primary/40 hover:shadow-e2"
                 >
-                  <div class="aspect-4/3 overflow-hidden">
+                  <div class:list={["overflow-hidden", CUTOUT_CATEGORIES.has(item.data.category) ? "aspect-square bg-canvas p-4" : "aspect-4/3"]}>
                     <Image
                       src={item.data.cover}
                       alt={item.data.title}
                       width={400}
                       height={300}
-                      class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      class={CUTOUT_CATEGORIES.has(item.data.category) ? "h-full w-full object-contain drop-shadow-[0_14px_18px_rgb(0_0_0/0.14)] transition-transform duration-500 ease-out group-hover:scale-[1.03]" : "h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"}
                     />
                   </div>
                   <div class="flex flex-1 flex-col p-5">

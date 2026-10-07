@@ -115,7 +115,7 @@ const alternates = (Object.keys(LANGUAGES) as Lang[]).map((code) => ({
           const stored = localStorage.getItem("theme");
           const dark = stored
             ? stored === "dark"
-            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+            : false;
           document.documentElement.classList.toggle("dark", dark);
         };
         apply();
