@@ -10,6 +10,7 @@ import { usePath } from "@/i18n/utils";
 import { getRelatedProducts, type Product } from "@/lib/content";
 import { DEFAULT_GALLERY } from "@/constants/site";
 import { CUTOUT_CATEGORIES } from "@/components/products/ProductExplorer";
+import { patternsData } from "@/constants/patterns";
 
 interface Props {
   product: Product;
@@ -22,13 +23,13 @@ const lang = getLang(Astro.currentLocale);
 const i18n = getI18N(lang);
 const path = usePath(lang);
 
-const { title, excerpt, code, category, cover, specs, gallery, madeToOrder, slug, surfaceFinishes } =
+const { title, excerpt, code, category, cover, specs, gallery, madeToOrder, slug, surfaceFinishes, resources } =
   product.data;
 const categoryCopy = i18n.products.categories[category];
 const related = await getRelatedProducts(product);
 
 // Surface finishes read as one more spec row, so the table keeps a single layout.
-const specRows = surfaceFinishes?.length
+let specRows = surfaceFinishes?.length
   ? [
       ...specs,
       {
@@ -36,7 +37,26 @@ const specRows = surfaceFinishes?.length
         value: surfaceFinishes.map((f) => i18n.products.detail.surface_finishes[f]).join(" · "),
       },
     ]
-  : specs;
+  : [...specs];
+
+if (category === "tub-shower-surrounds") {
+  const patternInfo = patternsData.find((p) => title.toLowerCase().includes(p.pattern.toLowerCase()) || p.pattern.toLowerCase().includes(title.toLowerCase()));
+  if (patternInfo) {
+    const existingLabels = new Set(specRows.map(s => s.label.toLowerCase()));
+    if (!existingLabels.has("height") && patternInfo.height) {
+      specRows.push({ label: "Height", value: patternInfo.height });
+    }
+    if (!existingLabels.has("material") && patternInfo.material) {
+      specRows.push({ label: "Material", value: patternInfo.material });
+    }
+    if (!existingLabels.has("panel width") && patternInfo.panelWidth) {
+      specRows.push({ label: "Panel Width", value: patternInfo.panelWidth });
+    }
+    if (!existingLabels.has("thickness") && patternInfo.thickness) {
+      specRows.push({ label: "Thickness", value: patternInfo.thickness });
+    }
+  }
+}
 
 const isCutout = CUTOUT_CATEGORIES.has(category);
 ---
@@ -138,6 +158,21 @@ const isCutout = CUTOUT_CATEGORIES.has(category);
             title={i18n.products.detail.gallery_title}
             alt={title}
           />
+        </div>
+      </section>
+    )
+  }
+
+  {
+    resources && (
+      <section class="section-y bg-canvas">
+        <div class="container-x">
+          <h2 class="type-heading text-ink">Resources</h2>
+          <div class="mt-8">
+            <a href="#" class="btn btn-outline">
+              Download Resources
+            </a>
+          </div>
         </div>
       </section>
     )

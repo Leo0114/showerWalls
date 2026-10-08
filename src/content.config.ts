@@ -39,6 +39,7 @@ const products = defineCollection({
       available: z.boolean().default(true),
       surfaceFinishes: z.array(z.enum(SURFACE_FINISHES)).optional(),
       madeToOrder: z.boolean().default(false),
+      resources: z.boolean().default(false),
       specs: z
         .array(z.object({ label: z.string(), value: z.string() }))
         .default([]),
