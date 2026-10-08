@@ -7,9 +7,9 @@ export const SITE = {
   phone: "Toll Free 866 544 94 77 Ext 123",
   phoneHref: "tel:+8665449477,123",
   social: {
-    instagram: "https://instagram.com/",
+    instagram: "https://www.instagram.com/showerwalls1?stkn=NHVkNjJuMmd2MzV3",
     facebook: "https://facebook.com/",
-    linkedin: "https://linkedin.com/",
+    linkedin: "https://www.linkedin.com/company/shower-walls-sa-de-cv/",
   },
 } as const;
 
