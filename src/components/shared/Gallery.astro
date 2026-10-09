@@ -2,14 +2,13 @@
 import { Image, getImage } from "astro:assets";
 
 interface Props {
-  /** Folder path inside src/assets/images/. Path is resolved automatically. */
   name: string;
   title?: string;
-  /** Base alt text; defaults to the folder name. */
   alt?: string;
+  standardGrid?: boolean;
 }
 
-const { name, title, alt = name } = Astro.props;
+const { name, title, alt = name, standardGrid = false } = Astro.props;
 
 // Eagerly load every gallery image; we filter to the requested folder.
 const modules = import.meta.glob<{ default: ImageMetadata }>(
@@ -22,7 +21,9 @@ const isCover = (path: string) => /\/one\.[a-z]+$/i.test(path);
 
 const images = Object.entries(modules)
   .filter(([path]) => path.includes(`/${name}/`))
-  .sort(([a], [b]) => Number(isCover(b)) - Number(isCover(a)) || a.localeCompare(b))
+  .sort(
+    ([a], [b]) => Number(isCover(b)) - Number(isCover(a)) || a.localeCompare(b),
+  )
   .map(([, mod]) => mod.default);
 
 // Source photos run up to ~6 MB; the lightbox gets a capped WebP instead of the original.
@@ -43,9 +44,7 @@ const galleryId = `pswp-${name.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`;
 {
   images.length > 0 && (
     <div class="gallery-block">
-      {title && (
-        <h2 class="type-heading mb-5 text-ink">{title}</h2>
-      )}
+      {title && <h2 class="type-heading mb-5 text-ink">{title}</h2>}
       <div
         id={galleryId}
         class="grid grid-cols-2 gap-3 md:grid-cols-3"
@@ -60,14 +59,16 @@ const galleryId = `pswp-${name.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`;
             rel="noreferrer"
             class:list={[
               "press-soft group relative flex items-center justify-center overflow-hidden rounded-2xl bg-canvas p-8 lg:p-10",
-              i === 0 ? "col-span-2 row-span-2 md:col-span-2 aspect-square" : "aspect-square",
+              !standardGrid && i === 0
+                ? "col-span-2 row-span-2 md:col-span-2 aspect-square"
+                : "aspect-square",
             ]}
           >
             <Image
               src={img}
               alt={`${alt} ${i + 1}`}
-              width={i === 0 ? 900 : 500}
-              height={i === 0 ? 700 : 400}
+              width={(!standardGrid && i === 0) ? 900 : 500}
+              height={(!standardGrid && i === 0) ? 700 : 400}
               class="h-full w-full object-contain drop-shadow-[0_14px_18px_rgb(0_0_0/0.14)] transition-transform duration-500 ease-out group-hover:scale-[1.03]"
             />
           </a>
