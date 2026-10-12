@@ -2,9 +2,13 @@ import { useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Toaster, toast } from "sonner";
-import { FiSend } from "react-icons/fi";
-import { buildContactSchema, type ContactPayload } from "@/lib/contactSchema";
-import { PROJECT_TYPES } from "@/constants/site";
+import { FiLoader, FiSend } from "react-icons/fi";
+import { actions } from "astro:actions";
+import {
+  buildContactSchema,
+  PROJECT_TYPES,
+  type ContactFormData,
+} from "./contact.schema";
 import { useReactI18n } from "@/i18n/useReacti18n";
 
 interface ContactFormProps {
@@ -14,8 +18,7 @@ interface ContactFormProps {
 const fieldClass =
   "w-full rounded-2xl border border-line bg-canvas px-4 py-3 text-sm text-ink transition-colors placeholder:text-muted focus:border-primary focus:outline-none";
 
-const labelClass =
-  "type-label mb-2 block text-muted";
+const labelClass = "type-label mb-2 block text-muted";
 
 export default function ContactForm({ lang }: ContactFormProps) {
   const { t } = useReactI18n(lang);
@@ -28,25 +31,30 @@ export default function ContactForm({ lang }: ContactFormProps) {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<ContactPayload>({
+  } = useForm<ContactFormData>({
     resolver: zodResolver(schema),
     mode: "onBlur",
   });
 
   const onSubmit = handleSubmit(async (values) => {
+    const toastId = toast.loading(copy.sending ?? "Sending...");
+
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+      const { error } = await actions.send(values);
+
+      if (error) {
+        toast.error(error.message || copy.error_message, { id: toastId });
+        return;
+      }
+
+      toast.success(copy.success_message, {
+        id: toastId,
+        description: "We will contact you shortly.",
       });
-
-      if (!response.ok) throw new Error(String(response.status));
-
-      toast.success(copy.success_message);
       reset();
-    } catch {
-      toast.error(copy.error_message);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : copy.error_message;
+      toast.error(message, { id: toastId });
     }
   });
 
@@ -64,7 +72,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
         noValidate
         className="grid gap-5 sm:grid-cols-2"
       >
-        {/* Honeypot */}
+        {/* Honeypot anti-spam */}
         <input
           {...register("company")}
           type="text"
@@ -184,11 +192,20 @@ export default function ContactForm({ lang }: ContactFormProps) {
             disabled={isSubmitting}
             className="btn btn-primary group px-8 py-4 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isSubmitting ? copy.sending : copy.submit_button}
-            <FiSend
-              className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
-              aria-hidden="true"
-            />
+            {isSubmitting ? (
+              <>
+                <span>{copy.sending}</span>
+                <FiLoader className="h-4 w-4 animate-spin" aria-hidden="true" />
+              </>
+            ) : (
+              <>
+                <span>{copy.submit_button}</span>
+                <FiSend
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </>
+            )}
           </button>
         </div>
       </form>
