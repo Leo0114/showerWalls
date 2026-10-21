@@ -27,6 +27,14 @@ export const PRODUCT_CATEGORIES = [
   "tub-shower-surrounds",
   "shower-pans",
   "accessories",
+  "shower-doors",
+] as const;
+
+export const HARDWARE_FINISHES = [
+  "Brushed Nickel",
+  "Matte Black",
+  "Chrome",
+  "Satin Black",
 ] as const;
 
 export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];

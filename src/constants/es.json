@@ -298,6 +298,10 @@
       "accessories": {
         "name": "Accesorios",
         "description": "Nichos, jaboneras, repisas, reposapiés y perfiles para completar la ducha."
+      },
+      "shower-doors": {
+        "name": "Puertas para Ducha",
+        "description": "Puertas corredizas bypass y pivotantes frameless fabricadas con vidrio templado de 10 mm."
       }
     },
     "details_button": "Ver detalles",

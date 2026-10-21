@@ -298,6 +298,10 @@
       "accessories": {
         "name": "Accessories",
         "description": "Niches, soap dishes, shelves, footrests and trim to complete the shower."
+      },
+      "shower-doors": {
+        "name": "Shower Doors",
+        "description": "Frameless bypass sliding and pivot doors built with 10 mm tempered glass."
       }
     },
     "details_button": "View details",
