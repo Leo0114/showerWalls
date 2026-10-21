@@ -30,12 +30,6 @@ export const CUTOUT_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
   "accessories",
 ]);
 
-/** Categories whose card is reduced to name + CTA. */
-const COMPACT_CATEGORIES: ReadonlySet<ProductCategory> = new Set([
-  "tub-shower-surrounds",
-  "shower-pans",
-  "accessories",
-]);
 
 /** Categories whose cover image gets a #eaeaec color tint overlay. */
 const TINTED_CATEGORIES: ReadonlySet<ProductCategory> = new Set<ProductCategory>();
@@ -201,7 +195,6 @@ export default function ProductExplorer({
           <ul className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {pageItems.map((product) => {
               const isCutout = CUTOUT_CATEGORIES.has(product.category);
-              const isCompact = COMPACT_CATEGORIES.has(product.category);
               const isTinted = TINTED_CATEGORIES.has(product.category);
               return (
                 <li key={product.slug}>
@@ -268,23 +261,9 @@ export default function ProductExplorer({
                     </div>
 
                     <div className="flex flex-1 flex-col p-6">
-                      {!isCompact && (
-                        <p className="type-label mb-2 text-muted">
-                          {copy.categories[product.category].name}
-                        </p>
-                      )}
-                      <h3
-                        className={`font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-ink ${
-                          isCompact ? "flex-1" : ""
-                        }`}
-                      >
+                      <h3 className="font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-ink flex-1">
                         {product.title}
                       </h3>
-                      {!isCompact && (
-                        <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-muted">
-                          {product.excerpt}
-                        </p>
-                      )}
                       <span className="type-label mt-5 inline-flex items-center gap-2 text-strategic">
                         {copy.details_button}
                         <FiArrowUpRight

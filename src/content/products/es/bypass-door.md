@@ -5,9 +5,10 @@ title: "Puerta Corrediza Bypass"
 category: "shower-doors"
 excerpt: "Puerta corrediza doble (bypass) sin marco, fabricada con vidrio templado de 10 mm y sistema deslizante superior de alta gama."
 cover: "../../../assets/images/products/doors/Bypass/one.jpg"
-gallery: "products/doors/bypass"
+gallery: "products/doors/Bypass"
 madeToOrder: false
 featured: true
+isNew: true
 order: 2
 resources: true
 specs:

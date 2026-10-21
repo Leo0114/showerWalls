@@ -5,9 +5,10 @@ title: "Bypass Sliding Door"
 category: "shower-doors"
 excerpt: "Frameless double sliding bypass door built with 10 mm tempered glass and a premium top-track sliding system."
 cover: "../../../assets/images/products/doors/Bypass/one.jpg"
-gallery: "products/doors/bypass"
+gallery: "products/doors/Bypass"
 madeToOrder: false
 featured: true
+isNew: true
 order: 2
 resources: true
 specs:

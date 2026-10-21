@@ -5,9 +5,10 @@ title: "Puerta Pivot"
 category: "shower-doors"
 excerpt: "Puerta pivotante frameless con un panel fijo de vidrio templado de 10 mm, diseño reversible y herrajes de acero inoxidable."
 cover: "../../../assets/images/products/doors/Pivot/one.png"
-gallery: "products/doors/pivot"
+gallery: "products/doors/Pivot"
 madeToOrder: false
 featured: true
+isNew: true
 order: 1
 resources: true
 specs:

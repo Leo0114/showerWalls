@@ -5,9 +5,10 @@ title: "Pivot Door"
 category: "shower-doors"
 excerpt: "Frameless pivot door featuring a 10 mm tempered glass fixed panel, reversible design, and stainless steel hardware."
 cover: "../../../assets/images/products/doors/Pivot/one.png"
-gallery: "products/doors/pivot"
+gallery: "products/doors/Pivot"
 madeToOrder: false
 featured: true
+isNew: true
 order: 1
 resources: true
 specs:
